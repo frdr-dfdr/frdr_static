@@ -48,27 +48,27 @@ span.ds-authority-confidence
   padding: 0px 2px; vertical-align: bottom; color: transparent;}
 img.ds-authority-confidence.cf-unset,
 span.ds-authority-confidence.cf-unset
-  { background-image: url(../../../image/authority/bug.png);}
+  { background-image: url(/repo/image/authority/bug.png);}
 img.ds-authority-confidence.cf-novalue,
 span.ds-authority-confidence.cf-novalue
-  { background-image: url(../../../image/confidence/0-unauthored.gif);}
+  { background-image: url(/repo/image/confidence/0-unauthored.gif);}
 img.ds-authority-confidence.cf-rejected,
 img.ds-authority-confidence.cf-failed,
 span.ds-authority-confidence.cf-rejected,
 span.ds-authority-confidence.cf-failed
-  { background-image: url(../../../image/confidence/2-errortriangle.gif); }
+  { background-image: url(/repo/image/confidence/2-errortriangle.gif); }
 img.ds-authority-confidence.cf-notfound,
 span.ds-authority-confidence.cf-notfound
-  { background-image: url(../../../image/confidence/3-thumb1.gif); }
+  { background-image: url(/repo/image/confidence/3-thumb1.gif); }
 img.ds-authority-confidence.cf-ambiguous,
 span.ds-authority-confidence.cf-ambiguous
-  { background-image: url(../../../image/confidence/4-question.gif); }
+  { background-image: url(/repo/image/confidence/4-question.gif); }
 img.ds-authority-confidence.cf-uncertain,
 span.ds-authority-confidence.cf-uncertain
-  { background-image: url(../../../image/confidence/5-pinion.gif); }
+  { background-image: url(/repo/image/confidence/5-pinion.gif); }
 img.ds-authority-confidence.cf-accepted,
 span.ds-authority-confidence.cf-accepted
-  { background-image: url(../../../image/confidence/6-greencheck.gif); }
+  { background-image: url(/repo/image/confidence/6-greencheck.gif); }
 
 /* hide authority-value inputs in forms */
 input.ds-authority-value { display:none; }
@@ -78,9 +78,9 @@ input.ds-authority-lock
   { vertical-align: bottom; height: 24px; width: 24px; margin-right: 8px;
     background-repeat: no-repeat; background-color: transparent; }
 input.ds-authority-lock.is-locked
-  { background-image: url(../../../image/lock24.png); }
+  { background-image: url(/repo/image/lock24.png); }
 input.ds-authority-lock.is-unlocked
-  { background-image: url(../../../image/unlock24.png); }
+  { background-image: url(/repo/image/unlock24.png); }
 
 /* field required in submission */
 .label-required:after { content:" *"; }
@@ -134,7 +134,7 @@ input.ds-authority-lock.is-unlocked
 
 .frdr-jumbo-mid {
   background-color: #424242;
-  background-image: url('/repo/image/frdr-jumbo-mid.png');
+  background-image: url('/static/image/frdr-jumbo-mid.png');
   background-position: 0px 0px;
   min-height: 300px;
   margin-bottom: 3px;
