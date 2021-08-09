@@ -39,7 +39,6 @@ body.undernavigation {overflow-x: hidden; padding-top: 65px;}
 #designedby {padding: 5px;}
 #footer_feedback {padding-top: 12px;}
 input[type="file"] {display: block;height: auto;}
-div.panel-primary div.panel-heading a {color: white;}
 /* This magic gets the 16x16 icon to show up.. setting height/width didn't
    do it, but adding padding actually made it show up. */
 img.ds-authority-confidence,
