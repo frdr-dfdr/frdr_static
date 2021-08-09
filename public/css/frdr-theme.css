@@ -29,6 +29,8 @@ a.btn {
 body .content img.pull-right { margin: 5px 0 5px 5px; }
 body .content img.pull-left { margin: 5px 5px 5px 0; }
 
+.card { margin-bottom: 16px }
+
 .banner img {background-color: #FFFFFF;padding:0px;margin:20px;}
 .brand {padding-top: 30px;}
 .brand h4 {color: #999999}
