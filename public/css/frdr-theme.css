@@ -429,6 +429,8 @@ navbar-inverse .navbar-text {
 
 .navbar-highlight {color:#2191C5}
 
+.card-header { background-color: rgba(0,0,0,0.1); }
+
 @media only screen and (max-width : 1024px) {
   #jumbo-mid-tagline { font-size: 28px; }
 }
