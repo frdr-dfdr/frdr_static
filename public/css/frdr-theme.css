@@ -36,12 +36,10 @@ body .content img.pull-left { margin: 5px 5px 5px 0; }
 .brand h4 {color: #999999}
 ol.breadcrumb li {color: white; font-style: italic;}
 ol.breadcrumb li a {color: white; font-weight: bold; font-style: normal;}
-body.undernavigation {overflow-x: hidden; padding-top: 65px;}
-#content {
-    padding-top: 1px;
-}
 
+#content { padding-top: 1px; }
 #footer_feedback {padding-top: 12px;}
+
 input[type="file"] {display: block;height: auto;}
 img.ds-authority-confidence,
 span.ds-authority-confidence
@@ -397,7 +395,7 @@ navbar-inverse .navbar-text {
     color: #999999 !important;
 }
 
-.navbar-header > a{
+.navbar-header > a {
     margin-top: 0px;
     margin-bottom: 0px;
 }
