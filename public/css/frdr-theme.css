@@ -450,21 +450,34 @@ navbar-inverse .navbar-text {
 
 .navbar-highlight {color:#2191C5}
 
-.card-header { background-color: rgba(0,0,0,0.1); }
+.card-header {
+  background-color: rgba(0,0,0,0.08);
+  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#f5f5f5), to(#e8e8e8));
+  background-image: -webkit-linear-gradient(top, #f5f5f5, 0%, #e8e8e8, 100%);
+  background-image: -moz-linear-gradient(top, #f5f5f5 0%, #e8e8e8 100%);
+  background-image: linear-gradient(to bottom, #f5f5f5 0%, #e8e8e8 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff5f5f5', endColorstr='#ffe8e8e8', GradientType=0);
+}
 
-/* Give tabbed nav a darker border */
+/* Start tabbed nav styles */
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
   border-color: #bbb #bbb #fff;
 }
-.nav-tabs .nav-link:focus,
-.nav-tabs .nav-link:hover {
-    border-color: #bbb #bbb #bbb;
+.nav-tabs .nav-link:focus {
+    border-color: #bbb #bbb #fff;
 }
 .nav-tabs {
     border-bottom: 1px solid #bbb;
     margin-bottom: 6px;
 }
+.nav > li > a:hover,
+.nav > li > a:focus {
+ text-decoration:none;
+ background-color:#eee
+}
+/* End tabbed nav styles */
 
 .download-icon {
     padding-left: 5px;
