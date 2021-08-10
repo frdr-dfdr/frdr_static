@@ -182,6 +182,7 @@ input.ds-authority-lock.is-unlocked
 
 #sitelogo {
   height: 140px;
+  float: right;
 }
 
 #data-deposit {
