@@ -412,6 +412,15 @@ fieldset[disabled] .btn-success.active
     border-color: #666666;
 }
 
+.btn-primary.disabled, .btn-primary:disabled,
+.btn-secondary.disabled, .btn-secondary:disabled,
+.btn-success.disabled, .btn-success:disabled,
+.btn-info.disabled, .btn-info:disabled,
+.btn-globus.disabled, .btn-globus:disabled
+{
+  color: #333;
+}
+
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus,
 .navbar-inverse .navbar-nav > li > a:active {
