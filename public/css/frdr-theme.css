@@ -304,7 +304,8 @@ input.search_bar {
 
 .bootstrap-tagsinput .tag {
   background-color: #2882bb;
-  padding-top: 4px;
+  padding: 4px 8px;
+  border-radius:  3px;
 }
 
 .instructions-box {
