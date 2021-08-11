@@ -419,6 +419,7 @@ fieldset[disabled] .btn-success.active
 .btn-globus.disabled, .btn-globus:disabled
 {
   color: #333;
+  cursor: not-allowed;
 }
 
 .navbar-inverse .navbar-nav > li > a:hover,
