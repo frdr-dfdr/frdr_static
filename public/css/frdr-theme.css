@@ -423,6 +423,12 @@ fieldset[disabled] .btn-success.active
   cursor: not-allowed;
 }
 
+.submitProgressButtonCurrent {
+    border-top:1px solid #444;
+    border-left:1px solid #444;
+    border-right:1px solid #444;
+}
+
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus,
 .navbar-inverse .navbar-nav > li > a:active {
