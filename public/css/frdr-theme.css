@@ -381,7 +381,7 @@ fieldset[disabled] .btn-success.active
     color: #999999;
     font-weight: 300;
     line-height: 23px;
-    font-size: 17px;
+    font-size: 15px;
     margin-top: 10px;
 }
 
@@ -403,10 +403,16 @@ fieldset[disabled] .btn-success.active
     margin: 0 4px;
     padding: 8px 15px;
     color: #fafafa;
+    border-radius: 5px 5px 5px 5px;
     border: none;
 }
 
 .navbar-nav > li > a:hover {
+    color: #424242;
+}
+
+.navbar-nav > li.show > a {
+    border-radius: 0px;
     color: #424242;
 }
 
@@ -442,7 +448,6 @@ fieldset[disabled] .btn-success.active
 
 .frdr-navbar-menu-info {
   padding-left:10px;
-  background-color: white;
 }
 
 /* End navigation bar styles */
