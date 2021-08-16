@@ -94,49 +94,6 @@ input.ds-authority-lock.is-unlocked
     content:" *";
 }
 
-.navbar-inverse {
-  background-image: none;
-  background-color: #424242;
-  border-color: #424242;
-  -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1);
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1);
-}
-
-.navbar-collapse {
-  background-image: none;
-  border-color: #dcdcdc;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1);
-  color: #64B635;
-  max-height: 390px;
-}
-
-.navbar > .container .navbar-brand {
-    margin-left: 10px;
-    margin-top: -12px;
-}
-
-.navbar-inverse .navbar-nav > li > a:hover,
-.navbar-inverse .navbar-nav > li > a:active {
-    color: #bcdeff !important;
-}
-
-.navbar-inverse .navbar-text {
-  color: #aaaaaa;
-}
-
-.navbar-inverse .navbar-nav > li > a {
-  color: #fafafa;
-  font-weight: 300;
-  line-height: 23px;
-  font-size: 15px;
-  border:none;
-}
-
-.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
-    background-color: #2882bb;
-    color: #FFFFFF;
-}
-
 .frdr-jumbo-mid {
   background-color: #424242;
   background-image: url('/static/images/latest/frdr-jumbo-mid.png');
@@ -282,12 +239,6 @@ input.search_bar {
   color: #B12;
 }
 
-
-.frdr-navbar-menu-info {
-  padding-left:10px;
-  background-color: white;
-}
-
 #pleasewait {
   width: 500px;
   margin-top: 100px;
@@ -318,18 +269,6 @@ input.search_bar {
 }
 
 .nav > li.disabled > a {
-  color: #e6e6e6;
-}
-
-.navbar-inverse .navbar-nav > li  > a {
-  color: #e6e6e6;
-}
-
-.navbar-inverse .navbar {
-  color: #e6e6e6;
-}
-
-navbar-inverse .navbar-text {
   color: #e6e6e6;
 }
 
@@ -430,43 +369,11 @@ fieldset[disabled] .btn-success.active
     cursor:  unset !important;
 }
 
-.navbar-inverse .navbar-nav > li > a:hover,
-.navbar-inverse .navbar-nav > li > a:focus,
-.navbar-inverse .navbar-nav > li > a:active {
-    color: #424242 !important;
-    background-color: #ffffff;
-    text-decoration: underline;
-}
-.navbar-inverse .navbar-nav > .open > a,
-.navbar-inverse .navbar-nav > .open > a:hover,
-.navbar-inverse .navbar-nav > .open > a:focus {
-    border-color: #e0e0e0;
-    background-color: #f0f0f0;
-    color: #333333 !important;
-    border-radius: 0px;
-    border: none;
-}
-
-.navbar-nav > li > a {
-  -moz-box-sizing: border-box;
-    border: 1px solid rgba(0, 0, 0, 0);
-    border-radius: 5px 5px 5px 5px;
-    font-weight: 300;
-    line-height: 17px;
-    margin: 0 4px;
-    padding: 8px 15px;
-}
-
-.navbar-nav .dropdown-menu-selected,
-.navbar-nav .dropdown-menu-selected:hover {
-    background: none repeat scroll 0 0 #2882bb !important;
-    border: 1px solid #EAEAEA !important;
-    color: #FFFFFF !important;
-    cursor: text !important;
-}
+/* Start navigation bar styles */
 
 .navbar {
     border-color: #424242;
+    height: 64px;
 }
 
 .navbar-nav {
@@ -479,6 +386,38 @@ fieldset[disabled] .btn-success.active
 
 .navbar-nav > a {
     color: #999999 !important;
+}
+
+.navbar-collapse {
+  background-image: none;
+  border-color: #dcdcdc;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1);
+  color: #dcdcdc;
+  max-height: 390px;
+}
+
+.navbar-nav > li > a {
+    -moz-box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 5px 5px 5px 5px;
+    font-weight: 300;
+    line-height: 17px;
+    margin: 0 4px;
+    padding: 8px 15px;
+}
+
+.navbar-nav .dropdown-menu > li > a:hover,
+.navbar-nav .dropdown-menu > li > a:focus {
+    background-color: #EAEAEA;
+    color: #000000;
+}
+
+.navbar-nav .dropdown-menu-selected,
+.navbar-nav .dropdown-menu-selected:hover {
+    background: none repeat scroll 0 0 #EAEAEA;
+    border: 1px solid #EAEAEA;
+    color: #FFFFFF;
+    cursor: text;
 }
 
 .navbar-header > a {
@@ -495,11 +434,6 @@ fieldset[disabled] .btn-success.active
     background: none repeat scroll 0 0 #2882bb;
 }
 
-.navbar-brand {
-    padding-top: 10px;
-}
-
-.navbar-brand,
 .navbar-nav > li > a {
     color: #999999;
     font-weight: 300;
@@ -508,30 +442,28 @@ fieldset[disabled] .btn-success.active
     border: none;
 }
 
-.navbar-inverse .navbar-nav > .dropdown > a:hover .caret {
-    border-top:4px solid #2191C5;
-}
-
-.navbar-inverse .navbar-nav > .dropdown > a .caret {
-    border-top:4px solid #f0f0f0;
-}
-
-.navbar-inverse .navbar-brand {
-    color: #999999;
-    font-weight: 400;
-    line-height: 23px;
-    font-size: 24px;
-    letter-spacing: 2px;
-    border:none;
-}
-
 .navbar-static-top,
 .navbar-fixed-top,
 .navbar-fixed-bottom {
     border-radius: 0;
 }
 
-.navbar-highlight {color:#2191C5}
+.navbar-highlight { color:#2191C5 }
+
+.navbar-brand {
+    margin-left: 10px;
+    padding-top: 10px;
+    color: #537eec;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.frdr-navbar-menu-info {
+  padding-left:10px;
+  background-color: white;
+}
+
+/* End navigation bar styles */
 
 .card-header {
   background-color: rgba(0,0,0,0.08);
@@ -1253,18 +1185,10 @@ input[type=number] {
   .navbar-collapse li a { color:black ; background-color: white; }
   .navbar-collapse li a:hover { background-color: white; }
   .navbar-nav > li > a:hover { background-color: white; }
-  .navbar-inverse .navbar-nav > li > a:hover,
-  .navbar-inverse .navbar-nav > li > a:active {  color: #2191C5 !important; background-color: white;}
-  .navbar-inverse .navbar-nav > .open > a,
-  .navbar-inverse .navbar-nav > .open > a:hover,
-  .navbar-inverse .navbar-nav > .open > a:focus {background-color: #e0e0e0;}
   #navbar-collapse-1 > ul { margin-top: 0px; margin-bottom: 0px;}
   #navbar-collapse-1 > ul >li > a { border-radius: 0px; margin:0px; color:#424242;}
   #navbar-collapse-1 > ul >li > ul { padding: 0px; }
   #navbar-collapse-1 > ul >li > ul > li > a:hover { border-radius: 0px; margin:0px; color:#2191C5 !important;}
-  .navbar-inverse .navbar-nav .open .dropdown-menu>li>a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu>li>a:focus { background-color: white; }
-  .navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus { background-color: white; }
-  .navbar-inverse .navbar-nav > .dropdown > a .caret { border-top: 4px solid #424242; }
   #sitelogo {height: 110px; margin-right:-10px;}
   #jumbo-mid-logo {height: 110px;}
   #jumbo-mid-tagline { font-size: 24px; margin-top: 150px; margin-left:-10px;}
@@ -1274,7 +1198,6 @@ input[type=number] {
 }
 
 @media only screen and (max-width : 500px) {
-  .navbar-inverse .navbar-brand { font-size: 15px; }
   #sitelogo {height: 100px; margin-right:-35px;}
   #jumbo-mid-tagline { font-size: 22px; margin-top: 150px; margin-left:-20px;}
   .frdr-jumbo-mid { min-height: 240px; }
