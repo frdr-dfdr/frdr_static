@@ -401,13 +401,14 @@ fieldset[disabled] .btn-success.active
     font-weight: 300;
     line-height: 23px;
     margin: 0 4px;
-    padding: 8px 15px;
+    padding: 10px 15px;
     color: #fafafa;
     border-radius: 5px 5px 5px 5px;
     border: none;
 }
 
-.navbar-nav > li > a:hover {
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:focus {
     color: #424242;
 }
 
