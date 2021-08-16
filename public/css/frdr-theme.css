@@ -377,7 +377,7 @@ fieldset[disabled] .btn-success.active
 }
 
 .navbar-nav {
-    color: #999999 !important;
+    color: #999999;
     font-weight: 300;
     line-height: 23px;
     font-size: 17px;
@@ -385,7 +385,7 @@ fieldset[disabled] .btn-success.active
 }
 
 .navbar-nav > a {
-    color: #999999 !important;
+    color: #999999;
 }
 
 .navbar-collapse {
@@ -398,26 +398,22 @@ fieldset[disabled] .btn-success.active
 
 .navbar-nav > li > a {
     -moz-box-sizing: border-box;
-    border: 1px solid rgba(0, 0, 0, 0);
-    border-radius: 5px 5px 5px 5px;
     font-weight: 300;
-    line-height: 17px;
+    line-height: 23px;
     margin: 0 4px;
     padding: 8px 15px;
+    color: #fafafa;
+    border: none;
+}
+
+.navbar-nav > li > a:hover {
+    color: #424242;
 }
 
 .navbar-nav .dropdown-menu > li > a:hover,
 .navbar-nav .dropdown-menu > li > a:focus {
     background-color: #EAEAEA;
-    color: #000000;
-}
-
-.navbar-nav .dropdown-menu-selected,
-.navbar-nav .dropdown-menu-selected:hover {
-    background: none repeat scroll 0 0 #EAEAEA;
-    border: 1px solid #EAEAEA;
-    color: #FFFFFF;
-    cursor: text;
+    color: #424242;
 }
 
 .navbar-header > a {
@@ -428,18 +424,6 @@ fieldset[disabled] .btn-success.active
 .navbar .navbar-nav > .active > a {
     background-color: #01FF00;
     color: #FF0000;
-}
-
-.navbar-nav > li > a:hover {
-    background: none repeat scroll 0 0 #2882bb;
-}
-
-.navbar-nav > li > a {
-    color: #999999;
-    font-weight: 300;
-    line-height: 23px;
-    font-size:15px;
-    border: none;
 }
 
 .navbar-static-top,
