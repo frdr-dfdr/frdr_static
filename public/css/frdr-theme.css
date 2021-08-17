@@ -269,6 +269,10 @@ input.search_bar {
   border-collapse: separate;
 }
 
+.col-form-label {
+    font-weight: bold;
+}
+
 .nav > li.disabled > a {
   color: #e6e6e6;
 }
