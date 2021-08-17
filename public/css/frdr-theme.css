@@ -423,8 +423,7 @@ fieldset[disabled] .btn-success.active
 
 .navbar-nav .dropdown-menu > li > a:hover,
 .navbar-nav .dropdown-menu > li > a:focus {
-    background-color: #2882bb;
-    color: #FFFFFF;
+    color: #0066cc;
 }
 
 .navbar-header > a {
