@@ -417,10 +417,14 @@ fieldset[disabled] .btn-success.active
     color: #424242;
 }
 
+.navbar-nav .dropdown-menu > li > a {
+    color: #333333;
+}
+
 .navbar-nav .dropdown-menu > li > a:hover,
 .navbar-nav .dropdown-menu > li > a:focus {
-    background-color: #EAEAEA;
-    color: #424242;
+    background-color: #2882bb;
+    color: #FFFFFF;
 }
 
 .navbar-header > a {
@@ -449,6 +453,12 @@ fieldset[disabled] .btn-success.active
 
 .frdr-navbar-menu-info {
   padding-left:10px;
+}
+
+.navbar-dark .navbar-text {
+    font-weight: bold;
+    padding-left: 12px;
+    color: #424242;
 }
 
 /* End navigation bar styles */
