@@ -270,7 +270,7 @@ input.search_bar {
 }
 
 .col-form-label {
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .nav > li.disabled > a {
