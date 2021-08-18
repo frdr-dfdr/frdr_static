@@ -938,6 +938,11 @@ button.link {
     height: calc(3em + 0.75rem + 2px);
 }
 
+/* Reduce font weight of user input from Boostrap 4 default */
+.form-control {
+  font-weight:300;
+}
+
 .table-heading {
     font-weight: 700;
 }
