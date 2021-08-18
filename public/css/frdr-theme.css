@@ -139,6 +139,12 @@ input.ds-authority-lock.is-unlocked
   float: right;
 }
 
+#brandlogo {
+  max-height: 44px;
+  vertical-align: bottom;
+  margin-bottom: 6px;
+}
+
 #data-deposit {
   margin-top:5px;
   white-space: nowrap;
