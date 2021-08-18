@@ -469,6 +469,11 @@ fieldset[disabled] .btn-success.active
   padding-left:10px;
 }
 
+.navbar-dark {
+    background-color: #424242;
+    border-color: #424242;
+}
+
 .navbar-dark .navbar-text {
     font-weight: bold;
     padding-left: 12px;
