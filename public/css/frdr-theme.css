@@ -113,9 +113,13 @@ input.ds-authority-lock.is-unlocked
 }
 
 #jumbo-mid-tagline .tagtext {
-  padding: 5px 10px 5px 10px;
-  background-color: rgba(0,0,0,0.75);
+    font-size: 36px;
+    color: white;
+    font-weight: 700;
+    background-color: rgba(0,0,0,0.75);
+    padding: 5px 10px;
 }
+
 #jumbo-mid-tagline .tagtext .redhighlight {
   color:#FF0000;
 }
@@ -137,6 +141,7 @@ input.ds-authority-lock.is-unlocked
 #sitelogo {
   height: 140px;
   float: right;
+  margin-top: 30px;
 }
 
 #brandlogo {
