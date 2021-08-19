@@ -135,7 +135,8 @@ input.ds-authority-lock.is-unlocked
   min-height: 80px;
   padding: 30px;
   font-size: 18px;
-  margin-top: 0
+  margin-top: 0px;
+  border-radius: 0px;
 }
 
 #sitelogo {
