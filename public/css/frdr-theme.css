@@ -95,6 +95,13 @@ input.ds-authority-lock.is-unlocked
     content:" *";
 }
 
+.label-pill {
+    margin-bottom: 5px;
+    border-radius: 16px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
 .frdr-jumbo-mid {
   background-color: #424242;
   background-image: url('/static/images/latest/frdr-jumbo-mid.png');
