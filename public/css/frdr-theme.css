@@ -100,6 +100,15 @@ input.ds-authority-lock.is-unlocked
     border-radius: 16px;
     padding-top: 4px;
     padding-bottom: 4px;
+    background-color: #e0e0e0;
+}
+
+.bg-success-light {
+    background-color: #a9e3b6;
+}
+
+.bg-danger-light {
+    background-color: #ffb0b8;
 }
 
 .frdr-jumbo-mid {
