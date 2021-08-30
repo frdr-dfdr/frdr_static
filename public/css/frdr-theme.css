@@ -273,11 +273,6 @@ input.search_bar {
   margin-top: 100px;
 }
 
-.tooltip-inner {
-  max-width: 260px;
-  min-width: 160px;
-}
-
 #globus-endpoint-file-list {
   min-height: 80px;
 }
@@ -819,6 +814,15 @@ div.ekko-lightbox.modal > * > .modal-content {
 
 .close:hover {
     opacity: .8;
+}
+
+.tooltip-icon {
+    margin-left: 5px;
+}
+
+.tooltip-inner {
+  max-width: 260px;
+  min-width: 160px;
 }
 
 .tooltip-text {
