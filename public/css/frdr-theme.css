@@ -312,6 +312,10 @@ input.search_bar {
     padding-top:60px;
 }
 
+.btn {
+    font-size: 15px;
+}
+
 .btn-primary,
 .btn-secondary,
 .btn-success,
