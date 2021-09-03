@@ -281,6 +281,7 @@ input.search_bar {
   background-color: #2882bb;
   padding: 4px 8px;
   border-radius:  3px;
+  font-size: 15px;
 }
 
 .instructions-box {
@@ -1209,9 +1210,6 @@ div.crdc-label {
 
 .metadata-sub-group {
     margin-bottom: 32px;
-}
-
-.metadata-sub-label {
 }
 
 /*** Stop numeric input from having up / down arrows ***/
