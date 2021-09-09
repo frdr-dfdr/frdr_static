@@ -630,7 +630,7 @@ fieldset[disabled] .btn-success.active
 
 .bg-info {
     background-image: none;
-    background-color: #bfddff;
+    background-color: #bfddff !important;
 }
 
 .card-info {
