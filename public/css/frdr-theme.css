@@ -30,6 +30,10 @@ a:hover {
     color:#5869e2;
 }
 
+b, strong {
+    font-weight: 600;
+}
+
 body .content img.pull-right { margin: 5px 0 5px 5px; }
 body .content img.pull-left { margin: 5px 5px 5px 0; }
 body.undernavigation { overflow-x: hidden; padding-top: 65px; }
