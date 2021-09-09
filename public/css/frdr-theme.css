@@ -1266,6 +1266,8 @@ input[type=number] {
   .navbar-collapse li a { color:black ; background-color: white; }
   .navbar-collapse li a:hover { background-color: white; }
   .navbar-nav > li > a:hover { background-color: white; }
+  .navbar-nav { line-height: 26px; }
+  .nav-item { background-color: white }
   #navbar-collapse-1 > ul { margin-top: 0px; margin-bottom: 0px;}
   #navbar-collapse-1 > ul >li > a { border-radius: 0px; margin:0px; color:#424242;}
   #navbar-collapse-1 > ul >li > ul { padding: 0px; }
