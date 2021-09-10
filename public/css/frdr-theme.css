@@ -1021,6 +1021,10 @@ button.link {
   font-weight:300;
 }
 
+.checkbox-md {
+    height:  1.5rem;
+}
+
 .table-heading {
     font-weight: 700;
 }
