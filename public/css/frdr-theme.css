@@ -98,6 +98,10 @@ input.ds-authority-lock.is-locked
 input.ds-authority-lock.is-unlocked
   { background-image: url(/repo/image/unlock24.png); }
 
+label {
+    font-weight: 600;
+}
+
 /* field required in submission */
 .label-required:after {
     color: #ff0000;
