@@ -1278,10 +1278,15 @@ input[type=number] {
   #navbar-collapse-1 > ul >li > a { border-radius: 0px; margin:0px; color:#424242;}
   #navbar-collapse-1 > ul >li > ul { padding: 0px; }
   #navbar-collapse-1 > ul >li > ul > li > a:hover { border-radius: 0px; margin:0px; color:#2191C5 !important;}
+  .container { max-width: 1170px; }
 }
 
 @media only screen and (max-width : 1024px) {
   #jumbo-mid-tagline { font-size: 28px; }
+}
+
+@media only screen and (max-width : 992px) {
+    .container { max-width: 970px; }
 }
 
 @media only screen and (max-width : 768px) {
@@ -1290,6 +1295,7 @@ input[type=number] {
   #jumbo-mid-tagline { font-size: 24px; }
   .frdr-jumbo-mid { min-height: 270px; }
   .item-metadata-grid { grid-template-columns: auto auto; }
+  .container { max-width: 750px; }
 }
 
 @media only screen and (max-width : 500px) {
