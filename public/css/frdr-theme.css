@@ -517,6 +517,10 @@ fieldset[disabled] .btn-success.active
     color: #424242;
 }
 
+.navbar-dark .navbar-brand {
+    color: #537eec;
+}
+
 /* End navigation bar styles */
 
 .card-header {
