@@ -356,11 +356,11 @@ input.search_bar {
 .btn-globus:active,
 .btn-globus:focus,
 .btn-globus:hover {
-    color: #fff;
     background-color: #2882bb;
-    border: 1px solid #2c58c0;
-    border-color: #adadad;
     background-image: none;
+    border-color: #adadad;
+    border: 1px solid #2c58c0;
+    color: #fff;
     text-shadow: none;
 }
 
@@ -368,7 +368,7 @@ input.search_bar {
 .btn-primary:not(:disabled):not(.disabled):active, 
 .show > .btn-primary.dropdown-toggle {
     color: #fff;
-    background-color: #ebebeb;
+    background-color: #2882bb;
     border-color: #adadad;
 }
 
@@ -473,7 +473,6 @@ fieldset[disabled] .btn-success.active
 
 .navbar-nav .dropdown-menu > li > a {
     color: #333333;
-    display: block;
     text-decoration:  none;
     font-size: 15px;
 }
@@ -490,13 +489,6 @@ fieldset[disabled] .btn-success.active
 .navbar-nav .dropdown-item:active {
     background-color: #2882bb;
     color: #ffffff;
-}
-
-.dropdown-item {
-        padding:0px;
-}
-.dropdown-item > a {
-        padding: 0.25rem 1.5rem;
 }
 
 .navbar-header > a {
@@ -543,6 +535,19 @@ fieldset[disabled] .btn-success.active
 }
 
 /* End navigation bar styles */
+
+.dropdown-menu > li > a {
+    display: block;
+}
+
+.dropdown-item {
+        padding:0px;
+}
+.dropdown-item > a {
+        padding: 0.25rem 1.5rem;
+}
+
+/* End nav styles for all dropdown menus */
 
 .card-header {
   background-color: rgba(0,0,0,0.08);
