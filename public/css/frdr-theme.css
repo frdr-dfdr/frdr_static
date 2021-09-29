@@ -492,10 +492,10 @@ fieldset[disabled] .btn-success.active
     color: #ffffff;
 }
 
-.navbar-nav .dropdown-item {
+.dropdown-item {
         padding:0px;
 }
-.navbar-nav .dropdown-item > a {
+.dropdown-item > a {
         padding: 0.25rem 1.5rem;
 }
 
