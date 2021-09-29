@@ -470,18 +470,25 @@ fieldset[disabled] .btn-success.active
     font-size: 15px;
 }
 
-.dropdown-menu > li > a:hover, 
-.dropdown-menu > li > a:focus,
-.dropdown-menu > li > a:active {
+.navbar-nav .dropdown-menu > li > a:hover, 
+.navbar-nav .dropdown-menu > li > a:focus,
+.navbar-nav .dropdown-menu > li > a:active {
     background-color: #2882bb;
     color: #ffffff;
 }
 
-.dropdown-item:hover, 
-.dropdown-item:focus,
-.dropdown-item:active {
+.navbar-nav .dropdown-item:hover, 
+.navbar-nav .dropdown-item:focus,
+.navbar-nav .dropdown-item:active {
     background-color: #2882bb;
     color: #ffffff;
+}
+
+.navbar-nav .dropdown-item {
+        padding:0px;
+}
+.navbar-nav .dropdown-item > a {
+        padding: 0.25rem 1.5rem;
 }
 
 .navbar-header > a {
