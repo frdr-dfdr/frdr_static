@@ -877,6 +877,7 @@ div.ekko-lightbox.modal > * > .modal-content {
 
 .tooltip-icon {
     margin-left: 5px;
+    color: #999999;
 }
 
 .tooltip-inner {
