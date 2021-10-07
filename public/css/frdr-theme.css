@@ -1183,6 +1183,7 @@ button.notification-spacer {
     padding: 10px;
 }
 
+/* Start policies CSS */
 iframe.policy {
     width: 100%;
     height: 400px;
@@ -1193,6 +1194,25 @@ iframe.policy {
 .policy-content {
     margin-bottom: 50px;
 }
+
+.clause {
+    margin-bottom: 10px;
+}
+
+.clause-number {
+    margin-right: 1em;
+}
+
+.subclause {
+    margin-left: 2.625em;
+    margin-bottom: 10px;
+}
+
+.subclause-number {
+    margin-right: 0.5em;
+}
+
+/* End policies CSS */
 
 select.crdc, select.geo {
     padding: 8px 7px;
