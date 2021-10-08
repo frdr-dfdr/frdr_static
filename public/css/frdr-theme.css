@@ -1295,6 +1295,18 @@ div.crdc-label {
     margin-bottom: 32px;
 }
 
+.cal-icon-grey {
+    position: fixed;
+    padding-left: 4px;
+    font-size: 20px;
+    color: #ccc;
+    padding-top: 8px;
+}
+
+.usedatepicker {
+    padding-left: 28px;
+}
+
 /*** Stop numeric input from having up / down arrows ***/
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
