@@ -1296,7 +1296,7 @@ div.crdc-label {
 }
 
 .cal-icon-grey {
-    position: fixed;
+    position: absolute;
     padding-left: 4px;
     font-size: 20px;
     color: #ccc;
