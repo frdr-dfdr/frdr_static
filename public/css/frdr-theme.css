@@ -666,6 +666,11 @@ fieldset[disabled] .btn-success.active
     background-color: #bfddff !important;
 }
 
+.bg-info-light {
+    background-image: none;
+    background-color: #dce7ff !important;
+}
+
 .card-info {
     border-color: #bfddff;
 }
