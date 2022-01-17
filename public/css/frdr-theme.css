@@ -1330,7 +1330,11 @@ input[type=number] {
 }
 
 .striped:nth-child(even) {
-  background-color: #CECECE;
+  background-color: #dddddd;
+}
+
+.grid-striped .row:nth-of-type(odd) {
+    background-color: #dddddd;
 }
 
 .citation_string {
