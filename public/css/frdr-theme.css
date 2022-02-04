@@ -1463,3 +1463,19 @@ a#ndrio_logo {
 .disabled-button-wrapper .btn[disabled] {
     pointer-events: none;
 }
+
+
+/* Publication dashboard requestitem css */
+
+.dropdown-item>a.disabled {
+    color: #6C757D;
+    pointer-events: none;
+}
+
+.dataset-row.highlight {
+    background-color: rgba(0, 0, 0, .05);
+}
+
+.highlight {
+    color: red;
+}
