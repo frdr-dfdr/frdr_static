@@ -1476,6 +1476,6 @@ a#ndrio_logo {
     background-color: rgba(0, 0, 0, .05);
 }
 
-.highlight {
+.font-weight-bold.highlight {
     color: red;
 }
