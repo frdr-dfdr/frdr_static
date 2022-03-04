@@ -1113,6 +1113,10 @@ button.link {
     border-top: 1px solid #ddd;
 }
 
+.dashed-top {
+  border-top: 1px dashed #999;
+}
+
 .translation-value {
     word-wrap: break-word;
 }
