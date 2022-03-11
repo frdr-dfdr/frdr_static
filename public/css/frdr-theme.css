@@ -1376,6 +1376,10 @@ input[type=number] {
   fill: #17e617;
 }
 
+.ror-name {
+    font-size: 18px;
+}
+
 
 /* Override Boostrap 4 container to be as wide as Bootstrap 3 was */
 @media only screen and (min-width : 768px) {
