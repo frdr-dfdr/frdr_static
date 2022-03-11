@@ -1380,8 +1380,12 @@ input[type=number] {
 .ror-name {
     font-size: 17px;
 }
+.ror-detail {
+    color: #666666;
+}
 .tt-menu {
     max-height:  300px;
+    max-width: 500px;
     overflow-y:  auto;
 }
 .tt-suggestion {
