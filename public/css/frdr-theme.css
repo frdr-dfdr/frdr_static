@@ -1376,8 +1376,13 @@ input[type=number] {
   fill: #17e617;
 }
 
+/* Typeahead and tags */
 .ror-name {
     font-size: 18px;
+}
+.tt-menu {
+    max-height:  300px;
+    overflow-y:  auto;
 }
 
 
