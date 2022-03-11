@@ -1378,11 +1378,16 @@ input[type=number] {
 
 /* Typeahead and tags */
 .ror-name {
-    font-size: 18px;
+    font-size: 17px;
 }
 .tt-menu {
     max-height:  300px;
     overflow-y:  auto;
+}
+.tt-suggestion {
+    padding: 3px 3px;
+    border-bottom: 1px solid #aaaaaa;
+    overflow-x: hidden;
 }
 
 
