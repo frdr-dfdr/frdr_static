@@ -1479,3 +1479,356 @@ a#ndrio_logo {
 .font-weight-bold.highlight {
     color: red;
 }
+
+/* Settings sidebar css */
+/* <ul> */
+.ActionList {
+  padding: 8px;
+}
+
+/* full bleed */
+.ActionList--full {
+  padding: 0;
+}
+
+/* nested list within main ActionList */
+.ActionList--subGroup {
+  padding: 0;
+}
+
+/* hide if item is first of type with label::before, or is the first item after a sectionDivider */
+.ActionList-item:first-of-type .ActionList-item-label::before,
+.ActionList-sectionDivider + .ActionList-item .ActionList-item-label::before {
+  visibility: hidden;
+}
+
+/* hide if item is first of type with label::before, or is the first item after a sectionDivider */
+.ActionList-item:first-of-type .ActionList-item-descriptionWrap--inline::before,
+.ActionList-sectionDivider + .ActionList-item .ActionList-item-descriptionWrap--inline::before {
+  visibility: hidden;
+}
+
+/* <li> */
+.ActionList-item {
+    position: relative;
+    list-style: none;
+    background-color: transparent;
+    border-radius: 6px;
+}
+
+.ActionList-item:hover,
+.ActionList-item:active {
+    cursor: pointer;
+}
+
+@media (hover: hover) {
+    /* only hover li without list as children */
+    .ActionList-item:not(.ActionList-item--hasSubItem):hover,
+    /* target contents of first child li if sub-item (li wraps item label + nested ul) */
+    .ActionList-item.ActionList-item--hasSubItem > .ActionList-content:hover {
+        cursor: pointer;
+        background-color: rgba(208,215,222,0.32);
+    }
+
+    .ActionList-item:not(.ActionList-item--hasSubItem):hover:not(.ActionList-item--navActive),
+    .ActionList-item.ActionList-item--hasSubItem > .ActionList-content:hover:not(.ActionList-item--navActive) {
+        /* Support for "Windows high contrast mode" */
+        outline: solid 1px transparent;
+        outline-offset: -1px;
+        /* stylelint-disable-next-line primer/box-shadow */
+        box-shadow: inset 0 0 0 2px rgba(0,0,0,0);
+    }
+}
+
+.ActionList-item:not(.ActionList-item--hasSubItem):active,
+.ActionList-item.ActionList-item--hasSubItem > .ActionList-content:active {
+    background: rgba(208,215,222,0.48);
+}
+
+.ActionList-item:not(.ActionList-item--hasSubItem):active:not(.ActionList-item--navActive), 
+.ActionList-item.ActionList-item--hasSubItem > .ActionList-content:active:not(.ActionList-item--navActive)  {
+    /* Support for "Windows high contrast mode" https://sarahmhigley.com/writing/whcm-quick-tips/ */
+    outline: solid 1px transparent;
+    outline-offset: -1px;
+    /* stylelint-disable-next-line primer/box-shadow */
+    box-shadow: inset 0 0 0 2px rgba(0,0,0,0);
+    }
+
+/* hide dividers */
+@media (hover: hover) {
+    .ActionList-item:not(.ActionList-item--hasSubItem):hover .ActionList-item-label::before, 
+    .ActionList-item:not(.ActionList-item--hasSubItem):hover + .ActionList-item .ActionList-item-label::before, 
+    .ActionList-item.ActionList-item--hasSubItem > .ActionList-content:hover .ActionList-item-label::before, 
+    .ActionList-item.ActionList-item--hasSubItem > .ActionList-content:hover + .ActionList-item .ActionList-item-label::before {
+        visibility: hidden;
+   }
+    .ActionList-item:not(.ActionList-item--hasSubItem):hover .ActionList-item-descriptionWrap--inline::before, .ActionList-item:not(.ActionList-item--hasSubItem):hover + .ActionList-item .ActionList-item-descriptionWrap--inline::before, .ActionList-item.ActionList-item--hasSubItem > .ActionList-content:hover .ActionList-item-descriptionWrap--inline::before, .ActionList-item.ActionList-item--hasSubItem > .ActionList-content:hover + .ActionList-item .ActionList-item-descriptionWrap--inline::before {
+        visibility: hidden;
+   }
+}
+/* stylelint-disable-next-line no-duplicate-selectors */
+.ActionList-item:not(.ActionList-item--hasSubItem):active .ActionList-item-label::before, 
+.ActionList-item:not(.ActionList-item--hasSubItem):active + .ActionList-item .ActionList-item-label::before, 
+.ActionList-item.ActionList-item--hasSubItem > .ActionList-content:active .ActionList-item-label::before, 
+.ActionList-item.ActionList-item--hasSubItem > .ActionList-content:active + .ActionList-item .ActionList-item-label::before {
+    visibility: hidden;
+}
+
+/* target contents of li if sub-item (li wraps item label + nested ul) */
+/* collapse styles here */
+.ActionList-item.ActionList-item--hasSubItem > .ActionList-content {
+    z-index: 1;
+}
+@media (hover: hover) {
+    .ActionList-item.ActionList-item--hasSubItem > .ActionList-content:hover {
+        background-color: rgba(208,215,222,0.32);
+   }
+}
+.ActionList-item.ActionList-item--hasSubItem > .ActionList-content:active {
+    background-color: rgba(208,215,222,0.48);
+}
+
+/* active state [aria-current] */
+.ActionList-item.ActionList-item--navActive:not(.ActionList-item--subItem) .ActionList-item-label {
+    font-weight: 600;
+}
+.ActionList-item.ActionList-item--navActive:not(.ActionList-item--danger) {
+    background: rgba(208,215,222,0.24);
+}
+@media (hover: hover) {
+    .ActionList-item.ActionList-item--navActive:not(.ActionList-item--danger):hover {
+        background-color: rgba(208,215,222,0.32);
+   }
+}
+.ActionList-item.ActionList-item--navActive:not(.ActionList-item--danger)::before, 
+.ActionList-item.ActionList-item--navActive:not(.ActionList-item--danger) + .ActionList-item::before {
+    visibility: hidden;
+}
+
+/* danger */
+.ActionList-item.ActionList-item--danger .ActionList-item-label {
+    color: #cf222e;
+}
+.ActionList-item.ActionList-item--danger .ActionList-item-visual {
+    color: #cf222e;
+}
+@media (hover: hover) {
+    .ActionList-item.ActionList-item--danger:hover {
+        background: rgba(255,235,233,0.64);
+   }
+    .ActionList-item.ActionList-item--danger:hover .ActionList-item-label {
+        color: #cf222e;
+   }
+}
+.ActionList-item.ActionList-item--danger .ActionList-content:active {
+    background: #FFEBE9;
+}
+
+  /* if nested list exists, remove default padding */
+.ActionList-item .ActionList {
+    /* stylelint-disable-next-line primer/spacing */
+    padding: unset;
+}
+
+/* button or a href */
+.ActionList-content {
+    position: relative;
+    display: grid;
+    width: 100%;
+    padding: 6px 8px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #24292f;
+    text-align: left;
+    user-select: none;
+    background-color: transparent;
+    border: none;
+    border-radius: 6px;
+    transition: background 33.333ms linear;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    grid-template-rows: min-content;
+    grid-template-areas: 'leadingAction leadingVisual label trailingVisual trailingAction';
+    grid-template-columns: min-content min-content minmax(0,auto) min-content min-content;
+    align-items: start;
+}
+.ActionList-content > :not(:last-child) {
+    margin-right: 8;
+}
+.ActionList-content:hover {
+    text-decoration: none;
+}
+.ActionList-content[aria-disabled='true'] .ActionList-item-label, .ActionList-content[aria-disabled='true'] .ActionList-item-description {
+    color: #8c959f;
+}
+.ActionList-content[aria-disabled='true'] .ActionList-item-visual {
+    fill: #8c959f;
+}
+@media (hover: hover) {
+    .ActionList-content[aria-disabled='true']:hover {
+        cursor: not-allowed;
+        background-color: transparent;
+   }
+}
+@media screen and (prefers-reduced-motion: no-preference) {
+    .ActionList-content[aria-expanded] + .ActionList--subGroup {
+        transition: opacity 160ms cubic-bezier(0.25,1,0.5,1), transform 160ms cubic-bezier(0.25,1,0.5,1);
+   }
+}
+.ActionList-content[aria-expanded] + .ActionList--subGroup .ActionList-content {
+    padding-left: 6;
+}
+.ActionList-content[aria-expanded].ActionList-content--visual16 + .ActionList--subGroup .ActionList-content {
+    padding-left: 5;
+}
+.ActionList-content[aria-expanded].ActionList-content--visual20 + .ActionList--subGroup .ActionList-content {
+    padding-left: 1;
+}
+.ActionList-content[aria-expanded].ActionList-content--visual24 + .ActionList--subGroup .ActionList-content {
+    padding-left: 4;
+}
+.ActionList-content[aria-expanded='true'] .ActionList-item-collapseIcon {
+    transition: transform 120ms linear;
+    transform: scaleY(-1);
+}
+.ActionList-content[aria-expanded='true'] + .ActionList--subGroup {
+    height: auto;
+    overflow: visible;
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+.ActionList-content[aria-expanded='true'].ActionList-content--hasActiveSubItem > .ActionList-item-label {
+    font-weight: 600;
+}
+.ActionList-content[aria-expanded='false'] .ActionList-item-collapseIcon {
+    transition: transform 120ms linear;
+    transform: scaleY(1);
+}
+.ActionList-content[aria-expanded='false'] + .ActionList--subGroup {
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-13);
+}
+.ActionList-content[aria-expanded='false'].ActionList-content--hasActiveSubItem {
+    background: rgba(208,215,222,0.24);
+}
+.ActionList-content[aria-expanded='false'].ActionList-content--hasActiveSubItem .ActionList-item-label {
+    font-weight: 600;
+}
+.ActionList-content[aria-expanded='false'].ActionList-content--hasActiveSubItem::before, .ActionList-content[aria-expanded='false'].ActionList-content--hasActiveSubItem + .ActionList-item::before {
+    visibility: hidden;
+}
+.ActionList-content.ActionList-content--sizeMedium {
+    padding: 6px 8px;
+}
+.ActionList-content.ActionList-content--sizeLarge {
+    padding: 6px 8px;
+}
+.ActionList-content.ActionList-content--fontSmall {
+    font-size: 12px;
+}
+@media (pointer: coarse) {
+    .ActionList-content {
+        padding: 6px 8px;
+   }
+}
+.ActionList-content.ActionList-content--blockDescription .ActionList-item-visual {
+    place-self: start;
+}
+
+
+/* place children on grid */
+
+.ActionList-item-action--leading {
+  grid-area: leadingAction;
+}
+
+.ActionList-item-visual--leading {
+  grid-area: leadingVisual;
+}
+
+.ActionList-item-label {
+  grid-area: label;
+}
+
+.ActionList-item-visual--trailing {
+  grid-area: trailingVisual;
+}
+
+.ActionList-item-action--trailing {
+  grid-area: trailingAction;
+}
+
+/* wrapper span */
+/* default block */
+.ActionList-item-descriptionWrap {
+    grid-area: label;
+    display: flex;
+    flex-direction: column;
+}
+.ActionList-item-descriptionWrap .ActionList-item-description {
+    margin-top: 9;
+}
+.ActionList-item-descriptionWrap .ActionList-item-label {
+    font-weight: 600;
+}
+
+/* inline */
+.ActionList-item-descriptionWrap--inline {
+  position: relative;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.ActionList-item-descriptionWrap--inline .ActionList-item-description {
+    /* stylelint-disable-next-line primer/spacing */
+    margin-left: 8px;
+}
+
+/* description */
+.ActionList-item-description {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #57606a;
+  }
+
+/* helper for grid alignment with multi-line content */
+/* span wrapping svg or text */
+.ActionList-item-visual, 
+.ActionList-item-action {
+    display: flex;
+    min-height: 20px;
+    color: #57606a;
+    pointer-events: none;
+    fill: #57606a;
+    align-items: center;
+}
+
+/* text */
+/* stylelint-disable-next-line no-duplicate-selectors */
+.ActionList-item-label {
+  position: relative; /* for pseudo dividers */
+  font-weight: 400;
+  /* we need a strict value here for grid alignment */
+  /* stylelint-disable-next-line primer/typography */
+  line-height: 20px;
+  color: #24292f;
+}
+
+.ActionList-item-label--truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* nested lists (only supports 1 level currently) */
+/* target ActionList-item--subItem for padding-left to maintain :active :after state */
+
+/* TODO: remove with PVC implementation */
+.ActionList-item--subItem > .ActionList-content {
+  font-size: 12px;
+}
