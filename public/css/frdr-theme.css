@@ -1113,6 +1113,10 @@ button.link {
     border-top: 1px solid #ddd;
 }
 
+.dashed-top {
+  border-top: 1px dashed #999;
+}
+
 .translation-value {
     word-wrap: break-word;
 }
@@ -1370,6 +1374,20 @@ input[type=number] {
 .video-wrap .video-play-btn:focus svg {
   cursor: pointer;
   fill: #17e617;
+}
+
+/* Typeahead and tags */
+.ror-name {
+    font-size: 17px;
+}
+.tt-menu {
+    max-height:  300px;
+    max-width: 500px;
+    overflow-y:  auto;
+}
+.tt-suggestion {
+    border-bottom: 1px solid #aaaaaa;
+    overflow-x: hidden;
 }
 
 
