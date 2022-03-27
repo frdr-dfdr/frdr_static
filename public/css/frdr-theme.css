@@ -1654,8 +1654,8 @@ a#ndrio_logo {
     display: grid;
     width: 100%;
     padding: 6px 8px;
-    font-size: 14px;
-    font-weight: 400;
+    font-size: 15px;
+    font-weight: 300;
     color: #24292f;
     text-align: left;
     user-select: none;
@@ -1830,10 +1830,10 @@ a#ndrio_logo {
 /* stylelint-disable-next-line no-duplicate-selectors */
 .ActionList-item-label {
   position: relative; /* for pseudo dividers */
-  font-weight: 400;
+  font-weight: 300;
   /* we need a strict value here for grid alignment */
   /* stylelint-disable-next-line primer/typography */
-  line-height: 20px;
+  line-height: 23px;
   color: #24292f;
 }
 
@@ -1849,4 +1849,31 @@ a#ndrio_logo {
 /* TODO: remove with PVC implementation */
 .ActionList-item--subItem > .ActionList-content {
   font-size: 12px;
+}
+
+/* divider */
+/* has children */
+.ActionList-sectionDivider:not(:empty) {
+    display: flex;
+    padding: 6px 8px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #57606a;
+    flex-direction: column;
+}
+/* no children */
+.ActionList-sectionDivider:empty {
+    display: block;
+    height: 1px;
+    padding: 0;
+    /* stylelint-disable-next-line primer/spacing */
+    margin: 7px -8px 8px;
+    list-style: none;
+    background: rgba(208,215,222,0.48);
+    border: 0;
+}
+.ActionList-sectionDivider .ActionList-sectionDivider-title {
+    font-size: 14px;
+    font-weight: 400;
+    color: #57606a;
 }
