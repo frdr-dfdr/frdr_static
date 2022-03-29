@@ -1671,7 +1671,7 @@ a#ndrio_logo {
     align-items: start;
 }
 .ActionList-content > :not(:last-child) {
-    margin-right: 8;
+    margin-right: 8px;
 }
 .ActionList-content:hover {
     text-decoration: none;
@@ -1819,7 +1819,7 @@ a#ndrio_logo {
 .ActionList-item-visual, 
 .ActionList-item-action {
     display: flex;
-    min-height: 20px;
+    min-height: 23px;
     color: #57606a;
     pointer-events: none;
     fill: #57606a;
