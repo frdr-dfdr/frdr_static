@@ -1877,3 +1877,7 @@ a#ndrio_logo {
     font-weight: 400;
     color: #57606a;
 }
+
+.ActionList-sectionDivider h3 {
+    margin: 0px;
+}
