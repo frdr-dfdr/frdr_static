@@ -913,6 +913,10 @@ div.ekko-lightbox.modal > * > .modal-content {
     margin-left: 5px;
 }
 
+.w-90 {
+  width: 90% !important;
+}
+
 .advanced-panel {
     margin-left: 20px;
 }
