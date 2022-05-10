@@ -394,7 +394,7 @@
         if (! self.$element.prop('disabled')) {
           self.$input.prop('disabled', false);
         }
-        self.$input.focus();
+        self.$input.trigger("focus");
       }, self));
 
       if (self.options.addOnBlur && self.options.freeInput) {
@@ -463,7 +463,7 @@
             var $prevTag = $inputWrapper.prev();
             if ($input.val().length === 0 && $prevTag[0]) {
               $prevTag.before($inputWrapper);
-              $input.focus();
+              $input.trigger("focus");
             }
             break;
           // RIGHT ARROW
@@ -472,7 +472,7 @@
             var $nextTag = $inputWrapper.next();
             if ($input.val().length === 0 && $nextTag[0]) {
               $nextTag.after($inputWrapper);
-              $input.focus();
+              $input.trigger("focus");
             }
             break;
           case 'Home':
@@ -480,7 +480,7 @@
             var $firstTag = $inputWrapper.siblings().first();
             if ($input.val().length === 0 && $firstTag[0]) {
               $firstTag.before($inputWrapper);
-              $input.focus();
+              $input.trigger("focus");
             }
             break;
           case 'End':
@@ -488,7 +488,7 @@
             var $lastTag = $inputWrapper.siblings().last();
             if ($input.val().length === 0 && $lastTag[0]) {
               $lastTag.after($inputWrapper);
-              $input.focus();
+              $input.trigger("focus");
             }
             break;
          default:
@@ -572,7 +572,7 @@
      * Sets focus on the tagsinput
      */
     focus: function() {
-      this.$input.focus();
+      this.$input.trigger("focus");
     },
 
     /**
