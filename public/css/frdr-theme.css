@@ -293,7 +293,7 @@ input.search_bar {
 
 .bootstrap-tagsinput .tag {
   background-color: #2882bb;
-  padding: 4px 4px;
+  padding: 2px 8px;
   border-radius: 3px;
   font-size: 15px;
 }

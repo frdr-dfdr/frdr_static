@@ -1168,7 +1168,7 @@
             var css = {
                 wrapper: {
                     position: "relative",
-                    display: "inline-block",
+                    "margin-top": "2px",
                     float: "left"
                 },
                 hint: {
