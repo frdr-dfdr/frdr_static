@@ -358,10 +358,10 @@
         var datasets = [self.options.typeaheadjs];
         var typeaheadjsArgs = [null, datasets];
 
-        if ($.isArray(self.options.typeaheadjs)) {
+        if (Array.isArray(self.options.typeaheadjs)) {
             var typeaheadjsOptions = self.options.typeaheadjs[0];
             // Datasets can be passed as an array or as N arguments
-            if ($.isArray(self.options.typeaheadjs[1])) {
+            if (Array.isArray(self.options.typeaheadjs[1])) {
                 datasets = typeaheadjsOptions[1];
             } else {
                 datasets = [].slice.call(self.options.typeaheadjs, 1);
