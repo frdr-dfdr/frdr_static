@@ -296,6 +296,7 @@ input.search_bar {
   padding: 2px 8px;
   border-radius: 3px;
   font-size: 15px;
+  margin-bottom: 2px;
 }
 
 .instructions-box {
