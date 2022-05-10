@@ -391,8 +391,8 @@
       }
 
       self.$container.on('click', $.proxy(function(event) {
-        if (! self.$element.attr('disabled')) {
-          self.$input.removeAttr('disabled');
+        if (! self.$element.prop('disabled')) {
+          self.$input.prop('disabled', false);
         }
         self.$input.focus();
       }, self));
@@ -427,8 +427,8 @@
         var $input = $(event.target),
             $inputWrapper = self.findInputWrapper();
 
-        if (self.$element.attr('disabled')) {
-          self.$input.attr('disabled', 'disabled');
+        if (self.$element.prop('disabled')) {
+          self.$input.prop('disabled', true);
           return;
         }
 
@@ -505,8 +505,8 @@
       self.$container.on('keyup input', 'input', $.proxy(function(event) {
          var $input = $(event.target);
 
-         if (self.$element.attr('disabled')) {
-            self.$input.attr('disabled', 'disabled');
+         if (self.$element.prop('disabled')) {
+            self.$input.prop('disabled', true);
             return;
          }
 
@@ -535,7 +535,7 @@
 
       // Remove icon clicked
       self.$container.on('click', '[data-role=remove]', $.proxy(function(event) {
-        if (self.$element.attr('disabled')) {
+        if (self.$element.prop('disabled')) {
           return;
         }
         self.remove($(event.target).closest('.tag').data('item'));
