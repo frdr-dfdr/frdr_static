@@ -1,4 +1,4 @@
-/*
+/*!
  * bootstrap-tagsinput v0.9.1
  *
  * FRDR: Note this version has been modified from the original
@@ -10,7 +10,7 @@
 
   var defaultOptions = {
     tagClass: function(item) {
-      return 'label label-info';
+      return 'label label-info float-left';
     },
     focusClass: 'focus',
     itemValue: function(item) {
@@ -146,7 +146,7 @@
 
       // add a tag element
 
-      var $tag = $('<span class="tag ' + htmlEncode(tagClass) + (itemTitle !== null ? ('" title="' + itemTitle) : '') + '">' + htmlEncode(itemText) + '<span data-role="remove"></span></span>');
+      var $tag = $('<div class="tag ' + htmlEncode(tagClass) + (itemTitle !== null ? ('" title="' + itemTitle) : '') + '">' + htmlEncode(itemText) + '<span data-role="remove"></span></div>');
       $tag.data('item', item);
       self.findInputWrapper().before($tag);
       $tag.after(' ');
