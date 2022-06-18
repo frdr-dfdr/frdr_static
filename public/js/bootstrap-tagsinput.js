@@ -1,4 +1,4 @@
-/*
+/*!
  * bootstrap-tagsinput v0.9.1
  *
  * FRDR: Note this version has been modified from the original
@@ -10,7 +10,7 @@
 
   var defaultOptions = {
     tagClass: function(item) {
-      return 'label label-info';
+      return 'label label-info float-left';
     },
     focusClass: 'focus',
     itemValue: function(item) {
@@ -146,7 +146,7 @@
 
       // add a tag element
 
-      var $tag = $('<span class="tag ' + htmlEncode(tagClass) + (itemTitle !== null ? ('" title="' + itemTitle) : '') + '">' + htmlEncode(itemText) + '<span data-role="remove"></span></span>');
+      var $tag = $('<div class="tag ' + htmlEncode(tagClass) + (itemTitle !== null ? ('" title="' + itemTitle) : '') + '">' + htmlEncode(itemText) + '<span data-role="remove"></span></div>');
       $tag.data('item', item);
       self.findInputWrapper().before($tag);
       $tag.after(' ');
@@ -358,10 +358,10 @@
         var datasets = [self.options.typeaheadjs];
         var typeaheadjsArgs = [null, datasets];
 
-        if ($.isArray(self.options.typeaheadjs)) {
+        if (Array.isArray(self.options.typeaheadjs)) {
             var typeaheadjsOptions = self.options.typeaheadjs[0];
             // Datasets can be passed as an array or as N arguments
-            if ($.isArray(self.options.typeaheadjs[1])) {
+            if (Array.isArray(self.options.typeaheadjs[1])) {
                 datasets = typeaheadjsOptions[1];
             } else {
                 datasets = [].slice.call(self.options.typeaheadjs, 1);
@@ -391,10 +391,10 @@
       }
 
       self.$container.on('click', $.proxy(function(event) {
-        if (! self.$element.attr('disabled')) {
-          self.$input.removeAttr('disabled');
+        if (! self.$element.prop('disabled')) {
+          self.$input.prop('disabled', false);
         }
-        self.$input.focus();
+        self.$input.trigger("focus");
       }, self));
 
       if (self.options.addOnBlur && self.options.freeInput) {
@@ -427,8 +427,8 @@
         var $input = $(event.target),
             $inputWrapper = self.findInputWrapper();
 
-        if (self.$element.attr('disabled')) {
-          self.$input.attr('disabled', 'disabled');
+        if (self.$element.prop('disabled')) {
+          self.$input.prop('disabled', true);
           return;
         }
 
@@ -463,7 +463,7 @@
             var $prevTag = $inputWrapper.prev();
             if ($input.val().length === 0 && $prevTag[0]) {
               $prevTag.before($inputWrapper);
-              $input.focus();
+              $input.trigger("focus");
             }
             break;
           // RIGHT ARROW
@@ -472,7 +472,7 @@
             var $nextTag = $inputWrapper.next();
             if ($input.val().length === 0 && $nextTag[0]) {
               $nextTag.after($inputWrapper);
-              $input.focus();
+              $input.trigger("focus");
             }
             break;
           case 'Home':
@@ -480,7 +480,7 @@
             var $firstTag = $inputWrapper.siblings().first();
             if ($input.val().length === 0 && $firstTag[0]) {
               $firstTag.before($inputWrapper);
-              $input.focus();
+              $input.trigger("focus");
             }
             break;
           case 'End':
@@ -488,7 +488,7 @@
             var $lastTag = $inputWrapper.siblings().last();
             if ($input.val().length === 0 && $lastTag[0]) {
               $lastTag.after($inputWrapper);
-              $input.focus();
+              $input.trigger("focus");
             }
             break;
          default:
@@ -505,8 +505,8 @@
       self.$container.on('keyup input', 'input', $.proxy(function(event) {
          var $input = $(event.target);
 
-         if (self.$element.attr('disabled')) {
-            self.$input.attr('disabled', 'disabled');
+         if (self.$element.prop('disabled')) {
+            self.$input.prop('disabled', true);
             return;
          }
 
@@ -535,7 +535,7 @@
 
       // Remove icon clicked
       self.$container.on('click', '[data-role=remove]', $.proxy(function(event) {
-        if (self.$element.attr('disabled')) {
+        if (self.$element.prop('disabled')) {
           return;
         }
         self.remove($(event.target).closest('.tag').data('item'));
@@ -572,7 +572,7 @@
      * Sets focus on the tagsinput
      */
     focus: function() {
-      this.$input.focus();
+      this.$input.trigger("focus");
     },
 
     /**

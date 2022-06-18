@@ -2,6 +2,8 @@
  * typeahead.js 1.3.1
  * https://github.com/corejavascript/typeahead.js
  * Copyright 2013-2020 Twitter, Inc. and other contributors; Licensed MIT
+ * 
+ * FRDR: Note this version has been modified from the original
  */
 
 
@@ -34,8 +36,12 @@
             isNumber: function(obj) {
                 return typeof obj === "number";
             },
-            isArray: $.isArray,
-            isFunction: $.isFunction,
+            isArray: function(obj) {
+                return Array.isArray(obj);
+            },
+            isFunction: function(obj) {
+                return typeof obj === "function";
+            },
             isObject: $.isPlainObject,
             isUndefined: function(obj) {
                 return typeof obj === "undefined";
@@ -96,7 +102,7 @@
                 };
             },
             templatify: function templatify(obj) {
-                return $.isFunction(obj) ? obj : template;
+                return _.isFunction(obj) ? obj : template;
                 function template() {
                     return String(obj);
                 }
@@ -981,8 +987,12 @@
             isNumber: function(obj) {
                 return typeof obj === "number";
             },
-            isArray: $.isArray,
-            isFunction: $.isFunction,
+            isArray: function(obj) {
+                return Array.isArray(obj);
+            },
+            isFunction: function(obj) {
+                return typeof obj === "function";
+            },
             isObject: $.isPlainObject,
             isUndefined: function(obj) {
                 return typeof obj === "undefined";
@@ -1043,7 +1053,7 @@
                 };
             },
             templatify: function templatify(obj) {
-                return $.isFunction(obj) ? obj : template;
+                return _.isFunction(obj) ? obj : template;
                 function template() {
                     return String(obj);
                 }
@@ -1143,7 +1153,7 @@
         }
         function buildHtml(c) {
             return {
-                wrapper: '<span class="' + c.wrapper + '"></span>',
+                wrapper: '<div class="' + c.wrapper + '"></div>',
                 menu: '<div role="listbox" class="' + c.menu + '"></div>'
             };
         }
@@ -1158,7 +1168,8 @@
             var css = {
                 wrapper: {
                     position: "relative",
-                    display: "inline-block"
+                    "margin-top": "2px",
+                    float: "left"
                 },
                 hint: {
                     position: "absolute",
