@@ -472,8 +472,9 @@ fieldset[disabled] .btn-success.active
 }
 
 .navbar-nav > li.show > a {
-    border-radius: 0px;
+    border-radius: 5px;
     color: #424242;
+    background-color: #eee;
 }
 
 .navbar-nav .dropdown-menu > li > a {
@@ -1504,7 +1505,7 @@ a#ndrio_logo {
 }
 
 .font-weight-bold.highlight {
-    color: red;
+    color: #dc3545;
 }
 
 /* Settings sidebar css */
