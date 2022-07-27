@@ -1,0 +1,394 @@
+:root {
+    --primary: rgb(214, 171, 0);
+    --secondary: rgb(50, 50, 47);
+    --success: rgb(214, 171, 0);
+    --link-color: black;
+    --link-decoration: underline;
+    --link-hover-color: var(--primary);
+    --link-hover-decoration: underline;
+}
+
+.blacklight-dc_description_s {
+    white-space: pre-line;
+}
+
+.facets-heading {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.facet-heading-label {
+    margin-top: 10px;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.facet-heading-collapse-btn {
+    width: 55px;
+    margin-left: 5px;
+}
+
+.btn.facet-heading-collapse-btn:hover {
+    color: var(--primary);
+    background-color: var(--secondary);
+}
+
+a.clear-facet-btn {
+    margin-top: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: white;
+    color: black !important;
+}
+
+a.clear-facet-btn:hover {
+    color: white !important;
+}
+
+.facet-checkbox {
+    margin-right: 5px;
+}
+
+.facet-content {
+    max-height: 230px;
+    overflow-y: auto;
+}
+
+.facet-label {
+    /** Make the facet label look like a link, it can be clicked **/
+    text-decoration-color: rgb(0, 0, 0);
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: auto;
+    cursor: pointer;
+}
+
+.card.facet-limit.facet-limit-active {
+    /** Make the active filter card's borders match no filters chosen **/
+    border-left-color: rgba(0, 0, 0, 0.125) !important;
+    border-right-color: rgba(0, 0, 0, 0.125) !important;
+    border-top-color: rgba(0, 0, 0, 0.125) !important;
+    border-bottom-color: rgba(0, 0, 0, 0.125) !important;
+}
+
+.card-header.p-0.facet-field-heading {
+    /** Make the active filter colour match no filters chosen **/
+    background-color: white !important;
+}
+
+.catalog-section-divider {
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+h2 > span {
+    font-size: 1.70rem;
+}
+
+ul.list-group.list-group-flush {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+hr.metadata-divider {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.document-additional-metadata.dl-invert dt {
+    font-weight: bold;
+}
+
+.index_title {
+    margin-bottom: 0px;
+}
+
+.index_title > span > a:hover {
+    color: var(--primary);
+}
+
+.index_title > span > a {
+    color: black;
+    font-size: 1.1em;
+    margin-bottom: 0px;
+    overflow-x: inherit;
+    white-space: normal;
+}
+
+.index_creators {
+    font-style: italic;
+}
+
+.index_date {
+    font-style: italic;
+}
+
+/** Make sure the list of documents isn't shorter than the map **/
+.documents-list, .noresults {
+    min-height: 400px;
+}
+
+.documents-list .document {
+    border-bottom: 1px solid #dee2e6;
+    margin-right: 15px;
+    margin-left: 28px;
+}
+
+.repo-icon {
+    width: 80px;
+    margin-bottom: 12px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.blacklight-icon-restricted {
+    margin-left: 6px;
+}
+
+.page-links, .sort-dropdown > button, .sort-dropdown > button > span {
+    font-size: 13px;
+}
+
+.index-details {
+    width: calc(100% - 100px);
+}
+
+.more-info-area {
+    font-size: 0.9em;
+}
+
+.centre-pane {
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.page-sidebar {
+    background-color: #E5E5E5;
+    padding-top: 8px;
+}
+
+.index-main {
+    background-color: #E5E5E5;
+    padding-top: 8px;
+}
+
+/** xs size breakpoint **/
+@media (min-width: 1px) and (max-width: 576px) {
+    /**
+    In mobile disable scrollbar and full height of list based on
+    screensize for mobile size.
+    **/
+    .centre-pane {
+        width: 100%;
+    }
+
+    .documents-list {
+        max-height: 100%;
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    .documents-map {
+        width: 400px;
+    }
+
+    .repo-icon {
+        width: 60px;
+    }
+
+    .index-details {
+        width: calc(100% - 60px);
+    }
+}
+
+/** sm size breakpoint **/
+@media (min-width: 577px) and (max-width: 768px) {
+    /**
+    In mobile disable scrollbar and full height of list based on
+    screensize for mobile size.
+    **/
+    .centre-pane {
+        width: 100%;
+    }
+
+    .documents-list {
+        max-height: 100%;
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    .documents-map {
+        width: 400px;
+    }
+
+    .repo-icon {
+        width: 60px;
+    }
+
+    .index-details {
+        width: calc(100% - 60px);
+    }
+
+}
+
+/** md size breakpoint **/
+@media (min-width: 769px) and (max-width: 992px) {
+    .centre-pane {
+        width: 100%;
+    }
+
+    .documents-list {
+        max-height: 100%;
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    .documents-map {
+        width: 400px;
+    }
+
+    .repo-icon {
+        width: 60px;
+    }
+
+}
+
+/** lg size breakpoint **/
+@media (min-width: 993px) and (max-width: 1200px) {
+    .centre-pane {
+        width: calc(100% - 424px);
+    }
+
+    .documents-list {
+        max-height: calc(100vh - 340px);
+        overflow-y: scroll;
+    }
+
+    .documents-map {
+        width: 400px;
+    }
+}
+
+/** xl size breakpoint **/
+@media (min-width: 1201px) and (max-width: 1400px) {
+    .centre-pane {
+        width: calc(100% - 424px);
+    }
+
+    .documents-list {
+        max-height: calc(100vh - 340px);
+        overflow-y: scroll;
+    }
+
+    .documents-map {
+        width: 400px;
+    }
+}
+
+/** > xl size breakpoint **/
+@media (min-width: 1401px) {
+    .centre-pane {
+        width: calc(100% - 524px);
+    }
+
+    .documents-list {
+        max-height: calc(100vh - 340px);
+        overflow-y: scroll;
+    }
+
+    .documents-map {
+        width: 504px;
+    }
+
+    .container {
+      max-width: 95% !important;
+    }
+}
+
+/** Global CSS rules across the site **/
+a:hover, a:focus, a:active {
+    color: var(--primary) ;
+}
+
+/** Default bootstrap uses black text on mustard **/
+.btn-primary {
+    color: rgb(255, 255, 255) !important;
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+/** Disable mustard halo on focus of button **/
+.btn:focus {
+    box-shadow: none !important;
+}
+
+.dropdown-toggle {
+    padding: 8px;
+}
+
+.dropdown-menu > li > a {
+    display: block;
+    padding: 3px 20px;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    background-color: var(--primary);
+    color: #FFFFFF !important;
+}
+
+input.feature-checkbox {
+    margin-left: 1px;
+}
+
+label.feature-label {
+    margin-left: 20px;
+}
+
+.card-header {
+    font-weight: 500;
+}
+
+.card-header {
+    font-weight: 500;
+}
+
+.search-query-form {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/** Change layout and colour of main container **/
+#main-container {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    width: 100%;
+    max-width: 100% !important;
+}
+
+.navbar-search {
+    background-color: #F1F2F2;
+}
+
+/* Change color of pagination */
+.page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.page-link {
+    color: black;
+}
+
+.page-link:hover {
+    color: var(--primary);
+}
+
+.sort-pagination{
+    border-bottom: 1px solid #dee2e6;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+}
