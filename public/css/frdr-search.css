@@ -165,7 +165,8 @@ hr.metadata-divider {
 .centre-pane {
     background-color: white;
     padding: 10px;
-    border-radius: 15px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
 }
 
 .page-sidebar {
@@ -175,7 +176,7 @@ hr.metadata-divider {
 
 .index-main {
     background-color: #E5E5E5;
-    padding-top: 8px;
+    padding-top: 8px !important;
 }
 
 /** xs size breakpoint **/
@@ -262,7 +263,7 @@ hr.metadata-divider {
 /** lg size breakpoint **/
 @media (min-width: 993px) and (max-width: 1200px) {
     .centre-pane {
-        width: calc(100% - 424px);
+        width: 100%;
     }
 
     .documents-list {
@@ -278,7 +279,7 @@ hr.metadata-divider {
 /** xl size breakpoint **/
 @media (min-width: 1201px) and (max-width: 1400px) {
     .centre-pane {
-        width: calc(100% - 424px);
+        width: 100%;
     }
 
     .documents-list {
@@ -294,7 +295,7 @@ hr.metadata-divider {
 /** > xl size breakpoint **/
 @media (min-width: 1401px) {
     .centre-pane {
-        width: calc(100% - 524px);
+        width: 100%;
     }
 
     .documents-list {
@@ -384,7 +385,15 @@ label.feature-label {
     background-color: #F1F2F2;
 }
 
-/* Change color of pagination */
+/* Change color and style of pagination */
+
+.pagination {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: 0.25rem;
+}
+
 .pagination>.active>span {
     background-color: var(--primary) !important;
     border-color: var(--primary) !important;
@@ -398,15 +407,59 @@ label.feature-label {
 }
 
 .page-link {
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    margin-left: -1px;
+    line-height: 1.25;
     color: black;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
 }
 
 .page-link:hover {
     color: var(--primary);
+    z-index: 2;
+    text-decoration: none;
+    background-color: #e9ecef;
+    border-color: #dee2e6;
 }
 
 .sort-pagination{
     border-bottom: 1px solid #dee2e6;
     margin-bottom: 1em;
     padding-bottom: 1em;
+}
+
+.record-padding {
+    margin-top: 0.5rem;
+}
+
+/* Change colors for buttons, might be removed if the color scheme is changed on FRDR */
+.btn-outline-secondary:not(:disabled):not(.disabled):active, .btn-outline-secondary.active:not(:disabled):not(.disabled), .show>.btn-outline-secondary.dropdown-toggle {
+    color: #fff;
+    background-color: #32322f;
+    border-color: #32322f;
+}
+
+/* Dropdown item color and style */
+.dropdown-item.active, .dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: #d6ab00;
+}
+
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 0.25rem 1.5rem;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
 }
