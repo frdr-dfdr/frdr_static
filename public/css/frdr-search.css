@@ -106,6 +106,8 @@ hr.metadata-divider {
 
 .index_title {
     margin-bottom: 0px;
+    font-weight: 500;
+    line-height: 1.2;
 }
 
 .index_title > span > a:hover {
