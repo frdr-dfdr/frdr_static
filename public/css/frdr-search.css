@@ -450,4 +450,5 @@ label.feature-label {
 .dropdown-menu  > a {
     display: block;
     padding: 0.25rem 1.5rem;
+    text-decoration: none;
 }
