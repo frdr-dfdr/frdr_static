@@ -17,15 +17,58 @@
     font-weight: 600;
 }
 
+.facets-header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+}
+
 .facet-heading-label {
     margin-top: 10px;
     margin-left: 10px;
     display: inline-block;
 }
 
+.facets-heading {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-top:0;
+    color: var(--secondary);
+}
+
 .facet-heading-collapse-btn {
     width: 55px;
     margin-left: 5px;
+}
+
+.facet-search-input {
+    width: calc(100% - 71px);
+    margin-left: 14px;
+}
+
+.facet-field-heading button::after {
+    content: "❯";
+    float: right;
+    transform: rotate(90deg);
+}
+
+.facet-field-heading button.collapsed::after {
+    transform: rotate(0deg);
+    transition: transform 0.1s ease;
+}
+
+.facet-values .facet-count {
+    display: table-cell;
+    vertical-align: top;
+    text-align: right;
+    width: 5em;
+}
+
+.facet-values li {
+    display: table-row;
 }
 
 .btn.facet-heading-collapse-btn:hover {
@@ -60,6 +103,18 @@ a.clear-facet-btn:hover {
     overflow-y: auto;
 }
 
+.list-unstyled, .pivot-facet {
+    padding-left: 0;
+    list-style: none;
+}
+
+.facet-values {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    margin-bottom: 0;
+}
+
 .facet-label {
     /** Make the facet label look like a link, it can be clicked **/
     text-decoration-color: rgb(0, 0, 0);
@@ -67,6 +122,10 @@ a.clear-facet-btn:hover {
     text-decoration-style: solid;
     text-decoration-thickness: auto;
     cursor: pointer;
+}
+
+.facet-limit {
+    margin-bottom: 1rem;
 }
 
 .card.facet-limit.facet-limit-active {
@@ -80,6 +139,7 @@ a.clear-facet-btn:hover {
 .card-header.p-0.facet-field-heading {
     /** Make the active filter colour match no filters chosen **/
     background-color: white !important;
+    background-image: none;
 }
 
 .catalog-section-divider {
@@ -331,6 +391,18 @@ a:hover, a:focus, a:active {
     color: #fff;
     background-color: #b08c00;
     border-color: #a38200;
+}
+
+.btn-secondary {
+    color: #fff;
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+}
+
+.btn-secondary:hover {
+    color: #fff;
+    background-color: #1e1e1c;
+    border-color: #181816;
 }
 
 /** Disable mustard halo on focus of button **/
