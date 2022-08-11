@@ -397,6 +397,8 @@ a:hover, a:focus, a:active {
     color: #fff;
     background-color: var(--secondary);
     border-color: var(--secondary);
+    background-image: none;
+    text-decoration: none;
 }
 
 .btn-secondary:hover {
