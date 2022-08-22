@@ -526,3 +526,26 @@ label.feature-label {
     padding: 0.25rem 1.5rem;
     text-decoration: none;
 }
+
+/*Publication date*/
+.form-control:focus {
+    border-color: #ffdd57;
+    box-shadow: 0 0 0 0.2rem rgb(214 171 0 / 25%);
+}
+
+.date-from, .date-to {
+    max-width: 110px;
+    min-width: 108px;
+}
+
+.usedatepicker {
+    padding-left: 12px;;
+}
+
+.date-divider {
+    max-width: 110px;
+    min-width: 15px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    text-align: center;
+}
