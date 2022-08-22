@@ -549,3 +549,9 @@ label.feature-label {
     padding-bottom: 6px;
     text-align: center;
 }
+
+.date-controls {
+    align-content: center;
+    display: flex;
+    justify-content: center;
+}
