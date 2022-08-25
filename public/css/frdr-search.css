@@ -454,6 +454,11 @@ label.feature-label {
 
 .navbar-search {
     background-color: #F1F2F2;
+    height: auto;
+}
+
+.container.search {
+    display: block;
 }
 
 /* Change color and style of pagination */
