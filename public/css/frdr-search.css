@@ -560,3 +560,27 @@ label.feature-label {
     display: flex;
     justify-content: center;
 }
+
+/* Advanced search */
+.filter > div > .dropdown > .dropdown-toggle {
+    width: 180px;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a.dropdown-item.fieldname {
+    display: block;
+    padding: 0.25rem 8px;
+    text-decoration: none;
+}
+
+a#loadMore {
+    text-decoration: underline;
+}
+
+a#loadMore:hover, a#loadMore:focus, a#loadMore:active {
+    color: var(--primary);
+    background: none;
+}
