@@ -576,11 +576,12 @@ a.dropdown-item.fieldname {
     text-decoration: none;
 }
 
-a#loadMore {
+a.load-more {
     text-decoration: underline;
+    padding: 0.25rem 8px;
 }
 
-a#loadMore:hover, a#loadMore:focus, a#loadMore:active {
+a.load-more:hover, a.load-more:focus, a.load-more:active {
     color: var(--primary);
     background: none;
 }
