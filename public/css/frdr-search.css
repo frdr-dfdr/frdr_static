@@ -381,16 +381,15 @@ a:hover, a:focus, a:active {
 
 /** Default bootstrap uses black text on mustard **/
 .btn-primary {
-    color: rgb(255, 255, 255) !important;
     background-color: var(--primary);
     border-color: var(--primary);
     background-image: none
 }
 
-.btn-primary:hover {
-    color: #fff;
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active  {
     background-color: #b08c00;
     border-color: #a38200;
+    color: var(--secondary);
 }
 
 .btn-secondary {
@@ -401,7 +400,7 @@ a:hover, a:focus, a:active {
     text-decoration: none;
 }
 
-.btn-secondary:hover {
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
     color: #fff;
     background-color: #1e1e1c;
     border-color: #181816;
@@ -553,12 +552,6 @@ label.feature-label {
     padding-top: 6px;
     padding-bottom: 6px;
     text-align: center;
-}
-
-.date-controls {
-    align-content: center;
-    display: flex;
-    justify-content: center;
 }
 
 /* Advanced search */
