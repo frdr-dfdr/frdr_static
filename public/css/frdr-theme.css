@@ -1031,6 +1031,10 @@ button.link {
     padding-right: 0px;
 }
 
+.dataset-button-fw {
+    min-width: 65px;
+}
+
 .share-icon {
     width: 32px;
     height: 32px;
