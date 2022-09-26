@@ -103,6 +103,10 @@ a.clear-facet-btn:hover {
     overflow-y: auto;
 }
 
+.collapsing {
+    overflow: hidden;
+}
+
 .list-unstyled, .pivot-facet {
     padding-left: 0;
     list-style: none;
@@ -555,7 +559,7 @@ label.feature-label {
 }
 
 /* Advanced search */
-.filter > div > .dropdown > .dropdown-toggle {
+.advanced-input > .advanced-field > .advanced-field-dropdown > .dropdown-toggle {
     width: 180px;
     max-width: 100%;
     display: flex;
