@@ -217,7 +217,7 @@ hr.metadata-divider {
 }
 
 .page-links, .sort-dropdown > button, .sort-dropdown > button > span {
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .index-details {
@@ -410,6 +410,12 @@ a:hover, a:focus, a:active {
     border-color: #181816;
 }
 
+.btn-secondary.disabled, .btn-secondary:disabled {
+    color: #fff;
+    background-color: #32322f;
+    border-color: #32322f;
+}
+
 /** Disable mustard halo on focus of button **/
 .btn:focus {
     box-shadow: none !important;
@@ -507,7 +513,6 @@ label.feature-label {
 
 .sort-pagination{
     border-bottom: 1px solid #dee2e6;
-    margin-bottom: 1em;
     padding-bottom: 1em;
 }
 
