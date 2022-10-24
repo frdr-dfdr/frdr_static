@@ -132,7 +132,7 @@ a.clear-facet-btn:hover {
     margin-bottom: 1rem;
 }
 
-.card.facet-limit.facet-limit-active {
+.card.facet-limit{
     /** Make the active filter card's borders match no filters chosen **/
     border-left-color: rgba(0, 0, 0, 0.125) !important;
     border-right-color: rgba(0, 0, 0, 0.125) !important;
@@ -356,6 +356,16 @@ hr.metadata-divider {
     .documents-map {
         width: 400px;
     }
+
+    .date-to {
+        float: right;
+    }
+
+    .date-control {
+        align-content: center;
+        display: flex;
+        justify-content: center;
+    }
 }
 
 /** > xl size breakpoint **/
@@ -375,6 +385,16 @@ hr.metadata-divider {
 
     .container {
       max-width: 95% !important;
+    }
+
+    .date-to {
+        float: right;
+    }
+
+    .date-control {
+        align-content: center;
+        display: flex;
+        justify-content: center;
     }
 }
 
