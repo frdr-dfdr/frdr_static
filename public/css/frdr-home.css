@@ -9,8 +9,9 @@
 }
 
 .home-search{
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(https://dev1-disc-c1.frdr.ca/assets/shutterstock_336698507-7ef0ebf….jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),url(https://dev1-disc-c1.frdr.ca/assets/shutterstock_336698507-7ef0ebf8a956535b571a2cb6da428bb241a3865ea2c476a7e9db92c41dc14886.jpg);
     background-size: cover;
+    background-position: center;
 }
 
 .home-img-container {
