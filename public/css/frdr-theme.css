@@ -203,6 +203,11 @@ label {
   grid-template-columns: auto auto auto;
   padding: 5px;
 }
+.item-metadata-grid-4 {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 5px;
+}
 .item-md-field {
   overflow:hidden;
   text-overflow: ellipsis;
@@ -1030,6 +1035,10 @@ button.link {
 .dataset-inner-col {
     padding-left: 0px;
     padding-right: 0px;
+}
+
+.dataset-button-mw {
+    min-width: 65px;
 }
 
 .share-icon {
