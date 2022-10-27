@@ -1,0 +1,609 @@
+:root {
+    --primary: rgb(214, 171, 0);
+    --secondary: rgb(50, 50, 47);
+    --success: rgb(214, 171, 0);
+    --link-color: black;
+    --link-decoration: underline;
+    --link-hover-color: var(--primary);
+    --link-hover-decoration: underline;
+}
+
+.blacklight-dc_description_s {
+    white-space: pre-line;
+}
+
+.facets-heading {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.facets-header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+.facet-heading-label {
+    margin-top: 10px;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.facets-heading {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-top:0;
+    color: var(--secondary);
+}
+
+.facet-heading-collapse-btn {
+    width: 55px;
+    margin-left: 5px;
+}
+
+.facet-search-input {
+    width: calc(100% - 71px);
+    margin-left: 14px;
+}
+
+.facet-field-heading button::after {
+    content: "❯";
+    float: right;
+    transform: rotate(90deg);
+}
+
+.facet-field-heading button.collapsed::after {
+    transform: rotate(0deg);
+    transition: transform 0.1s ease;
+}
+
+.facet-values .facet-count {
+    display: table-cell;
+    vertical-align: top;
+    text-align: right;
+    width: 5em;
+}
+
+.facet-values li {
+    display: table-row;
+}
+
+.btn.facet-heading-collapse-btn:hover {
+    color: var(--primary);
+    background-color: var(--secondary);
+}
+
+a {
+    color: black;
+    text-decoration: underline;
+    background-color: transparent;
+}
+
+a.clear-facet-btn {
+    margin-top: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: white;
+    color: black !important;
+}
+
+a.clear-facet-btn:hover {
+    color: white !important;
+}
+
+.facet-checkbox {
+    margin-right: 5px;
+}
+
+.facet-content {
+    max-height: 230px;
+    overflow-y: auto;
+}
+
+.collapsing {
+    overflow: hidden;
+}
+
+.list-unstyled, .pivot-facet {
+    padding-left: 0;
+    list-style: none;
+}
+
+.facet-values {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.facet-label {
+    /** Make the facet label look like a link, it can be clicked **/
+    text-decoration-color: rgb(0, 0, 0);
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: auto;
+    cursor: pointer;
+}
+
+.facet-limit {
+    margin-bottom: 1rem;
+}
+
+.card.facet-limit{
+    /** Make the active filter card's borders match no filters chosen **/
+    border-left-color: rgba(0, 0, 0, 0.125) !important;
+    border-right-color: rgba(0, 0, 0, 0.125) !important;
+    border-top-color: rgba(0, 0, 0, 0.125) !important;
+    border-bottom-color: rgba(0, 0, 0, 0.125) !important;
+}
+
+.card-header.p-0.facet-field-heading {
+    /** Make the active filter colour match no filters chosen **/
+    background-color: white !important;
+    background-image: none;
+}
+
+.catalog-section-divider {
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+h2 > span {
+    font-size: 1.70rem;
+}
+
+ul.list-group.list-group-flush {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+hr.metadata-divider {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.document-additional-metadata.dl-invert dt {
+    font-weight: bold;
+}
+
+.index_title {
+    margin-bottom: 0px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.index_title > span > a:hover {
+    color: var(--primary);
+}
+
+.index_title > span > a {
+    color: black;
+    font-size: 1.1em;
+    margin-bottom: 0px;
+    overflow-x: inherit;
+    white-space: normal;
+}
+
+.index_creators {
+    font-style: italic;
+}
+
+.index_date {
+    font-style: italic;
+}
+
+/** Make sure the list of documents isn't shorter than the map **/
+.documents-list, .noresults {
+    min-height: 400px;
+}
+
+.documents-list .document {
+    border-bottom: 1px solid #dee2e6;
+    margin-right: 15px;
+    margin-left: 28px;
+}
+
+.repo-icon {
+    width: 80px;
+    margin-bottom: 12px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+.blacklight-icon-restricted {
+    margin-left: 6px;
+}
+
+.page-links, .sort-dropdown > button, .sort-dropdown > button > span {
+    font-size: 14px;
+}
+
+.index-details {
+    width: calc(100% - 100px);
+}
+
+.more-info-area {
+    font-size: 0.9em;
+}
+
+.centre-pane {
+    background-color: white;
+    padding: 10px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.page-sidebar {
+    background-color: #E5E5E5;
+    padding-top: 8px;
+}
+
+.index-main {
+    background-color: #E5E5E5;
+    padding-top: 8px !important;
+}
+
+/** xs size breakpoint **/
+@media (min-width: 1px) and (max-width: 576px) {
+    /**
+    In mobile disable scrollbar and full height of list based on
+    screensize for mobile size.
+    **/
+    .centre-pane {
+        width: 100%;
+    }
+
+    .documents-list {
+        max-height: 100%;
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    .documents-map {
+        width: 400px;
+    }
+
+    .repo-icon {
+        width: 60px;
+    }
+
+    .index-details {
+        width: calc(100% - 60px);
+    }
+}
+
+/** sm size breakpoint **/
+@media (min-width: 577px) and (max-width: 768px) {
+    /**
+    In mobile disable scrollbar and full height of list based on
+    screensize for mobile size.
+    **/
+    .centre-pane {
+        width: 100%;
+    }
+
+    .documents-list {
+        max-height: 100%;
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    .documents-map {
+        width: 400px;
+    }
+
+    .repo-icon {
+        width: 60px;
+    }
+
+    .index-details {
+        width: calc(100% - 60px);
+    }
+
+}
+
+/** md size breakpoint **/
+@media (min-width: 769px) and (max-width: 992px) {
+    .centre-pane {
+        width: 100%;
+    }
+
+    .documents-list {
+        max-height: 100%;
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    .documents-map {
+        width: 400px;
+    }
+
+    .repo-icon {
+        width: 60px;
+    }
+
+}
+
+/** lg size breakpoint **/
+@media (min-width: 993px) and (max-width: 1200px) {
+    .centre-pane {
+        width: 100%;
+    }
+
+    .documents-list {
+        max-height: calc(100vh - 340px);
+        overflow-y: scroll;
+    }
+
+    .documents-map {
+        width: 400px;
+    }
+}
+
+/** xl size breakpoint **/
+@media (min-width: 1201px) and (max-width: 1400px) {
+    .centre-pane {
+        width: 100%;
+    }
+
+    .documents-list {
+        max-height: calc(100vh - 340px);
+        overflow-y: scroll;
+    }
+
+    .documents-map {
+        width: 400px;
+    }
+
+    .date-to {
+        float: right;
+    }
+
+    .date-control {
+        align-content: center;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/** > xl size breakpoint **/
+@media (min-width: 1401px) {
+    .centre-pane {
+        width: 100%;
+    }
+
+    .documents-list {
+        max-height: calc(100vh - 340px);
+        overflow-y: scroll;
+    }
+
+    .documents-map {
+        width: 504px;
+    }
+
+    .container {
+      max-width: 95% !important;
+    }
+
+    .date-to {
+        float: right;
+    }
+
+    .date-control {
+        align-content: center;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/** Global CSS rules across the site **/
+a:hover, a:focus, a:active {
+    color: var(--primary) ;
+}
+
+/** Default bootstrap uses black text on mustard **/
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    background-image: none
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active  {
+    background-color: #b08c00;
+    border-color: #a38200;
+    color: var(--secondary);
+}
+
+.btn-secondary {
+    color: #fff;
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+    background-image: none;
+    text-decoration: none;
+}
+
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
+    color: #fff;
+    background-color: #1e1e1c;
+    border-color: #181816;
+}
+
+.btn-secondary.disabled, .btn-secondary:disabled {
+    color: #fff;
+    background-color: #32322f;
+    border-color: #32322f;
+}
+
+/** Disable mustard halo on focus of button **/
+.btn:focus {
+    box-shadow: none !important;
+}
+
+.dropdown-toggle {
+    padding: 8px;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    background-color: var(--primary);
+    color: #FFFFFF !important;
+}
+
+input.feature-checkbox {
+    margin-left: 1px;
+}
+
+label.feature-label {
+    margin-left: 20px;
+}
+
+.card-header {
+    font-weight: 500;
+}
+
+.card-header {
+    font-weight: 500;
+}
+
+.search-query-form {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/** Change layout and colour of main container **/
+#main-container {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    width: 100%;
+    max-width: 100% !important;
+}
+
+.navbar-search {
+    background-color: #F1F2F2;
+    height: auto;
+}
+
+.container.search {
+    display: block;
+}
+
+/* Change color and style of pagination */
+
+.pagination {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: 0.25rem;
+}
+
+.pagination>.active>span {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
+.page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.page-link {
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: black;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}
+
+.page-link:hover {
+    color: var(--primary);
+    z-index: 2;
+    text-decoration: none;
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+}
+
+.sort-pagination{
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 1em;
+}
+
+.record-padding {
+    margin-top: 0.5rem;
+}
+
+/* Change colors for buttons, might be removed if the color scheme is changed on FRDR */
+.btn-outline-secondary:not(:disabled):not(.disabled):active, .btn-outline-secondary.active:not(:disabled):not(.disabled), .show>.btn-outline-secondary.dropdown-toggle {
+    color: #fff;
+    background-color: #32322f;
+    border-color: #32322f;
+}
+
+/* Sort by dropdown item color and style */
+.dropdown-item.active, .dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: #d6ab00;
+}
+
+.dropdown-menu  > a {
+    display: block;
+    padding: 0.25rem 1.5rem;
+    text-decoration: none;
+}
+
+/*Publication date*/
+.form-control:focus {
+    border-color: #ffdd57;
+    box-shadow: 0 0 0 0.2rem rgb(214 171 0 / 25%);
+}
+
+.date-from, .date-to {
+    max-width: 110px;
+    min-width: 108px;
+}
+
+.usedatepicker {
+    padding-left: 12px;;
+}
+
+.date-divider {
+    max-width: 110px;
+    min-width: 15px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    text-align: center;
+}
+
+/* Advanced search */
+.advanced-input > .advanced-field > .advanced-field-dropdown > .dropdown-toggle {
+    width: 180px;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a.dropdown-item.fieldname {
+    display: block;
+    padding: 0.25rem 8px;
+    text-decoration: none;
+}
+
+a.load-more {
+    text-decoration: underline;
+    padding: 0.25rem 8px;
+}
+
+a.load-more:hover, a.load-more:focus, a.load-more:active {
+    color: var(--primary);
+    background: none;
+}
