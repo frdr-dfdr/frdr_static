@@ -140,3 +140,19 @@
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
+.home-collection-icon {
+    margin-left: auto;
+    margin-right: auto;
+    height: 80px;
+    width: 80px;
+    object-fit: scale-down;
+}
+
+.carousel-control-prev {
+    background-color: var(--secondary) !important;
+}
+
+.carousel-control-next {
+    background-color: var(--secondary) !important;
+}
