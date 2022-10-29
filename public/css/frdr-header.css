@@ -1,0 +1,83 @@
+:root {
+    --primary: rgb(214, 171, 0);
+    --secondary: rgb(50, 50, 47);
+    --success: rgb(214, 171, 0);
+    --link-color: black;
+    --link-decoration: underline;
+    --link-hover-color: var(--primary);
+    --link-hover-decoration: underline;
+}
+
+/** xs size breakpoint **/
+@media (min-width: 1px) and (max-width: 576px) {
+    .lang-btn {
+        margin-left: 12px;
+    }
+
+    a.nav-link.navbar-link {
+        padding-left: 12px !important;
+    }
+}
+
+/** sm size breakpoint **/
+@media (min-width: 577px) and (max-width: 768px) {
+    .lang-btn {
+        margin-left: 12px;
+    }
+
+    a.nav-link.navbar-link {
+        padding-left: 12px !important;
+    }
+}
+
+/** md size breakpoint **/
+@media (min-width: 769px) and (max-width: 992px) {
+    .lang-btn {
+        margin-left: 20px;
+        margin-top: -40px;
+    }
+
+    a.nav-link.navbar-link {
+        padding-left: 1.5em !important;
+        padding-right: 1.5em !important;
+    }
+}
+
+/** lg size breakpoint **/
+@media (min-width: 993px) and (max-width: 1200px) {
+    .lang-btn {
+        margin-left: 20px;
+        margin-top: -40px;
+    }
+
+    a.nav-link.navbar-link {
+        padding-left: 1.5em !important;
+        padding-right: 1.5em !important;
+    }
+}
+
+/** xl size breakpoint **/
+@media (min-width: 1201px) and (max-width: 1400px) {
+    .lang-btn {
+        margin-left: 20px;
+        margin-top: -40px;
+    }
+
+    a.nav-link.navbar-link {
+        padding-left: 1.5em !important;
+        padding-right: 1.5em !important;
+    }
+}
+
+/** > xl size breakpoint **/
+@media (min-width: 1401px) {
+    .lang-btn {
+        margin-left: 20px;
+        margin-top: -40px;
+    }
+
+    a.nav-link.navbar-link {
+        padding-left: 1.5em !important;
+        padding-right: 1.5em !important;
+    }
+}
