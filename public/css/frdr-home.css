@@ -1,6 +1,7 @@
 :root {
     --primary: rgb(214, 171, 0);
     --secondary: rgb(50, 50, 47);
+    --gray: #f0f0f0;
     --success: rgb(214, 171, 0);
     --link-color: black;
     --link-decoration: underline;
@@ -33,6 +34,10 @@
     margin-left: 2em;
     margin-top: 0.75em;
     font-size: 1.05em;
+}
+
+a.advanced_search:hover, a.advanced_search:focus, a.advanced_search:active {
+    color: var(--primary);
 }
 
 .home-circle {
@@ -155,4 +160,69 @@
 
 .carousel-control-next {
     background-color: var(--secondary) !important;
+}
+
+/* Footer */
+.site-footer {
+    padding: 1rem 0;
+    margin-top: 0;
+    background-color: var(--secondary) !important;
+    color: var(--gray);
+}
+
+.site-footer .row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-0.5 * var(--bs-gutter-x));
+    margin-left: calc(-0.5 * var(--bs-gutter-x));
+}
+
+
+.site-footer .row > * {
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-top: var(--bs-gutter-y);
+}
+
+.site-footer a {
+    color: var(--gray);
+    text-decoration: underline;
+}
+
+.site-footer a.social-media-icon {
+    color: var(--gray) !important;
+}
+
+
+.social-media-buttons {
+    padding: 1rem 0;
+    gap: 1rem !important;
+}
+
+a.social-media-icon {
+    color: #000 !important;
+    text-decoration: none !important;
+    font-size: 2.5rem;
+}
+
+@media (max-width:61.99875rem) {
+
+    .region-footer-second>.block,
+    .region-footer-second>.block .d-flex {
+        padding-bottom: 2rem;
+    }
+}
+
+@media (min-width:62rem) {
+    .region-footer-second {
+        border-right: 1px solid #fff;
+    }
+}
+
+.footer-logo {
+    height: 50px;
+    max-width: 100%;
 }
