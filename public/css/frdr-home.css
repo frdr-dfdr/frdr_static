@@ -192,6 +192,11 @@ a.advanced_search:hover, a.advanced_search:focus, a.advanced_search:active {
     text-decoration: underline;
 }
 
+.site-footer h2 {
+    color: var(--gray);
+    font-weight: 600;
+}
+
 .site-footer a.social-media-icon {
     color: var(--gray) !important;
 }
@@ -222,7 +227,7 @@ a.social-media-icon {
     }
 }
 
-.footer-logo {
-    height: 50px;
+.frdr-footer-logo {
+    height: 150px;
     max-width: 100%;
 }
