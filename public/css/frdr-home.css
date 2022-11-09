@@ -231,3 +231,8 @@ a.social-media-icon {
     height: 150px;
     max-width: 100%;
 }
+
+.fixed-left {
+    position: absolute;
+    left: 0;
+}
