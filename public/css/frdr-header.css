@@ -70,7 +70,7 @@
 }
 
 /** > xl size breakpoint **/
-@media (min-width: 1401px) {
+@media (min-width: 1400px) {
     .lang-btn {
         margin-left: 20px;
         margin-top: -40px;

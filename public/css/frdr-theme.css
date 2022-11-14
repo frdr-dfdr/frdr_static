@@ -520,8 +520,6 @@ fieldset[disabled] .btn-success.active
 .navbar-highlight { color:#2191c5 }
 
 .navbar-brand {
-    margin-left: 10px;
-    padding-top: 10px;
     color: #537eec;
     font-size: 24px;
     font-weight: 400;
