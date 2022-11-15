@@ -34,7 +34,7 @@
 @media (min-width: 769px) and (max-width: 992px) {
     .lang-btn {
         margin-left: 20px;
-        margin-top: -40px;
+        margin-top: -30px;
     }
 
     a.nav-link.navbar-link {
@@ -47,7 +47,7 @@
 @media (min-width: 993px) and (max-width: 1200px) {
     .lang-btn {
         margin-left: 20px;
-        margin-top: -40px;
+        margin-top: -30px;
     }
 
     a.nav-link.navbar-link {
@@ -60,7 +60,7 @@
 @media (min-width: 1201px) and (max-width: 1400px) {
     .lang-btn {
         margin-left: 20px;
-        margin-top: -40px;
+        margin-top: -30px;
     }
 
     a.nav-link.navbar-link {
@@ -73,7 +73,7 @@
 @media (min-width: 1400px) {
     .lang-btn {
         margin-left: 20px;
-        margin-top: -40px;
+        margin-top: -30px;
     }
 
     a.nav-link.navbar-link {
