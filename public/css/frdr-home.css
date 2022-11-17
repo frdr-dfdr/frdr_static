@@ -560,3 +560,98 @@ body {
     background-color: #D6AB00;
     border-color: #D6AB00;
 }
+
+/* Item List (TEMP) */
+.documents-list .document {
+    border-bottom: 1px solid #dee2e6;
+    margin-right: 15px;
+    margin-left: 28px;
+}
+
+.index-details {
+    width: calc(100% - 100px);
+}
+
+.index_title {
+    margin-bottom: 0px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.index_title > span > a:hover {
+    color: var(--primary);
+}
+
+.index_title > span > a {
+    color: black;
+    font-size: 1.1em;
+    margin-bottom: 0px;
+    overflow-x: inherit;
+    white-space: normal;
+}
+
+.index_creators {
+    font-style: italic;
+    line-height: 1.2;
+}
+
+/** xs size breakpoint **/
+@media (min-width: 1px) and (max-width: 576px) {
+
+    .documents-list {
+        max-height: 100%;
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    .index-details {
+        width: calc(100% - 60px);
+    }
+}
+
+/** sm size breakpoint **/
+@media (min-width: 577px) and (max-width: 768px) {
+    .documents-list {
+        max-height: 100%;
+        height: 100%;
+        overflow-y: auto;
+    }
+
+    .index-details {
+        width: calc(100% - 60px);
+    }
+
+}
+
+/** md size breakpoint **/
+@media (min-width: 769px) and (max-width: 992px) {
+    .documents-list {
+        max-height: 100%;
+        height: 100%;
+        overflow-y: auto;
+    }
+}
+
+/** lg size breakpoint **/
+@media (min-width: 993px) and (max-width: 1200px) {
+    .documents-list {
+        max-height: calc(100vh - 340px);
+        overflow-y: scroll;
+    }
+}
+
+/** xl size breakpoint **/
+@media (min-width: 1201px) and (max-width: 1400px) {
+    .documents-list {
+        max-height: calc(100vh - 340px);
+        overflow-y: scroll;
+    }
+}
+
+/** > xl size breakpoint **/
+@media (min-width: 1401px) {
+    .documents-list {
+        max-height: calc(100vh - 340px);
+        overflow-y: scroll;
+    }
+}
