@@ -2185,3 +2185,83 @@ a#ndrio_logo {
 .ActionList-sectionDivider h3 {
     margin: 0px;
 }
+
+
+/* Footer */
+.site-footer {
+    padding: 1rem 0;
+    margin-top: 0;
+    background-color: var(--alliance-primary) !important;
+    color: var(--alliance-gray-200);
+}
+
+.site-footer .row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-0.5 * var(--bs-gutter-x));
+    margin-left: calc(-0.5 * var(--bs-gutter-x));
+}
+
+
+.site-footer .row > * {
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    margin-top: var(--bs-gutter-y);
+}
+
+.site-footer a {
+    color: var(--alliance-gray-200);
+    text-decoration: underline;
+}
+
+.site-footer h2 {
+    color: var(--alliance-gray-200);
+    font-weight: 600;
+}
+
+.site-footer a.social-media-icon {
+    color: var(--gray) !important;
+}
+
+
+.social-media-buttons {
+    padding: 1rem 0;
+    gap: 1rem !important;
+}
+
+a.social-media-icon {
+    color: #000 !important;
+    text-decoration: none !important;
+    font-size: 2.5rem;
+}
+
+@media (max-width:61.99875rem) {
+
+    .region-footer-second>.block,
+    .region-footer-second>.block .d-flex {
+        padding-bottom: 2rem;
+    }
+}
+
+@media (min-width:62rem) {
+    .region-footer-second {
+        border-right: 1px solid #fff;
+    }
+}
+
+.frdr-footer-logo {
+    height: 150px;
+    max-width: 100%;
+}
+
+.fixed-left {
+    position: absolute;
+    left: 0;
+}
+
+.alliance-footer-logo {
+    height: 20px;
+}
