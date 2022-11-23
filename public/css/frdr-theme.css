@@ -524,7 +524,8 @@ fieldset[disabled] .btn-success.active
 }
 
 a.lang-btn {
-    background-color: var(--alliance-yellow)
+    background-color: var(--alliance-yellow);
+    text-decoration: none;
 }
 
 .navbar {
@@ -2461,6 +2462,7 @@ a.advanced_search:hover, a.advanced_search:focus, a.advanced_search:active {
     margin-left: -2px;
     padding-top: 10px;
     padding-bottom: 10px;
+    text-decoration: none;
 }
 
 .home-collection-icon {
