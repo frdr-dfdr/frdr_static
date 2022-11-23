@@ -508,7 +508,7 @@ fieldset[disabled] .btn-success.active
 }
 
 /** lg size breakpoint **/
-@media (min-width: 993px){
+@media (min-width: 992px){
     .lang-btn {
         margin-left: 20px;
         margin-top: -30px;
@@ -516,6 +516,10 @@ fieldset[disabled] .btn-success.active
 
     .navbar-nav {
         padding-top: 20px;
+    }
+
+    .navbar-expand-lg > .container {
+        max-width: none;
     }
 }
 
