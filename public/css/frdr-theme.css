@@ -524,6 +524,16 @@ a.lang-btn {
 }
 
 .navbar {
+    border-color: #424242;
+    height: 64px;
+}
+
+.navbar-dark {
+    background-color: #424242;
+    border-color: #424242;
+}
+
+#header .navbar {
     background-color: var(--alliance-gray-300);
     border-color: #424242;
     min-height: 100%;
