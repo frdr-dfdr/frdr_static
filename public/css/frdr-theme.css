@@ -789,7 +789,7 @@ fieldset[disabled] .btn-success.active
 
 .navbar-nav .nav-item {
     padding-top: 0px;
-    padding-bottom: 0px;
+    padding-bottom: 1px;
 }
 
 .navbar-toggler {
