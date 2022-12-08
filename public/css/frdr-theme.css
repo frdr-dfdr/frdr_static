@@ -600,8 +600,8 @@ fieldset[disabled] .btn-success.active
 
 .navbar-nav > li > a:not(.lang-btn) {
     display: block;
-    padding-right: 0.5rem;
-    padding-left: 0.5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
     color: #000;
     text-decoration: none;
     -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
@@ -654,7 +654,6 @@ fieldset[disabled] .btn-success.active
     position: static;
     z-index: 1000;
     display: none;
-    min-width: 20rem;
     padding: 0 0;
     font-size: 1rem;
     color: #32322F;
