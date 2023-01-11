@@ -467,11 +467,6 @@ label.feature-label {
     font-weight: 500;
 }
 
-.search-query-form {
-    margin-left: auto;
-    margin-right: auto;
-}
-
 /** Change layout and colour of main container **/
 #main-container {
     margin-left: 0px;
