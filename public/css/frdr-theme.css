@@ -558,7 +558,7 @@ fieldset[disabled] .btn-success.active
 
 .container.navbar-up {
     justify-content: flex-end;
-    padding: 5px 0px;
+    padding-bottom: 5px;
     margin-right: 0px;
 }
 
@@ -887,9 +887,7 @@ a.lang-btn {
     background-color: var(--alliance-yellow);
     text-decoration: none;
     color: var(--alliance-primary) !important;
-    max-height: 30px;
-    line-height: 1rem;
-    border-radius: 0px;
+    max-height: 35px;
 }
 
 /* End navigation bar styles */
