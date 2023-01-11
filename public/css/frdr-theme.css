@@ -193,7 +193,6 @@ label {
   color: white;
   font-weight: 600;
   font-size: 36px;
-  margin-top: 70px;
 }
 
 #jumbo-mid-tagline .tagtext {
@@ -2367,7 +2366,7 @@ a.social-media-icon {
     color: var(--alliance-primary);
 }
 
-.home-search{
+.home-banner{
     background-image: url('/static/images/latest/frdr-jumbo-mid.png');
     background-position: 0px 0px;
     min-height: 300px;
@@ -2376,26 +2375,27 @@ a.social-media-icon {
     border-radius: 0px;
 }
 
-.home-img-container {
+.home-banner-container {
     position: relative;
     min-height: calc(20vh);
 }
 
-.home-search .search-query-form {
+.home-banner-content {
     position: absolute;
     top: 50%;
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
 }
 
-.home-search .advanced_search {
-    color: var(--alliance-yellow);
-    float: right;
-    margin-left: 2em;
-    margin-top: 0.75em;
-    font-size: 1.05em;
-    text-decoration: underline;
+.home-tagline {
+    color: var(--alliance-white);
+    background-color: var(--alliance-gray-600);
+}
+
+.home-banner .btn {
+    min-width: 200px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.8;
 }
 
 a.advanced_search:hover, a.advanced_search:focus, a.advanced_search:active {
