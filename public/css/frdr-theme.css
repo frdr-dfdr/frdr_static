@@ -890,6 +890,12 @@ a.lang-btn {
     max-height: 35px;
 }
 
+/* remove round top corner for language switch button on large screen */
+a.lang-btn.d-lg-block {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
 /* End navigation bar styles */
 
 .dropdown-menu > li > a {
