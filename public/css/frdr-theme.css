@@ -74,7 +74,7 @@ h1 {
 }
 
 h2, h3 {
-  color: #708fca;
+  color: var(--alliance-info);
   margin-top: 20px;
 }
 
@@ -736,7 +736,7 @@ fieldset[disabled] .btn-success.active
 .navbar-nav .dropdown-menu > li > a:hover, 
 .navbar-nav .dropdown-menu > li > a:focus,
 .navbar-nav .dropdown-menu > li > a:active {
-    background-color: var(--alliance-yellow);
+    background-color: var(--alliance-gray-300);
     color: #000;
 }
 
@@ -780,7 +780,7 @@ fieldset[disabled] .btn-success.active
 .navbar-nav .dropdown-item a:hover,
 .navbar-nav .dropdown-item a.active:hover {
     color: #000;
-    background: var(--alliance-yellow);
+    background: var(--alliance-gray-300);
     text-decoration: none;
 }
 
@@ -880,7 +880,7 @@ fieldset[disabled] .btn-success.active
 }
 
 .navbar-dark .navbar-brand {
-    color: #537eec;
+    color: var(--alliance-gray-500);
 }
 
 a.lang-btn {
@@ -2428,6 +2428,13 @@ a.advanced_search:hover, a.advanced_search:focus, a.advanced_search:active {
     color: var(--alliance-secondary);
 }
 
+.home-feature-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+}
+
 /** xs size breakpoint **/
 @media (min-width: 1px) and (max-width: 576px) {
     .home-circle {
@@ -2486,6 +2493,10 @@ a.advanced_search:hover, a.advanced_search:focus, a.advanced_search:active {
         justify-content: center;
         margin-top: 24px;
     }
+
+    .home-feature-header {
+        min-height: 5rem;
+    }
 }
 
 /** xl size breakpoint **/
@@ -2501,6 +2512,10 @@ a.advanced_search:hover, a.advanced_search:focus, a.advanced_search:active {
         justify-content: center;
         margin-top: 24px;
     }
+
+    .home-feature-header {
+        min-height: 5rem;
+    }
 }
 
 /** > xl size breakpoint **/
@@ -2515,7 +2530,15 @@ a.advanced_search:hover, a.advanced_search:focus, a.advanced_search:active {
         font-size: 32px !important;
         justify-content: center;
         margin-top: 24px;
-    } 
+    }
+
+    .home-feature-header {
+        min-height: 5rem;
+    }
+}
+
+.workflow-container a {
+    color: #0066cc;
 }
 
 .btn.help {
