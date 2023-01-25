@@ -603,3 +603,7 @@ a.load-more:hover, a.load-more:focus, a.load-more:active {
     color: var(--primary);
     background: none;
 }
+
+div.twitter-typeahead {
+    margin-top: 0px !important; 
+}
