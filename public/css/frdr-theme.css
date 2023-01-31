@@ -421,11 +421,11 @@ input.search_bar {
 .btn-globus:active,
 .btn-globus:focus,
 .btn-globus:hover {
-    background-color: #2882bb;
+    background-color: var(--alliance-secondary);
     background-image: none;
     border-color: #adadad;
-    border: 1px solid #2c58c0;
-    color: #fff;
+    border: 1px solid #b08c00;
+    color: #333;
     text-shadow: none;
 }
 
@@ -433,7 +433,7 @@ input.search_bar {
 .btn-primary:not(:disabled):not(.disabled):active, 
 .show > .btn-primary.dropdown-toggle {
     color: #fff;
-    background-color: #2882bb;
+    background-color:  var(--alliance-secondary);;
     border-color: #adadad;
 }
 
@@ -2384,7 +2384,7 @@ a.social-media-icon {
     color: var(--alliance-primary);
 }
 
-.btn-primary {
+/* .btn-primary {
     color: #fff !important;
     background-color: var(--alliance-primary);
     border-color: var(--alliance-primary);
@@ -2398,17 +2398,11 @@ a.social-media-icon {
     border-color: #181816;
 }
 
-.btn-secondary {
-    background-color: var(--alliance-secondary);
-    border-color: var(--alliance-secondary);
-    background-image: none;
-}
-
 .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
-    background-color: #b08c00 !important;
-    border-color: #a38200;
+    background-color: var(--alliance-secondary);
+    border-color: #b08c00;
     color: var(--alliance-primary);
-}
+} */
 
 .home-banner{
     background-image: url('/static/images/latest/frdr-jumbo-mid.png');
