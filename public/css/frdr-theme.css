@@ -2333,14 +2333,29 @@ a.social-media-icon {
     height: 150px;
     max-width: 100%;
 }
+.footer-logo-frame {
+    height: 100px;
+    width: 300px;
+    position: relative;
+}
+
+.footer-logo {
+    height: 50px;
+    width: auto;
+    max-height: 100%;
+    max-width: 100%;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    object-fit: scale-down;
+}
 
 .fixed-left {
     position: absolute;
     left: 0;
-}
-
-.alliance-footer-logo {
-    height: 20px;
 }
 
 /* Home page */
