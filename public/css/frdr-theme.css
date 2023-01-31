@@ -529,15 +529,19 @@ fieldset[disabled] .btn-success.active
     border-color: #424242;
     min-height: 100%;
     height: auto;
+    min-height: 80px;
     padding: 0px;
 }
 
-#header input.search_bar {
+#header .navbar-up input.search_bar {
     height: 30px;
 }
  
-#header .search-button{
+#header .navbar-up .search-button{
     height: 30px;
+}
+
+#header .search-button{
     background-color: #FFFFFF;
     border: 1px solid #ced4da;
     border-left-width: 0px;
@@ -614,6 +618,11 @@ fieldset[disabled] .btn-success.active
     padding: 0.5rem 1rem;
     color: #fafafa;
     text-decoration: none;
+}
+
+/* Search bar in collapsed navbar */
+.navbar-nav > li > form {
+    padding: 0rem 0.25rem;
 }
 
 .navbar-nav > li > a:not(.lang-btn) {
@@ -887,7 +896,7 @@ a.lang-btn {
     background-color: var(--alliance-yellow);
     text-decoration: none;
     color: var(--alliance-primary) !important;
-    max-height: 35px;
+    /* max-height: 35px; */
 }
 
 /* remove round top corner for language switch button on large screen */
