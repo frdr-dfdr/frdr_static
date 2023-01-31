@@ -423,7 +423,7 @@ input.search_bar {
 .btn-globus:hover {
     background-color: var(--alliance-secondary);
     background-image: none;
-    border-color: #adadad;
+    /* border-color: #adadad; */
     border: 1px solid #b08c00;
     color: #333;
     text-shadow: none;
@@ -432,9 +432,9 @@ input.search_bar {
 .btn-primary:not(:disabled):not(.disabled).active, 
 .btn-primary:not(:disabled):not(.disabled):active, 
 .show > .btn-primary.dropdown-toggle {
-    color: #fff;
+    color: #333;
     background-color:  var(--alliance-secondary);;
-    border-color: #adadad;
+    border-color: #b08c00;
 }
 
 
