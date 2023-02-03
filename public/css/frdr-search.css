@@ -446,11 +446,6 @@ a:hover, a:focus, a:active {
     padding: 8px;
 }
 
-.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
-    background-color: var(--primary);
-    color: #FFFFFF !important;
-}
-
 input.feature-checkbox {
     margin-left: 1px;
 }
@@ -588,7 +583,7 @@ label.feature-label {
     align-items: center;
 }
 
-a.dropdown-item.fieldname {
+button.dropdown-item.fieldname {
     display: block;
     padding: 0.25rem 8px;
     text-decoration: none;
