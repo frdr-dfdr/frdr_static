@@ -530,7 +530,7 @@ fieldset[disabled] .btn-success.active
     min-height: 100%;
     height: auto;
     min-height: 80px;
-    padding: 0px;
+    padding: 0rem 1rem;
 }
 
 #header .navbar-up input.search_bar {
