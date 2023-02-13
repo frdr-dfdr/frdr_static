@@ -91,8 +91,19 @@ small {
 a {
   color: #0066cc; 
 }
-a:hover {
-    color:#5869e2;
+
+a:not(.btn) {
+    color: black;
+    margin-bottom: 0px;
+    overflow-x: inherit;
+    white-space: normal;
+    text-decoration: underline;
+}
+
+a:hover,
+a:focus,
+a:active {
+    color: var(--alliance-secondary);
 }
 
 b, strong {
@@ -920,8 +931,8 @@ a.lang-btn.d-lg-block {
 .dropdown-menu > li > a:hover, 
 .dropdown-menu > li > a:focus,
 .dropdown-menu > li > a:active {
-    background-color: #2882bb;
-    color: #ffffff;
+    background-color: var(--alliance-gray-300);
+    color: #333333;
 }
 
 .dropdown-item {
@@ -1139,6 +1150,7 @@ div.folder.odd.drag-highlight, div.folder.drag-highlight, .drag-highlight {
 
 .file-details > div > a {
     color: #2b5d8f;
+    text-decoration: none;
 }
 
 .file-details > div > a:hover {
@@ -2454,20 +2466,6 @@ a.advanced_search:hover, a.advanced_search:focus, a.advanced_search:active {
     margin-left: auto;
     margin-right: auto;
     border-radius: 50%;
-}
-
-.home-container a {
-    color: black;
-    margin-bottom: 0px;
-    overflow-x: inherit;
-    white-space: normal;
-    text-decoration: underline;
-}
-
-.home-container a:hover,
-.home-container a:focus,
-.home-container a:active {
-    color: var(--alliance-secondary);
 }
 
 .home-feature-header {

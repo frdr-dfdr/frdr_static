@@ -127,6 +127,7 @@ a.clear-facet-btn:hover {
     text-decoration-style: solid;
     text-decoration-thickness: auto;
     cursor: pointer;
+    font-weight: 400;
 }
 
 .facet-limit {
@@ -497,7 +498,7 @@ label.feature-label {
 
 .page-item.active .page-link {
     z-index: 3;
-    color: #fff;
+    color: #333;
     background-color: var(--primary);
     border-color: var(--primary);
 }
@@ -532,7 +533,10 @@ label.feature-label {
 }
 
 /* Change colors for buttons, might be removed if the color scheme is changed on FRDR */
-.btn-outline-secondary:not(:disabled):not(.disabled):active, .btn-outline-secondary.active:not(:disabled):not(.disabled), .show>.btn-outline-secondary.dropdown-toggle {
+.btn-outline-secondary:not(:disabled):not(.disabled):active, 
+.btn-outline-secondary:not(:disabled):not(.disabled):hover,
+.btn-outline-secondary.active:not(:disabled):not(.disabled), 
+.show>.btn-outline-secondary.dropdown-toggle {
     color: #fff;
     background-color: #32322f;
     border-color: #32322f;
@@ -540,7 +544,7 @@ label.feature-label {
 
 /* Sort by dropdown item color and style */
 .dropdown-item.active, .dropdown-item:active {
-    color: #fff;
+    color: #333;
     text-decoration: none;
     background-color: #d6ab00;
 }
