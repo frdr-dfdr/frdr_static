@@ -100,9 +100,11 @@ a:not(.btn) {
     text-decoration: underline;
 }
 
-a:hover,
-a:focus,
-a:active {
+.workflow-container a {
+    color: #0066cc;
+}
+
+a:hover, a:focus, a:active {
     color: var(--alliance-secondary);
 }
 
@@ -2577,8 +2579,17 @@ a.advanced_search:hover, a.advanced_search:focus, a.advanced_search:active {
     }
 }
 
-.workflow-container a {
-    color: #0066cc;
+a.external-link:after {
+    display: inline-block;
+    vertical-align: text-top;
+    font-size: 0.6rem;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f35d";
+    margin-left: 0.1875rem;
+    margin-right: 0.1875rem;
+    vertical-align: super;
+    color: #282828;
 }
 
 .btn.help {
