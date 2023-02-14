@@ -92,17 +92,17 @@ a {
   color: #0066cc; 
 }
 
-a:not(.btn) {
+/* a:not(.btn) {
     color: black;
     margin-bottom: 0px;
     overflow-x: inherit;
     white-space: normal;
     text-decoration: underline;
-}
+} */
 
-.workflow-container a {
+/* .workflow-container a {
     color: #0066cc;
-}
+} */
 
 a:hover, a:focus, a:active {
     color: var(--alliance-secondary);
@@ -434,11 +434,10 @@ input.search_bar {
 .btn-globus:active,
 .btn-globus:focus,
 .btn-globus:hover {
-    background-color: var(--alliance-secondary);
+    background-color: var(--alliance-secondary) !important;
     background-image: none;
-    /* border-color: #adadad; */
-    border: 1px solid #b08c00;
-    color: #333;
+    border: 1px solid #b08c00 !important;
+    color: #333 !important;
     text-shadow: none;
 }
 
@@ -958,6 +957,9 @@ a.lang-btn.d-lg-block {
 
 
 /* Start tabbed nav styles */
+.nav-tabs .nav-link{
+    text-decoration: none;
+}
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
   border-color: #bbb #bbb #fff;
@@ -2659,6 +2661,7 @@ a.external-link:after {
     margin-bottom: 0px;
     overflow-x: inherit;
     white-space: normal;
+    text-decoration: underline;
 }
 
 .index_creators {
