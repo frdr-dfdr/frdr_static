@@ -1,5 +1,7 @@
 :root {
     --gray: #e5e5e5;
+    --teal: #008080;
+    --brown: #524033;
     --link-color: black;
     --link-decoration: underline;
     --link-hover-color: var(--alliance-yellow);
@@ -74,7 +76,7 @@ h1 {
 }
 
 h2, h3 {
-  color: #524033;
+  color: var(--brown);
   margin-top: 20px;
 }
 
@@ -88,22 +90,18 @@ small {
     13 px;
 }
 
-a {
+/* a {
   color: #0066cc;
   text-decoration:underline;
-}
+} */
 
-/* a:not(.btn) {
-    color: black;
+a:not(.btn) {
+    color: var(--teal);
     margin-bottom: 0px;
     overflow-x: inherit;
     white-space: normal;
     text-decoration: underline;
-} */
-
-/* .workflow-container a {
-    color: #0066cc;
-} */
+}
 
 a:hover, a:focus, a:active {
     color: var(--alliance-secondary);
@@ -2657,7 +2655,6 @@ a.external-link:after {
 }
 
 .index_title > span > a {
-    color: black;
     font-size: 1.1em;
     margin-bottom: 0px;
     overflow-x: inherit;
