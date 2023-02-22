@@ -2073,6 +2073,7 @@ a#ndrio_logo {
     grid-template-areas: 'leadingAction leadingVisual label trailingVisual trailingAction';
     grid-template-columns: min-content min-content minmax(0,auto) min-content min-content;
     align-items: start;
+    text-decoration: none !important;
 }
 .ActionList-content > :not(:last-child) {
     margin-right: 8px;
