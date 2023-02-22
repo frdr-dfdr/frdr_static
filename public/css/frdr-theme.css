@@ -99,7 +99,6 @@ a:not(.btn) {
     color: var(--teal);
     margin-bottom: 0px;
     overflow-x: inherit;
-    white-space: normal;
     text-decoration: underline;
 }
 
@@ -2656,10 +2655,7 @@ a.external-link:after {
 
 .index_title > span > a {
     font-size: 1.1em;
-    margin-bottom: 0px;
-    overflow-x: inherit;
     white-space: normal;
-    text-decoration: underline;
 }
 
 .index_creators {
