@@ -1106,6 +1106,10 @@ a.lang-btn.d-lg-block {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff428bca', endColorstr='#ff3278b3', GradientType=0);
 }
 
+.list-group-item img {
+    max-height: 150px;
+}
+
 .pagination>.active>span {
   background-color: #79ad2a !important;
   border-color: #79ad2a !important;
