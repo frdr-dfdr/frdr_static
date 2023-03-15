@@ -2602,7 +2602,7 @@ a.external-link:after {
     color: #282828;
 }
 
-.btn.help {
+.btn.float {
     position: fixed;
     margin-top: calc(80vh);
     z-index: 1000;
