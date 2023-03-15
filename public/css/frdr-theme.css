@@ -545,6 +545,8 @@ fieldset[disabled] .btn-success.active
 
 #header .navbar-up input.search_bar {
     height: 30px;
+    padding: 11px;
+    width: 200px;
 }
  
 #header .navbar-up .search-button{
@@ -704,7 +706,6 @@ fieldset[disabled] .btn-success.active
     -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
     top: 100%;
-    left: 0;
     margin-top: 0.15rem;
 }
 
@@ -2401,9 +2402,7 @@ a.social-media-icon {
 }
 
 .alliance-btn-primary:hover, .alliance-btn-primary:focus, .alliance-btn-primary:active {
-    color: #fff;
-    background-color: #1e1e1c;
-    border-color: #181816;
+    opacity: 0.7;
 }
 
 .alliance-btn-secondary {
