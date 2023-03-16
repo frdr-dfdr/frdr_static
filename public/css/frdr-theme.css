@@ -1084,7 +1084,7 @@ a.lang-btn.d-lg-block {
     display: none;
 }
 
-.list-group-item {
+.list-group-item.collection-row {
     display: flex;
     border: 0;
     border-bottom: 1px solid #dee2e6;
@@ -2442,6 +2442,7 @@ a.social-media-icon {
     border-radius: 0px;
     background-size: cover;
     background-position: center center;
+    position: relative;
 }
 
 .home-banner-container {
@@ -2451,7 +2452,7 @@ a.social-media-icon {
 
 .home-banner-content {
     position: absolute;
-    top: 50%;
+    top: 30%;
     width: 100%;
 }
 
@@ -2465,6 +2466,26 @@ a.social-media-icon {
     font-weight: 500;
     font-size: 18px;
     line-height: 1.8;
+}
+
+/* Styles of citation of banner image */
+.home-banner-citation {
+    position: absolute;
+    bottom: 0;
+    width: 30%;
+    right: 0;
+    padding: 8px;
+    font-size: 0.8rem;
+    color: #fff;
+    margin-top: auto;
+}
+
+.home-banner-citation a {
+    color: white;
+}
+
+.home-banner-citation a:hover, .home-banner-citation a:focus, .home-banner-citation a:active {
+    color: var(--alliance-yellow);
 }
 
 a.advanced_search:hover, a.advanced_search:focus, a.advanced_search:active {
