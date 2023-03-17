@@ -2472,7 +2472,7 @@ a.social-media-icon {
 .home-banner-citation {
     position: absolute;
     bottom: 0;
-    width: 30%;
+    /* width: 30%; */
     right: 0;
     padding: 8px;
     font-size: 0.8rem;
