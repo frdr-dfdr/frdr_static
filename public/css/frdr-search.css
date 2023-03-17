@@ -1,15 +1,6 @@
 :root {
     --primary: rgb(214, 171, 0);
     --secondary: rgb(50, 50, 47);
-    --success: rgb(214, 171, 0);
-    --link-color: black;
-    --link-decoration: underline;
-    --link-hover-color: var(--primary);
-    --link-hover-decoration: underline;
-}
-
-.blacklight-dc_description_s {
-    white-space: pre-line;
 }
 
 .facets-heading {
@@ -25,8 +16,6 @@
 }
 
 .facet-heading-label {
-    margin-top: 10px;
-    margin-left: 10px;
     display: inline-block;
 }
 
@@ -40,8 +29,7 @@
 }
 
 .facet-heading-collapse-btn {
-    width: 55px;
-    margin-left: 5px;
+    width: 100%;
 }
 
 .facet-search-input {
@@ -76,22 +64,16 @@
     background-color: var(--secondary);
 }
 
-a {
-    color: black;
-    text-decoration: underline;
-    background-color: transparent;
+.btn.facet-heading-collapse-btn:has(a.clear-facet-btn:hover) {
+    color: var(--secondary);
+    background-color: white;
 }
 
 a.clear-facet-btn {
-    margin-top: 5px;
     padding-top: 2px;
     padding-bottom: 2px;
     background-color: white;
-    color: black !important;
-}
-
-a.clear-facet-btn:hover {
-    color: white !important;
+    color: var(--secondary) !important;
 }
 
 .facet-checkbox {
@@ -107,7 +89,7 @@ a.clear-facet-btn:hover {
     overflow: hidden;
 }
 
-.list-unstyled, .pivot-facet {
+.list-unstyled {
     padding-left: 0;
     list-style: none;
 }
@@ -121,11 +103,11 @@ a.clear-facet-btn:hover {
 
 .facet-label {
     /** Make the facet label look like a link, it can be clicked **/
-    text-decoration-color: rgb(0, 0, 0);
     text-decoration-line: underline;
     text-decoration-style: solid;
     text-decoration-thickness: auto;
     cursor: pointer;
+    font-weight: 400;
 }
 
 .facet-limit {
@@ -168,24 +150,6 @@ hr.metadata-divider {
     font-weight: bold;
 }
 
-.index_title {
-    margin-bottom: 0px;
-    font-weight: 500;
-    line-height: 1.2;
-}
-
-.index_title > span > a:hover {
-    color: var(--primary);
-}
-
-.index_title > span > a {
-    color: black;
-    font-size: 1.1em;
-    margin-bottom: 0px;
-    overflow-x: inherit;
-    white-space: normal;
-}
-
 .index_creators {
     font-style: italic;
 }
@@ -210,10 +174,6 @@ hr.metadata-divider {
     margin-bottom: 12px;
     margin-left: 8px;
     margin-right: 8px;
-}
-
-.blacklight-icon-restricted {
-    margin-left: 6px;
 }
 
 .page-links, .sort-dropdown > button, .sort-dropdown > button > span {
@@ -445,11 +405,6 @@ a:hover, a:focus, a:active {
     padding: 8px;
 }
 
-.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
-    background-color: var(--primary);
-    color: #FFFFFF !important;
-}
-
 input.feature-checkbox {
     margin-left: 1px;
 }
@@ -466,11 +421,6 @@ label.feature-label {
     font-weight: 500;
 }
 
-.search-query-form {
-    margin-left: auto;
-    margin-right: auto;
-}
-
 /** Change layout and colour of main container **/
 #main-container {
     margin-left: 0px;
@@ -482,7 +432,6 @@ label.feature-label {
 }
 
 .navbar-search {
-    background-color: #F1F2F2;
     height: auto;
 }
 
@@ -506,9 +455,13 @@ label.feature-label {
 
 .page-item.active .page-link {
     z-index: 3;
-    color: #fff;
+    color: var(--secondary);
     background-color: var(--primary);
     border-color: var(--primary);
+}
+
+.page-item.disabled .page-link {
+    color: #6c757d !important;
 }
 
 .page-link {
@@ -517,14 +470,14 @@ label.feature-label {
     padding: 0.5rem 0.75rem;
     margin-left: -1px;
     line-height: 1.25;
-    color: black;
-    text-decoration: none;
+    color: var(--secondary) !important;
+    text-decoration: none !important;
     background-color: #fff;
     border: 1px solid #dee2e6;
 }
 
 .page-link:hover {
-    color: var(--primary);
+    color: var(--primary) !important;
     z-index: 2;
     text-decoration: none;
     background-color: #e9ecef;
@@ -541,7 +494,10 @@ label.feature-label {
 }
 
 /* Change colors for buttons, might be removed if the color scheme is changed on FRDR */
-.btn-outline-secondary:not(:disabled):not(.disabled):active, .btn-outline-secondary.active:not(:disabled):not(.disabled), .show>.btn-outline-secondary.dropdown-toggle {
+.btn-outline-secondary:not(:disabled):not(.disabled):active, 
+.btn-outline-secondary:not(:disabled):not(.disabled):hover,
+.btn-outline-secondary.active:not(:disabled):not(.disabled), 
+.show>.btn-outline-secondary.dropdown-toggle {
     color: #fff;
     background-color: #32322f;
     border-color: #32322f;
@@ -549,7 +505,7 @@ label.feature-label {
 
 /* Sort by dropdown item color and style */
 .dropdown-item.active, .dropdown-item:active {
-    color: #fff;
+    color: var(--secondary);
     text-decoration: none;
     background-color: #d6ab00;
 }
@@ -558,6 +514,7 @@ label.feature-label {
     display: block;
     padding: 0.25rem 1.5rem;
     text-decoration: none;
+    color: #32322f;
 }
 
 /*Publication date*/
@@ -592,7 +549,7 @@ label.feature-label {
     align-items: center;
 }
 
-a.dropdown-item.fieldname {
+button.dropdown-item.fieldname {
     display: block;
     padding: 0.25rem 8px;
     text-decoration: none;
@@ -606,4 +563,8 @@ a.load-more {
 a.load-more:hover, a.load-more:focus, a.load-more:active {
     color: var(--primary);
     background: none;
+}
+
+div.twitter-typeahead {
+    margin-top: 0px !important; 
 }
