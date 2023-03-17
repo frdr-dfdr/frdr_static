@@ -876,8 +876,10 @@ fieldset[disabled] .btn-success.active
 
 .navbar-brand {
     color: #537eec;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 400;
+    padding-left: 20px;
+    margin-bottom: 7px;
 }
 
 .frdr-navbar-menu-info {
