@@ -2436,14 +2436,12 @@ a.social-media-icon {
 } */
 
 .home-banner{
-    background-image: url(/static/images/latest/banner_mountain_legacy_project.png);
+    background-image: url(/static/images/latest/frdr-jumbo-mid.png);
     background-position: 0px 0px;
     min-height: 300px;
     margin-bottom: 3px;
     padding:  1px;
     border-radius: 0px;
-    background-size: cover;
-    background-position: center center;
     position: relative;
 }
 
