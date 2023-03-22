@@ -880,6 +880,7 @@ fieldset[disabled] .btn-success.active
     font-weight: 400;
     padding-left: 10px;
     margin-bottom: 7px;
+    width: 10px;
 }
 
 .frdr-navbar-menu-info {
