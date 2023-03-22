@@ -1517,6 +1517,11 @@ button.link {
     margin-right: 32px;
 }
 
+/* Handle long URLs on mobile screen */
+.input-group a {
+    word-wrap: break-word;
+}
+
 .center-col {
     display: flex;
     align-items: center;
