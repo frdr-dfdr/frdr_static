@@ -880,6 +880,9 @@ fieldset[disabled] .btn-success.active
     font-weight: 400;
     padding-left: 10px;
     margin-bottom: 7px;
+}
+
+span.navbar-brand {
     width: 10px;
 }
 
