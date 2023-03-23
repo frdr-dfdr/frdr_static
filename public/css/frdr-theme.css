@@ -1475,10 +1475,6 @@ button.link {
     margin-top: 7px;
 }
 
-.form-control-2h {
-    height: calc(3em + 0.75rem + 2px);
-}
-
 /* Reduce font weight of user input from Boostrap 4 default */
 .form-control {
   font-weight:300;
