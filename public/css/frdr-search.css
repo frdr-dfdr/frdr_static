@@ -343,10 +343,6 @@ hr.metadata-divider {
         width: 504px;
     }
 
-    .container {
-      max-width: 95% !important;
-    }
-
     .date-to {
         float: right;
     }
