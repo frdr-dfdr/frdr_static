@@ -192,7 +192,7 @@ label {
 
 .frdr-jumbo-mid {
   background-color: #424242;
-  background-image: url('/static/images/latest/frdr-jumbo-mid.png');
+  background-image: url('/static/images/latest/frdr-banner.png');
   background-position: 0px 0px;
   min-height: 300px;
   margin-bottom: 3px;
@@ -2442,6 +2442,8 @@ a.social-media-icon {
     margin-bottom: 3px;
     padding:  1px;
     border-radius: 0px;
+    background-size: cover;
+    background-position: center center;
     position: relative;
 }
 
