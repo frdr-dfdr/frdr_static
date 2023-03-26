@@ -2436,14 +2436,14 @@ a.social-media-icon {
 } */
 
 .home-banner{
-    background-image: url(/static/images/latest/frdr-banner.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/static/images/latest/frdr-banner.png);
     background-position: 0px 0px;
     min-height: 300px;
     margin-bottom: 3px;
     padding:  1px;
     border-radius: 0px;
     background-size: cover;
-    background-position: center center;
+    background-position: center bottom;
     position: relative;
 }
 
