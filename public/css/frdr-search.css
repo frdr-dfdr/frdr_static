@@ -70,6 +70,10 @@
 }
 
 a.clear-facet-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
     padding-top: 2px;
     padding-bottom: 2px;
     background-color: white;
@@ -123,9 +127,10 @@ a.clear-facet-btn {
 }
 
 .card-header.p-0.facet-field-heading {
-    /** Make the active filter colour match no filters chosen **/
+    /** Make the active filter color match no filters chosen **/
     background-color: white !important;
     background-image: none;
+    position: relative;
 }
 
 .catalog-section-divider {
