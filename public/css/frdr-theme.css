@@ -176,6 +176,14 @@ label {
     font-weight: 600;
 }
 
+legend {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.text-success {
+    color: #006702 !important;
+}
 /* field required in submission */
 .label-required:after {
     color: #ff0000;
@@ -359,7 +367,7 @@ input.search_bar {
 }
 
 .bootstrap-tagsinput .tag {
-  background-color: #2882bb;
+  background-color: #005c92;
   padding: 2px 8px;
   border-radius: 3px;
   font-size: 15px;
@@ -1734,6 +1742,10 @@ div.crdc-label {
 
 .usedatepicker {
     padding-left: 28px;
+}
+
+.ui-datepicker .ui-datepicker-prev span, .ui-datepicker .ui-datepicker-next span {
+    color: #000;
 }
 
 /*** Stop numeric input from having up / down arrows ***/
