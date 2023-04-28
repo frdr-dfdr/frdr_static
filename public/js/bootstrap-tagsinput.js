@@ -56,10 +56,11 @@
     this.multiple = (this.isSelect && element.hasAttribute('multiple'));
     this.objectItems = options && options.itemValue;
     this.placeholderText = element.hasAttribute('placeholder') ? this.$element.attr('placeholder') : '';
+    this.ariaLabel = element.hasAttribute('aria-label') ? this.$element.attr('aria-label') : '';
     this.inputSize = Math.max(1, this.placeholderText.length);
 
     this.$container = $('<div class="bootstrap-tagsinput w-100"></div>');
-    this.$input = $('<input type="text" placeholder="' + this.placeholderText + '"/>').appendTo(this.$container);
+    this.$input = $('<input type="text" placeholder="' + this.placeholderText + 'aria-label="' + this.ariaLabel + '"/>').appendTo(this.$container);
 
     this.$element.before(this.$container);
 
