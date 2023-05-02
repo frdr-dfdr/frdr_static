@@ -2497,6 +2497,7 @@ a.social-media-icon {
     font-size: 0.8rem;
     color: #fff;
     margin-top: auto;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .home-banner-citation a {
