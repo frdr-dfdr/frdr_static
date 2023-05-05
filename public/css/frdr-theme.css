@@ -2820,7 +2820,7 @@ a.external-link:after {
     border: 1px solid #dee2e6;
 }
 
-.page-link:hover {
+.page-item:not(.active) .page-link:hover {
     color: var(--alliance-secondary) !important;
     z-index: 2;
     text-decoration: none;
