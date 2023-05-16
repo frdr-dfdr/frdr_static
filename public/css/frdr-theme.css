@@ -95,15 +95,15 @@ small {
   text-decoration:underline;
 } */
 
+a:hover, a:focus, a:active {
+    color: var(--alliance-secondary);
+}
+
 a:not(.btn):not(.badge) {
     color: var(--teal);
     margin-bottom: 0px;
     overflow-x: inherit;
     text-decoration: underline;
-}
-
-a:hover, a:focus, a:active {
-    color: var(--alliance-secondary);
 }
 
 b, strong {
@@ -2835,4 +2835,13 @@ a.external-link:after {
 
 .record-padding {
     margin-top: 0.5rem;
+}
+
+/* Fix web accessibility color contrast error */
+.badge-primary {
+    color: #0070f2;
+}
+
+.bg-success {
+    background-color: #008828;
 }
