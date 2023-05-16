@@ -95,7 +95,7 @@ small {
   text-decoration:underline;
 } */
 
-a:not(.btn) a:not(.badge) {
+a:not(.btn):not(.badge) {
     color: var(--teal);
     margin-bottom: 0px;
     overflow-x: inherit;
