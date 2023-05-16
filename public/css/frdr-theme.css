@@ -95,7 +95,7 @@ small {
   text-decoration:underline;
 } */
 
-a:not(.btn) {
+a:not(.btn) a:not(.badge) {
     color: var(--teal);
     margin-bottom: 0px;
     overflow-x: inherit;
@@ -1545,15 +1545,15 @@ button.link {
 }
 
 .translation-missing {
-    color: red;
+    color: var(--alliance-danger);
 }
 
 .translation-match {
-    color: orange;
+    color: #c45400;
 }
 
 .translation-locale-different {
-    color: red;
+    color: var(--alliance-danger);;
     font-weight: 900;
 }
 
@@ -1586,7 +1586,7 @@ button.link {
 }
 
 .duplicate {
-    color: #59a22e;
+    color: #3b850b;
 }
 
 button.notification-button {
