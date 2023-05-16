@@ -2335,7 +2335,7 @@ a#ndrio_logo {
 }
 
 .site-footer a {
-    color: var(--alliance-gray-200);
+    color: var(--alliance-gray-200) !important;
     text-decoration: underline;
 }
 
@@ -2496,7 +2496,7 @@ a.social-media-icon {
 }
 
 .home-banner-citation a {
-    color: white;
+    color: white !important;
 }
 
 .home-banner-citation a:hover, .home-banner-citation a:focus, .home-banner-citation a:active {
