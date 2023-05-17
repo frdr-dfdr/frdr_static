@@ -2839,9 +2839,9 @@ a.external-link:after {
 
 /* Fix web accessibility color contrast error */
 .badge-primary {
-    color: #0070f2;
+    background-color: #0070f2 !important;
 }
 
 .bg-success {
-    background-color: #008828;
+    background-color: #008828 !important;
 }
