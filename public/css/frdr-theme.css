@@ -95,15 +95,15 @@ small {
   text-decoration:underline;
 } */
 
-a:not(.btn) {
+a:hover, a:focus, a:active {
+    color: var(--alliance-secondary);
+}
+
+a:not(.btn):not(.badge) {
     color: var(--teal);
     margin-bottom: 0px;
     overflow-x: inherit;
     text-decoration: underline;
-}
-
-a:hover, a:focus, a:active {
-    color: var(--alliance-secondary);
 }
 
 b, strong {
@@ -1121,11 +1121,6 @@ a.lang-btn.d-lg-block {
     max-height: 150px;
 }
 
-.pagination>.active>span {
-  background-color: #79ad2a !important;
-  border-color: #79ad2a !important;
-}
-
 div.folder > span {
     margin-right: 5px;
 }
@@ -1550,15 +1545,15 @@ button.link {
 }
 
 .translation-missing {
-    color: red;
+    color: var(--alliance-danger);
 }
 
 .translation-match {
-    color: orange;
+    color: #c45400;
 }
 
 .translation-locale-different {
-    color: red;
+    color: var(--alliance-danger);;
     font-weight: 900;
 }
 
@@ -1591,7 +1586,7 @@ button.link {
 }
 
 .duplicate {
-    color: #59a22e;
+    color: #3b850b;
 }
 
 button.notification-button {
@@ -2340,7 +2335,7 @@ a#ndrio_logo {
 }
 
 .site-footer a {
-    color: var(--alliance-gray-200);
+    color: var(--alliance-gray-200) !important;
     text-decoration: underline;
 }
 
@@ -2501,7 +2496,7 @@ a.social-media-icon {
 }
 
 .home-banner-citation a {
-    color: white;
+    color: white !important;
 }
 
 .home-banner-citation a:hover, .home-banner-citation a:focus, .home-banner-citation a:active {
@@ -2787,4 +2782,66 @@ a.external-link:after {
 
 .home-container .documentHeader {
     margin: auto;
+}
+
+/* Change color and style of pagination */
+.pagination {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: 0.25rem;
+}
+
+.pagination>.active>span {
+    background-color: var(--alliance-secondary) !important;
+    border-color: var(--alliance-secondary) !important;
+}
+
+.page-item.active .page-link {
+    z-index: 3;
+    color: var(--alliance-primary);
+    background-color: var(--alliance-secondary);
+    border-color: var(--alliance-secondary);
+}
+
+.page-item.disabled .page-link {
+    color: #6c757d !important;
+}
+
+.page-link {
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: var(--alliance-primary) !important;
+    text-decoration: none !important;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}
+
+.page-item:not(.active) .page-link:hover {
+    color: var(--alliance-secondary) !important;
+    z-index: 2;
+    text-decoration: none;
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+}
+
+.sort-pagination{
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 1em;
+}
+
+.record-padding {
+    margin-top: 0.5rem;
+}
+
+/* Fix web accessibility color contrast error */
+.badge-primary {
+    background-color: #0070f2 !important;
+}
+
+.bg-success {
+    background-color: #008828 !important;
 }
