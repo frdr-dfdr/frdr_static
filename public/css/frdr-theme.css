@@ -95,15 +95,15 @@ small {
   text-decoration:underline;
 } */
 
-a:hover, a:focus, a:active {
-    color: var(--alliance-secondary);
-}
-
-a:not(.btn):not(.badge) {
+a:not(.btn, .badge) {
     color: var(--teal);
     margin-bottom: 0px;
     overflow-x: inherit;
     text-decoration: underline;
+}
+
+a:hover, a:focus, a:active {
+    color: var(--alliance-secondary);
 }
 
 b, strong {
