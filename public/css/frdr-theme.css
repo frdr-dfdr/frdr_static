@@ -492,6 +492,10 @@ fieldset[disabled] .btn-success.active
   cursor: not-allowed;
 }
 
+.btn-sm {
+    font-size: 80%;
+}
+
 .submitProgressButtonCurrent {
     border-top:1px solid #444;
     border-left:1px solid #444;
