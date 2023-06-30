@@ -1327,6 +1327,27 @@ div.ekko-lightbox.modal > * > .modal-content {
     margin-left: 5px;
 }
 
+/* A table with a fixed header and 400px scrolling body */
+.table-fixed-header {
+  background-color: #f3f3f3;
+}
+.table-fixed-header tbody {
+  height: 400px;
+  overflow-y: auto;
+  width: 100%;
+}
+.table-fixed-header thead, .table-fixed-header tbody, .table-fixed-header tr, .table-fixed-header td, .table-fixed-header th {
+  display: block;
+}
+.table-fixed-header thead td, .table-fixed-header tbody td, .table-fixed-header tr td, .table-fixed-header td td, .table-fixed-header th td {
+  float: left;
+}
+.table-fixed-header thead tr th {
+  float: left;
+  border-bottom-color: #666666;
+}
+
+
 .w-90 {
   width: 90% !important;
 }
