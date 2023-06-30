@@ -1346,6 +1346,10 @@ div.ekko-lightbox.modal > * > .modal-content {
   float: left;
   border-bottom-color: #666666;
 }
+.td-no-wrap {
+  white-space:nowrap;
+  overflow-x:hidden;
+}
 
 
 .w-90 {
