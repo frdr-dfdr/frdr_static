@@ -1431,6 +1431,15 @@ button.link {
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);g
 }
 
+.dataset-row:last-of-type {
+    margin-bottom: 0px;
+    box-shadow: none;
+}
+
+.border-bottom:last-of-type {
+    border-bottom: none !important;
+}
+
 .dataset-header-row {
     padding-bottom: 5px;
     margin-bottom: 20px;
