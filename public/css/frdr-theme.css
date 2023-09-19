@@ -1171,6 +1171,13 @@ div.folder.odd.drag-highlight, div.folder.drag-highlight, .drag-highlight {
     text-decoration: none;
 }
 
+.loading-folder {
+    margin-left: 22px;
+    font-size: 24px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
 .file-details > div > a:hover {
     color: #0080ff;
 }
