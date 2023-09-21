@@ -1175,6 +1175,13 @@ div.folder.odd.drag-highlight, div.folder.drag-highlight, .drag-highlight {
     text-decoration: none;
 }
 
+.loading-folder {
+    margin-left: 22px;
+    font-size: 24px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
 .file-details > div > a:hover {
     color: #0080ff;
 }
@@ -1331,6 +1338,31 @@ div.ekko-lightbox.modal > * > .modal-content {
     margin-left: 5px;
 }
 
+/* A table with a fixed header and 400px scrolling body */
+.table-fixed-header {
+  background-color: #f3f3f3;
+}
+.table-fixed-header tbody {
+  height: 400px;
+  overflow-y: auto;
+  width: 100%;
+}
+.table-fixed-header thead, .table-fixed-header tbody, .table-fixed-header tr, .table-fixed-header td, .table-fixed-header th {
+  display: block;
+}
+.table-fixed-header thead td, .table-fixed-header tbody td, .table-fixed-header tr td, .table-fixed-header td td, .table-fixed-header th td {
+  float: left;
+}
+.table-fixed-header thead tr th {
+  float: left;
+  border-bottom-color: #666666;
+}
+.no-wrap-x {
+  white-space:nowrap;
+  overflow-x:hidden;
+}
+
+
 .w-90 {
   width: 90% !important;
 }
@@ -1408,6 +1440,15 @@ button.link {
     padding-bottom: 5px;
     margin-bottom: 20px;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);g
+}
+
+.dataset-row:last-of-type {
+    margin-bottom: 0px;
+    box-shadow: none;
+}
+
+.border-bottom:last-of-type {
+    border-bottom: none !important;
 }
 
 .dataset-header-row {
