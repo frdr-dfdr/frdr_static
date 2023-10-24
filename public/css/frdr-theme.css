@@ -2890,3 +2890,7 @@ a.external-link:after {
 .bg-success {
     background-color: #008828 !important;
 }
+
+img.grey {
+    filter: grayscale(1);
+}
