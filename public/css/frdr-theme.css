@@ -2895,8 +2895,8 @@ a.external-link:after {
 .metadata-field::before {
     display: block;
     content: " ";
-    margin-top: -55px;
-    height: 75px;
+    margin-top: -85px;
+    height: 85px;
     visibility: hidden;
     pointer-events: none;
 }
