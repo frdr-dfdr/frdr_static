@@ -2900,7 +2900,3 @@ a.external-link:after {
     visibility: hidden;
     pointer-events: none;
 }
-
-.metadata-field {
-    margin-top: 30px;
-}
