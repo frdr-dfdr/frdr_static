@@ -2890,3 +2890,13 @@ a.external-link:after {
 .bg-success {
     background-color: #008828 !important;
 }
+
+/* Pseudo element to fix anchors being hidden under navbar */
+.metadata-field::before {
+    display: block;
+    content: " ";
+    margin-top: -85px;
+    height: 85px;
+    visibility: hidden;
+    pointer-events: none;
+}
