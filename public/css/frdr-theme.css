@@ -2900,3 +2900,13 @@ a.external-link:after {
     visibility: hidden;
     pointer-events: none;
 }
+
+.list-group-item .accicon {
+    float: right;
+    font-size: 20px;  
+    width: 1.2em;
+}
+
+.list-group-item:not(.collapsed) .rotate-icon {
+transform: rotate(180deg);
+}
