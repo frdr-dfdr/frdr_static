@@ -1924,6 +1924,23 @@ a#ndrio_logo {
     padding-left: 9px;
 }
 
+/* Red dot on in progress submission action button */
+
+.inprogress-badge {
+    position: absolute;
+    right: 9px;
+    top: -4px;
+    min-width: 10px;
+    min-height: 10px;
+    line-height: 10px;
+    padding: 5px;
+    color: #fff;
+    background-color: #33aa33;
+    font-size: 10px;
+    border-radius: 20px;
+    border: solid 1px #33aa33;
+}
+
 
 /* Red dot on Requests Submitted and Requests Received tabs */
 
