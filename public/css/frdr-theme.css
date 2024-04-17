@@ -104,7 +104,7 @@ a:not(.btn, .badge) {
 }
 
 a:hover, a:focus, a:active {
-    color: var(--alliance-secondary);
+    color: var(--alliance-yellow-darkened);
 }
 
 b, strong {
