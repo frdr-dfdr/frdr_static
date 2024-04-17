@@ -2426,6 +2426,9 @@ a#ndrio_logo {
 
 .site-footer a.social-media-icon {
     color: var(--gray) !important;
+    &:hover, &:focus {
+        color: var(--alliance-yellow) !important;
+    }
 }
 
 
