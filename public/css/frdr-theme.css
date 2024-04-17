@@ -2414,6 +2414,9 @@ a#ndrio_logo {
 .site-footer a {
     color: var(--alliance-gray-200) !important;
     text-decoration: underline;
+    :hover {
+        color: var(--alliance-yellow-darkened) !important;
+    }
 }
 
 .site-footer h2 {
@@ -2771,7 +2774,7 @@ a.external-link:after {
 }
 
 .index_title > span > a:hover {
-    color: var(--alliance-yellow);
+    color: var(--alliance-yellow-darkened);
 }
 
 .index_title > span > a {
