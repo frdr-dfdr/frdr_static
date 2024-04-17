@@ -2411,7 +2411,7 @@ a#ndrio_logo {
     margin-top: var(--bs-gutter-y);
 }
 
-.site-footer a, li a {
+.site-footer a, .site-footer li a {
     color: var(--alliance-gray-200) !important;
     text-decoration: underline;
     &:hover, &:focus {
