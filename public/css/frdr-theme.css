@@ -4,7 +4,7 @@
     --brown: #524033;
     --link-color: black;
     --link-decoration: underline;
-    --link-hover-color: var(--alliance-yellow);
+    --link-hover-color: var(--alliance-yellow-darkened);
     --link-hover-decoration: underline;
     --body-font-family: Montserrat,sans-serif;
     --body-font-size: 1rem;
@@ -22,6 +22,7 @@
     --alliance-red: #dc3545;
     --alliance-orange: #fd7e14;
     --alliance-yellow: #D6AB00;
+    --alliance-yellow-darkened: #856D2C;
     --alliance-green: #00DBA7;
     --alliance-teal: #20c997;
     --alliance-cyan: #17a2b8;
