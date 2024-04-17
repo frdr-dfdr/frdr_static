@@ -23,6 +23,7 @@
     --alliance-orange: #fd7e14;
     --alliance-yellow: #D6AB00;
     --alliance-yellow-darkened: #856D2C;
+    --alliance-yellow-desaturated: #EBD580;
     --alliance-green: #00DBA7;
     --alliance-teal: #20c997;
     --alliance-cyan: #17a2b8;
@@ -2504,10 +2505,17 @@ a.social-media-icon {
     background-image: none;
 }
 
-.alliance-btn-secondary:hover, .alliance-btn-secondary:focus, .alliance-btn-secondary:active {
-    background-color: #b08c00 !important;
-    border-color: #a38200;
+.alliance-btn-secondary:hover {
+    background-color: var(--alliance-yellow-desaturated) !important;
+    border-color: #dab31a;
     color: var(--alliance-primary);
+}
+
+.alliance-btn-secondary:focus, .alliance-btn-secondary:active {
+    background-color: var(--alliance-yellow-desaturated) !important;
+    border-color: #dab31a;
+    color: var(--alliance-primary);
+    box-shadow: 0 0 0 transparent, 0 0 0 0.25rem rgba(182, 145, 0, 0.5) !important;
 }
 
 /* .btn-primary {
