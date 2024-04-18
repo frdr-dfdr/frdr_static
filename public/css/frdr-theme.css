@@ -439,8 +439,6 @@ input.search_bar {
 .btn-success:active,
 .btn-success:focus,
 .btn-success:hover,
-.btn-info:active,
-.btn-info:focus,
 .btn-info:hover,
 .btn-globus:active,
 .btn-globus:focus,
@@ -453,7 +451,9 @@ input.search_bar {
 }
 
 .btn-primary:active,
-.btn-primary:focus
+.btn-primary:focus,
+.btn-info:active,
+.btn-info:focus
  {
     background-color: var(--alliance-secondary) !important;
     background-image: none;
