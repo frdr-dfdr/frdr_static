@@ -453,7 +453,7 @@ input.search_bar {
 .btn-info:active,
 .btn-info:focus,
 .btn-secondary:active,
-.btn-secondary:focus,
+.btn-secondary:focus
  {
     background-color: var(--alliance-secondary) !important;
     background-image: none;
