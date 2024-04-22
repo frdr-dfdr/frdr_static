@@ -451,9 +451,9 @@ input.search_bar {
     text-shadow: none;
 }
 
-.btn-primary:focus,
-.btn-info:focus,
-.btn-secondary:focus
+.btn-primary:focus-visible,
+.btn-info:focus-visible,
+.btn-secondary:focus-visible
  {
     background-color: var(--alliance-secondary) !important;
     background-image: none;
@@ -2531,7 +2531,7 @@ a.social-media-icon {
     color: var(--alliance-primary);
 }
 
-.alliance-btn-secondary:focus {
+.alliance-btn-secondary:focus-visible {
     background-color: var(--alliance-yellow-desaturated) !important;
     border-color: #dab31a;
     color: var(--alliance-primary);
