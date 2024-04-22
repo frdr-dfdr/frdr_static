@@ -1594,6 +1594,24 @@ button.link {
     box-shadow: 0 0 0 0.2rem rgba(182, 145, 0, 0.5) !important;
 }
 
+.bootstrap-tagsinput:focus {
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #b08c00 !important;
+    outline: 0;
+    box-shadow: 0 0 0 .2rem rgba(182, 145, 0, 0.5) !important;
+}
+
+
+.bootstrap-tagsinput:focus-visible {
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #b08c00 !important;
+    outline: 2px solid #193146;
+    outline-offset: 3px;
+    box-shadow: 0 0 0 0.2rem rgba(182, 145, 0, 0.5) !important;
+}
+
 .checkbox-md {
     height:  1.5rem;
 }
