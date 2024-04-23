@@ -1,0 +1,14 @@
+:root {
+    --primary: rgb(214, 171, 0);
+    --secondary: rgb(50, 50, 47);
+}
+
+/** Change layout and colour of main container **/
+#main-container {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    width: 100%;
+    max-width: 100% !important;
+}
