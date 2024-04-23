@@ -102,6 +102,10 @@ small {
     13 px;
 }
 
+.table-link {
+    color: #212529;
+}
+
 /* a {
   color: #0066cc;
   text-decoration:underline;
