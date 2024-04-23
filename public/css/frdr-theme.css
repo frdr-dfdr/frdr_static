@@ -1591,26 +1591,13 @@ button.link {
     background-color: #fff;
     border: 1px solid #b08c00 !important;
     outline: 0;
-    box-shadow: 0 0 0 .2rem rgba(182, 145, 0, 0.5) !important;
+    box-shadow: 0 0 0 .2rem rgba(179, 143, 0, 0.5) !important;
 }
 
-.bootstrap-tagsinput:focus {
+.bootstrap-tagsinput:focus-within {
     background-color: #fff;
     border: 1px solid #b08c00 !important;
-    box-shadow: 0 0 0 .2rem rgba(182, 145, 0, 0.5) !important;
-    display: inline-block;
-    padding: 4px 6px;
-    color: #555;
-}
-
-.bootstrap-tagsinput:focus-visible {
-    background-color: #fff;
-    border: 1px solid #b08c00 !important;
-    outline: 2px solid #193146;
-    outline-offset: 3px;
-    box-shadow: 0 0 0 transparent, 0 0 0 0.25rem rgba(182, 145, 0, 0.5) !important;
-    display: inline-block;
-    padding: 4px 6px;
+    box-shadow: 0 0 0 .2rem rgba(179, 143, 0, 0.5) !important;
     color: #555;
 }
 
