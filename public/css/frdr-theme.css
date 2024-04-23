@@ -102,16 +102,12 @@ small {
     13 px;
 }
 
-.table-link {
-    color: #212529;
-}
-
 /* a {
   color: #0066cc;
   text-decoration:underline;
 } */
 
-a:not(.btn, .badge) {
+a:not(.btn, .badge, .table-link) {
     color: var(--teal);
     margin-bottom: 0px;
     overflow-x: inherit;
@@ -119,6 +115,14 @@ a:not(.btn, .badge) {
 }
 
 a:hover, a:focus, a:active {
+    color: var(--alliance-yellow-darkened);
+}
+
+.table-link {
+    color: #212529;
+}
+
+.table-link:hover, .table-link:focus, table-link:active {
     color: var(--alliance-yellow-darkened);
 }
 
@@ -1586,34 +1590,6 @@ button.link {
     border: 1px solid #b08c00 !important;
     outline: 0;
     box-shadow: 0 0 0 .2rem rgba(182, 145, 0, 0.5) !important;
-}
-
-
-.form-control:focus-visible {
-    color: #495057;
-    background-color: #fff;
-    border: 1px solid #b08c00 !important;
-    outline: 2px solid #193146;
-    outline-offset: 3px;
-    box-shadow: 0 0 0 0.2rem rgba(182, 145, 0, 0.5) !important;
-}
-
-.bootstrap-tagsinput:focus {
-    color: #555;
-    background-color: #fff;
-    border: 1px solid #b08c00 !important;
-    outline: 0;
-    box-shadow: 0 0 0 .2rem rgba(182, 145, 0, 0.5) !important;
-}
-
-
-.bootstrap-tagsinput:focus-visible {
-    color: #555;
-    background-color: #fff;
-    border: 1px solid #b08c00 !important;
-    outline: 2px solid #193146;
-    outline-offset: 3px;
-    box-shadow: 0 0 0 0.2rem rgba(182, 145, 0, 0.5) !important;
 }
 
 .checkbox-md {
