@@ -12,3 +12,31 @@
     width: 100%;
     max-width: 100% !important;
 }
+
+.ActionList-item--hasSubItem button::after {
+    content: "❯";
+    float: right;
+    transform: rotate(90deg);
+}
+
+.ActionList-item--hasSubItem button.collapsed::after {
+    transform: rotate(0deg);
+    transition: transform 0.1s ease;
+}
+
+.sidebar-item-icon {
+    display: inline;
+    color: var(--primary);
+    pointer-events: none;
+    align-items: center;
+    padding-right: 0.25rem;
+}
+
+#dashboard-sidebar {
+    background-image: linear-gradient(0deg, #3232232F, #FFFFFF);
+}
+
+.site-footer {
+    margin-top: 0rem !important;
+}
+
