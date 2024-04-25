@@ -32,8 +32,11 @@
     padding-right: 0.25rem;
 }
 
-#dashboard-sidebar {
-    background-image: linear-gradient(0deg, #3232232F, #FFFFFF);
+@media (min-width: 992px) {
+    #dashboard-sidebar {
+        flex: 0 0 230px;
+        background-image: linear-gradient(0deg, #3232232F, #FFFFFF);
+    }    
 }
 
 .site-footer {
