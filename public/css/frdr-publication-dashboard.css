@@ -24,6 +24,27 @@
     transition: transform 0.1s ease;
 }
 
+@media (hover: hover) {
+    .ActionList-item:not(.ActionList-item--hasSubItem):hover,
+    .ActionList-item.ActionList-item--hasSubItem > .ActionList-content:hover {
+        cursor: pointer;
+        background-color: var(--primary);
+    }
+
+    .ActionList-item:not(.ActionList-item--hasSubItem):hover:not(.ActionList-item--navActive),
+    .ActionList-item.ActionList-item--hasSubItem > .ActionList-content:hover:not(.ActionList-item--navActive) {
+        /* Support for "Windows high contrast mode" */
+        outline: solid 1px transparent;
+        outline-offset: -1px;
+        box-shadow: inset 0 0 0 2px rgba(0,0,0,0);
+        margin-left: 100p;
+    }
+}
+
+.ActionList--subGroup {
+    padding-top: 0px;
+}
+
 .sidebar-item-icon {
     display: inline;
     color: var(--primary);
@@ -34,7 +55,7 @@
 
 @media (min-width: 992px) {
     #dashboard-sidebar {
-        flex: 0 0 230px;
+        flex: 0 0 250px;
         background-image: linear-gradient(0deg, #3232232F, #FFFFFF);
     }    
 }
@@ -43,3 +64,59 @@
     margin-top: 0rem !important;
 }
 
+
+ul.ActionList.ActionList--subGroup {
+    list-style-type: none;
+    position: relative;
+}
+
+a.ActionList-content.ActionList-content--visual16 {
+    list-style-type: none;
+    border-left: 2px solid rgba(0,0,0,0.2);
+    left: -22px;
+}
+
+.ActionList-item-label {
+    padding-left: 1em;
+    position: relative;
+}
+
+.ActionList-item-label::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -9px;
+    bottom: 50%;
+    width: 0.75em;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-top: 0 none transparent;
+    border-right: 0 none transparent;
+    border-left: 0 none transparent;
+}
+
+li#all {
+    padding-left: 2.5rem;
+}
+
+.watermark {
+    width: 230px;
+    height: 300px;
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    left: 0px;
+    max-width: 100%;
+}
+
+.watermark::after {
+    content: "";
+    background: url(/static/images/latest/logos/FRDR_logo.svg);
+    bottom: 0px;
+    position: absolute;
+    rotate: 45deg;
+    opacity:0.2;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 230px;
+    height: 300px;
+}

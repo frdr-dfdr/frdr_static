@@ -2016,12 +2016,6 @@ a#ndrio_logo {
 }
 
 /* hide if item is first of type with label::before, or is the first item after a sectionDivider */
-.ActionList-item:first-of-type .ActionList-item-label::before,
-.ActionList-sectionDivider + .ActionList-item .ActionList-item-label::before {
-  visibility: hidden;
-}
-
-/* hide if item is first of type with label::before, or is the first item after a sectionDivider */
 .ActionList-item:first-of-type .ActionList-item-descriptionWrap--inline::before,
 .ActionList-sectionDivider + .ActionList-item .ActionList-item-descriptionWrap--inline::before {
   visibility: hidden;
@@ -2075,12 +2069,6 @@ a#ndrio_logo {
 
 /* hide dividers */
 @media (hover: hover) {
-    .ActionList-item:not(.ActionList-item--hasSubItem):hover .ActionList-item-label::before, 
-    .ActionList-item:not(.ActionList-item--hasSubItem):hover + .ActionList-item .ActionList-item-label::before, 
-    .ActionList-item.ActionList-item--hasSubItem > .ActionList-content:hover .ActionList-item-label::before, 
-    .ActionList-item.ActionList-item--hasSubItem > .ActionList-content:hover + .ActionList-item .ActionList-item-label::before {
-        visibility: hidden;
-   }
     .ActionList-item:not(.ActionList-item--hasSubItem):hover .ActionList-item-descriptionWrap--inline::before, .ActionList-item:not(.ActionList-item--hasSubItem):hover + .ActionList-item .ActionList-item-descriptionWrap--inline::before, .ActionList-item.ActionList-item--hasSubItem > .ActionList-content:hover .ActionList-item-descriptionWrap--inline::before, .ActionList-item.ActionList-item--hasSubItem > .ActionList-content:hover + .ActionList-item .ActionList-item-descriptionWrap--inline::before {
         visibility: hidden;
    }
@@ -2162,7 +2150,6 @@ a#ndrio_logo {
     user-select: none;
     background-color: transparent;
     border: none;
-    border-radius: 6px;
     transition: background 33.333ms linear;
     touch-action: manipulation;
     -webkit-tap-highlight-color: transparent;
@@ -2347,11 +2334,6 @@ a#ndrio_logo {
 
 /* nested lists (only supports 1 level currently) */
 /* target ActionList-item--subItem for padding-left to maintain :active :after state */
-
-/* TODO: remove with PVC implementation */
-.ActionList-item--subItem > .ActionList-content {
-  font-size: 12px;
-}
 
 /* divider */
 /* has children */
