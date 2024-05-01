@@ -94,7 +94,7 @@ a.ActionList-content.ActionList-content--visual16 {
     border-left: 0 none transparent;
 }
 
-li#all {
+li.ActionList-item.ActionList-item--subItem {
     padding-left: 2.5rem;
 }
 
