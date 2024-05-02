@@ -555,6 +555,10 @@ fieldset[disabled] .btn-success.active
     height: 30px;
     padding: 11px;
     width: 200px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
 }
  
 #header .navbar-up .search-button{
@@ -565,7 +569,10 @@ fieldset[disabled] .btn-success.active
     background-color: #FFFFFF;
     border: 1px solid #ced4da;
     border-left-width: 0px;
-    border-radius: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
 }
 
 #header span.fas.fa-search {
@@ -726,6 +733,7 @@ fieldset[disabled] .btn-success.active
 .navbar-dark .navbar-nav > li.show > a:not(.lang-btn) {
     color: var(--alliance-primary) !important;
     background-color: var(--alliance-white) !important;
+    border-radius: 6px;
 }
 
 .navbar-dark .navbar-nav > li > a:link,
@@ -743,6 +751,7 @@ fieldset[disabled] .btn-success.active
 .navbar-dark .navbar-nav > li > a:not(.lang-btn):focus {
     background-color: var(--alliance-white) !important;
     color: var(--alliance-primary);
+    border-radius: 6px;
 }
 
 .navbar-dark .navbar-nav .dropdown-divider {
@@ -764,8 +773,8 @@ fieldset[disabled] .btn-success.active
 .navbar-nav .dropdown-menu > li > a:hover, 
 .navbar-nav .dropdown-menu > li > a:focus,
 .navbar-nav .dropdown-menu > li > a:active {
-    background-color: var(--alliance-gray-300);
-    color: #000;
+    background-color: var(--alliance-secondary);
+    color: #fff;
 }
 
 .navbar-nav .dropdown-item {
@@ -928,6 +937,8 @@ a.lang-btn {
 a.lang-btn.d-lg-block {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
 }
 
 /* End navigation bar styles */
