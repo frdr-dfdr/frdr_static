@@ -199,3 +199,37 @@ form#submit_new_dataset {
     box-shadow: none;
     margin: 0;
 }
+
+/* Quota Usage Graph */
+.progress.storage-percentage,
+.progress.files-percentage {
+    background-color: inherit;
+    border-radius: 0px;
+}
+
+.progress> .progress-bar {
+    text-align: right;
+    padding-right: 10px;
+    border-radius: 0rem;
+    font-weight:700;
+}
+
+.progress.storage-percentage > .progress-bar:not(.bg-danger):not(.bg-warning) {
+    background-color: var(--secondary) !important;
+    color: #F9F9F9;
+}
+
+.progress.files-percentage > .progress-bar:not(.bg-danger):not(.bg-warning)  {
+    background-color: var(--primary) !important;
+    color: var(--secondary);
+}
+
+.progress-bar > span.text-indent {
+    text-indent: 15px;
+    position: absolute;
+    color: var(--secondary);
+}
+
+#quota-usage {
+    border-right: solid 2px #D9D9D9;
+}
