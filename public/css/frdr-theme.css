@@ -1479,7 +1479,7 @@ button.link {
 .dataset-header-row {
     padding-bottom: 5px;
     margin-bottom: 20px;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);g
+    background-color: #F9F9F9;
 }
 
 .dataset-header {

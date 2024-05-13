@@ -121,6 +121,10 @@ li.ActionList-item.ActionList-item--subItem {
     height: 300px;
 }
 
+.card {
+    margin-bottom: 32px;
+}
+
 .card.notification {
     border: none;
 }
@@ -232,4 +236,24 @@ form#submit_new_dataset {
 
 #quota-usage {
     border-right: solid 2px #D9D9D9;
+}
+
+/* Datasets Section */
+.nav-tabs .nav-link {
+    color: #000;
+    border: none;
+    font-size: 1.5rem;
+}
+
+.nav-tabs .nav-link.active {
+  border-bottom: 3.57px solid #F0B90B;
+  font-weight: 600;
+}
+
+.card.datasets > .card-body {
+    padding: 0;
+}
+
+.card.datasets .dataset-inner-col {
+    align-self: center;
 }
