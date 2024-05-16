@@ -45,6 +45,10 @@
     padding-top: 0px;
 }
 
+.ActionList-item.ActionList-item--navActive:not(.ActionList-item--danger) {
+    background: var(--primary);
+}
+
 .sidebar-item-icon {
     display: inline;
     color: var(--primary);
