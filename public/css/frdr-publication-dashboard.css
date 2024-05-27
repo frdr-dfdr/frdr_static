@@ -283,10 +283,8 @@ form#submit_new_dataset {
 }
 
 .card.datasets .btn {
-    height: 40px;
     border-radius: 38px;
     background-image: none;
-    padding: 8px 16px;
     box-shadow: 0px 0px 14.87px rgba(0, 0, 0, 0.1);
     border: none;
 } 
@@ -317,4 +315,29 @@ a#viewall {
     font-size: 100%;
     font-weight: inherit;
     padding: 0.5rem 1rem;
+    white-space: normal
+}
+
+/* Publish Dashboard Pagination */
+.pagination {
+    gap: 10px;
+}
+
+.page-link {
+    border-radius: 8px !important;
+}
+
+.page-item:first-child .page-link i,
+.page-item:last-child .page-link i {
+    padding: 0px 0.5rem;
+}
+
+.page-item .page-link {
+    background-color: #F1F7FF;
+    border-color: #F1F7FF;
+}
+
+.page-item.disabled .page-link {
+    background-color: #F1F7FF;
+    border-color: #F1F7FF;
 }
