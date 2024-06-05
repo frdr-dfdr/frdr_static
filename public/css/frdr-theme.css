@@ -34,7 +34,7 @@
     --alliance-green: #00DBA7;
     --alliance-teal: #20c997;
     --alliance-cyan: #17a2b8;
-    --white: #fbfafa;
+    --alliance-white: #fbfafa;
     --alliance-gray: #949494;
     --alliance-gray-dark: #3e3e3e;
     --alliance-gray-100: #f8f9fa;
@@ -617,7 +617,13 @@ fieldset[disabled] .btn-success.active
     border-color: #424242;
     min-height: 100%;
     height: auto;
-    padding: 0.75rem 1rem;
+    padding: 0rem 1rem;
+}
+
+@media (min-width: 1px) and (max-width: 992px) {
+    #header .navbar {
+        padding: 0.75rem 1rem;
+    }
 }
 
 #header .navbar-up input.search_bar {

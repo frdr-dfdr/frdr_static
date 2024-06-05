@@ -21,6 +21,7 @@ h4, .h4 {
 h5, .h5 {
     font-size: 13px;
     font-weight: 400;
+    margin-bottom: 0rem;
 }
 
 .btn.alliance-btn-secondary {
@@ -211,6 +212,8 @@ li.ActionList-item.ActionList-item--subItem {
     background-color: var(--alliance-yellow-desaturated);
     background-image: none;
     border-radius: 12px;
+    font-size: 24px;
+    font-weight: var(--font-weight-bold);
 }
 
 #submit_new_dataset {
