@@ -1,6 +1,32 @@
-:root {
-    --primary: rgb(214, 171, 0);
-    --secondary: rgb(50, 50, 47);
+h1, .h1 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+h2, .h2 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+h3, .h3 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+h4, .h4 {
+    font-size: var(--h4-font-size);
+    font-weight: var(--font-weight-normal);
+}
+
+h5, .h5 {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.btn.alliance-btn-secondary {
+    font-size: 18px;
+    font-weight: var(--font-weight-semibold);
+    color: var(--alliance-primary-tuatara);
 }
 
 /** Change layout and colour of main container **/
@@ -30,7 +56,7 @@
     .ActionList-item:not(.ActionList-item--hasSubItem):hover,
     .ActionList-item.ActionList-item--hasSubItem > .ActionList-content:hover {
         cursor: pointer;
-        background-color: var(--primary);
+        background-color: var(--alliance-primary-gold);
     }
 
     .ActionList-item:not(.ActionList-item--hasSubItem):hover:not(.ActionList-item--navActive),
@@ -43,17 +69,24 @@
     }
 }
 
+.ActionList-item:not(.ActionList-item--hasSubItem):active,
+.ActionList-item.ActionList-item--hasSubItem > .ActionList-content:active,
+.ActionList-item:not(.ActionList-item--hasSubItem):focus,
+.ActionList-item.ActionList-item--hasSubItem > .ActionList-content:focus {
+    background-color: var(--alliance-primary-gold);
+}
+
 .ActionList--subGroup {
     padding-top: 0px;
 }
 
 .ActionList-item.ActionList-item--navActive:not(.ActionList-item--danger) {
-    background: var(--primary);
+    background: var(--alliance-primary-gold);
 }
 
 .sidebar-item-icon {
     display: inline;
-    color: var(--primary);
+    color: var(--alliance-primary-gold);
     pointer-events: none;
     align-items: center;
     padding-right: 0.25rem;
@@ -76,7 +109,7 @@
 #dashboard-dropdown-menu .dropdown-menu > li > a:hover, 
 #dashboard-dropdown-menu .dropdown-menu > li > a:focus, 
 #dashboard-dropdown-menu .dropdown-menu > li > a:active {
-    background-color: var(--primary);
+    background-color: var(--alliance-primary-gold);
 }
 
 .site-footer {
@@ -150,9 +183,7 @@ li.ActionList-item.ActionList-item--subItem {
 
 .card.notification > .card-header {
     background-image: none;
-    background-color: #FFFFFF;
-    font-size: 36px;
-    font-weight: 700;
+    background-color: var(--white);
     border-bottom: 1px solid #000;
 }
 
@@ -177,11 +208,9 @@ li.ActionList-item.ActionList-item--subItem {
 }
 
 .card.panel-default > .card-header {
-    background-color: rgba(214, 171, 0, 0.3);
+    background-color: var(--alliance-yellow-desaturated);
     background-image: none;
     border-radius: 12px;
-    font-size: 24px;
-    font-weight: 700;
 }
 
 #submit_new_dataset {
@@ -203,8 +232,8 @@ form#submit_new_dataset {
     padding-right: 0rem;
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
-    font-size: 23px;
-    font-weight: 700;
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-weight-semibold);
     border-radius: 10px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, .25);
 }
@@ -233,8 +262,8 @@ form#submit_new_dataset {
 
 .card.alert-notice > .alert.alert-warning {
     background-image: none;
-    background-color: #FFF;
-    color: #000;
+    background-color: var(--white);
+    color: var(--alliance-primary-tuatara);
     border: none;
     box-shadow: none;
     margin: 0;
@@ -255,19 +284,19 @@ form#submit_new_dataset {
 }
 
 .progress.storage-percentage > .progress-bar:not(.bg-danger):not(.bg-warning) {
-    background-color: var(--secondary) !important;
+    background-color: var(--alliance-primary-tuatara) !important;
     color: #F9F9F9;
 }
 
 .progress.files-percentage > .progress-bar:not(.bg-danger):not(.bg-warning)  {
-    background-color: var(--primary) !important;
-    color: var(--secondary);
+    background-color: var(--alliance-primary-gold) !important;
+    color: var(--alliance-primary-tuatara);
 }
 
 .progress-bar > span.text-indent {
     text-indent: 15px;
     position: absolute;
-    color: var(--secondary);
+    color: var(--alliance-primary-tuatara);
 }
 
 @media (max-width: 992px) {
@@ -301,14 +330,16 @@ form#submit_new_dataset {
 
 /* Datasets Section */
 .nav-tabs .nav-link {
-    color: #000;
+    color: var(--alliance-primary-tuatara);
     border: none;
-    font-size: 1.5rem;
+    font-size: 24px;
+    font-weight: var(--font-weight-light);
 }
 
 .nav-tabs .nav-link.active {
-  border-bottom: 3.57px solid #F0B90B;
-  font-weight: 600;
+    color: var(--alliance-primary-tuatara);
+    border-bottom: 3.57px solid #F0B90B;
+    font-weight: var(--font-weight-bold);
 }
 
 .card.datasets {
@@ -355,12 +386,36 @@ form#submit_new_dataset {
     background-image: none;
     box-shadow: 0px 0px 14.87px rgba(0, 0, 0, 0.1);
     border: none;
+    font-size: var(--h4-font-size);
+    font-weight: var(--font-weight-normal);
 } 
 
-a#viewall {
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: #000;
+.card.datasets .btn.edit-action:hover, 
+.card.datasets .btn.edit-action:focus, 
+.card.datasets .btn.edit-action:active {
+    background-color: var(--alliance-yellow-desaturated);
+    color: var(--alliance-primary-tuatara);
+}
+
+.card.datasets .btn.btn-primary:hover, 
+.card.datasets .btn.btn-primary:focus, 
+.card.datasets .btn.btn-primary:active {
+    background-color: var(--alliance-blue-desaturated);
+    color: var(--alliance-blue-tuatara);
+}
+
+.card.datasets .btn.btn-secondary:hover, 
+.card.datasets .btn.btn-secondary:focus, 
+.card.datasets .btn.btn-secondary:active {
+    background-color: var(--alliance-yellow-desaturated);
+    color: var(--alliance-primary-tuatara);
+}
+
+.card.datasets .btn.btn-danger:hover, 
+.card.datasets .btn.btn-danger:focus, 
+.card.datasets .btn.btn-danger:active {
+    background-color: var(--alliance-red-desaturated);
+    color: var(--alliance-primary-tuatara);
 }
 
 .badge-inprogress {
@@ -409,3 +464,4 @@ a#viewall {
     background-color: #F1F7FF;
     border-color: #F1F7FF;
 }
+
