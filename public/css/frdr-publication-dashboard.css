@@ -444,6 +444,15 @@ form#submit_new_dataset {
     white-space: normal
 }
 
+.dataset-reviewer {
+    background-color: var(--alliance-gray-100);
+    padding: 1rem 0rem;
+}
+
+.dataset-reviewer form[name="manage_reviewer"] > a {
+    color: var(--alliance-primary-tuatara);
+}
+
 /* Publish Dashboard Pagination */
 .pagination {
     gap: 10px;
