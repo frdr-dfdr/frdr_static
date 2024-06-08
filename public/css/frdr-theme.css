@@ -9,6 +9,8 @@
     --link-hover-decoration: underline;
     --body-font-family: Helvetica,Arial,sans-serif;
     --body-font-size: 16px;
+    --h1-font-size: 32px;
+    --h2-font-size: 24px;
     --h3-font-size: 18px;
     --h4-font-size: 16px;
     --font-weight-light: 300;
@@ -1562,6 +1564,12 @@ button.link {
 .dataset-header {
     font-size: var(--h4-font-size);
     font-weight: var(--font-weight-normal);
+}
+
+@media (min-width: 1px) and (max-width: 992px) {
+    .dataset-header {
+        margin: 0.25rem 0rem;
+    }
 }
 
 .dataset-col {

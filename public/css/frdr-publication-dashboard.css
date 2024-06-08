@@ -212,8 +212,27 @@ li.ActionList-item.ActionList-item--subItem {
     background-color: var(--alliance-yellow-desaturated);
     background-image: none;
     border-radius: 12px;
-    font-size: 24px;
-    font-weight: var(--font-weight-bold);
+}
+
+@media (min-width: 576px) {
+    .card.notification > .card-header {
+        font-size: var(--h1-font-size);
+        font-weight: var(--font-weight-bold);
+    }
+
+    .card.panel-default > .card-header {
+        font-size: var(--h2-font-size);
+        font-weight: var(--font-weight-bold);
+    }
+}
+
+/* Change card header font size on small screen */
+@media (min-width: 1px) and (max-width: 576px) {
+    .card.notification > .card-header,
+    .card.panel-default > .card-header {
+        font-size: var(--h3-font-size);
+        font-weight: var(--font-weight-semibold);
+    }
 }
 
 #submit_new_dataset {
@@ -335,14 +354,35 @@ form#submit_new_dataset {
 .nav-tabs .nav-link {
     color: var(--alliance-primary-tuatara);
     border: none;
-    font-size: 24px;
-    font-weight: var(--font-weight-light);
 }
 
 .nav-tabs .nav-link.active {
     color: var(--alliance-primary-tuatara);
     border-bottom: 3.57px solid #F0B90B;
-    font-weight: var(--font-weight-bold);
+}
+
+@media (min-width: 576px) {
+    .nav-tabs .nav-link {
+        font-size: var(--h2-font-size);
+        font-weight: var(--font-weight-light);
+    }
+
+    .nav-tabs .nav-link.active {
+        font-size: var(--h2-font-size);
+        font-weight: var(--font-weight-bold);
+    }
+}
+
+@media (min-width: 1px) and (max-width: 576px) {
+    .nav-tabs .nav-link {
+        font-size: var(--h3-font-size);
+        font-weight: var(--font-weight-light);
+    }
+
+    .nav-tabs .nav-link.active {
+        font-size: var(--h3-font-size);
+        font-weight: var(--font-weight-semibold);
+    }
 }
 
 .card.datasets {
@@ -350,6 +390,7 @@ form#submit_new_dataset {
 }
 
 .card.datasets > .card-body {
+    padding: 15px;
     padding-top: 0;
 }
 
@@ -419,6 +460,10 @@ form#submit_new_dataset {
 .card.datasets .btn.btn-danger:active {
     background-color: var(--alliance-red-desaturated);
     color: var(--alliance-primary-tuatara);
+}
+
+.card.datasets hr {
+    border-top: 4px solid var(--alliance-primary-gold);
 }
 
 .badge-inprogress {
