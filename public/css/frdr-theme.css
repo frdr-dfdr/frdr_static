@@ -1,5 +1,6 @@
 :root {
     --white: #FFFFFF;
+    --gray-100: #F9F9F9;
     --gray: #e5e5e5;
     --teal: #006666;
     --brown: #524033;
@@ -24,7 +25,7 @@
     --bs-gutter-y: 0;
 
     --alliance-blue: #E3F5FF;
-    --alliance-blue-desaturated: #FFBDBD;
+    --alliance-blue-desaturated: #E3F5FF;
     --alliance-indigo: #6610f2;
     --alliance-purple: #6f42c1;
     --alliance-pink: #d63384;
