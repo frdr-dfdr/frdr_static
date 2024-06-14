@@ -1,6 +1,15 @@
-h1, .h1 {
-    font-size: 32px;
-    font-weight: 700;
+@media (min-width: 1px) and (max-width: 576px) {
+    h1, .h1 {
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
+
+@media (min-width: 576px) {
+    h1, .h1 {
+        font-size: 32px;
+        font-weight: 700;
+    }    
 }
 
 h2, .h2 {
@@ -527,3 +536,10 @@ form#submit_new_dataset {
     border-color: #F1F7FF;
 }
 
+.page-item:not(.active) .page-link:hover,
+.page-item:not(.active) .page-link:focus,
+.page-item:not(.active) .page-link:active {
+    background-color: var(--alliance-yellow-desaturated) !important;
+    color: var(--alliance-primary-tuatara) !important;
+    border-color: var(--alliance-yellow-desaturated);
+}
