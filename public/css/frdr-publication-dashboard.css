@@ -484,7 +484,9 @@ form#submit_new_dataset {
     background-color: #FFEDD5;
 }
 
-.badge-incuration {
+.badge-incuration,
+.badge-pending_r,
+.badge-pending_d {
     background-color: #E3F5FF;
 }
 
@@ -492,8 +494,19 @@ form#submit_new_dataset {
     background-color: #E1BEE7;
 }
 
-.badge-published {
+.badge-published,
+.badge-completed {
     background-color: #D4F8D3;
+}
+
+.badge-needaction {
+    background-color: #FFBDBD;
+}
+
+.badge-rejected,
+.badge-withdrawn,
+.badge-expired {
+    background-color: #D6D6D6;
 }
 
 .card.datasets .status.badge {
