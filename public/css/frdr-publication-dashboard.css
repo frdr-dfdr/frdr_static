@@ -556,3 +556,7 @@ form#submit_new_dataset {
     color: var(--alliance-primary-tuatara) !important;
     border-color: var(--alliance-yellow-desaturated);
 }
+
+a.table-sort.inactive {
+    color: #D8D3D3;
+}
