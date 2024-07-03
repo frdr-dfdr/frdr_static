@@ -449,7 +449,7 @@ form#submit_new_dataset {
 .card.datasets .btn.edit-action:focus, 
 .card.datasets .btn.edit-action:active {
     background-color: var(--blue-hover) !important;
-    color: var(--alliance-primary-tuatara);
+    color: var(--white);
     border: none !important;
 }
 
@@ -457,7 +457,7 @@ form#submit_new_dataset {
 .card.datasets .btn.btn-primary:focus, 
 .card.datasets .btn.btn-primary:active {
     background-color: var(--green-hover) !important;
-    color: var(--alliance-primary-tuatara);
+    color: var(--white);
     border: none !important;
 }
 
@@ -465,7 +465,7 @@ form#submit_new_dataset {
 .card.datasets .btn.btn-secondary:focus, 
 .card.datasets .btn.btn-secondary:active {
     background-color: var(--green-hover) !important;
-    color: var(--alliance-primary-tuatara);
+    color: var(--white) !important;
     border: none !important;
 }
 
@@ -473,7 +473,7 @@ form#submit_new_dataset {
 .card.datasets .btn.btn-danger:focus, 
 .card.datasets .btn.btn-danger:active {
     background-color: var(--red-hover) !important;
-    color: var(--alliance-primary-tuatara);
+    color: var(--white) !important;
     border: none !important;
 }
 
