@@ -561,3 +561,13 @@ form#submit_new_dataset {
 a.table-sort.inactive {
     color: #D8D3D3;
 }
+
+/* Sensitive data requests section */
+#requestreceived .dropdown-menu > li > a:hover, 
+#requestreceived .dropdown-menu > li > a:focus, 
+#requestreceived .dropdown-menu > li > a:active,
+#requestsubmitted .dropdown-menu > li > a:hover, 
+#requestsubmitted .dropdown-menu > li > a:focus, 
+#requestsubmitted .dropdown-menu > li > a:active  {
+    background-color: var(--alliance-primary-gold);
+}
