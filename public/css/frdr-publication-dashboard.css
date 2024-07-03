@@ -37,6 +37,7 @@ h5, .h5 {
     font-size: 18px;
     font-weight: var(--font-weight-semibold);
     color: var(--alliance-primary-tuatara);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, .25);
 }
 
 /** Change layout and colour of main container **/
@@ -447,7 +448,7 @@ form#submit_new_dataset {
 .card.datasets .btn.edit-action:hover, 
 .card.datasets .btn.edit-action:focus, 
 .card.datasets .btn.edit-action:active {
-    background-color: var(--alliance-blue-desaturated) !important;
+    background-color: var(--blue-hover) !important;
     color: var(--alliance-primary-tuatara);
     border: none !important;
 }
@@ -455,7 +456,7 @@ form#submit_new_dataset {
 .card.datasets .btn.btn-primary:hover, 
 .card.datasets .btn.btn-primary:focus, 
 .card.datasets .btn.btn-primary:active {
-    background-color: var(--alliance-yellow-desaturated) !important;
+    background-color: var(--green-hover) !important;
     color: var(--alliance-primary-tuatara);
     border: none !important;
 }
@@ -463,7 +464,7 @@ form#submit_new_dataset {
 .card.datasets .btn.btn-secondary:hover, 
 .card.datasets .btn.btn-secondary:focus, 
 .card.datasets .btn.btn-secondary:active {
-    background-color: var(--alliance-yellow-desaturated) !important;
+    background-color: var(--green-hover) !important;
     color: var(--alliance-primary-tuatara);
     border: none !important;
 }
@@ -471,7 +472,7 @@ form#submit_new_dataset {
 .card.datasets .btn.btn-danger:hover, 
 .card.datasets .btn.btn-danger:focus, 
 .card.datasets .btn.btn-danger:active {
-    background-color: var(--alliance-red-desaturated) !important;
+    background-color: var(--red-hover) !important;
     color: var(--alliance-primary-tuatara);
     border: none !important;
 }
