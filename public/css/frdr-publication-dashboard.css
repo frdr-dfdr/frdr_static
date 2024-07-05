@@ -457,8 +457,16 @@ form#submit_new_dataset {
 .card.datasets .btn.btn-primary:focus, 
 .card.datasets .btn.btn-primary:active {
     background-color: var(--green-hover) !important;
-    color: var(--white);
+    color: var(--white) !important;
     border: none !important;
+    box-shadow: 0 0 0 transparent, 0 0 0 0.25rem rgba(40, 167, 69, 0.5) !important;
+}
+
+.card.datasets  .btn-primary:focus-visible
+ {
+    background-color: var(--green-hover) !important;
+    box-shadow: 0 0 0 transparent, 0 0 0 0.25rem rgba(40, 167, 69, 0.5) !important;
+    color: var(--white) !important;
 }
 
 .card.datasets .btn.btn-secondary:hover, 
