@@ -570,6 +570,11 @@ a.table-sort.inactive {
     color: #D8D3D3;
 }
 
+/* Inactive sort icon on small screen */
+i.fas.fa-sort.inactive {
+    color: #D8D3D3;
+}
+
 /* Sensitive data requests section */
 #requestreceived .dropdown-menu > li > a:hover, 
 #requestreceived .dropdown-menu > li > a:focus, 
