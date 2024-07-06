@@ -76,8 +76,16 @@ h5, .h5 {
         outline: solid 1px transparent;
         outline-offset: -1px;
         box-shadow: inset 0 0 0 2px rgba(0,0,0,0);
-        margin-left: 100p;
     }
+}
+
+li.ActionList-item.ActionList-item--subItem.divider {
+    height: 6px;
+}
+
+li.ActionList-item.ActionList-item--subItem.divider:hover {
+    pointer-events: none;
+    background: inherit;
 }
 
 .ActionList-item:not(.ActionList-item--hasSubItem):active,
@@ -85,6 +93,12 @@ h5, .h5 {
 .ActionList-item:not(.ActionList-item--hasSubItem):focus,
 .ActionList-item.ActionList-item--hasSubItem > .ActionList-content:focus {
     background-color: var(--alliance-primary-gold);
+}
+
+@media (hover: hover) {
+    .ActionList-item.ActionList-item--navActive:not(.ActionList-item--danger):hover {
+        background-color: var(--alliance-primary-gold);
+   }
 }
 
 .ActionList--subGroup {
@@ -133,7 +147,11 @@ ul.ActionList.ActionList--subGroup {
     position: relative;
 }
 
-a.ActionList-content.ActionList-content--visual16 {
+.ActionList-content {
+    padding: 3px 8px;
+}
+
+.ActionList-content.ActionList-content--visual16 {
     list-style-type: none;
     border-left: 2px solid rgba(0,0,0,0.2);
     left: -22px;
