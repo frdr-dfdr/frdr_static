@@ -463,6 +463,10 @@ form#submit_new_dataset {
     background-color: var(--alliance-primary-gold);
 } 
 
+.card.datasets .btn-sm {
+    font-size: 80%;
+}
+
 .card.datasets .btn.edit-action:hover, 
 .card.datasets .btn.edit-action:focus, 
 .card.datasets .btn.edit-action:active {
@@ -493,6 +497,7 @@ form#submit_new_dataset {
     background-color: var(--green-hover) !important;
     color: var(--white) !important;
     border: none !important;
+    box-shadow: none !important;
 }
 
 .card.datasets .btn.btn-danger:hover, 
