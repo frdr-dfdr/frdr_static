@@ -2145,10 +2145,6 @@ a#ndrio_logo {
     border-radius: 6px;
 }
 
-.ActionList-item:active {
-    cursor: pointer;
-}
-
 @media (hover: hover) {
     /* only hover li without list as children */
     .ActionList-item:not(.ActionList-item--hasSubItem):hover,
