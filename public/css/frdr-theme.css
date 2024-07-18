@@ -2145,7 +2145,6 @@ a#ndrio_logo {
     border-radius: 6px;
 }
 
-.ActionList-item:hover,
 .ActionList-item:active {
     cursor: pointer;
 }
