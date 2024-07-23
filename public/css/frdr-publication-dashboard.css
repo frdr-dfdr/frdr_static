@@ -575,6 +575,7 @@ form#submit_new_dataset {
     background-color: var(--alliance-yellow-desaturated) !important;
     color: var(--alliance-primary-tuatara) !important;
     border-color: var(--alliance-yellow-desaturated);
+    box-shadow: 0 0 0 .2rem rgba(179, 143, 0, 0.5) !important;
 }
 
 a.table-sort.inactive {
