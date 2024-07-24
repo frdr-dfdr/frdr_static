@@ -33,6 +33,7 @@
     --alliance-purple: #6f42c1;
     --alliance-pink: #d63384;
     --alliance-red: #dc3545;
+    --alliance-maple: #B3021A;
     --alliance-red-desaturated: #FFBDBD;
     --alliance-orange: #fd7e14;
     --alliance-yellow-darkened: #8F7200;
@@ -1137,14 +1138,9 @@ a.lang-btn.d-lg-block {
 }
 
 .alert-warning {
-  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#fcf8e3), to(#f8efc0));
-  background-image: -webkit-linear-gradient(top, #fcf8e3, 0%, #f8efc0, 100%);
-  background-image: -moz-linear-gradient(top, #fcf8e3 0%, #f8efc0 100%);
-  background-image: linear-gradient(to bottom, #fcf8e3 0%, #f8efc0 100%);
-  background-repeat: repeat-x;
-  border-color: #f5e79e;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffcf8e3', endColorstr='#fff8efc0', GradientType=0);
-  color: #ce4400;
+    border-color: #f5e79e;
+    color: var(--alliance-maple) !important;
+    background-color: var(--alliance-yellow-desaturated);
 }
 
 .alert-danger {
