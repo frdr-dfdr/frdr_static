@@ -50,19 +50,6 @@ h5, .h5 {
     max-width: 100% !important;
 }
 
-@media (min-width: 992px) {
-    .ActionList-item--hasSubItem::after {
-        content: "❯";
-        float: right;
-        transform: rotate(90deg);
-    }
-}
-
-.ActionList-item--hasSubItem button.collapsed::after {
-    transform: rotate(0deg);
-    transition: transform 0.1s ease;
-}
-
 @media (hover: hover) {
     .ActionList-item:not(.ActionList-item--hasSubItem):hover,
     .ActionList-item.ActionList-item--hasSubItem > .ActionList-content:hover {
@@ -361,6 +348,7 @@ form#submit_new_dataset {
 
     #quota-usage .usage-text {
         width: 30%;
+        align-self: center;
     }
 
     #quota-usage .usage-graph {
