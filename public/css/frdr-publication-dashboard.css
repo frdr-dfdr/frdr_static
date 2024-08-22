@@ -530,6 +530,11 @@ form#submit_new_dataset {
     color: var(--alliance-primary-tuatara);
 }
 
+div.li-styled {
+    display: list-item;
+    list-style-position: inside;
+}
+
 /* Publish Dashboard Pagination */
 .pagination {
     gap: 10px;
