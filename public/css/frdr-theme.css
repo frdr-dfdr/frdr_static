@@ -2103,6 +2103,24 @@ a#ndrio_logo {
     pointer-events: none;
 }
 
+/* Publication dashboard item actions button */
+a.dashboard.dropdown-item {
+    text-decoration: none;
+    color: #212529;
+}
+
+.dashboard.dropdown-item:hover {
+    background-color: var(--alliance-primary-gold);
+}
+
+.dashboard.actions.btn {
+    min-width: 90.15px;
+}
+
+.badge-warning {
+    background-color: #D6AB00;
+}
+
 .dataset-row.highlight {
     background-color: rgba(0, 0, 0, .05);
 }
