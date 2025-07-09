@@ -74,6 +74,10 @@
     --alliance-body-bg: #fff;
 }
 
+html {
+    scroll-padding-top: 81.5px; /* height of sticky header */
+}
+
 body {
   font-family: var(--body-font-family);
   font-weight: var(--font-weight-light);
