@@ -240,3 +240,163 @@
 .search-container .input-group:focus-within {
     box-shadow: 0 0 0 .2rem rgba(214, 171, 0, 0.25) !important;
 }
+
+/* Advanced Search Input Layout */
+.advanced-input {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+}
+
+/* Boolean Operator (AND/OR) */
+.boolean-operator {
+    width: 80px;
+    flex-shrink: 0;
+}
+
+.boolean-operator .btn {
+    width: 100%;
+    text-align: left;
+    background-color: white;
+    border: 1px solid #ced4da;
+    color: var(--secondary);
+}
+
+/* Advanced Field Dropdown */
+.advanced-field {
+    width: 200px;
+    flex-shrink: 0;
+}
+
+.advanced-field .dropdown-toggle {
+    width: 100%;
+    text-align: left;
+    background-color: white;
+    border: 1px solid #ced4da;
+    color: var(--secondary);
+}
+
+/* Field Operator Dropdown */
+.field-operator {
+    width: 150px;
+    flex-shrink: 0;
+}
+
+.field-operator .dropdown-toggle {
+    width: 100%;
+    text-align: left;
+    background-color: white;
+    border: 1px solid #ced4da;
+    color: var(--secondary);
+}
+
+/* Advanced Value */
+.advanced-value {
+    flex: 1;
+    min-width: 0;
+}
+
+.advanced-value input,
+.advanced-value select {
+    width: 100%;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 8px 12px;
+}
+
+/* Date Range Inputs */
+.date-range-container {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.date-range-container input {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Remove Button */
+.remove-advanced-btn {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    background-color: #dc3545;
+    border: none;
+    color: white;
+}
+
+.remove-advanced-btn:hover {
+    background-color: #c82333;
+}
+
+/* Add Field Button */
+.add-field-btn {
+    margin-top: 16px;
+    background-color: var(--secondary);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.add-field-btn:hover {
+    background-color: #1a1a18;
+}
+
+/* Dropdown Menus */
+.dropdown-menu {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.dropdown-item {
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+}
+
+/* Typeahead Inputs */
+.typeahead-container {
+    position: relative;
+}
+
+.typeahead-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+/* CRDC Field */
+.crdc-container {
+    display: flex;
+    gap: 8px;
+}
+
+.crdc-group,
+.crdc-class {
+    flex: 1;
+    min-width: 0;
+}
