@@ -201,12 +201,12 @@ hr.metadata-divider {
 }
 
 .page-sidebar {
-    background-color: #E5E5E5;
+    background-color: var(--alliance-gray-200);
     padding-top: 8px;
 }
 
 .index-main {
-    background-color: #E5E5E5;
+    background-color: var(--alliance-gray-200);
     padding-top: 8px !important;
 }
 
