@@ -412,8 +412,7 @@
 .documents-list .document .repo-icon {
     width: 50px !important;
     height: 50px;
-    margin-right: 12px;
-    margin-left: 0;
+    margin: 12px;
     object-fit: contain;
     display: flex;
     align-items: center;

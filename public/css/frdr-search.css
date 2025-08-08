@@ -181,6 +181,11 @@ hr.metadata-divider {
     margin-right: 8px;
 }
 
+.page-links {
+    padding: 10px 0px 0px 10px;
+    font-size: 0.9rem;
+}
+
 .page-links, .sort-dropdown > button, .sort-dropdown > button > span {
     font-size: 14px;
 }
@@ -201,13 +206,11 @@ hr.metadata-divider {
 }
 
 .page-sidebar {
-    background-color: var(--alliance-gray-200);
-    padding-top: 8px;
+    padding-top: 20px;
 }
 
 .index-main {
-    background-color: var(--alliance-gray-200);
-    padding-top: 8px !important;
+    padding-top: 20px !important;
 }
 
 /** xs size breakpoint **/
@@ -430,6 +433,7 @@ label.feature-label {
     padding-bottom: 0px !important;
     width: 100%;
     max-width: 100% !important;
+    background-color: var(--alliance-gray-200);
 }
 
 .navbar-search {
