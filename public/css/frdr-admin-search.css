@@ -300,14 +300,6 @@
     min-width: 0;
 }
 
-.advanced-value input,
-.advanced-value select {
-    width: 100%;
-    border: 1px solid #ced4da;
-    border-radius: 4px;
-    padding: 8px 12px;
-}
-
 /* Date Range Inputs */
 .date-range-container {
     display: flex;
@@ -496,4 +488,32 @@
     .documents-list .document .index-details {
         padding-right: 70px;
     }
+}
+
+/* Pagination */
+.pagination .page-item .page-link {
+    border: none;
+    padding: 0.5rem 0.75rem;
+    margin: 0 1px;
+    background-color: transparent;
+    border-radius: 0.25rem;
+    font-size: 0.9rem;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--primary);
+    color: var(--secondary);
+    font-weight: 600;
+    /* border-radius: 0.25rem; */
+}
+
+.pagination .page-item:not(.disabled) .page-link:hover {
+    background-color: #f8f9fa;
+    color: var(--primary);
+}
+
+.pagination .page-item.disabled .page-link {
+    color: #6c757d;
+    background-color: transparent;
+    cursor: not-allowed;
 }
