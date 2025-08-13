@@ -241,6 +241,10 @@
 }
 
 /* Advanced Search Input Layout */
+
+.advanced-search-container .form-control {
+   background-color:white !important;
+}
 .advanced-input {
     display: flex;
     align-items: center;
@@ -408,6 +412,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.documents-list .document .index_title {
+    font-size: 1.1rem;
 }
 
 .documents-list .document .index-details {
