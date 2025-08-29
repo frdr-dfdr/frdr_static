@@ -59,8 +59,7 @@
     display: table-row;
 }
 
-.btn.facet-heading-collapse-btn:hover,
-.btn.facet-heading-collapse-btn:focus {
+.btn.facet-heading-collapse-btn:hover {
     color: var(--primary);
     background-color: var(--secondary);
 }
