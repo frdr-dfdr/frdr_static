@@ -479,7 +479,8 @@ $( document ).ready(function() {
         cardTitle.append(titleLink);
         parentElement.append(cardTitle);
 
-        let textMatched = $('<div class="mb-3">' + match["textMatched"] ? match["textMatched"] : "" + '</div>')
+        let textContent = match["textMatched"] ? match["textMatched"] : "";
+        let textMatched = $('<div class="mb-3">' + textContent + '</div>');
         parentElement.append(textMatched);
     }
 
