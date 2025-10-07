@@ -485,6 +485,10 @@ label.feature-label {
     align-items: center;
 }
 
+.advanced-field-dropdown .dropdown-menu {
+    min-width: min-content;
+}
+
 button.dropdown-item.fieldname {
     display: block;
     padding: 0.25rem 8px;
