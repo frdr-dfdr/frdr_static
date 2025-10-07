@@ -301,7 +301,7 @@ hr.metadata-divider {
     }
 
     .documents-list {
-        max-height: calc(100vh - 340px);
+        max-height: 100vh;
         overflow-y: scroll;
     }
 
@@ -317,7 +317,7 @@ hr.metadata-divider {
     }
 
     .documents-list {
-        max-height: calc(100vh - 340px);
+        max-height: 100vh;
         overflow-y: scroll;
     }
 
@@ -343,7 +343,7 @@ hr.metadata-divider {
     }
 
     .documents-list {
-        max-height: calc(100vh - 340px);
+        max-height: 100vh;
         overflow-y: scroll;
     }
 
