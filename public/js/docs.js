@@ -46,9 +46,11 @@ $( document ).ready(function() {
         } else if(existing && existing === NOT_HELPFUL) {
             // Remove not-helpful feedback and add helpful feedback
             localStorage.setItem(feedbackKey, HELPFUL);
+            plausible('Rate', {props: {rating: 'helpful'}});
         } else {
             // Add helpful feedback
             localStorage.setItem(feedbackKey, HELPFUL);
+            plausible('Rate', {props: {rating: 'helpful'}});
         }
         updateFeedbackUI();
     });
@@ -63,9 +65,11 @@ $( document ).ready(function() {
         } else if(existing && existing === HELPFUL) {
             // Remove helpful feedback and add not-helpful feedback
             localStorage.setItem(feedbackKey, NOT_HELPFUL);
+            plausible('Rate', {props: {rating: 'not'}});
         } else {
             // Add not-helpful feedback
             localStorage.setItem(feedbackKey, NOT_HELPFUL);
+            plausible('Rate', {props: {rating: 'not'}});
         }
         updateFeedbackUI();
     });
