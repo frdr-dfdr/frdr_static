@@ -13,6 +13,30 @@
     margin-bottom: 15px;
 }
 
+.search-details-btn-group {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+    padding: 0;
+    background-color: transparent;
+    display: inline-flex;
+    gap: 3px;
+}
+
+.search-details-btn-group .btn {
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: white;
+    border: 1px solid var(--secondary);
+    color: var(--secondary) !important;
+}
+
+.search-details-btn-group .btn:hover {
+    background-color: var(--secondary);
+    color: white !important;
+}
+
 .reset-all-filters-sticky {
     position: sticky;
     bottom: 0;
