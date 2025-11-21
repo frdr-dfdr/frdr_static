@@ -37,7 +37,7 @@
     margin-left: 14px;
 }
 
-.facet-field-heading button::after {
+.facet-field-heading button:not(#edit-query-btn)::after {
     content: "❯";
     float: right;
     transform: rotate(90deg);
@@ -181,6 +181,11 @@ hr.metadata-divider {
     margin-right: 8px;
 }
 
+.page-links {
+    padding: 10px 0px 0px 10px;
+    font-size: 0.9rem;
+}
+
 .page-links, .sort-dropdown > button, .sort-dropdown > button > span {
     font-size: 14px;
 }
@@ -201,13 +206,11 @@ hr.metadata-divider {
 }
 
 .page-sidebar {
-    background-color: #E5E5E5;
-    padding-top: 8px;
+    padding-top: 20px;
 }
 
 .index-main {
-    background-color: #E5E5E5;
-    padding-top: 8px !important;
+    padding-top: 20px !important;
 }
 
 /** xs size breakpoint **/
@@ -298,7 +301,7 @@ hr.metadata-divider {
     }
 
     .documents-list {
-        max-height: calc(100vh - 340px);
+        max-height: 100vh;
         overflow-y: scroll;
     }
 
@@ -314,7 +317,7 @@ hr.metadata-divider {
     }
 
     .documents-list {
-        max-height: calc(100vh - 340px);
+        max-height: 100vh;
         overflow-y: scroll;
     }
 
@@ -340,7 +343,7 @@ hr.metadata-divider {
     }
 
     .documents-list {
-        max-height: calc(100vh - 340px);
+        max-height: 100vh;
         overflow-y: scroll;
     }
 
@@ -397,11 +400,6 @@ a:hover, a:focus, a:active {
     border-color: #32322f;
 }
 
-/** Disable mustard halo on focus of button **/
-.btn:focus {
-    box-shadow: none !important;
-}
-
 .dropdown-toggle {
     padding: 8px;
 }
@@ -430,6 +428,7 @@ label.feature-label {
     padding-bottom: 0px !important;
     width: 100%;
     max-width: 100% !important;
+    background-color: var(--alliance-gray-200);
 }
 
 .navbar-search {
@@ -484,6 +483,10 @@ label.feature-label {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.advanced-field-dropdown .dropdown-menu {
+    min-width: min-content;
 }
 
 button.dropdown-item.fieldname {
