@@ -301,10 +301,6 @@ input.search_bar {
   color: #B12;
 }
 
-.footer-alliance-logo {
-    height: 50px;
-}
-
 #pleasewait {
   width: 500px;
   margin-top: 100px;
@@ -1758,18 +1754,6 @@ a.social-media-icon {
    HOME PAGE
    migrated from frdr-theme.css
    ======================================== */
-
-.alliance-btn-primary {
-    color: var(--color-white) !important;
-    background-color: var(--color-tuatara);
-    border-color: var(--color-tuatara);
-    background-image: none;
-    text-decoration: none !important;
-}
-
-.alliance-btn-primary:hover, .alliance-btn-primary:focus, .alliance-btn-primary:active {
-    opacity: 0.7;
-}
 
 .alliance-btn-secondary {
     background-color: var(--color-buddha-gold);
@@ -3787,7 +3771,15 @@ div.twitter-typeahead {
     margin-bottom: 32px;
 }
 
-.btn.alliance-btn-secondary {
+.dashboard-content .dropdown-menu {
+    padding: 0px;
+}
+
+.dashboard-content .dashboard.dropdown-item {
+    padding: 0.25rem 1rem;
+}
+
+.dashboard-content .btn.btn-primary {
     font-size: var(--font-size-h3);
     font-weight: var(--font-weight-semibold);
     color: var(--color-tuatara);
@@ -3885,7 +3877,7 @@ form#submit_new_dataset {
     padding-top: 1.25rem;
 }
 
-#submit_new_dataset .alliance-btn-secondary {
+#submit_new_dataset .btn-primary {
     padding-left: 1.75rem;
     padding-right: 0rem;
     padding-top: 0.75rem;
@@ -3897,7 +3889,7 @@ form#submit_new_dataset {
 }
 
 @media (max-width: 768px) {
-    #submit_new_dataset .alliance-btn-secondary {
+    #submit_new_dataset .btn-primary {
         font-size: var(--font-size-h3);
         font-weight: var(--font-weight-bold);
     }
@@ -4544,6 +4536,12 @@ input[type=number] {
 .dropdown-item > a.disabled {
     color: #6C757D;
     pointer-events: none;
+}
+
+.dropdown-item:has(.disabled):hover,
+.dropdown-item:has(.disabled):focus {
+    background-color: transparent;
+    color: #6C757D;
 }
 
 a.dashboard.dropdown-item {
