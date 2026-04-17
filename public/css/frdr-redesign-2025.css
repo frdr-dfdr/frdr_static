@@ -1968,6 +1968,73 @@ a.external-link:after {
 }
 
 /* ========================================
+   HOMEPAGE ABOUT SECTION
+   ======================================== */
+
+.home-about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 24px 48px;
+    position: relative;
+}
+
+/* Full-bleed background — breaks out of the .container */
+.home-about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+    background-color: var(--color-ebb);
+    z-index: -1;
+}
+
+.home-about-logo-col {
+    flex-shrink: 0;
+}
+
+.home-about-icon {
+    height: 100px;
+    width: auto;
+}
+
+.home-about-text-col {
+    flex: 1;
+}
+
+.home-about-heading {
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-h2);
+    color: var(--color-tuatara);
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.home-about-divider {
+    width: 80px;
+    height: 2px;
+    background-color: var(--color-buddha-gold);
+    margin: 24px auto;
+}
+
+@media (max-width: 768px) {
+    .home-about {
+        flex-direction: column;
+        padding: 24px 20px;
+        text-align: center;
+    }
+
+    .home-about-logo-col {
+        text-align: center;
+    }
+}
+
+/* ========================================
    ITEM LIST / DOCUMENTS
    migrated from frdr-theme.css
    ======================================== */
