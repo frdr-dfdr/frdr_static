@@ -11,7 +11,6 @@
     --color-buttercup: #F0B90B;
     --color-wheat: #F5E5B3;
     --color-maple: #B3021A;
-    --color-brown: #524033;
     --color-green: #458240;
     --color-blue: #4379B1;
     --color-red: #dc3545;
@@ -379,7 +378,6 @@ h2, .h2, .styled-h2 {
     font-weight: var(--font-weight-bold);
     font-size: var(--font-size-h2);
     line-height: var(--line-height-heading);
-    color: var(--color-brown);
     margin-top: 20px;
     margin-bottom: 16px;
 }
@@ -389,7 +387,6 @@ h3, .h3, .styled-h3 {
     font-weight: var(--font-weight-semibold);
     font-size: var(--font-size-h3);
     line-height: var(--line-height-heading);
-    color: var(--color-brown);
     margin-top: 20px;
 }
 
@@ -2007,19 +2004,61 @@ a.external-link:after {
     flex: 1;
 }
 
-.home-about-heading {
-    font-weight: var(--font-weight-bold);
-    font-size: var(--font-size-h2);
-    color: var(--color-tuatara);
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-}
-
 .home-about-divider {
     width: 80px;
     height: 2px;
     background-color: var(--color-buddha-gold);
     margin: 24px auto;
+}
+
+/* ========================================
+   HOME GET STARTED SECTION
+   ======================================== */
+
+.get-started-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.get-started-img {
+    width: 100%;
+    height: 158px; 
+    object-fit: cover;
+    border-radius: var(--border-radius-sm); 
+    display: block;
+    position: relative;
+    z-index: 0;
+}
+
+.get-started-card {
+    background-color: var(--color-ebb); 
+    box-shadow: 0px 2.67px 5.34px rgba(171, 190, 209, 0.4);
+    border-radius: var(--border-radius-md);
+    padding: 12px 12px 20px;
+    width: calc(100% - 20px);
+    flex: 1;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin-top: -32px;
+}
+
+.get-started-card-title {
+    font-weight: var(--font-weight-bold); 
+    color: var(--color-tuatara); 
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.get-started-card ul {
+    text-align: left;
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-semibold);
+    line-height: 25px;
+    margin-bottom: 0;
+    padding-left: 20px;
 }
 
 @media (max-width: 768px) {
@@ -2460,7 +2499,9 @@ ol > li:before {
 }
 
 
-/* Pseudo element to fix anchors being hidden under navbar */
+/* DEPRECATED: anchor-offset hack superseded by `html { scroll-padding-top }` above.
+   TODO: verify docs anchor links still work before deleting. */
+/*
 h2::before, h3::before {
     display: block;
     content: " ";
@@ -2469,6 +2510,7 @@ h2::before, h3::before {
     visibility: hidden;
     pointer-events: none;
 }
+*/
 
 table {
     width: 100%;
