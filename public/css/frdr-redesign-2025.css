@@ -1783,6 +1783,316 @@ a.social-media-icon {
     box-shadow: 0 0 0 .2rem rgba(182, 145, 0, 0.5) !important;
 }
 
+/* ========================================
+   BASE BUTTON STYLES
+   ======================================== */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    border: none;
+    border-radius: var(--border-radius-sm);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+/* ========================================
+   PRIMARY BUTTON
+   ======================================== */
+
+.btn-primary {
+    background-color: var(--color-buddha-gold);
+    color: var(--color-tuatara);
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-semibold);
+    padding: 8px 16px;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-wheat);
+    color: var(--color-tuatara);
+    text-decoration: none;
+}
+
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: var(--color-wheat);
+    color: var(--color-tuatara);
+    outline: none;
+}
+
+.btn-primary:disabled,
+.btn-primary.disabled {
+    background-color: var(--color-disabled);
+    color: var(--gray-600);
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* ========================================
+   SECONDARY BUTTON
+   ======================================== */
+
+.btn-secondary {
+    background-color: var(--color-white);
+    color: var(--color-tuatara);
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-normal);
+    padding: 10px 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-wheat);
+    color: var(--color-tuatara);
+    border-color: var(--color-wheat);
+    text-decoration: none;
+}
+
+.btn-secondary:focus,
+.btn-secondary:active {
+    background-color: var(--color-wheat);
+    color: var(--color-tuatara);
+    border-color: var(--color-wheat);
+    outline: none;
+}
+
+.btn-secondary:disabled,
+.btn-secondary.disabled {
+    background-color: var(--gray-100);
+    color: var(--gray-600);
+    border-color: var(--gray-300);
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* ========================================
+   SAVE BUTTON (Secondary Button, Primary Action, smaller than btn-primary)
+   ======================================== */
+
+.btn-save {
+    background-color: var(--color-buddha-gold);
+    color: var(--color-tuatara);
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-normal);
+}
+
+.btn-save:hover,
+.btn-save:focus,
+.btn-save:active {
+    background-color: var(--color-wheat);
+    color: var(--color-tuatara);
+    text-decoration: none;
+}
+
+/* ========================================
+   STATUS BUTTONS (Success, Info, Warning, Danger)
+   aligned with frdr-theme.css
+   ======================================== */
+
+.btn-success,
+.btn-info,
+.btn-globus,
+.btn-warning,
+.btn-danger {
+    background-color: var(--color-white);
+    color: var(--color-tuatara);
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-normal);
+    padding: 10px 20px;
+    border: 1px solid var(--gray-500);
+}
+
+/* Success / Info / Globus: hover, active, focus → gold */
+.btn-success:hover,
+.btn-success:active,
+.btn-success:focus,
+.btn-info:hover,
+.btn-info:active,
+.btn-globus:hover,
+.btn-globus:active,
+.btn-globus:focus {
+    background-color: var(--color-buddha-gold) !important;
+    background-image: none;
+    border: 1px solid #b08c00 !important;
+    color: var(--color-tuatara)!important;
+    text-shadow: none;
+}
+
+.btn-info:focus {
+    box-shadow: 0 0 0 .2rem rgba(182, 145, 0, 0.5) !important;
+}
+
+/* Warning: hover, active, focus → amber */
+.btn-warning:hover,
+.btn-warning:active,
+.btn-warning:focus {
+    background-color: #f0ad4e;
+    border-color: #eea236;
+    color: var(--color-white);
+    background-image: none;
+    text-shadow: none;
+}
+
+/* Danger: hover, active → solid red */
+.btn-danger:hover,
+.btn-danger:active {
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    color: var(--color-white);
+    background-image: none;
+    text-shadow: none;
+}
+
+.btn-danger:focus {
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    color: var(--color-white);
+    background-image: none;
+    text-shadow: none;
+    box-shadow: 0 0 0 .2rem rgba(225, 83, 97, .5) !important;
+}
+
+/* Disabled */
+.btn-success.disabled,
+.btn-success[disabled],
+fieldset[disabled] .btn-success {
+    border-color: #666666;
+}
+
+.btn-success.disabled, .btn-success:disabled,
+.btn-info.disabled, .btn-info:disabled,
+.btn-globus.disabled, .btn-globus:disabled {
+    color: var(--color-tuatara);
+    cursor: not-allowed;
+}
+
+/* ========================================
+   OUTLINE BUTTONS
+   ======================================== */
+
+.btn-outline-secondary {
+    background-color: transparent;
+    color: var(--color-tuatara);
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-normal);
+    padding: 10px 20px;
+    border: 2px solid var(--color-tuatara);
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--color-tuatara);
+    color: var(--color-white);
+    border-color: var(--color-tuatara);
+    text-decoration: none;
+}
+
+/* ========================================
+   BUTTON SIZES
+   ======================================== */
+
+.btn-lg {
+    font-size: var(--font-size-h3);
+    padding: 14px 28px;
+}
+
+.btn-sm {
+    font-size: var(--font-size-h5);
+    padding: 8px 16px;
+}
+
+.btn-xs {
+    font-size: var(--font-size-h5);
+    padding: 6px 12px;
+}
+
+.btn-bold {
+    font-weight: var(--font-weight-bold);
+}
+
+.btn-shadow {
+    box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+/* ========================================
+   BUTTON WITH ICONS
+   ======================================== */
+
+.btn i:first-child,
+.btn .fa:first-child,
+.btn .fas:first-child,
+.btn .far:first-child {
+    margin-right: 8px;
+}
+
+.btn i:last-child,
+.btn .fa:last-child,
+.btn .fas:last-child,
+.btn .far:last-child {
+    margin-left: 8px;
+}
+
+.btn i:only-child,
+.btn .fa:only-child,
+.btn .fas:only-child,
+.btn .far:only-child {
+    margin: 0;
+}
+
+/* ========================================
+   BUTTON GROUPS
+   ======================================== */
+
+.btn-group {
+    display: inline-flex;
+    gap: 10px;
+}
+
+/* ========================================
+   BLOCK BUTTON (Full Width)
+   ======================================== */
+
+.btn-block {
+    display: flex;
+    width: 100%;
+}
+
+/* ========================================
+   BUTTON RESPONSIVE ADJUSTMENTS
+   ======================================== */
+
+@media only screen and (max-width: 768px) {
+    .btn-primary {
+        font-size: var(--font-size-h4);
+        padding: 10px 20px;
+    }
+
+    .btn-lg {
+        font-size: var(--font-size-h4);
+        padding: 12px 24px;
+    }
+
+    .btn-group {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-group > * {
+        width: 100%;
+    }
+}
+
+/* ========================================
+   HOME PAGE
+   ======================================== */
+
 .home-banner {
     background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
                       url(/static/images/latest/banner_mountain_legacy_project.png);
@@ -1962,6 +2272,107 @@ a.external-link:after {
 
 .carousel-control-next {
     background-color: var(--color-tuatara) !important;
+}
+
+/* ========================================
+   HOME COLLECTIONS SECTION
+   ======================================== */
+
+.home-collections-section {
+    position: relative;
+    padding: 20px 0px 40px 0px;
+}
+
+.home-collections-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+    background-color: var(--color-ebb);
+    z-index: -1;
+}
+
+/* Make each Bootstrap col a flex container so height propagates down */
+#collections .row > [class*="col-"] {
+    display: flex;
+    flex-direction: column;
+}
+
+.collection-carousel-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.collection-carousel-card {
+    background-color: var(--color-white);
+    box-shadow: 0px 12px 32px rgba(0, 0, 0, 0.12);
+    border-radius: var(--border-radius-md);
+    padding: 20px 20px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    flex: 1;
+}
+
+.collection-carousel-img {
+    height: 100px;
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 12px;
+    flex-shrink: 0;
+}
+
+.collection-carousel-name {
+    font-size: var(--font-size-h4);
+    color: var(--color-tuatara);
+    text-align: center;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.collection-carousel-btn {
+    font-size: var(--font-size-h4);
+    width: calc(100% - 60px);
+    margin-top: -20px;
+    position: relative;
+    z-index: 1;
+}
+
+#collections .carousel-control-prev,
+#collections .carousel-control-next {
+    width: 48px;
+    height: 48px;
+    background-color: var(--color-white) !important;
+    border-radius: var(--border-radius-full);
+    top: 45%;
+    transform: translateY(-55%);
+    bottom: auto;
+    opacity: 1;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+}
+
+#collections .carousel-control-prev {
+    left: -30px;
+}
+
+#collections .carousel-control-next {
+    right: -30px;
+}
+
+#collections .carousel-control-prev i,
+#collections .carousel-control-next i {
+    color: var(--color-tuatara);
+    font-size: 18px;
 }
 
 /* ========================================
@@ -2220,308 +2631,6 @@ body {
     margin-bottom: 32px;
     border-width: 3px;
     background-color: var(--color-buddha-gold);
-}
-
-/* ========================================
-   BASE BUTTON STYLES
-   ======================================== */
-
-.btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    text-align: center;
-    text-decoration: none;
-    vertical-align: middle;
-    cursor: pointer;
-    user-select: none;
-    border: none;
-    border-radius: var(--border-radius-sm);
-    transition: all 0.3s ease;
-    white-space: nowrap;
-}
-
-/* ========================================
-   PRIMARY BUTTON
-   ======================================== */
-
-.btn-primary {
-    background-color: var(--color-buddha-gold);
-    color: var(--color-tuatara);
-    font-size: var(--font-size-h3);
-    font-weight: var(--font-weight-semibold);
-    padding: 8px 16px;
-}
-
-.btn-primary:hover {
-    background-color: var(--color-wheat);
-    color: var(--color-tuatara);
-    text-decoration: none;
-}
-
-.btn-primary:focus,
-.btn-primary:active {
-    background-color: var(--color-wheat);
-    color: var(--color-tuatara);
-    outline: none;
-}
-
-.btn-primary:disabled,
-.btn-primary.disabled {
-    background-color: var(--color-disabled);
-    color: var(--gray-600);
-    cursor: not-allowed;
-    opacity: 0.6;
-}
-
-/* ========================================
-   SECONDARY BUTTON
-   ======================================== */
-
-.btn-secondary {
-    background-color: var(--color-white);
-    color: var(--color-tuatara);
-    font-size: var(--font-size-h4);
-    font-weight: var(--font-weight-normal);
-    padding: 10px 20px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.btn-secondary:hover {
-    background-color: var(--color-wheat);
-    color: var(--color-tuatara);
-    border-color: var(--color-wheat);
-    text-decoration: none;
-}
-
-.btn-secondary:focus,
-.btn-secondary:active {
-    background-color: var(--color-wheat);
-    color: var(--color-tuatara);
-    border-color: var(--color-wheat);
-    outline: none;
-}
-
-.btn-secondary:disabled,
-.btn-secondary.disabled {
-    background-color: var(--gray-100);
-    color: var(--gray-600);
-    border-color: var(--gray-300);
-    cursor: not-allowed;
-    opacity: 0.6;
-}
-
-/* ========================================
-   SAVE BUTTON (Secondary Button, Primary Action, smaller than btn-primary)
-   ======================================== */
-
-.btn-save {
-    background-color: var(--color-buddha-gold);
-    color: var(--color-tuatara);
-    font-size: var(--font-size-h4);
-    font-weight: var(--font-weight-normal);
-}
-
-.btn-save:hover,
-.btn-save:focus,
-.btn-save:active {
-    background-color: var(--color-wheat);
-    color: var(--color-tuatara);
-    text-decoration: none;
-}
-
-/* ========================================
-   STATUS BUTTONS (Success, Info, Warning, Danger)
-   aligned with frdr-theme.css
-   ======================================== */
-
-.btn-success,
-.btn-info,
-.btn-globus,
-.btn-warning,
-.btn-danger {
-    background-color: var(--color-white);
-    color: var(--color-tuatara);
-    font-size: var(--font-size-h4);
-    font-weight: var(--font-weight-normal);
-    padding: 10px 20px;
-    border: 1px solid var(--gray-500);
-}
-
-/* Success / Info / Globus: hover, active, focus → gold */
-.btn-success:hover,
-.btn-success:active,
-.btn-success:focus,
-.btn-info:hover,
-.btn-info:active,
-.btn-globus:hover,
-.btn-globus:active,
-.btn-globus:focus {
-    background-color: var(--color-buddha-gold) !important;
-    background-image: none;
-    border: 1px solid #b08c00 !important;
-    color: var(--color-tuatara)!important;
-    text-shadow: none;
-}
-
-.btn-info:focus {
-    box-shadow: 0 0 0 .2rem rgba(182, 145, 0, 0.5) !important;
-}
-
-/* Warning: hover, active, focus → amber */
-.btn-warning:hover,
-.btn-warning:active,
-.btn-warning:focus {
-    background-color: #f0ad4e;
-    border-color: #eea236;
-    color: var(--color-white);
-    background-image: none;
-    text-shadow: none;
-}
-
-/* Danger: hover, active → solid red */
-.btn-danger:hover,
-.btn-danger:active {
-    background-color: #d9534f;
-    border-color: #d43f3a;
-    color: var(--color-white);
-    background-image: none;
-    text-shadow: none;
-}
-
-.btn-danger:focus {
-    background-color: #d9534f;
-    border-color: #d43f3a;
-    color: var(--color-white);
-    background-image: none;
-    text-shadow: none;
-    box-shadow: 0 0 0 .2rem rgba(225, 83, 97, .5) !important;
-}
-
-/* Disabled */
-.btn-success.disabled,
-.btn-success[disabled],
-fieldset[disabled] .btn-success {
-    border-color: #666666;
-}
-
-.btn-success.disabled, .btn-success:disabled,
-.btn-info.disabled, .btn-info:disabled,
-.btn-globus.disabled, .btn-globus:disabled {
-    color: var(--color-tuatara);
-    cursor: not-allowed;
-}
-
-/* ========================================
-   OUTLINE BUTTONS
-   ======================================== */
-
-.btn-outline-secondary {
-    background-color: transparent;
-    color: var(--color-tuatara);
-    font-size: var(--font-size-h4);
-    font-weight: var(--font-weight-normal);
-    padding: 10px 20px;
-    border: 2px solid var(--color-tuatara);
-}
-
-.btn-outline-secondary:hover {
-    background-color: var(--color-tuatara);
-    color: var(--color-white);
-    border-color: var(--color-tuatara);
-    text-decoration: none;
-}
-
-/* ========================================
-   BUTTON SIZES
-   ======================================== */
-
-.btn-lg {
-    font-size: var(--font-size-h3);
-    padding: 14px 28px;
-}
-
-.btn-sm {
-    font-size: var(--font-size-h5);
-    padding: 8px 16px;
-}
-
-.btn-xs {
-    font-size: var(--font-size-h5);
-    padding: 6px 12px;
-}
-
-.btn-bold {
-    font-weight: var(--font-weight-bold);
-}
-
-/* ========================================
-   BUTTON WITH ICONS
-   ======================================== */
-
-.btn i:first-child,
-.btn .fa:first-child,
-.btn .fas:first-child,
-.btn .far:first-child {
-    margin-right: 8px;
-}
-
-.btn i:last-child,
-.btn .fa:last-child,
-.btn .fas:last-child,
-.btn .far:last-child {
-    margin-left: 8px;
-}
-
-.btn i:only-child,
-.btn .fa:only-child,
-.btn .fas:only-child,
-.btn .far:only-child {
-    margin: 0;
-}
-
-/* ========================================
-   BUTTON GROUPS
-   ======================================== */
-
-.btn-group {
-    display: inline-flex;
-    gap: 10px;
-}
-
-/* ========================================
-   BLOCK BUTTON (Full Width)
-   ======================================== */
-
-.btn-block {
-    display: flex;
-    width: 100%;
-}
-
-/* ========================================
-   RESPONSIVE ADJUSTMENTS
-   ======================================== */
-
-@media only screen and (max-width: 768px) {
-    .btn-primary {
-        font-size: var(--font-size-h4);
-        padding: 10px 20px;
-    }
-    
-    .btn-lg {
-        font-size: var(--font-size-h4);
-        padding: 12px 24px;
-    }
-    
-    .btn-group {
-        flex-direction: column;
-        width: 100%;
-    }
-    
-    .btn-group > * {
-        width: 100%;
-    }
 }
 
 ol {
