@@ -76,7 +76,7 @@
    migrated from frdr-theme.css
    ======================================== */
 
-a:not(.btn, .badge, .table-link, .page-link, .stats-label) {
+a:not(.btn, .badge, .table-link, .page-link, .stats-label, .recent-dataset-title, .category-card) {
     color: var(--color-blue-stone);
     margin-bottom: 0px;
     overflow-x: inherit;
@@ -2538,6 +2538,222 @@ a.external-link:after {
 }
 
 /* ========================================
+   HOME RECENT DATASETS SECTION
+   ======================================== */
+
+.recent-datasets-section {
+    margin-bottom: 3rem;
+}
+
+.recent-dataset-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 11px;
+    padding: 10px;
+    background: var(--color-white);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    margin-bottom: 16px;
+}
+
+.recent-dataset-img {
+    width: 220px;
+    height: 104px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.recent-dataset-content {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    flex: 1;
+    padding: 10px;
+}
+
+.recent-dataset-title {
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-tuatara); /* Figma: #3E4958 */
+    line-height: 1.36;
+    text-decoration: none;
+}
+
+.recent-dataset-title:hover {
+    color: var(--color-olive);
+    text-decoration: none;
+}
+
+.recent-dataset-doi {
+    font-size: 15px;
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-tuatara); /* Figma: #3E4958 */
+}
+
+.recent-dataset-authors {
+    font-size: 15px;
+    font-style: italic;
+    font-weight: var(--font-weight-normal);
+    color: var(--color-tuatara); /* Figma: #3E4958 */
+}
+
+/* Previous / Next nav buttons */
+.recent-pagination-wrapper .recent-nav-btn .page-link {
+    width: auto !important;   /* override global first/last-child width: 44px */
+    height: auto !important;  /* override global first/last-child height: 32px */
+    padding: 10px 24px !important;
+    background-color: var(--color-white);
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    color: var(--color-tuatara);
+    font-size: var(--font-size-h4);
+}
+
+.recent-pagination-wrapper .recent-nav-btn:not(.disabled) .page-link:hover,
+.recent-pagination-wrapper .recent-nav-btn:not(.disabled) .page-link:focus {
+    background-color: var(--color-wheat);
+    border-color: var(--color-wheat) !important;
+    color: var(--color-tuatara);
+    box-shadow: none;
+}
+
+.recent-pagination-wrapper .recent-nav-btn.disabled .page-link {
+    background-color: var(--color-white);
+    border-color: rgba(0, 0, 0, 0.1) !important;
+    color: var(--gray-400);
+}
+
+/* Prev at far left, Next at far right; numbers stay centered */
+.recent-pagination-wrapper .recent-nav-btn:first-child {
+    margin-right: auto;
+    margin-left: 1rem;
+}
+
+.recent-pagination-wrapper .recent-nav-btn:last-child {
+    margin-left: auto;
+    margin-right: 1rem;
+}
+
+/* Override: remove scroll/height constraint from home recent datasets list */
+.recent-datasets-section .documents-list,
+.recent-datasets-section ~ .documents-list {
+    max-height: none;
+    overflow-y: visible;
+}
+
+@media (max-width: 768px) {
+    .recent-dataset-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .recent-dataset-img {
+        width: 100%;
+        height: 120px;
+    }
+}
+
+/* ========================================
+   HOME FEATURED CATEGORIES SECTION
+   ======================================== */
+
+.featured-categories-section {
+    padding: 40px 0;
+}
+
+/* 5-column grid for Bootstrap 4 (mobile: 2 col, desktop: 5 col) */
+#categories-grid > div {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 8px;
+    margin-bottom: 16px;
+}
+@media (min-width: 992px) {
+    #categories-grid > div {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+
+.categories-subheading {
+    font-size: var(--font-size-h5);
+    color: var(--gray-600);
+    margin-bottom: 8px;
+}
+
+.categories-desc {
+    font-size: var(--font-size-h4);
+    color: var(--color-tuatara);
+    max-width: 600px;
+    margin: 0 auto 12px;
+}
+
+.category-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 12px 16px;
+    background-color: var(--color-white);
+    border: 1px solid var(--gray-300);
+    border-radius: var(--border-radius-md);
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--color-tuatara);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    height: 100%;
+}
+
+.category-card:hover,
+.category-card:focus {
+    border-color: var(--color-buddha-gold);
+    box-shadow: var(--shadow-md);
+    color: var(--color-tuatara);
+    text-decoration: none;
+}
+
+.category-icon-circle {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--border-radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px;
+    flex-shrink: 0;
+}
+
+.category-icon-circle i {
+    font-size: 22px;
+    color: var(--color-white);
+}
+
+.category-icon-circle--gold   { background-color: var(--color-buddha-gold); }
+.category-icon-circle--teal   { background-color: var(--color-blue-stone); }
+.category-icon-circle--blue   { background-color: var(--color-blue); }
+.category-icon-circle--green  { background-color: var(--color-green); }
+.category-icon-circle--orange { background-color: var(--color-buttercup); }
+.category-icon-circle--red    { background-color: var(--color-maple); }
+
+.category-card-name {
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-h5);
+    color: var(--color-tuatara);
+    margin-bottom: 6px;
+    line-height: 1rem;
+}
+
+.category-card-count {
+    display: inline-block;
+    padding: 2px 10px;
+    background-color: var(--gray-300);
+    border-radius: 16px;
+    font-size: var(--font-size-h5);
+    font-weight: var(--font-weight-semibold);
+    margin-top: auto;
+}
+
+/* ========================================
    ITEM LIST / DOCUMENTS
    migrated from frdr-theme.css
    ======================================== */
@@ -4899,6 +5115,184 @@ a.dashboard.dropdown-item {
     overflow: hidden;
     white-space: nowrap;
     max-width: 10px;
+}
+
+/* ========================================
+   CATEGORY LIST PAGE (/category-list)
+   ======================================== */
+
+.catlist-page {
+    padding-top: 32px;
+    padding-bottom: 60px;
+    position: relative;
+}
+
+.catlist-page::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--gray-100);
+    z-index: -1;
+}
+
+/* Search card */
+.catlist-search-card {
+    background: var(--color-white);
+    border-radius: var(--border-radius-md);
+    padding: 14px 20px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow-card);
+}
+
+.catlist-search-input-wrapper {
+    position: relative;
+    width: 50%;
+}
+
+.catlist-search-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--gray-600);
+    font-size: var(--font-size-h4);
+    pointer-events: none;
+}
+
+.catlist-search-input {
+    width: 100%;
+    padding: 10px 16px 10px 40px;
+    font-size: var(--font-size-h4);
+    border: 1px solid var(--gray-300);
+    border-radius: var(--border-radius-sm);
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.catlist-search-input:focus {
+    border-color: var(--color-buddha-gold);
+    box-shadow: 0 0 0 3px rgba(214, 171, 0, 0.15);
+}
+
+.catlist-meta-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.catlist-count-label {
+    font-size: var(--font-size-h5);
+}
+
+.catlist-toggle-btn {
+    font-size: var(--font-size-h5);
+    padding: 6px 14px;
+}
+
+/* Division sections */
+.catlist-division {
+    margin-bottom: 20px;
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    background: var(--color-white);
+}
+
+.catlist-division-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    cursor: pointer;
+    background: var(--color-white);
+    user-select: none;
+    transition: background-color 0.15s ease;
+}
+
+
+.catlist-division-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: var(--border-radius-full);
+    flex-shrink: 0;
+}
+
+.catlist-dot--blue   { background-color: var(--color-blue); }
+.catlist-dot--teal   { background-color: var(--color-blue-stone); }
+.catlist-dot--gold   { background-color: var(--color-buddha-gold); }
+.catlist-dot--green  { background-color: var(--color-green); }
+.catlist-dot--orange { background-color: var(--color-buttercup); }
+.catlist-dot--red    { background-color: var(--color-maple); }
+
+.catlist-division-title-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 2px;
+}
+
+.catlist-division-title {
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-h3);
+    color: var(--color-tuatara);
+}
+
+.catlist-division-meta {
+    font-size: var(--font-size-h5);
+    color: var(--gray-600);
+}
+
+.catlist-division-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--gray-600);
+    padding: 4px 8px;
+    border-radius: var(--border-radius-sm);
+    transition: background-color 0.15s ease;
+    flex-shrink: 0;
+}
+
+/* Sub-category card grid inside a division */
+.catlist-division-grid {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 16px;
+    gap: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* 2 columns mobile, 5 columns desktop */
+.catlist-card-col {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+@media (min-width: 576px) {
+    .catlist-card-col {
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+    }
+}
+
+@media (min-width: 992px) {
+    .catlist-card-col {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+
+/* catlist-card overrides category-card for this page */
+.catlist-card {
+    height: 100%;
 }
 
 .dataInfoValue:hover {
