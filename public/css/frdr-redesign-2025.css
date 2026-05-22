@@ -2575,7 +2575,7 @@ a.external-link:after {
 .recent-dataset-title {
     font-size: var(--font-size-h3);
     font-weight: var(--font-weight-bold);
-    color: var(--color-tuatara); /* Figma: #3E4958 */
+    color: var(--color-tuatara);
     line-height: 1.36;
     text-decoration: none;
 }
@@ -2588,14 +2588,14 @@ a.external-link:after {
 .recent-dataset-doi {
     font-size: 15px;
     font-weight: var(--font-weight-semibold);
-    color: var(--color-tuatara); /* Figma: #3E4958 */
+    color: var(--color-tuatara);
 }
 
 .recent-dataset-authors {
     font-size: 15px;
     font-style: italic;
     font-weight: var(--font-weight-normal);
-    color: var(--color-tuatara); /* Figma: #3E4958 */
+    color: var(--color-tuatara);
 }
 
 /* Previous / Next nav buttons */
@@ -3785,6 +3785,31 @@ i.feedback-icon:hover {
 @media only screen and (max-width: 576px) {
     .collection-logo-box {
         margin: 0 auto 15px;
+    }
+}
+
+/* ========================================
+   COLLECTION HOME PAGE
+   ======================================== */
+
+.collection-home-logo-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 160px;
+}
+
+.collection-home-header + hr {
+    height: 6px;
+    background-color: var(--gray-400);
+    border: none;
+    opacity: 1;
+    margin: 16px 0 24px;
+}
+
+@media only screen and (max-width: 768px) {
+    .collection-home-logo-col {
+        width: 100%;
     }
 }
 
