@@ -3915,6 +3915,47 @@ i.feedback-icon:hover {
     }
 }
 
+/* COLLECTION ACTION CARDS */
+.col-action-cards {
+    display: flex;
+    flex-direction: row;
+    gap: 42px;
+    margin-top: 24px;
+}
+
+.col-action-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 24px 28px;
+    background: var(--color-white);
+    border: 1px solid var(--gray-400);
+    border-radius: var(--border-radius-md);
+}
+
+.col-action-card-title {
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-normal);
+    text-align: center;
+    margin: 0;
+}
+
+.col-action-card-desc {
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-normal);
+    text-align: center;
+    line-height: 1.5;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .col-action-cards {
+        flex-direction: column;
+    }
+}
+
 /* ========================================
    PAGINATION
    ======================================== */
