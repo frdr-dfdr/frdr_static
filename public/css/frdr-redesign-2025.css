@@ -76,7 +76,7 @@
    migrated from frdr-theme.css
    ======================================== */
 
-a:not(.btn, .badge, .table-link, .page-link, .stats-label, .recent-dataset-title, .category-card, .col-stat-text) {
+a:not(.btn, .badge, .table-link, .page-link, .stats-label, .recent-dataset-title, .category-card, .col-stat-text, .table-sort) {
     color: var(--color-blue-stone);
     margin-bottom: 0px;
     overflow-x: inherit;
@@ -3968,6 +3968,74 @@ i.feedback-icon:hover {
     border: none;
     opacity: 1;
     margin: 24px 0 0;
+}
+
+/* ========================================
+   COLLECTION DATASETS TABLE
+   ======================================== */
+
+.col-datasets-table {
+    margin-top: 16px;
+}
+
+.col-datasets-table .list-bordertop-row:first-child {
+    background-color: var(--gray-100);
+    border-top: 1px solid var(--gray-400);
+    border-bottom: 1px solid var(--gray-400);
+    padding-top: 0;
+    padding-bottom: 0;
+    align-items: center;
+}
+
+.col-datasets-table .list-bordertop-row:first-child > [id^="t"] {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px;
+    font-weight: var(--font-weight-bold);
+}
+
+.col-datasets-table a.table-sort {
+    color: var(--color-tuatara);
+    text-decoration: none;
+    line-height: 1;
+}
+.col-datasets-table a.table-sort.inactive {
+    color: var(--gray-400);
+}
+.col-datasets-table a.table-sort:hover {
+    color: var(--color-olive);
+    text-decoration: none;
+}
+
+.col-datasets-table .list-bordertop-row:not(:first-child) {
+    border-top: none;
+    border-bottom: 1px solid var(--gray-400);
+    min-height: 81px;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.col-datasets-table .list-bordertop-row:not(:first-child) > [headers] {
+    padding: 10px;
+    line-height: 21px;
+}
+
+/* Approved Date (t1) and Authors (t3) columns: smaller font */
+.col-datasets-table .list-bordertop-row:not(:first-child) > [headers="t1"],
+.col-datasets-table .list-bordertop-row:not(:first-child) > [headers="t3"] {
+    font-size: 15px;
+}
+
+.browse-item-doi {
+    display: block;
+    font-size: var(--font-size-h5);
+    margin-top: 4px;
+}
+
+.col-datasets-pagination {
+    margin-top: 16px;
 }
 
 /* ========================================
