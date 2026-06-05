@@ -5634,3 +5634,95 @@ a.dashboard.dropdown-item {
         margin-bottom: 32px;
     }
 }
+
+/* CONTACT US SENT PAGE (/contactus — confirmation) */
+.sent-card {
+    border: 1px solid var(--gray-300);
+    border-radius: var(--border-radius-md);
+    padding: 42px 46px 40px;
+    margin-bottom: 48px;
+}
+.sent-card-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 22px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--gray-200);
+}
+.sent-check-icon {
+    flex-shrink: 0;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: var(--color-success);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: var(--color-tuatara);
+}
+
+.sent-desc {
+    font-size: var(--font-size-h4);
+    color: var(--gray-600);
+    margin: 0;
+    line-height: 1.5;
+}
+.sent-reply-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #2f8f6b; /* Figma: green */
+    flex-shrink: 0;
+}
+
+.sent-summary-heading {
+    font-size: var(--font-size-h5);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--gray-600);
+    margin: 0 0 18px;
+}
+.sent-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 48px;
+}
+.sent-grid-item {
+    padding: 15px 0;
+    border-bottom: 1px solid var(--gray-200);
+}
+.sent-grid-item--full {
+    grid-column: 1 / -1;
+}
+.sent-grid-item--full:last-child {
+    border-bottom: none;
+}
+.sent-item-key {
+    font-size: var(--font-size-h5);
+    font-weight: var(--font-weight-semibold);
+    color: var(--gray-600);
+    margin-bottom: 5px;
+}
+.sent-item-value {
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-tuatara);
+}
+.sent-item-value--quote {
+    font-weight: var(--font-weight-normal);
+    color: var(--gray-600);
+    line-height: 1.55;
+    background: var(--gray-100);
+    border-left: 3px solid var(--color-buddha-gold);
+    padding: 13px 16px;
+    border-radius: 0 8px 8px 0;
+    margin-top: 3px;
+}
+
+@media (max-width: 768px) {
+    .sent-card { padding: 30px 24px 28px; }
+    .sent-grid { grid-template-columns: 1fr; gap: 0; }
+}
