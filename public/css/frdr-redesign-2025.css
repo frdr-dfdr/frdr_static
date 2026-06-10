@@ -2984,6 +2984,14 @@ th, td {
     font-size: var(--font-size-h4);
 }
 
+/* When sidebar is hidden via jQuery .hide() (hidesidebar URL param), expand main to full width */
+.frdr-sidebar[style*="display: none"] ~ .frdr-main {
+    display: inline-block;
+    width: 100%;
+    margin-left: 54px;
+    margin-right: 54px;
+}
+
 .card-group {
     display: flex;
 }
@@ -3451,6 +3459,13 @@ h1+ul {
         margin-right: 16px;
     }
 
+    .frdr-sidebar[style*="display: none"] ~ .frdr-main {
+        display: inline-block;
+        width: fit-content;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
     .carousel-container {
         margin-left: 0px;
         margin-right: 0px;
@@ -3521,6 +3536,32 @@ h1+ul {
     .page-banner-title {
         font-size: 60px;
         line-height: 60px;
+    }
+}
+
+@media (max-width: 767px) {
+    .page-banner-card {
+        margin: 0;
+        border-radius: 0;
+        margin-bottom: 24px;
+    }
+    .page-banner-text {
+        width: 100%;
+        padding: 0;
+    }
+    .page-banner-title {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .page-banner-subtitle {
+        font-size: 14px;
+        font-weight: var(--font-weight-normal);
+        line-height: 20px;
+        margin-top: 8px;
+        margin-bottom: 0;
+    }
+    .page-banner-icon {
+        display: none;
     }
 }
 
@@ -5174,6 +5215,24 @@ button.link {
 .apply-form { margin-bottom: 30px; }
 .sub-label { font-weight: normal; margin: 0px; padding: 0px; }
 .no-left-padding { padding-left: 0px; }
+
+/* ========================================
+   NEW USER SUBMISSION FORM
+   ======================================== */
+
+.apply-form-body .form-group,
+.apply-form-body .twitter-typeahead {
+    margin-bottom: 20px;
+}
+
+.apply-form-body .form-control {
+    border-radius: var(--border-radius-sm);
+}
+
+.apply-form-body .sub-label {
+    display: block;
+    margin-bottom: 4px;
+}
 .align-checkbox { margin-top: 14px !important; }
 .right-label { text-align: right; }
 .duplicate { color: #3b850b; }
@@ -5701,6 +5760,7 @@ a.dashboard.dropdown-item {
         margin-bottom: 0;
     }
     .page-banner-icon:has(.contact-banner-icon) {
+        display: block;
         position: absolute;
         top: -44px;
         right: -28px;
