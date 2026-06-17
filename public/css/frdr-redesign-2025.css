@@ -2841,6 +2841,11 @@ body {
     margin-top:80px !important;
 }
 
+#content {
+    background-color: var(--color-ebb);
+    padding-bottom: 24px;
+}
+
 #main-content > hr {
     margin-top: 32px;
     margin-bottom: 32px;
@@ -5880,10 +5885,20 @@ a.dashboard.dropdown-item {
     top: 80px;
     z-index: 100;
     background: var(--color-white);
-    border-bottom: 1px solid var(--gray-300);
     padding: 16px 0 12px;
     margin-bottom: 32px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.submit-progress-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+    background-color: var(--color-white);
+    z-index: -1;
 }
 
 .submit-progress-header {
@@ -6084,4 +6099,19 @@ a.dashboard.dropdown-item {
     font-size: 11px;
     color: var(--gray-500);
     margin-top: 1px;
+}
+
+/* ========================================
+   ACCEPT TERMS PAGE (/submit — show-license)
+   ======================================== */
+
+.license-checkbox-row {
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+}
+
+.license-checkbox-row.is-checked {
+    background: #eef9f1;
+    border-color: var(--color-success);
 }
