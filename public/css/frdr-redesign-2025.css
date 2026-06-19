@@ -1853,7 +1853,7 @@ a.social-media-icon {
     color: var(--color-tuatara);
     font-size: var(--font-size-h4);
     font-weight: var(--font-weight-normal);
-    padding: 6px 12px;
+    padding: 8px 16px;
     border: 1px solid var(--gray-500);
 }
 
@@ -1915,6 +1915,7 @@ a.social-media-icon {
     font-size: var(--font-size-h4);
     font-weight: var(--font-weight-normal);
     border: 1px solid var(--gray-500);
+    padding: 6px 12px;
 }
 
 /* Success / Info / Globus: hover, active, focus → gold */
@@ -6194,7 +6195,7 @@ label.collab-perm-inline:has(input[type="checkbox"]:checked) {
 
 /* Read-only permission indicators (Pending Collaborators) */
 span.collab-perm-inline:has(.text-success) {
-    color: var(--color-success);
+    color: #006702;
 }
 
 span.collab-perm-inline:has(.text-secondary) {
