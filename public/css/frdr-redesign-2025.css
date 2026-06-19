@@ -845,6 +845,15 @@ a.lang-btn.d-lg-block {
    migrated from frdr-theme.css
    ======================================== */
 
+/* Reusable white card panel — white bg, rounded corners, shadow, 24px padding */
+.frdr-card {
+    background: var(--color-white);
+    border-radius: var(--border-radius-md);
+    padding: 24px;
+    box-shadow: var(--shadow-card);
+    margin-bottom: 24px;
+}
+
 .card-header {
   background-color: rgba(0,0,0,0.08);
   background-image: linear-gradient(to bottom, #f5f5f5 0%, #e8e8e8 100%);
@@ -1809,7 +1818,7 @@ a.social-media-icon {
 .btn-primary {
     background-color: var(--color-buddha-gold);
     color: var(--color-tuatara);
-    font-size: var(--font-size-h3);
+    font-size: var(--font-size-h4);
     font-weight: var(--font-weight-semibold);
     padding: 8px 16px;
 }
@@ -1844,8 +1853,8 @@ a.social-media-icon {
     color: var(--color-tuatara);
     font-size: var(--font-size-h4);
     font-weight: var(--font-weight-normal);
-    padding: 10px 20px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 6px 12px;
+    border: 1px solid var(--gray-500);
 }
 
 .btn-secondary:hover {
@@ -1905,7 +1914,6 @@ a.social-media-icon {
     color: var(--color-tuatara);
     font-size: var(--font-size-h4);
     font-weight: var(--font-weight-normal);
-    padding: 10px 20px;
     border: 1px solid var(--gray-500);
 }
 
@@ -6114,4 +6122,101 @@ a.dashboard.dropdown-item {
 .license-checkbox-row.is-checked {
     background: #eef9f1;
     border-color: var(--color-success);
+}
+
+/* ========================================
+   COLLABORATE STEP (/submit — collaborate)
+   ======================================== */
+
+.collab-list {
+    border-top: 1px solid var(--gray-300);
+}
+
+.collab-list-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    border-bottom: 1px solid var(--gray-300);
+}
+
+.collab-list > form:last-child .collab-list-item,
+.collab-list > .collab-list-item:last-child {
+    border-bottom: none;
+}
+
+.collab-person {
+    flex: 1;
+    min-width: 0;
+}
+
+.collab-person-name {
+    display: block;
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-tuatara);
+}
+
+.collab-person-email {
+    display: block;
+    font-size: var(--font-size-h5);
+    color: var(--gray-600);
+    margin-top: 2px;
+}
+
+.collab-perms {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+}
+
+.collab-perm-inline {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: var(--font-size-h5);
+    white-space: nowrap;
+    margin-bottom: 0;
+    font-weight: var(--font-weight-normal);
+}
+
+/* Interactive checkbox pills (Recent Collaborators) */
+label.collab-perm-inline {
+    border: 1px solid var(--gray-300);
+    border-radius: var(--border-radius-sm);
+    padding: 4px 10px;
+    cursor: pointer;
+}
+
+label.collab-perm-inline:has(input[type="checkbox"]:checked) {
+    background-color: var(--color-info);
+}
+
+/* Read-only permission indicators (Pending Collaborators) */
+span.collab-perm-inline:has(.text-success) {
+    color: var(--color-success);
+}
+
+span.collab-perm-inline:has(.text-secondary) {
+    color: var(--gray-600);
+}
+
+.collab-perm-inline input[type="checkbox"] {
+    cursor: pointer;
+}
+
+.collab-action {
+    display: flex;
+    gap: 8px;
+}
+
+@media (max-width: 992px) {
+    .collab-list-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    .collab-action {
+        justify-content: flex-start;
+    }
 }
