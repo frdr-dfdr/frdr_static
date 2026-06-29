@@ -321,7 +321,7 @@ input.search_bar {
 }
 
 .instructions-box {
-  margin-bottom: 5px;
+  margin-bottom: 24px;
 }
 
 #contactform {
@@ -4171,15 +4171,6 @@ i.feedback-icon:hover {
     background-color: #0070f2 !important;
 }
 
-/* Pseudo element to fix anchors being hidden under navbar */
-.metadata-field::before {
-    display: block;
-    content: " ";
-    margin-top: -85px;
-    height: 85px;
-    visibility: hidden;
-    pointer-events: none;
-}
 
 .list-group-item .accicon {
     float: right;
@@ -5007,8 +4998,10 @@ i.fas.fa-sort.inactive {
     margin-left: 20px;
 }
 
-.metadata-input-spacer { padding-bottom: 50px; }
-.metadata-value-spacer { padding-bottom: 10px; }
+.metadata-field { margin-bottom: 30px; }
+.metadata-field:last-child { margin-bottom: 0; }
+.metadata-field-divider { border: none; border-top: 1px solid var(--gray-300);}
+.metadata-value-spacer { padding-bottom: 30px; }
 .metadata-linked-set-spacer { padding-bottom: 30px; }
 .metadata-linked-input-spacer { padding-bottom: 10px; }
 
@@ -5300,7 +5293,7 @@ select.crdc, select.geo {
 input[type=text].geo { padding-left: 10px; }
 
 input.geo {
-    height: 35px;
+    height: 38px;
     width: 100%;
     padding: 7px 7px;
     margin-top: 3px;
@@ -5312,7 +5305,6 @@ input.geo {
     transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
 
-div.crdc-container { margin-bottom: 16px; }
 div.crdc-label { padding: 7px 7px; margin-top: 3px; margin-bottom: 3px; }
 .crdc-required { color: #ce4400; }
 .item-sub-label { width: 80px; display: inline-block; }
@@ -6220,4 +6212,134 @@ span.collab-perm-inline:has(.text-secondary) {
     .collab-action {
         justify-content: flex-start;
     }
+}
+
+/* ================================================
+   MULTI-INPUT FIELD ENTRY
+   Shared base for all repeatable multi-input fields
+   (CRDC, Author, and linked fields)
+   ================================================ */
+
+.field-entry {
+    display: flex;
+    align-items: flex-start;
+    border: 1px solid var(--gray-300);
+    border-radius: var(--border-radius-sm);
+    padding: 12px 0;
+    margin-bottom: 12px;
+}
+
+.field-entry-sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 12px 8px;
+    flex-shrink: 0;
+}
+
+.field-entry-body {
+    flex: 1;
+    min-width: 0;
+}
+
+.field-entry-body .bootstrap-tagsinput {
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 38px;
+}
+
+.crdc-dropdowns {
+    padding: 12px 0 12px 12px;
+}
+
+.author-grip {
+    color: var(--gray-400);
+    cursor: grab;
+    font-size: 16px;
+    padding: 2px 4px;
+}
+
+.author-grip:hover {
+    color: var(--color-tuatara);
+}
+
+.author-number {
+    font-size: var(--font-size-h5);
+    color: var(--gray-600);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: 4px;
+}
+
+.author-move-btn {
+    background: none;
+    border: none;
+    padding: 1px 4px;
+    color: var(--gray-400);
+    cursor: pointer;
+    line-height: 1;
+}
+
+.author-move-btn:hover:not(:disabled) {
+    color: var(--color-tuatara);
+}
+
+.author-move-btn:disabled {
+    color: var(--gray-300);
+    cursor: default;
+}
+
+.field-entry > .field-entry-remove {
+    flex-shrink: 0;
+    padding: 0 12px 0 8px;
+}
+
+@media (max-width: 767px) {
+    .field-entry {
+        display:block;
+    }
+
+    .field-entry-sidebar {
+        display:block;
+    }
+
+    .field-entry-remove {
+        flex-basis: 100%;
+        display: flex;
+        justify-content: flex-end;
+        padding: 15px 15px 0 15px;
+    }
+}
+
+.linked-set-card.author-dragging {
+    opacity: 0.45;
+}
+
+.linked-set-card.author-drop-target {
+    outline: 2px solid var(--color-blue-stone);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+
+.listinput-toggle.collapsed .listinput-less-label { display: none; }
+.listinput-toggle:not(.collapsed) .listinput-more-label { display: none; }
+
+.listinput-toggle::after {
+    content: "❯";
+    display: inline-block;
+    transform: rotate(90deg);
+    transition: transform 0.2s ease;
+    font-size: var(--font-size-h5);
+}
+
+.listinput-toggle:not(.collapsed)::after {
+    transform: rotate(-90deg);
+}
+
+.listinput-toggle {
+    margin: 8px 0;
+}
+
+.listinput-toggle + .collapse {
+    flex: 0 0 100%;
+    max-width: 100%;
 }
