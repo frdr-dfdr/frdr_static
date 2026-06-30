@@ -6118,6 +6118,16 @@ a.dashboard.dropdown-item {
    COLLABORATE STEP (/submit — collaborate)
    ======================================== */
 
+.collaborate-section {
+    border: 1px solid var(--gray-300);
+    border-radius: var(--border-radius-sm);
+    padding: 20px 24px;
+    margin-bottom: 16px;
+}
+.collaborate-section:last-child {
+    margin-bottom: 0;
+}
+
 .collab-list {
     border-top: 1px solid var(--gray-300);
 }
