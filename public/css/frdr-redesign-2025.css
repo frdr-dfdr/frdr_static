@@ -4994,9 +4994,6 @@ i.fas.fa-sort.inactive {
   width: 90% !important;
 }
 
-.advanced-panel {
-    margin-left: 20px;
-}
 
 .metadata-field { margin-bottom: 30px; }
 .metadata-field:last-child { margin-bottom: 0; }
@@ -6343,3 +6340,42 @@ span.collab-perm-inline:has(.text-secondary) {
     flex: 0 0 100%;
     max-width: 100%;
 }
+
+/* ========================================
+   SELECT COLLECTION PAGE
+   ======================================== */
+
+.select-collection-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.select-collection-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    border: 1px solid var(--gray-300);
+    border-radius: var(--border-radius-sm);
+    padding: 16px;
+    cursor: pointer;
+    margin-bottom: 0;
+    font-weight: var(--font-weight-normal);
+    transition: border-color 0.15s ease;
+}
+
+.select-collection-option:hover {
+    border-color: var(--color-buddha-gold);
+}
+
+.select-collection-option input[type="radio"] {
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.select-collection-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
