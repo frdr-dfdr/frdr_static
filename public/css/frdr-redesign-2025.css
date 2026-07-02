@@ -4998,7 +4998,7 @@ i.fas.fa-sort.inactive {
 .metadata-field { margin-bottom: 30px; }
 .metadata-field:last-child { margin-bottom: 0; }
 .metadata-field-divider { border: none; border-top: 1px solid var(--gray-300);}
-.metadata-value-spacer { padding-bottom: 30px; }
+.metadata-value-spacer { margin-bottom: 30px; }
 .metadata-linked-set-spacer { padding-bottom: 30px; }
 .metadata-linked-input-spacer { padding-bottom: 10px; }
 
@@ -5028,6 +5028,14 @@ i.fas.fa-sort.inactive {
 
 .button-description {
     margin-left: 10px;
+}
+
+@media (max-width: 767px) {
+    .button-description {
+        display: block;
+        margin-left: 0;
+        margin-top: 6px;
+    }
 }
 
 .icon {
