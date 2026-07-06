@@ -1832,6 +1832,7 @@ a.social-media-icon {
     background-color: var(--color-wheat);
     color: var(--color-tuatara);
     text-decoration: none;
+    border: 1px solid transparent;
 }
 
 .btn-primary:focus,
@@ -1839,6 +1840,7 @@ a.social-media-icon {
     background-color: var(--color-wheat);
     color: var(--color-tuatara);
     outline: none;
+    border: 1px solid transparent;
 }
 
 .btn-primary:disabled,
@@ -1905,6 +1907,7 @@ a.social-media-icon {
     background-color: var(--color-wheat);
     color: var(--color-tuatara);
     text-decoration: none;
+    border: 1px solid transparent;
 }
 
 /* ========================================
