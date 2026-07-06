@@ -845,6 +845,10 @@ a.lang-btn.d-lg-block {
    migrated from frdr-theme.css
    ======================================== */
 
+.card {
+    margin-bottom: 16px;
+}
+
 /* Reusable white card panel — white bg, rounded corners, shadow, 24px padding */
 .frdr-card {
     background: var(--color-white);
@@ -4951,10 +4955,6 @@ i.fas.fa-sort.inactive {
 
 .dashboard-content .dropdown-menu {
     padding: 0;
-}
-
-.review-button-group {
-    padding-bottom: 5px;
 }
 
 .table-sort {
