@@ -1825,6 +1825,7 @@ a.social-media-icon {
     font-size: var(--font-size-h4);
     font-weight: var(--font-weight-semibold);
     padding: 8px 16px;
+    border: 1px solid transparent;
 }
 
 .btn-primary:hover {
@@ -1894,6 +1895,8 @@ a.social-media-icon {
     color: var(--color-tuatara);
     font-size: var(--font-size-h4);
     font-weight: var(--font-weight-normal);
+    padding: 8px 16px;
+    border: 1px solid transparent;
 }
 
 .btn-save:hover,
@@ -6400,5 +6403,27 @@ span.collab-perm-inline:has(.text-secondary) {
     display: flex;
     flex-direction: column;
     gap: 4px;
+}
+
+/* ========================================
+   DEPOSIT WORKFLOW NAV BUTTONS
+   ======================================== */
+
+@media (max-width: 767px) {
+    .deposit-nav-btns {
+        flex-direction: column-reverse;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 8px;
+    }
+    .deposit-nav-btns > div {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 8px;
+    }
+    .deposit-nav-btns .btn {
+        width: 100%;
+        margin-right: 0 !important;
+    }
 }
 
