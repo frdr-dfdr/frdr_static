@@ -4517,7 +4517,6 @@ div.twitter-typeahead {
     margin: 0 auto;
     background-color: var(--color-danger);
     border-color: var(--color-danger);
-    color: var(--color-white);
 }
 
 .btn-teal-pill {
@@ -4589,18 +4588,18 @@ div.twitter-typeahead {
     }
 }
 
-.admin-search-bar-row {
+.search-bar-row {
     gap: 16px;
     align-items: center !important;
 }
 
-.admin-search-bar-row > form {
+.search-bar-row > form {
     flex: 1;
     min-width: 0;
 }
 
 @media (max-width: 576px) {
-    .admin-search-bar-row {
+    .search-bar-row {
         flex-wrap: wrap;
     }
     .btn-teal-pill {
@@ -4675,6 +4674,18 @@ div.twitter-typeahead {
 .boolean-operator {
     width: 80px;
     flex-shrink: 0;
+    padding-right: 0;
+}
+
+.boolean-operator .operator-select {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 0.375rem 0.5rem;
+}
+
+.advanced-search-inputs .advanced-input:first-child .boolean-operator,
+.discovery-search-applied .advanced-input:first-child .boolean-operator {
+    visibility: hidden;
 }
 
 .advanced-field {
@@ -4720,6 +4731,9 @@ div.twitter-typeahead {
 }
 
 @media (max-width: 991px) {
+    .boolean-operator {
+        margin-bottom: 0.5rem;
+    }
     /* Row 1: boolean + field + operator; Row 2: value (flex) + remove */
     .advanced-input {
         flex-wrap: wrap;
