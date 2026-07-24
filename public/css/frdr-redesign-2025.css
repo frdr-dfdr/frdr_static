@@ -117,7 +117,7 @@ ol.breadcrumb li a {color: var(--color-white); font-weight: bold; font-style: no
 
 input[type="file"] {display: block; height: auto;}
 
-label {
+label, .metadata-group-label {
     font-weight: 600;
 }
 
