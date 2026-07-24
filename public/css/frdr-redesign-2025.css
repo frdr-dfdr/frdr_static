@@ -99,6 +99,13 @@ b, strong {
     font-weight: var(--font-weight-bold);
 }
 
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+    min-width: 0;
+}
+
 body .content img.pull-right { margin: 5px 0 5px 5px; }
 body .content img.pull-left { margin: 5px 5px 5px 0; }
 body.undernavigation { overflow-x: hidden; padding-top: 80px; }
@@ -948,6 +955,10 @@ a.lang-btn.d-lg-block {
   background-image: linear-gradient(to bottom, #f2dede 0%, #e7c3c3 100%);
   background-repeat: repeat-x;
   border-color: #dca7a7;
+}
+
+.text-danger {
+    color: var(--color-maple) !important;
 }
 
 .bg-success {
@@ -1849,6 +1860,7 @@ a.social-media-icon {
 .btn-primary.disabled {
     background-color: var(--color-disabled);
     color: var(--gray-600);
+    border-color: var(--color-buddha-gold);
     cursor: not-allowed;
     opacity: 0.6;
 }
@@ -6527,7 +6539,7 @@ a.dashboard.dropdown-item {
 .collab-person-email {
     display: block;
     font-size: var(--font-size-h5);
-    color: var(--gray-600);
+    color: var(--gray-700);
     margin-top: 2px;
 }
 
