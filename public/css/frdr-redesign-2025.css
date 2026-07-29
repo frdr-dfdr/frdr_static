@@ -1797,7 +1797,6 @@ a.social-media-icon {
     background-color: var(--color-wheat) !important;
     border-color: var(--color-wheat);
     color: var(--color-tuatara);
-    outline: 2px solid #193146;
     box-shadow: 0 0 0 transparent, 0 0 0 0.25rem rgba(182, 145, 0, 0.5) !important;
 }
 
@@ -1854,6 +1853,22 @@ a.social-media-icon {
     color: var(--color-tuatara) !important ;
     outline: none;
     border: 1px solid transparent;
+    box-shadow: 0 0 0 0.2rem rgba(182, 145, 0, 0.5) !important;
+}
+
+.btn-primary:focus-visible {
+    background-color: var(--color-wheat) !important;
+    color: var(--color-tuatara) !important;
+    border: 1px solid transparent;
+    box-shadow: 0 0 0 transparent, 0 0 0 0.25rem rgba(182, 145, 0, 0.5) !important;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle {
+    background-color: var(--color-wheat);
+    border-color: transparent;
+    color: var(--color-tuatara);
 }
 
 .btn-primary:disabled,
@@ -1891,6 +1906,14 @@ a.social-media-icon {
     color: var(--color-tuatara);
     border-color: var(--color-wheat);
     outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(182, 145, 0, 0.5) !important;
+}
+
+.btn-secondary:focus-visible {
+    background-color: var(--color-wheat);
+    color: var(--color-tuatara);
+    border-color: var(--color-wheat);
+    box-shadow: 0 0 0 transparent, 0 0 0 0.25rem rgba(182, 145, 0, 0.5) !important;
 }
 
 .btn-secondary:disabled,
@@ -1900,6 +1923,14 @@ a.social-media-icon {
     border-color: var(--gray-300);
     cursor: not-allowed;
     opacity: 0.6;
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active,
+.btn-secondary:not(:disabled):not(.disabled).active,
+.show > .btn-secondary.dropdown-toggle {
+    background-color: var(--color-wheat);
+    border-color: var(--color-wheat);
+    color: var(--color-tuatara);
 }
 
 /* ========================================
@@ -1915,13 +1946,27 @@ a.social-media-icon {
     border: 1px solid transparent;
 }
 
-.btn-save:hover,
+.btn-save:hover {
+    background-color: var(--color-wheat);
+    color: var(--color-tuatara);
+    text-decoration: none;
+    border: 1px solid transparent;
+}
+
 .btn-save:focus,
 .btn-save:active {
     background-color: var(--color-wheat);
     color: var(--color-tuatara);
     text-decoration: none;
     border: 1px solid transparent;
+    box-shadow: 0 0 0 0.2rem rgba(182, 145, 0, 0.5) !important;
+}
+
+.btn-save:focus-visible {
+    background-color: var(--color-wheat) !important;
+    color: var(--color-tuatara);
+    border: 1px solid transparent;
+    box-shadow: 0 0 0 transparent, 0 0 0 0.25rem rgba(182, 145, 0, 0.5) !important;
 }
 
 /* ========================================
