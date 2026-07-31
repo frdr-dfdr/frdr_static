@@ -415,8 +415,11 @@ h5, .h5 {
 }
 
 @media (max-width: 576px) {
+    :root {
+        --font-size-h1: 26px;
+        --font-size-h2: 20px;
+    }
     h1, .h1 {
-        font-size: var(--font-size-h3);
         font-weight: var(--font-weight-semibold);
     }
 }
@@ -1885,35 +1888,35 @@ a.social-media-icon {
    ======================================== */
 
 .btn-secondary {
-    background-color: var(--color-white);
+    background-color: var(--gray-100);
     color: var(--color-tuatara);
     font-size: var(--font-size-h4);
     font-weight: var(--font-weight-normal);
     padding: 8px 16px;
-    border: 1px solid var(--gray-500);
+    border: 1px solid var(--gray-400);
 }
 
 .btn-secondary:hover {
-    background-color: var(--color-wheat);
+    background-color: var(--gray-300);
+    border-color: var(--gray-500);
     color: var(--color-tuatara);
-    border-color: var(--color-wheat);
     text-decoration: none;
 }
 
 .btn-secondary:focus,
 .btn-secondary:active {
-    background-color: var(--color-wheat);
+    background-color: var(--gray-300);
+    border-color: var(--gray-500);
     color: var(--color-tuatara);
-    border-color: var(--color-wheat);
     outline: none;
-    box-shadow: 0 0 0 0.2rem rgba(182, 145, 0, 0.5) !important;
+    box-shadow: 0 0 0 0.2rem rgba(148, 148, 148, 0.35) !important;
 }
 
 .btn-secondary:focus-visible {
-    background-color: var(--color-wheat);
+    background-color: var(--gray-300);
+    border-color: var(--gray-500);
     color: var(--color-tuatara);
-    border-color: var(--color-wheat);
-    box-shadow: 0 0 0 transparent, 0 0 0 0.25rem rgba(182, 145, 0, 0.5) !important;
+    box-shadow: 0 0 0 transparent, 0 0 0 0.25rem rgba(148, 148, 148, 0.35) !important;
 }
 
 .btn-secondary:disabled,
@@ -1928,10 +1931,21 @@ a.social-media-icon {
 .btn-secondary:not(:disabled):not(.disabled):active,
 .btn-secondary:not(:disabled):not(.disabled).active,
 .show > .btn-secondary.dropdown-toggle {
-    background-color: var(--color-wheat);
-    border-color: var(--color-wheat);
+    background-color: var(--gray-300);
+    border-color: var(--gray-500);
     color: var(--color-tuatara);
 }
+
+.btn-secondary-on-gray {
+    background-color: var(--color-white);
+}
+.btn-secondary-on-gray:hover,
+.btn-secondary-on-gray:focus,
+.btn-secondary-on-gray:active {
+    background-color: var(--gray-300);
+    border-color: var(--gray-500);
+}
+
 
 /* ========================================
    SAVE BUTTON (Secondary Button, Primary Action, smaller than btn-primary)
@@ -1979,12 +1993,12 @@ a.social-media-icon {
 .btn-globus,
 .btn-warning,
 .btn-danger {
-    background-color: var(--color-white);
+    background-color: var(--gray-100);
     color: var(--color-tuatara);
     font-size: var(--font-size-h4);
     font-weight: var(--font-weight-normal);
-    border: 1px solid var(--gray-500);
-    padding: 6px 12px;
+    border: 1px solid var(--gray-400);
+    padding: 8px 16px;
 }
 
 /* Success / Info / Globus: hover, active, focus → gold */
@@ -1997,9 +2011,8 @@ a.social-media-icon {
 .btn-globus:active,
 .btn-globus:focus {
     background-color: var(--color-buddha-gold) !important;
-    background-image: none;
     border: 1px solid #b08c00 !important;
-    color: var(--color-tuatara)!important;
+    color: var(--color-tuatara) !important;
     text-shadow: none;
 }
 
@@ -2014,17 +2027,15 @@ a.social-media-icon {
     background-color: #f0ad4e;
     border-color: #eea236;
     color: var(--color-white);
-    background-image: none;
     text-shadow: none;
 }
 
-/* Danger: hover, active → solid red */
+/* Danger: hover, active, focus → red */
 .btn-danger:hover,
 .btn-danger:active {
     background-color: #d9534f;
     border-color: #d43f3a;
     color: var(--color-white);
-    background-image: none;
     text-shadow: none;
 }
 
@@ -2032,7 +2043,6 @@ a.social-media-icon {
     background-color: #d9534f;
     border-color: #d43f3a;
     color: var(--color-white);
-    background-image: none;
     text-shadow: none;
     box-shadow: 0 0 0 .2rem rgba(225, 83, 97, .5) !important;
 }
@@ -6824,6 +6834,8 @@ span.collab-perm-inline:has(.text-secondary) {
         align-items: stretch;
         justify-content: flex-start;
         gap: 8px;
+        border-top: 1px solid var(--gray-300);
+        padding-top: 16px;
     }
     .deposit-nav-btns > div {
         display: flex;
@@ -6834,5 +6846,26 @@ span.collab-perm-inline:has(.text-secondary) {
         width: 100%;
         margin-right: 0 !important;
     }
+
+    /* Select Collection: Advanced toggle fills full width on mobile */
+    .select-collection-advanced-btn {
+        width: 100%;
+    }
+}
+
+/* ========================================
+   SUBMISSION SAVED PAGE
+   ======================================== */
+
+.saved-icon-circle {
+    width: 70px;
+    height: 70px;
+    border-radius: var(--border-radius-full);
+    background: var(--color-buddha-gold);
+    color: var(--color-tuatara);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
 }
 
