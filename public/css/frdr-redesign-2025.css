@@ -2341,7 +2341,7 @@ a.external-link:after {
 
 .home-collections-section {
     position: relative;
-    padding: 40px 0;
+    padding: 20px 0 40px 0;
 }
 
 /* Make each Bootstrap col a flex container so height propagates down */
@@ -2390,7 +2390,7 @@ a.external-link:after {
 
 .collection-carousel-btn {
     font-size: var(--font-size-h4);
-    width: calc(100% - 60px);
+    width: fit-content;
     margin-top: -20px;
     position: relative;
     z-index: 1;
@@ -2459,9 +2459,8 @@ a.external-link:after {
         font-size: var(--font-size-h5);
     }
     .collection-carousel-btn {
-        width: calc(100% - 20px);
+        margin-top: -20px;
         font-size: var(--font-size-h5);
-        padding: 6px 10px;
     }
 }
 
@@ -2475,7 +2474,7 @@ a.external-link:after {
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
-    padding: 40px 0;
+    padding: 20px 0 40px 0;
     position: relative;
     isolation: isolate;
 }
@@ -2571,7 +2570,7 @@ a.external-link:after {
 @media (max-width: 768px) {
     .home-about {
         flex-direction: column;
-        padding: 40px 0;
+        padding: 20px 0 40px 0;
         text-align: center;
     }
 
@@ -2587,7 +2586,7 @@ a.external-link:after {
 .home-stats-section {
     position: relative;
     isolation: isolate;
-    padding: 40px 0;
+    padding: 20px 0 40px 0;
 }
 
 .home-stats-section::before {
@@ -2647,24 +2646,22 @@ a.external-link:after {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4px;
     color: var(--color-tuatara);
     text-decoration: none;
 }
 
 .stats-value {
     font-weight: var(--font-weight-bold);
-    font-size: var(--font-size-h1);
+    font-size: var(--font-size-h2);
     color: var(--color-tuatara);
     line-height: 1.2;
 }
 
 .stats-text {
     font-weight: var(--font-weight-semibold);
-    font-size: var(--font-size-h5);
+    font-size: var(--font-size-h4);
     color: var(--color-tuatara);
     text-align: center;
-    text-decoration: underline;
 }
 
 @media (max-width: 767px) {
@@ -2707,7 +2704,7 @@ a.external-link:after {
    ======================================== */
 
 .recent-datasets-section {
-    padding: 40px 0;
+    padding: 20px 0 40px 0;
     margin-bottom: 0;
 }
 
@@ -2789,6 +2786,11 @@ a.external-link:after {
     color: var(--gray-400);
 }
 
+/* Vertically center all page items against the taller Prev/Next buttons */
+.recent-pagination-wrapper .pagination {
+    align-items: center;
+}
+
 /* Prev at far left, Next at far right; numbers stay centered */
 .recent-pagination-wrapper .recent-nav-btn:first-child {
     margin-right: auto;
@@ -2818,6 +2820,7 @@ a.external-link:after {
         width: 84px;
         height: 72px;
         flex-shrink: 0;
+        align-self: center;
     }
 
     .recent-dataset-title {
@@ -2837,7 +2840,7 @@ a.external-link:after {
 .featured-categories-section {
     position: relative;
     isolation: isolate;
-    padding: 40px 0;
+    padding: 20px 0 40px 0;
 }
 
 .featured-categories-section::before {
@@ -3812,7 +3815,7 @@ h1+ul {
 .frdr-search-no-results {
     display: none;
     text-align: center;
-    padding: 40px 0;
+    padding: 20px 0 40px 0;
     color: var(--gray-600);
     font-size: var(--font-size-h4);
 }
