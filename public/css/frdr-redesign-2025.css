@@ -76,7 +76,7 @@
    migrated from frdr-theme.css
    ======================================== */
 
-a:not(.btn, .badge, .table-link, .page-link, .stats-label, .recent-dataset-title, .category-card, .col-stat-text, .table-sort, .progress-step) {
+a:not(.btn, .badge, .table-link, .page-link, .stats-card-link, .recent-dataset-title, .category-card, .col-stat-text, .table-sort, .progress-step) {
     color: var(--color-blue-stone);
     margin-bottom: 0px;
     overflow-x: inherit;
@@ -176,7 +176,7 @@ small {
 }
 
 #jumbo-mid-tagline .tagtext-gold {
-    color: var(--color-buddha-gold);
+    color: var(--color-olive);
 }
 
 #jumbo-mid-logo {
@@ -1229,14 +1229,14 @@ div.ekko-lightbox.modal > * > .modal-content {
 @media only screen and (max-width: 768px) {
   #sitelogo { height: 110px; margin-right: -10px; }
   #jumbo-mid-logo { height: 110px; }
-  #jumbo-mid-tagline { font-size: var(--font-size-h3); }
+  #jumbo-mid-tagline { font-size: var(--font-size-h1); }
   .frdr-jumbo-mid { min-height: 270px; }
   .item-metadata-grid { grid-template-columns: auto auto; }
 }
 
 @media only screen and (max-width: 500px) {
   #sitelogo { height: 100px; margin-right: -35px; }
-  #jumbo-mid-tagline { font-size: var(--font-size-h4); }
+  #jumbo-mid-tagline { font-size: var(--font-size-h1); }
   .frdr-jumbo-mid { min-height: 240px; }
   .item-metadata-grid { grid-template-columns: auto; }
   .item-md-field { font-weight: bold; background-color: var(--gray-300); }
@@ -2208,6 +2208,7 @@ fieldset[disabled] .btn-success {
     padding: 12px 40px;
     margin-bottom: 1.5rem;
     width: max-content;
+    max-width: 100%;
 }
 
 .home-banner-content .d-flex {
@@ -2340,19 +2341,7 @@ a.external-link:after {
 
 .home-collections-section {
     position: relative;
-    padding: 20px 0px 40px 0px;
-}
-
-.home-collections-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    width: 100vw;
-    transform: translateX(-50%);
-    background-color: var(--color-ebb);
-    z-index: -1;
+    padding: 40px 0;
 }
 
 /* Make each Bootstrap col a flex container so height propagates down */
@@ -2435,6 +2424,47 @@ a.external-link:after {
     font-size: 18px;
 }
 
+@media (max-width: 767px) {
+    #collections .row.mx-4 {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+    }
+    #collections .carousel-control-prev,
+    #collections .carousel-control-next {
+        width: 36px;
+        height: 36px;
+        top: 45%;
+        bottom: auto;
+        transform: translateY(-50%);
+    }
+    #collections .carousel-control-prev {
+        left: 0;
+    }
+    #collections .carousel-control-next {
+        right: 0;
+    }
+    #collections .carousel-control-prev i,
+    #collections .carousel-control-next i {
+        font-size: 14px;
+    }
+    .collection-carousel-img {
+        height: 64px;
+    }
+    .collection-carousel-card {
+        padding: 12px 8px 20px;
+    }
+    .collection-carousel-name {
+        font-size: var(--font-size-h5);
+    }
+    .collection-carousel-btn {
+        width: calc(100% - 20px);
+        font-size: var(--font-size-h5);
+        padding: 6px 10px;
+    }
+}
+
 /* ========================================
    HOMEPAGE ABOUT SECTION
    ======================================== */
@@ -2445,8 +2475,9 @@ a.external-link:after {
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
-    padding: 24px 48px;
+    padding: 40px 0;
     position: relative;
+    isolation: isolate;
 }
 
 /* Full-bleed background — breaks out of the .container */
@@ -2485,6 +2516,11 @@ a.external-link:after {
 /* ========================================
    HOME GET STARTED SECTION
    ======================================== */
+
+.workflow-container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
 
 .get-started-card-wrapper {
     display: flex;
@@ -2535,7 +2571,7 @@ a.external-link:after {
 @media (max-width: 768px) {
     .home-about {
         flex-direction: column;
-        padding: 24px 20px;
+        padding: 40px 0;
         text-align: center;
     }
 
@@ -2547,6 +2583,24 @@ a.external-link:after {
 /* ========================================
    HOME STATS SECTION
    ======================================== */
+
+.home-stats-section {
+    position: relative;
+    isolation: isolate;
+    padding: 40px 0;
+}
+
+.home-stats-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+    background-color: var(--color-ebb);
+    z-index: -1;
+}
 
 .stats-card {
     display: flex;
@@ -2589,12 +2643,63 @@ a.external-link:after {
     font-size: 40px;
 }
 
-.stats-label {
-    font-weight: var(--font-weight-bold);
-    font-size: var(--font-size-h4);
-    text-align: center;
+.stats-card-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
     color: var(--color-tuatara);
+    text-decoration: none;
+}
+
+.stats-value {
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-h1);
+    color: var(--color-tuatara);
+    line-height: 1.2;
+}
+
+.stats-text {
+    font-weight: var(--font-weight-semibold);
+    font-size: var(--font-size-h5);
+    color: var(--color-tuatara);
+    text-align: center;
     text-decoration: underline;
+}
+
+@media (max-width: 767px) {
+    .stats-section {
+        flex-wrap: nowrap;
+        padding: 0 8px;
+    }
+    .stats-card {
+        flex: 1;
+        width: auto;
+        min-width: 0;
+        min-height: 130px;
+        margin: 0 4px;
+        padding: 12px 6px;
+        gap: 8px;
+    }
+    .stats-icon-wrapper {
+        width: 40px;
+        height: 40px;
+    }
+    .stats-icon-bg {
+        width: 36px;
+        height: 34px;
+        right: -8px;
+        bottom: -4px;
+    }
+    .stats-icon {
+        font-size: 24px;
+    }
+    .stats-value {
+        font-size: var(--font-size-h3);
+    }
+    .stats-text {
+        font-size: var(--font-size-h6);
+    }
 }
 
 /* ========================================
@@ -2602,7 +2707,8 @@ a.external-link:after {
    ======================================== */
 
 .recent-datasets-section {
-    margin-bottom: 3rem;
+    padding: 40px 0;
+    margin-bottom: 0;
 }
 
 .recent-dataset-card {
@@ -2627,7 +2733,7 @@ a.external-link:after {
 .recent-dataset-content {
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 6px;
     flex: 1;
     padding: 10px;
 }
@@ -2703,13 +2809,24 @@ a.external-link:after {
 
 @media (max-width: 768px) {
     .recent-dataset-card {
-        flex-direction: column;
         align-items: flex-start;
+        gap: 12px;
+        padding: 12px;
     }
 
     .recent-dataset-img {
-        width: 100%;
-        height: 120px;
+        width: 84px;
+        height: 72px;
+        flex-shrink: 0;
+    }
+
+    .recent-dataset-title {
+        font-size: var(--font-size-h4);
+    }
+
+    .recent-dataset-doi,
+    .recent-dataset-authors {
+        font-size: var(--font-size-h5);
     }
 }
 
@@ -2718,7 +2835,21 @@ a.external-link:after {
    ======================================== */
 
 .featured-categories-section {
+    position: relative;
+    isolation: isolate;
     padding: 40px 0;
+}
+
+.featured-categories-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    transform: translateX(-50%);
+    background-color: var(--color-ebb);
+    z-index: -1;
 }
 
 /* 5-column grid for Bootstrap 4 (mobile: 2 col, desktop: 5 col) */
@@ -2737,7 +2868,7 @@ a.external-link:after {
 
 .categories-subheading {
     font-size: var(--font-size-h5);
-    color: var(--gray-600);
+    color: var(--gray-700);
     margin-bottom: 8px;
 }
 
@@ -2901,8 +3032,12 @@ body {
 }
 
 #content {
+    background-color: var(--color-white);
+    /* padding-bottom: 24px; */
+}
+
+#content.submission-content {
     background-color: var(--color-ebb);
-    padding-bottom: 24px;
 }
 
 #main-content > hr {
