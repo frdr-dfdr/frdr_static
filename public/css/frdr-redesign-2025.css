@@ -3500,6 +3500,7 @@ a.main-faq-link:hover {
 summary {
     padding-bottom: 5px;
 }
+summary > h2,
 summary > h3 {
     display: inline;
     padding-top: 80px;
@@ -3508,10 +3509,6 @@ summary > h3 {
 
 summary > p:empty{
     display: none;
-}
-
-h2, h3 {
-    pointer-events: none;
 }
 
 .expand-all-btn {
@@ -3932,7 +3929,6 @@ i.feedback-icon:hover {
     align-items: center;
     justify-content: space-between;
     gap: 15px;
-    margin-bottom: 15px;
 }
 
 .collection-title {
@@ -3987,9 +3983,20 @@ i.feedback-icon:hover {
 
 /* Responsive Design */
 @media only screen and (max-width: 768px) {
+    .collection-card {
+        border: 1px solid var(--gray-300);
+        box-shadow: none;
+    }
+
+    .collection-card .col-md-2 {
+        flex: 0 0 auto;
+        width: auto;
+        max-width: none;
+    }
+
     .collection-logo-box {
-        max-width: 120px;
-        margin-bottom: 15px;
+        max-width: 70px;
+        margin-bottom: 10px;
     }
     
     .collection-title-row {
@@ -4000,6 +4007,7 @@ i.feedback-icon:hover {
 
     .collection-title {
         font-size: var(--font-size-h3);
+        line-height: var(--line-height-body);
     }
 
     .collection-delete-form {
@@ -4008,7 +4016,6 @@ i.feedback-icon:hover {
     
     .affiliation-badge {
         font-size: var(--font-size-h5);
-        padding: 5px 14px;
     }
     
     .collection-footer {
@@ -4020,11 +4027,6 @@ i.feedback-icon:hover {
     }
 }
 
-@media only screen and (max-width: 576px) {
-    .collection-logo-box {
-        margin: 0 auto 15px;
-    }
-}
 
 /* ========================================
    COLLECTION HOME PAGE
