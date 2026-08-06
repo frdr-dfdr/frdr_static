@@ -4291,7 +4291,7 @@ i.feedback-icon:hover {
 
 .pagination-info {
     font-size: 14px;
-    color: var(--gray-600);
+    color: var(--gray-700);
 }
 
 .pagination .page-item .page-link {
