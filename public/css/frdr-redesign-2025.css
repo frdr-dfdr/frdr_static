@@ -2517,7 +2517,6 @@ a.external-link:after {
    ======================================== */
 
 .workflow-container {
-    padding-top: 40px;
     padding-bottom: 40px;
 }
 
@@ -2586,7 +2585,7 @@ a.external-link:after {
 .home-stats-section {
     position: relative;
     isolation: isolate;
-    padding: 20px 0 40px 0;
+    padding: 40px 0 40px 0;
 }
 
 .home-stats-section::before {
@@ -4039,6 +4038,12 @@ i.feedback-icon:hover {
     min-width: 160px;
 }
 
+.collection-home-name {
+    font-size: var(--font-size-h2);
+    color: var(--color-tuatara);
+    margin-top: 0;
+}
+
 .col-header-divider {
     height: 6px;
     background-color: var(--gray-400);
@@ -4276,6 +4281,117 @@ i.feedback-icon:hover {
 
 .col-datasets-pagination {
     margin-top: 16px;
+}
+
+.col-datasets-sort-bar {
+    display: none;
+}
+
+/* ========================================
+   COLLECTION DATASETS — MOBILE CARDS
+   ======================================== */
+
+@media (max-width: 767px) {
+    .col-datasets-sort-bar {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 12px;
+        margin-bottom: 16px;
+    }
+
+    .col-datasets-table .list-bordertop-row:first-child {
+        display: none;
+    }
+
+    .col-datasets-table .list-bordertop-row:not(:first-child) {
+        flex-direction: column;
+        border: 1px solid var(--gray-300);
+        border-radius: var(--border-radius-md);
+        margin-bottom: 12px;
+        min-height: 0;
+    }
+
+    .col-datasets-table .list-bordertop-row:not(:first-child) > [headers] {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 8px 16px;
+    }
+
+    .col-datasets-table .list-bordertop-row:not(:first-child) > [headers="t1"] {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: var(--font-size-h5);
+        color: var(--gray-700);
+        padding: 12px 16px 4px;
+    }
+
+    .col-datasets-table .list-bordertop-row:not(:first-child) > [headers="t1"]::before {
+        content: "\f073";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        color: var(--gray-700);
+    }
+
+    /* Title cell */
+    .col-datasets-table .list-bordertop-row:not(:first-child) > [headers="t2"] {
+        padding: 4px 16px;
+    }
+
+    /* Authors cell */
+    .col-datasets-table .list-bordertop-row:not(:first-child) > [headers="t3"] {
+        font-size: var(--font-size-h5);
+        padding: 4px 16px 12px;
+    }
+
+    /* Pagination: buttons on top row, info text on bottom row */
+    .col-datasets-pagination.pagination-wrapper {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 12px;
+    }
+}
+
+.col-datasets-sort-label {
+    font-size: var(--font-size-h5);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-tuatara);
+    white-space: nowrap;
+}
+
+.col-datasets-sort-wrapper {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.col-datasets-sort-select {
+    appearance: none;
+    -webkit-appearance: none;
+    background: var(--color-white);
+    border: 1px solid var(--gray-300);
+    border-radius: var(--border-radius-sm);
+    padding: 8px 40px 8px 16px;
+    font-size: var(--font-size-h5);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-tuatara);
+    cursor: pointer;
+    min-width: 210px;
+}
+
+.col-datasets-sort-select:focus {
+    outline: none;
+    border-color: var(--color-buddha-gold);
+    box-shadow: none;
+}
+
+.col-datasets-sort-icon {
+    position: absolute;
+    right: 14px;
+    pointer-events: none;
+    color: var(--color-tuatara);
+    font-size: var(--font-size-h5);
 }
 
 /* ========================================
