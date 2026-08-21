@@ -624,18 +624,21 @@ a.frdr-sidebar-link:focus {
     color: red;
     margin-left: 4px;
     margin-right: 4px;
+    margin-top: 4px;
 }
 
 .mac-maximize {
     color: green;
     margin-left: 4px;
     margin-right: 4px;
+    margin-top: 4px;
 }
 
 .mac-minimize {
     color: var(--alliance-primary-gold);
     margin-left: 4px;
     margin-right: 4px;
+    margin-top: 4px;
 }
 
 .main-faq-card {
