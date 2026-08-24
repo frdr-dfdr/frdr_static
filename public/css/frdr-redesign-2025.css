@@ -2391,6 +2391,8 @@ a.external-link:after {
 .collection-carousel-btn {
     font-size: var(--font-size-h4);
     width: fit-content;
+    max-width: 80%;
+    white-space: normal;
     margin-top: -20px;
     position: relative;
     z-index: 1;
@@ -2461,6 +2463,8 @@ a.external-link:after {
     .collection-carousel-btn {
         margin-top: -20px;
         font-size: var(--font-size-h5);
+        max-width: 100%;
+        white-space: normal;
     }
 }
 
@@ -3035,11 +3039,11 @@ body {
 
 #content {
     background-color: var(--color-white);
-    /* padding-bottom: 24px; */
 }
 
 #content.submission-content {
     background-color: var(--color-ebb);
+    padding-bottom: 24px;
 }
 
 #main-content > hr {
