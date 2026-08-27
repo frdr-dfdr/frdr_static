@@ -315,6 +315,10 @@ input.search_bar {
   margin-top: 100px;
 }
 
+.pleasewait-text {
+  font-size: 24px;
+}
+
 #globus-endpoint-file-list {
   min-height: 80px;
 }
