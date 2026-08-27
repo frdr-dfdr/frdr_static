@@ -3046,6 +3046,10 @@ body {
     padding-bottom: 0;
 }
 
+#content.sidebar-layout-content {
+    padding-bottom: 0;
+}
+
 #content.submission-content {
     background-color: var(--color-ebb);
 }
