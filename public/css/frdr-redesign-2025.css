@@ -878,6 +878,11 @@ a.lang-btn.d-lg-block {
     padding-top: 24px;
 }
 
+.boilerplate-card {
+    max-height: 320px;
+    overflow-y: auto;
+}
+
 .card-header {
   background-color: var(--gray-100);
 }
