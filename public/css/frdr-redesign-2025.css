@@ -408,6 +408,11 @@ h5, .h5 {
     border-bottom-right-radius: 0px;
 }
 
+.navbar .nav-item.d-lg-none input.search_bar.form-control {
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+}
+
 .navbar-up .search-button {
     height: 30px;
 }
@@ -1500,12 +1505,13 @@ a.social-media-icon {
 }
 
 .btn-primary:focus {
-    background-color: var(--color-tomorrow-gold); /* focus keeps the resting colour (also resets Bootstrap's blue :focus) */
+    background-color: var(--color-tomorrow-gold);
     color: var(--color-tuatara);
     border: 1px solid transparent;
 }
 
-.btn-primary:hover:focus {
+.btn-primary:hover:focus,
+.btn-primary:focus-visible {
     background-color: var(--color-desaturated-gold);
 }
 
@@ -1547,13 +1553,14 @@ a.social-media-icon {
 }
 
 .btn-secondary:focus {
-    background-color: var(--gray-100); /* focus keeps the resting colours (also resets Bootstrap's grey :focus) */
+    background-color: var(--gray-100);
     border-color: var(--gray-400);
     color: var(--color-tuatara);
     outline: none;
 }
 
-.btn-secondary:hover:focus {
+.btn-secondary:hover:focus,
+.btn-secondary:focus-visible {
     background-color: var(--gray-300);
     border-color: var(--gray-500);
 }
@@ -1595,6 +1602,11 @@ a.social-media-icon {
     background-color: var(--color-white);
 }
 
+.btn-secondary-on-gray:focus-visible {
+    background-color: var(--gray-300);
+    border-color: var(--gray-500);
+}
+
 /* ========================================
    SAVE BUTTON (Secondary Button, Primary Action, smaller than btn-primary)
    ======================================== */
@@ -1608,7 +1620,8 @@ a.social-media-icon {
     border: 1px solid transparent;
 }
 
-.btn-save:hover {
+.btn-save:hover,
+.btn-save:focus-visible {
     background-color: var(--color-desaturated-gold);
     color: var(--color-tuatara);
     text-decoration: none;
@@ -1640,8 +1653,6 @@ a.social-media-icon {
     padding: 8px 16px;
 }
 
-/* Focus keeps the resting colours (also resets Bootstrap's coloured :focus states); the cue is the ring
-   from .btn:focus-visible. Kept above the hover rules so hover still wins on a focused button. */
 .btn-success:focus,
 .btn-info:focus,
 .btn-globus:focus,
@@ -1652,31 +1663,34 @@ a.social-media-icon {
     color: var(--color-tuatara);
 }
 
-/* Success / Info / Globus: hover, active → gold */
 .btn-success:hover,
 .btn-success:active,
+.btn-success:focus-visible,
 .btn-info:hover,
 .btn-info:active,
+.btn-info:focus-visible,
 .btn-globus:hover,
-.btn-globus:active {
+.btn-globus:active,
+.btn-globus:focus-visible {
     background-color: var(--color-tomorrow-gold) !important;
     border: 1px solid #b08c00 !important;
     color: var(--color-tuatara) !important;
     text-shadow: none;
 }
 
-/* Warning: hover, active → amber */
+/* Warning: hover, active, keyboard focus → amber */
 .btn-warning:hover,
-.btn-warning:active {
+.btn-warning:active,
+.btn-warning:focus-visible {
     background-color: #f0ad4e;
     border-color: #eea236;
     color: var(--color-white);
     text-shadow: none;
 }
 
-/* Danger: hover, active, focus → red */
 .btn-danger:hover,
-.btn-danger:active {
+.btn-danger:active,
+.btn-danger:focus-visible {
     background-color: #d9534f;
     border-color: #d43f3a;
     color: var(--color-white);
@@ -1973,7 +1987,6 @@ a.external-link:after {
 .home-section-action.btn {
     border-radius: var(--border-radius-full);
     padding: 8px 18px;
-    font-size: var(--font-size-h5);
 }
 
 /* ========================================
@@ -2311,6 +2324,11 @@ a.external-link:after {
     background-color: var(--gray-300);
 }
 
+.recent-dataset-card:hover .recent-dataset-doi,
+.recent-dataset-card:hover .recent-dataset-authors {
+    color: var(--color-tuatara);
+}
+
 .recent-dataset-img {
     width: 48px;
     height: 48px;
@@ -2381,7 +2399,7 @@ a.external-link:after {
     height: 34px;
     padding: 0 6px;
     border-radius: var(--border-radius-sm);
-    border: 1.5px solid rgba(0, 0, 0, 0.1);
+    border: 1.5px solid var(--gray-700); /* was rgba(0,0,0,.1) — ~1.3:1 on white, below the 3:1 UI-component minimum (WCAG 1.4.11) */
     background-color: var(--color-white);
     color: var(--gray-700);
     font-size: var(--font-size-h5);
@@ -4240,6 +4258,11 @@ a.clear-facet-btn {
 .form-control:focus {
     border-color: var(--color-crete);
     box-shadow: 0 0 0 0.2rem rgba(214, 171, 0, 0.25); /* --color-tomorrow-gold at 25% */
+}
+
+.navbar-dark .search_bar.form-control:focus {
+    border-color: var(--color-white);
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.35);
 }
 
 .date-from, .date-to {
