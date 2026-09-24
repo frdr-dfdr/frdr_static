@@ -477,6 +477,10 @@ h5, .h5 {
     .affix {
         position: static;
     }
+    
+    body.undernavigation {
+        padding-top: 0;
+    }
 }
 
 .navbar-nav {
@@ -1969,7 +1973,7 @@ input:focus-visible,
     font-weight: var(--font-weight-semibold);
     font-size: 12px;
     line-height: 17px;
-    color: var(--gray-500);
+    color: var(--gray-400);
     text-align: right;
     z-index: 2;
 }
