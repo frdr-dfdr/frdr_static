@@ -76,7 +76,7 @@
 }
 
 /* Links in Body of Text */
-a:not(.btn, .badge, .page-link, .stats-card, .recent-dataset-title, .category-card, .coll-card, .col-stat-text, .table-sort, .progress-step, .get-started-cta, .skip-link, .link-on-dark, .link-on-dark-white, .link-black),
+a:not(.btn, .badge, .page-link, .stats-card, .recent-dataset-title, .category-card, .coll-card, .col-stat-text, .table-sort, .progress-step, .get-started-cta, .skip-link, .home-banner-link, .link-on-dark, .link-on-dark-white, .link-black),
 .link-body {
     color: var(--color-tuatara);
     margin-bottom: 0px;
@@ -477,7 +477,7 @@ h5, .h5 {
     .affix {
         position: static;
     }
-    
+
     body.undernavigation {
         padding-top: 0;
     }
@@ -1958,6 +1958,15 @@ input:focus-visible,
     margin: 18px 0 0;
 }
 
+.home-banner-link {
+    color: var(--color-desaturated-gold);
+    text-decoration: underline;
+}
+
+.home-banner-link:hover, .home-banner-link:focus, .home-banner-link:active {
+    color: var(--color-tomorrow-gold);
+}
+
 @media (max-width: 768px) {
     .home-banner-content {
         padding-top: 40px;
@@ -2027,6 +2036,11 @@ a.external-link:after {
     margin-bottom: 28px;
 }
 
+.home-collections-section > .home-section-head,
+.featured-categories-section > .home-section-head {
+    padding: 0 16px;
+}
+
 .home-section-title {
     display: inline-flex;
     align-items: center;
@@ -2056,7 +2070,7 @@ a.external-link:after {
    ======================================== */
 
 .get-started-section {
-    padding: 40px 0;
+    padding: 40px 16px;
 }
 
 .get-started-card {
@@ -2093,9 +2107,7 @@ a.external-link:after {
 
 .get-started-cta {
     margin-top: auto;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
+    display: inline;
     font-weight: var(--font-weight-bold);
     font-size: var(--font-size-h5);
     color: var(--color-tuatara);
@@ -2106,12 +2118,14 @@ a.external-link:after {
 .get-started-cta:focus {
     color: var(--color-tuatara);
     cursor: pointer;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .get-started-cta i {
     font-size: 12px;
+    margin-left: 6px;
     transition: transform 0.15s ease;
+    text-decoration: none;
 }
 
 .get-started-cta:hover i {
@@ -2123,7 +2137,7 @@ a.external-link:after {
    ======================================== */
 
 .home-stats-section {
-    padding: 0 0 40px 0;
+    padding: 0 16px 40px 16px;
 }
 
 .stats-band {
@@ -2214,42 +2228,47 @@ a.external-link:after {
    HOME COLLECTIONS AND CATEGORIES SECTION
    ======================================== */
 
+.home-collections-section,
+.featured-categories-section {
+    padding: 20px 0 40px 0;
+}
+
 .home-collections-section {
     position: relative;
-    padding: 20px 0 40px 0;
 }
 
 #collections .custom-carousel-inner {
     padding: 16px 16px 28px;
 }
 
-#collections .carousel-item .row {
+#collections .carousel-item .row,
+#categories-grid {
     margin-left: -9px;
     margin-right: -9px;
 }
 
-.collection-col {
+#categories-grid {
+    padding: 0 16px;
+}
+
+.collection-col,
+#categories-grid > div {
+    padding: 0 9px;
     flex: 0 0 100%;
     max-width: 100%;
-    padding: 0 9px;
 }
 
 @media (min-width: 768px) {
-    .collection-col {
-        flex-basis: 33.333%;
-        max-width: 33.333%;
+    .collection-col,
+    #categories-grid > div {
+        flex-basis: 50%;
+        max-width: 50%;
     }
 }
 
 @media (min-width: 992px) {
-    .collection-col {
-        flex-basis: 25%;
-        max-width: 25%;
-    }
-}
-
-@media (min-width: 1200px) {
-    .collection-col {
+    .collection-col,
+    #categories-grid > div {
         flex-basis: 20%;
         max-width: 20%;
     }
@@ -2283,7 +2302,8 @@ a.external-link:after {
     color: var(--color-tuatara);
 }
 
-.coll-logo {
+.coll-logo,
+.category-icon-circle {
     height: 56px;
     display: flex;
     align-items: center;
@@ -2299,10 +2319,11 @@ a.external-link:after {
 
 .coll-card-name,
 .category-card-name {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 38px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 38px;
     margin-bottom: 12px;
     font-size: 14px;
     font-weight: var(--font-weight-bold);
@@ -2315,6 +2336,7 @@ a.external-link:after {
     justify-content: flex-end;
     gap: 8px;
     margin-top: 8px;
+    padding: 0 16px;
 }
 
 @media (max-width: 767.98px) {
@@ -2329,12 +2351,47 @@ a.external-link:after {
     }
 }
 
+#categories-grid > div {
+    margin-bottom: 16px;
+}
+
+.category-icon-circle {
+    width: 56px;
+    border-radius: var(--border-radius-full);
+    margin-left: auto;
+    margin-right: auto;
+    flex-shrink: 0;
+}
+
+.category-icon-circle i {
+    font-size: 26px;
+    color: var(--color-white);
+}
+
+.category-icon-circle--gold   { background-color: var(--color-tomorrow-gold); }
+.category-icon-circle--teal   { background-color: var(--color-blue-stone); }
+.category-icon-circle--blue   { background-color: var(--color-blue); }
+.category-icon-circle--green  { background-color: var(--color-green); }
+.category-icon-circle--orange { background-color: var(--color-buttercup); }
+.category-icon-circle--red    { background-color: var(--color-maple); }
+
+.category-card-count,
+.coll-card-count {
+    display: inline-block;
+    padding: 2px 10px;
+    background-color: var(--gray-300);
+    border-radius: 16px;
+    font-size: var(--font-size-h5);
+    font-weight: var(--font-weight-semibold);
+    margin-top: auto;
+}
+
 /* ========================================
    HOME RECENT DATASETS SECTION
    ======================================== */
 
 .recent-datasets-section {
-    padding: 20px 0 40px 0;
+    padding: 20px 16px 40px 16px;
     margin-bottom: 0;
 }
 
@@ -2446,7 +2503,7 @@ a.external-link:after {
 .recent-page-btn:hover:not(.active),
 .recent-page-btn:focus-visible:not(.active) {
     background-color: var(--color-desaturated-gold);
-    border-color: rgba(50, 50, 47, 0.25); /* same border treatment as .btn-primary — gold fill vs. white page fails the 3:1 WCAG 1.4.11 minimum on its own */
+    border-color: rgba(50, 50, 47, 0.25);
     color: var(--color-tuatara);
 }
 
@@ -2480,63 +2537,6 @@ a.external-link:after {
     .recent-dataset-chevron {
         align-self: center;
     }
-}
-
-/* ========================================
-   HOME FEATURED CATEGORIES SECTION
-   ======================================== */
-
-.featured-categories-section {
-    padding: 20px 0 40px 0;
-}
-
-/* 5-column grid for Bootstrap 4 (mobile: 2 col, desktop: 5 col) */
-#categories-grid > div {
-    flex: 0 0 50%;
-    max-width: 50%;
-    padding: 0 8px;
-    margin-bottom: 16px;
-}
-@media (min-width: 992px) {
-    #categories-grid > div {
-        flex: 0 0 20%;
-        max-width: 20%;
-    }
-}
-
-
-.category-icon-circle {
-    width: 48px;
-    height: 48px;
-    border-radius: var(--border-radius-full);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 14px;
-    flex-shrink: 0;
-}
-
-.category-icon-circle i {
-    font-size: 22px;
-    color: var(--color-white);
-}
-
-.category-icon-circle--gold   { background-color: var(--color-tomorrow-gold); }
-.category-icon-circle--teal   { background-color: var(--color-blue-stone); }
-.category-icon-circle--blue   { background-color: var(--color-blue); }
-.category-icon-circle--green  { background-color: var(--color-green); }
-.category-icon-circle--orange { background-color: var(--color-buttercup); }
-.category-icon-circle--red    { background-color: var(--color-maple); }
-
-.category-card-count,
-.coll-card-count {
-    display: inline-block;
-    padding: 2px 10px;
-    background-color: var(--gray-300);
-    border-radius: 16px;
-    font-size: var(--font-size-h5);
-    font-weight: var(--font-weight-semibold);
-    margin-top: auto;
 }
 
 /* ========================================
