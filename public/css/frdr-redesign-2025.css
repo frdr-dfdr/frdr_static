@@ -3326,10 +3326,16 @@ h1+ul {
     color: var(--color-tuatara);
 }
 
-.frdr-search-input:focus {
-    border-color: var(--color-tomorrow-gold);
-    box-shadow: 0 0 0 0.2rem rgba(214, 171, 0, 0.25);
+.frdr-search-input.form-control:focus {
+    border-color: var(--gray-300);
+    box-shadow: none;
     outline: none;
+}
+
+.input-group:has(> .frdr-search-input:focus) {
+    border-radius: var(--border-radius-sm);
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 3px;
 }
 
 .frdr-search-btn {
@@ -3349,14 +3355,6 @@ h1+ul {
     background-color: var(--color-tomorrow-gold);
     border-color: var(--color-tomorrow-gold);
     color: var(--color-tuatara);
-}
-
-.frdr-search-no-results {
-    display: none;
-    text-align: center;
-    padding: 20px 0 40px 0;
-    color: var(--gray-400);
-    font-size: var(--font-size-h4);
 }
 
 i.feedback-icon {
