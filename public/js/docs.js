@@ -201,7 +201,7 @@ $( document ).ready(function() {
     }
 
     function handleSearchPage() {
-        $(".page-banner-card").addClass("collapse");
+        $(".page-banner").addClass("collapse");
         $(".frdr-sidebar").addClass("mt-5");
         const params = new Proxy(new URLSearchParams(window.location.search), {
               get: (searchParams, prop) => searchParams.get(prop),

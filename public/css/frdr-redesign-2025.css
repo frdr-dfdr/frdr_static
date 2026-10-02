@@ -47,6 +47,7 @@
     --font-size-h5: 13px;
     --font-size-h6: 10px;
     --font-size-body: 16px;
+    --font-size-sm: 14px;
 
     /* Font Weights */
     --font-weight-bold: 700;
@@ -76,7 +77,7 @@
 }
 
 /* Links in Body of Text */
-a:not(.btn, .badge, .page-link, .stats-card, .recent-dataset-title, .category-card, .coll-card, .col-stat-text, .table-sort, .progress-step, .get-started-cta, .skip-link, .home-banner-link, .link-on-dark, .link-on-dark-white, .link-black),
+a:not(.btn, .badge, .page-link, .stats-card, .recent-dataset-title, .category-card, .coll-card, .col-stat-text, .table-sort, .progress-step, .get-started-cta, .skip-link, .link-on-dark, .link-on-dark-white, .link-black),
 .link-body {
     color: var(--color-tuatara);
     margin-bottom: 0px;
@@ -91,12 +92,12 @@ a:hover, a:focus, a:active,
 
 /* Gold Links Placed Against a Black Background */
 .link-on-dark {
-    color: var(--color-tomorrow-gold);
+    color: var(--color-desaturated-gold);
     text-decoration: underline;
 }
 
 .link-on-dark:hover, .link-on-dark:focus, .link-on-dark:active {
-    color: var(--color-desaturated-gold);
+    color: var(--color-tomorrow-gold);
 }
 
 /* White Links Placed Against a Black Background */
@@ -168,14 +169,6 @@ small {
 
 .col-form-label {
     font-weight: 600;
-}
-
-#jumbo-mid-tagline {
-  color: var(--color-white);
-  font-weight: var(--font-weight-bold);
-  font-size: 44px;
-  line-height: 1.2;
-  margin: 0;
 }
 
 #brandlogo {
@@ -282,10 +275,6 @@ h3, .h3, .styled-h3 {
     font-size: var(--font-size-h3);
     line-height: var(--line-height-heading);
     margin-top: 20px;
-}
-
-.page-banner-subtitle {
-    color: var(--color-white);
 }
 
 h4, .h4, .styled-h4 {
@@ -1150,17 +1139,11 @@ div.ekko-lightbox.modal > * > .modal-content {
   .container { max-width: 1170px; }
 }
 
-@media (max-width: 1024px) {
-  #jumbo-mid-tagline { font-size: 32px; }
-}
-
 @media (max-width: 768px) {
-  #jumbo-mid-tagline { font-size: var(--font-size-h1); }
   .item-metadata-grid { grid-template-columns: auto auto; }
 }
 
 @media (max-width: 500px) {
-  #jumbo-mid-tagline { font-size: var(--font-size-h1); }
   .item-metadata-grid { grid-template-columns: auto; }
   .item-md-field { font-weight: bold; background-color: var(--gray-300); }
 }
@@ -1776,8 +1759,7 @@ input:focus-visible,
 
 /* Dark surfaces: switch the ring to white. The dropdown menus inside the navbar are white, so they switch back. */
 .navbar-dark,
-.home-banner,
-.page-banner-card,
+.page-banner,
 .site-footer {
     --focus-ring: var(--focus-ring-dark);
 }
@@ -1926,86 +1908,184 @@ input:focus-visible,
 }
 
 /* ========================================
-   HOME PAGE
+   PAGE BANNER
    ======================================== */
 
-.home-banner {
+.page-banner {
+    position: relative;
+    background-color: black;
+    background-image: linear-gradient(180deg, rgba(50, 50, 47, 0.9) 10.14%, rgba(50, 50, 47, 0.7) 100%);
+    color: var(--gray-200);
+    padding: 32px 0;
+    margin-bottom: 32px;
+}
+
+.page-banner--home {
     background-image: linear-gradient(180deg, rgba(50, 50, 47, 0.9) 10.14%, rgba(50, 50, 47, 0.7) 100%),
                       url(/static/images/latest/banner_mountain_legacy_project.png);
-    margin-bottom: 3px;
-    border-radius: 0;
     background-size: cover;
     background-position: center center;
-    position: relative;
-    overflow: hidden;
+    padding: 56px 0 72px;
+    margin-bottom: 3px;
 }
 
-.home-banner-outer {
-    max-width: 100% !important;
-}
-
-.home-banner-content {
-    position: relative;
-    z-index: 2;
+.page-banner-content {
     max-width: 700px;
-    padding-top: 56px;
-    padding-bottom: 72px;
 }
 
-.home-banner-desc {
+.page-banner-breadcrumb {
+    background: none;
+    padding: 0;
+    margin: 0 0 12px;
+    font-size: var(--font-size-sm);
+}
+
+.page-banner-breadcrumb a {
+    color: var(--gray-400);
+    text-decoration: underline;
+}
+
+.page-banner-breadcrumb a:hover,
+.page-banner-breadcrumb a:focus,
+.page-banner-breadcrumb a:active {
+    color: var(--color-tomorrow-gold);
+}
+
+.page-banner-breadcrumb .breadcrumb-item.active {
+    color: var(--color-white);
+}
+
+.page-banner-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+    color: var(--gray-600);
+}
+
+.page-banner-title {
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-h1);
+    line-height: var(--line-height-heading);
+    color: var(--color-white);
+    margin: 0 0 12px;
+}
+
+.page-banner--home .page-banner-title {
+    font-size: 44px;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.page-banner-desc {
     max-width: 640px;
     color: var(--color-white);
     line-height: 1.6;
     margin: 18px 0 0;
 }
 
-.home-banner-link {
-    color: var(--color-desaturated-gold);
-    text-decoration: underline;
+/* .page-banner-desc can also be a <div> holding several paragraphs (header-default-redesign) */
+.page-banner-desc p {
+    margin: 0;
 }
 
-.home-banner-link:hover, .home-banner-link:focus, .home-banner-link:active {
-    color: var(--color-tomorrow-gold);
+.page-banner-desc p + p {
+    margin-top: 16px;
 }
 
-@media (max-width: 768px) {
-    .home-banner-content {
-        padding-top: 40px;
-        padding-bottom: 24px;
-    }
+.page-banner-icon {
+    color: var(--gray-400);
+    font-size: 6em;
+    flex-shrink: 0;
 }
 
-.home-banner-citation {
+/* Image icons (e.g. a logo) scale with the icon font-size like Font Awesome icons */
+.page-banner-icon img {
+    display: block;
+    height: 1em;
+    width: auto;
+}
+
+.page-banner-citation {
     position: absolute;
     bottom: 10px;
     right: 16px;
-    margin-left: auto;
+    margin: 0;
     font-weight: var(--font-weight-semibold);
     font-size: 12px;
     line-height: 17px;
     color: var(--gray-400);
     text-align: right;
-    z-index: 2;
 }
 
-.home-banner-citation a {
+.page-banner-citation a {
     color: var(--gray-400);
 }
 
-.home-banner-citation a:hover,
-.home-banner-citation a:focus,
-.home-banner-citation a:active {
+.page-banner-citation a:hover,
+.page-banner-citation a:focus,
+.page-banner-citation a:active {
     color: var(--color-tomorrow-gold);
 }
 
+@media (min-width: 1050px) {
+    .page-banner-icon {
+        font-size: 8em;
+    }
+}
+
+@media (max-width: 1024px) {
+    .page-banner--home .page-banner-title {
+        font-size: 32px;
+    }
+}
+
 @media (max-width: 768px) {
-    .home-banner-citation {
+    .page-banner--home .page-banner-title {
+        font-size: var(--font-size-h1);
+    }
+
+    .page-banner-citation {
         position: static;
-        margin-top: 16px;
+        margin-top: 24px;
         padding: 0 15px;
         text-align: left;
     }
 }
+
+@media (max-width: 767px) {
+    .page-banner {
+        padding: 24px 0;
+        margin-bottom: 24px;
+    }
+
+    .page-banner--home {
+        padding: 40px 0 16px;
+        margin-bottom: 3px;
+    }
+
+    .page-banner-title {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .page-banner-desc {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .page-banner-icon {
+        display: none;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .page-banner--home > .container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+/* ========================================
+   HOME PAGE
+   ======================================== */
 
 a.external-link:after {
     display: inline-block;
@@ -3094,16 +3174,6 @@ h1+ul {
     margin-top: 1rem;
 }
 
-.page-banner-card {
-    margin: 18px;
-    border-radius: 10px;
-    background-color: var(--color-tuatara);
-    color: var(--gray-200);
-    padding-top: 30px;
-    padding-bottom: 15px;
-    margin-bottom: 50px;
-}
-
 .code-panel {
     background-color: var(--gray-100);
     border-bottom-left-radius: 12px;
@@ -3131,20 +3201,6 @@ h1+ul {
     padding-left: 64px;
 }
 
-.page-banner-title {
-    font-family: var(--font-primary);
-    font-weight: bold;
-    color: var(--color-white);
-}
-
-.page-banner-icon {
-    color: var(--gray-400);
-    width: 33%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-
 #docs-search-button {
     background-color: var(--color-white);
     border: 1px solid var(--gray-400);
@@ -3168,10 +3224,6 @@ h1+ul {
     height: 61px;
     padding: 11px;
     width: 395px;
-}
-
-.page-banner-text {
-    width: 66%;
 }
 
 #search-results-container {
@@ -3231,85 +3283,6 @@ h1+ul {
         width: 1%;
         min-width: 0;
         margin-bottom: 0;
-    }
-}
-
-@media (min-width: 1px) and (max-width: 518px) {
-    .page-banner-icon {
-        font-size: 3em;
-        width: 20%;
-    }
-
-    .page-banner-text {
-        width: 80%;
-    }
-
-    .page-banner-card {
-        padding-left: 12px;
-        padding-right: 12px;
-    }
-
-    .page-banner-title {
-        font-size: 30px;
-        line-height: 30px;
-    }
-}
-
-@media (min-width: 518px) and (max-width: 1050px) {
-    .page-banner-icon {
-        font-size: 8em;
-    }
-
-    .page-banner-card {
-        padding-left: 12px;
-        padding-right: 12px;
-    }
-
-    .page-banner-title {
-        font-size: 40px;
-        line-height: 40px;
-    }
-}
-
-@media (min-width: 1050px) {
-    .page-banner-icon {
-        font-size: 16em;
-    }
-
-    .page-banner-card {
-        padding-left: 120px;
-        padding-right: 120px;
-    }
-
-    .page-banner-title {
-        font-size: 60px;
-        line-height: 60px;
-    }
-}
-
-@media (max-width: 767px) {
-    .page-banner-card {
-        margin: 0;
-        border-radius: 0;
-        margin-bottom: 24px;
-    }
-    .page-banner-text {
-        width: 100%;
-        padding: 0;
-    }
-    .page-banner-title {
-        font-size: 32px;
-        line-height: 40px;
-    }
-    .page-banner-subtitle {
-        font-size: 14px;
-        font-weight: var(--font-weight-normal);
-        line-height: 20px;
-        margin-top: 8px;
-        margin-bottom: 0;
-    }
-    .page-banner-icon {
-        display: none;
     }
 }
 
@@ -5645,14 +5618,6 @@ a.dashboard.dropdown-item {
    CONTACT US PAGE
    ======================================== */
 
-.contact-banner-icon {
-    height: 100%;
-    max-height: 150px;
-    width: auto;
-    object-fit: contain;
-    margin: 0;
-}
-
 .contact-main-row {
     margin-bottom: 48px;
 }
@@ -5728,45 +5693,6 @@ a.dashboard.dropdown-item {
         border: none;
         padding: 0;
         box-shadow: none;
-    }
-    /* Banner: remove card margin/radius so it's full-bleed */
-    .page-banner-card:has(.contact-banner-icon) {
-        margin: 0;
-        border-radius: 0;
-        padding-top: 0;
-        padding-bottom: 0;
-        margin-bottom: 0;
-    }
-    /* Positioning context for absolute logo */
-    .page-banner-card:has(.contact-banner-icon) .card-body {
-        position: relative;
-        overflow: hidden;
-        padding: 0;
-        min-height: 232px;
-    }
-    /* Push text to the bottom of the banner */
-    .page-banner-card:has(.contact-banner-icon) .row {
-        margin: 0;
-        padding: 99px 24px 24px;
-    }
-    /* .page-banner-text/-title/-subtitle already match at this breakpoint via the generic mobile rules above — no override needed */
-    .page-banner-icon:has(.contact-banner-icon) {
-        display: block;
-        position: absolute;
-        top: -44px;
-        right: -28px;
-        left: auto;
-        width: 139px;
-        height: 187px;
-    }
-    .contact-banner-icon {
-        width: 100%;
-        height: 100%;
-        max-height: none;
-        object-fit: contain;
-        margin: 0;
-        float: none !important;
-        opacity: 0.3;
     }
 }
 
