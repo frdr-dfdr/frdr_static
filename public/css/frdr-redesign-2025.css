@@ -2708,19 +2708,19 @@ body {
     background-color: var(--color-tomorrow-gold);
 }
 
-ol {
+ol:not(.breadcrumb) {
     line-height: 22px;
     list-style: none;
     counter-reset: item;
 }
 
-ol > li {
+ol:not(.breadcrumb) > li {
     counter-increment: item;
     margin-bottom: 5px;
     position: relative;
 }
 
-ol > li:before {
+ol:not(.breadcrumb) > li:before {
     /** Position digit and circle */
     position: absolute;
     left: -30px;
