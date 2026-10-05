@@ -1914,7 +1914,7 @@ input:focus-visible,
 .page-banner {
     position: relative;
     background-color: black;
-    background-image: linear-gradient(180deg, rgba(50, 50, 47, 0.9) 10.14%, rgba(50, 50, 47, 0.7) 100%);
+    background-image: linear-gradient(180deg, rgba(50, 50, 47, 0.7) 10.14%, rgba(50, 50, 47, 0.7) 100%);
     color: var(--gray-200);
     padding: 32px 0;
     margin-bottom: 32px;
@@ -1981,7 +1981,6 @@ input:focus-visible,
     margin: 18px 0 0;
 }
 
-/* .page-banner-desc can also be a <div> holding several paragraphs (header-default-redesign) */
 .page-banner-desc p {
     margin: 0;
 }
