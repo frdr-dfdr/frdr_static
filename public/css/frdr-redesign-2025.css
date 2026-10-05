@@ -1940,23 +1940,8 @@ input:focus-visible,
     font-size: var(--font-size-sm);
 }
 
-.page-banner-breadcrumb a {
-    color: var(--gray-400);
-    text-decoration: underline;
-}
-
-.page-banner-breadcrumb a:hover,
-.page-banner-breadcrumb a:focus,
-.page-banner-breadcrumb a:active {
-    color: var(--color-tomorrow-gold);
-}
-
 .page-banner-breadcrumb .breadcrumb-item.active {
     color: var(--color-white);
-}
-
-.page-banner-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
-    color: var(--gray-600);
 }
 
 .page-banner-title {
