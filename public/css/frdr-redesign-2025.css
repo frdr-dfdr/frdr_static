@@ -1913,11 +1913,10 @@ input:focus-visible,
 
 .page-banner {
     position: relative;
-    background-color: black;
-    background-image: linear-gradient(180deg, rgba(50, 50, 47, 0.7) 10.14%, rgba(50, 50, 47, 0.7) 100%);
+    background-color: var(--color-white);
+    background-image: linear-gradient(180deg, rgba(50, 50, 47, 0.9) 10.14%, rgba(50, 50, 47, 0.9) 100%);
     color: var(--gray-200);
     padding: 32px 0;
-    margin-bottom: 32px;
 }
 
 .page-banner--home {
@@ -1926,7 +1925,6 @@ input:focus-visible,
     background-size: cover;
     background-position: center center;
     padding: 56px 0 72px;
-    margin-bottom: 3px;
 }
 
 .page-banner-content {
@@ -3277,53 +3275,6 @@ h1+ul {
     text-decoration: none;
 }
 
-
-/* ========================================
-   SHARED SEARCH BAR
-   Used on: community-home, docs
-   ======================================== */
-
-.frdr-search-input {
-    font-size: var(--font-size-h4);
-    padding: 10px 16px;
-    height: 48px;
-    border: 1px solid var(--gray-300);
-    border-right: none;
-    border-radius: var(--border-radius-sm) 0 0 var(--border-radius-sm) !important;
-    color: var(--color-tuatara);
-}
-
-.frdr-search-input.form-control:focus {
-    border-color: var(--gray-300);
-    box-shadow: none;
-    outline: none;
-}
-
-.input-group:has(> .frdr-search-input:focus) {
-    border-radius: var(--border-radius-sm);
-    outline: 2px solid var(--focus-ring);
-    outline-offset: 3px;
-}
-
-.frdr-search-btn {
-    background-color: var(--color-white);
-    color: var(--color-tuatara);
-    border: 1px solid var(--gray-300);
-    border-left: none;
-    border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0 !important;
-    padding: 0 20px;
-    height: 48px;
-    font-size: var(--font-size-h4);
-    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
-    cursor: pointer;
-}
-
-.frdr-search-btn:hover {
-    background-color: var(--color-tomorrow-gold);
-    border-color: var(--color-tomorrow-gold);
-    color: var(--color-tuatara);
-}
-
 i.feedback-icon {
     color: var(--color-tuatara);
     margin-right: 8px;
@@ -3374,18 +3325,59 @@ i.feedback-icon:hover {
   color: var(--color-tomorrow-gold);
 }
 
-.section-divider {
-    width: 100%;
-    height: 2px;
-    background-color: var(--color-tuatara);
-    margin: 20px 0;
-}
 
 /* ========================================
    COMMUNITY HOME PAGE
    ======================================== */
 
-/* Collections Container */
+/* Collection search bar */
+.frdr-search-input {
+    padding: 10px 16px;
+    height: 48px;
+    border: 1px solid var(--gray-700);
+    border-right: none;
+    border-radius: var(--border-radius-sm) 0 0 var(--border-radius-sm) !important;
+}
+
+.frdr-search-input.form-control:focus {
+    border-color: var(--gray-700);
+    box-shadow: none;
+    outline: none;
+}
+
+/* One ring around the whole bar, whether the input or the button has focus */
+.input-group:has(> .frdr-search-input:focus),
+.input-group:has(> .frdr-search-btn:focus-visible) {
+    border-radius: var(--border-radius-sm);
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 3px;
+}
+
+.frdr-search-btn {
+    background-color: var(--color-white);
+    border: 1px solid var(--gray-700);
+    border-left: none;
+    border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0 !important;
+    padding: 0 20px;
+    height: 48px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.frdr-search-btn:focus-visible {
+    outline: none;
+}
+
+.frdr-search-btn:hover,
+.frdr-search-btn:focus-visible {
+    background-color: var(--color-tomorrow-gold);
+}
+
+.collection-results-line {
+    color: var(--gray-700);
+    margin: 12px 0 20px;
+}
+
 .collections-container {
     display: flex;
     flex-direction: column;
@@ -3393,17 +3385,26 @@ i.feedback-icon:hover {
     margin: 20px 0;
 }
 
-/* Collection Card */
 .collection-card {
     background-color: var(--color-white);
     border-radius: var(--border-radius-sm);
     box-shadow: var(--shadow-card);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
+    position: relative; /* the title's .stretched-link covers the whole card */
+}
+
+.collection-card .row > [class*="col-"] {
+    position: static;
 }
 
 .collection-card:hover {
     box-shadow: 0px 15px 25px -3px rgba(0, 0, 0, 0.15);
+}
+
+.collection-card:has(.collection-title a:focus-visible) {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 3px;
 }
 
 .collection-card-body {
@@ -3450,12 +3451,17 @@ i.feedback-icon:hover {
 
 .collection-title a {
     color: var(--color-tuatara);
-    text-decoration: none;
+    text-decoration: underline;
     transition: color 0.3s ease;
 }
 
-.collection-title a:hover {
+.collection-title a:hover,
+.collection-card:hover .collection-title a {
     color: var(--color-crete);
+}
+
+.collection-title a:focus-visible {
+    outline: none;
 }
 
 /* Collection Count - inline with title */
@@ -3466,10 +3472,12 @@ i.feedback-icon:hover {
     margin-left: 8px;
 }
 
-/* Delete Form - inline with title */
+/* Delete Form - inline with title, above the stretched link so it stays clickable */
 .collection-delete-form {
     margin: 0;
     flex-shrink: 0;
+    position: relative;
+    z-index: 2;
 }
 
 /* Collection Description */
@@ -3479,13 +3487,6 @@ i.feedback-icon:hover {
     color: var(--color-tuatara);
     line-height: var(--line-height-body);
     margin: 0;
-}
-
-/* Collection Footer - Right aligned button */
-.collection-footer {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
 }
 
 /* Responsive Design */
@@ -3523,14 +3524,6 @@ i.feedback-icon:hover {
     
     .affiliation-badge {
         font-size: var(--font-size-h5);
-    }
-    
-    .collection-footer {
-        justify-content: center;
-    }
-
-    .collection-footer .btn {
-        width: 100%;
     }
 }
 
