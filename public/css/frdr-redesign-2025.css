@@ -3347,12 +3347,41 @@ i.feedback-icon:hover {
     outline: none;
 }
 
-/* One ring around the whole bar, whether the input or the button has focus */
 .input-group:has(> .frdr-search-input:focus),
 .input-group:has(> .frdr-search-btn:focus-visible) {
     border-radius: var(--border-radius-sm);
     outline: 2px solid var(--focus-ring);
     outline-offset: 3px;
+}
+
+.frdr-search-clear {
+    background-color: var(--color-white);
+    color: var(--gray-700);
+    border: 1px solid var(--gray-700);
+    border-left: none;
+    border-right: none;
+    padding: 0 12px;
+    height: 48px;
+    transition: color 0.3s ease;
+    position: relative; /* for the focus ring */
+}
+
+.frdr-search-clear:focus-visible {
+    outline: none;
+}
+
+.frdr-search-clear:focus-visible::after {
+    content: "";
+    position: absolute;
+    inset: 8px 4px;
+    border: 2px solid var(--focus-ring);
+    border-radius: var(--border-radius-sm);
+    pointer-events: none;
+}
+
+.frdr-search-clear:hover,
+.frdr-search-clear:focus-visible {
+    color: var(--color-tuatara);
 }
 
 .frdr-search-btn {
