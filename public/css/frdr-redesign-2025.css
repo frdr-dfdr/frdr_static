@@ -4004,6 +4004,25 @@ a.affiliation-badge:focus-visible .affiliation-badge-name {
     color: var(--color-tuatara);
 }
 
+/* Page button with link version (collection home — server-side pages) */
+a.frdr-page-btn,
+a.nav-arrow-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+a.frdr-page-btn:focus,
+a.frdr-page-btn:active {
+    color: var(--color-tuatara);
+}
+
+a.nav-arrow-btn:focus,
+a.nav-arrow-btn:active {
+    color: var(--color-white);
+}
+
 .frdr-page-ellipsis {
     color: var(--gray-700);
     font-size: var(--font-size-h5);
