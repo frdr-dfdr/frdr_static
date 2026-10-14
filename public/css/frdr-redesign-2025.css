@@ -2551,10 +2551,6 @@ a.external-link:after {
     color: var(--color-tuatara);
 }
 
-.recent-pagination-wrapper {
-    margin-top: 12px;
-}
-
 @media (max-width: 768px) {
     .recent-dataset-card {
         align-items: flex-start;
@@ -3404,11 +3400,6 @@ i.feedback-icon:hover {
     background-color: var(--color-tomorrow-gold);
 }
 
-.collection-results-line {
-    color: var(--gray-700);
-    margin: 12px 0 20px;
-}
-
 .collections-container {
     display: flex;
     flex-direction: column;
@@ -3912,13 +3903,6 @@ a.affiliation-badge:focus-visible .affiliation-badge-name {
         font-size: var(--font-size-h5);
         padding: 4px 16px 12px;
     }
-
-    /* Pagination: buttons on top row, info text on bottom row */
-    .col-datasets-pagination.pagination-wrapper {
-        flex-direction: column-reverse;
-        align-items: center;
-        gap: 12px;
-    }
 }
 
 .col-datasets-sort-label {
@@ -3967,17 +3951,18 @@ a.affiliation-badge:focus-visible .affiliation-badge-name {
    ======================================== */
 
 .pagination-wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 12px 0;
 }
 
 .frdr-pagination {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     gap: 8px;
+}
+
+.frdr-pagination--center {
+    justify-content: center;
 }
 
 .frdr-page-btn {
@@ -4030,8 +4015,8 @@ a.nav-arrow-btn:active {
 }
 
 .pagination-info {
-    font-size: 14px;
     color: var(--gray-700);
+    margin: 12px 0 20px;
 }
 
 .pagination .page-item .page-link {
@@ -4063,18 +4048,6 @@ a.nav-arrow-btn:active {
     border: none;
     color: var(--color-tuatara);
     box-shadow: none;
-}
-
-@media (max-width: 768px) {
-    #pagination-bottom {
-        flex-direction: column-reverse;
-        align-items: center;
-        gap: 8px;
-    }
-
-    #pagination-bottom .frdr-pagination {
-        justify-content: center;
-    }
 }
 
 .badge-primary {
