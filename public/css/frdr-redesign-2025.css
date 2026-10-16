@@ -3400,6 +3400,17 @@ i.feedback-icon:hover {
     background-color: var(--color-tomorrow-gold);
 }
 
+/* Icon-only variant for live search (category-list): same look, not clickable */
+.frdr-search-icon {
+    display: flex;
+    align-items: center;
+    cursor: default;
+}
+
+.frdr-search-icon:hover {
+    background-color: var(--color-white);
+}
+
 .collections-container {
     display: flex;
     flex-direction: column;
