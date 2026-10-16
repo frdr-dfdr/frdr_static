@@ -5490,45 +5490,6 @@ a.dashboard.dropdown-item {
     z-index: -1;
 }
 
-/* Search card */
-.catlist-search-card {
-    background: var(--color-white);
-    border-radius: var(--border-radius-md);
-    padding: 14px 20px;
-    margin-bottom: 16px;
-    box-shadow: var(--shadow-card);
-}
-
-.catlist-search-input-wrapper {
-    position: relative;
-    width: 50%;
-}
-
-.catlist-search-icon {
-    position: absolute;
-    left: 14px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--gray-600);
-    font-size: var(--font-size-h4);
-    pointer-events: none;
-}
-
-.catlist-search-input {
-    width: 100%;
-    padding: 10px 16px 10px 40px;
-    font-size: var(--font-size-h4);
-    border: 1px solid var(--gray-300);
-    border-radius: var(--border-radius-sm);
-    outline: none;
-    transition: border-color 0.2s ease;
-}
-
-.catlist-search-input:focus {
-    border-color: var(--color-tomorrow-gold);
-    box-shadow: 0 0 0 3px rgba(214, 171, 0, 0.15);
-}
-
 .catlist-meta-row {
     display: flex;
     align-items: center;
@@ -5536,10 +5497,6 @@ a.dashboard.dropdown-item {
     flex-wrap: wrap;
     gap: 8px;
     margin-bottom: 12px;
-}
-
-.catlist-count-label {
-    font-size: var(--font-size-h5);
 }
 
 .catlist-toggle-btn {
@@ -5550,9 +5507,7 @@ a.dashboard.dropdown-item {
 /* Division sections */
 .catlist-division {
     margin-bottom: 20px;
-    border-radius: var(--border-radius-md);
     overflow: hidden;
-    background: var(--color-white);
 }
 
 .catlist-division-header {
@@ -5640,11 +5595,6 @@ a.dashboard.dropdown-item {
         flex: 0 0 20%;
         max-width: 20%;
     }
-}
-
-/* catlist-card overrides category-card for this page */
-.catlist-card {
-    height: 100%;
 }
 
 /* ========================================
