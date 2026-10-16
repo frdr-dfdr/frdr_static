@@ -63,9 +63,12 @@
     --border-radius-sm: 8px;
     --border-radius-md: 12px;
     --border-radius-full: 9999px;
+    --card-border: 1px solid var(--gray-300);
 
     /* SHADOWS */
     --shadow-card: 0px 4px 6px -4px rgba(0, 0, 0, 0.1), 0px 10px 15px -3px rgba(0, 0, 0, 0.05);
+    --shadow-sm: 0 2px 5px rgba(34, 34, 30, 0.08); /* resting shadow for bordered cards */
+    --shadow-hover: 0px 15px 25px -3px rgba(0, 0, 0, 0.15); /* hover shadow for clickable cards */
 
     --focus-ring-light: var(--color-tuatara);
     --focus-ring-dark: var(--color-white);
@@ -801,6 +804,25 @@ a.lang-btn.d-lg-block {
     padding: 24px;
     box-shadow: var(--shadow-card);
     margin-bottom: 24px;
+}
+
+/* Card variants — combine with .frdr-card; component classes keep only padding/layout */
+.frdr-card--outline {
+    border: var(--card-border);
+    box-shadow: none;
+}
+
+.frdr-card--raised {
+    border: var(--card-border);
+    box-shadow: var(--shadow-sm);
+}
+
+.frdr-card--interactive {
+    transition: box-shadow 0.15s ease;
+}
+
+.frdr-card--interactive:hover {
+    box-shadow: var(--shadow-hover);
 }
 
 .container:has(> .frdr-card:first-child) {
@@ -2142,11 +2164,7 @@ a.external-link:after {
     display: flex;
     flex-direction: column;
     height: 100%;
-    background-color: var(--color-white);
-    border: 1px solid var(--gray-300);
-    border-radius: var(--border-radius-md);
     box-shadow: 0px 2.67px 5.34px rgba(171, 190, 209, 0.4);
-    padding: 28px 24px;
 }
 
 .get-started-icon-box {
@@ -2470,10 +2488,6 @@ a.external-link:after {
     display: flex;
     align-items: center;
     gap: 16px;
-    background: var(--color-white);
-    border: 1px solid var(--gray-300);
-    box-shadow: 0 2px 5px rgba(34, 34, 30, 0.08);
-    border-radius: var(--border-radius-md);
     padding: 14px 20px;
     transition: background-color 0.3s ease;
 }
@@ -3328,7 +3342,7 @@ i.feedback-icon:hover {
    COMMUNITY HOME PAGE
    ======================================== */
 
-/* Collection search bar */
+/* Collection search bar, also used on Category List page */
 .frdr-search-input {
     padding: 10px 16px;
     height: 48px;
@@ -3419,26 +3433,12 @@ i.feedback-icon:hover {
 }
 
 .collection-card {
-    background-color: var(--color-white);
-    border: 1px solid var(--gray-300);
-    border-radius: var(--border-radius-md);
-    box-shadow: 0 2px 5px rgba(34, 34, 30, 0.08);
     overflow: hidden;
     position: relative;
-    transition: box-shadow 0.15s ease, border-color 0.15s ease;
 }
-
-/* .collection-card:hover {
-    border-color: var(--gray-400);
-    box-shadow: 0 6px 16px rgba(34, 34, 30, 0.14);
-} */
 
 .collection-card .row > [class*="col-"] {
     position: static;
-}
-
-.collection-card:hover {
-    box-shadow: 0px 15px 25px -3px rgba(0, 0, 0, 0.15);
 }
 
 .collection-card:has(.collection-title a:focus-visible) {
@@ -3518,13 +3518,7 @@ a.affiliation-badge:focus-visible .affiliation-badge-name {
 }
 
 .collection-title {
-    font-size: var(--font-size-h2);
-    font-weight: var(--font-weight-bold);
-    color: var(--color-tuatara);
-    margin: 0;
-    font-family: var(--font-primary);
-    line-height: var(--line-height-heading);
-    flex: 1; 
+    flex: 1;
 }
 
 .collection-title a {
@@ -3540,14 +3534,6 @@ a.affiliation-badge:focus-visible .affiliation-badge-name {
 
 .collection-title a:focus-visible {
     outline: none;
-}
-
-/* Collection Count - inline with title */
-.collection-title [class*="count"] {
-    font-size: var(--font-size-h4);
-    color: var(--gray-600);
-    font-weight: var(--font-weight-normal);
-    margin-left: 8px;
 }
 
 /* Delete Form - inline with title, above the stretched link so it stays clickable */
@@ -3584,11 +3570,6 @@ a.affiliation-badge:focus-visible .affiliation-badge-name {
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
-    }
-
-    .collection-title {
-        font-size: var(--font-size-h3);
-        line-height: var(--line-height-body);
     }
 
     .collection-delete-form {
@@ -3635,8 +3616,6 @@ a.affiliation-badge:focus-visible .affiliation-badge-name {
     align-items: center;
     padding: 20px;
     gap: 38px;
-    border: 1px solid var(--gray-400);
-    border-radius: var(--border-radius-md);
 }
 
 .col-stat-card {
@@ -3745,10 +3724,6 @@ a.affiliation-badge:focus-visible .affiliation-badge-name {
     align-items: center;
     justify-content: center;
     gap: 20px;
-    padding: 24px 28px;
-    background: var(--color-white);
-    border: 1px solid var(--gray-400);
-    border-radius: var(--border-radius-md);
 }
 
 .col-action-card-title {
@@ -5658,9 +5633,6 @@ a.dashboard.dropdown-item {
 }
 
 .contact-form-card {
-    background: var(--color-white);
-    border: 1px solid var(--gray-300);
-    border-radius: var(--border-radius-md);
     padding: 32px;
 }
 
@@ -5692,8 +5664,6 @@ a.dashboard.dropdown-item {
 
 /* CONTACT US SENT PAGE (/contactus — confirmation) */
 .sent-card {
-    border: 1px solid var(--gray-300);
-    border-radius: var(--border-radius-md);
     padding: 42px 46px 40px;
     margin-bottom: 48px;
 }
@@ -6545,14 +6515,6 @@ span.collab-perm-inline:has(.text-secondary) {
     gap: 12px;
     padding-top: 20px;
     margin-top: 8px;
-}
-
-.settings-card {
-    background: var(--color-white);
-    border: 1px solid var(--gray-300);
-    border-radius: var(--border-radius-md);
-    padding: 24px;
-    margin-bottom: 24px;
 }
 
 .settings-header {
