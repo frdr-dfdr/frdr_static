@@ -1642,6 +1642,35 @@ a.social-media-icon {
     border-color: var(--gray-500);
 }
 
+/* SECONDARY BUTTON — TUATARA */
+.btn-secondary-tuatara {
+    background-color: var(--color-tuatara);
+    color: var(--color-white);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    padding: 12px 20px;
+    border: 1px solid transparent;
+    border-radius: var(--border-radius-md);
+}
+
+.btn-secondary-tuatara:focus {
+    color: var(--color-white);
+}
+
+.btn-secondary-tuatara:hover,
+.btn-secondary-tuatara:focus-visible,
+.btn-secondary-tuatara:not(:disabled):not(.disabled):active,
+.show > .btn-secondary-tuatara {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: var(--color-white);
+}
+
+.btn-secondary-tuatara:disabled,
+.btn-secondary-tuatara.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
 /* ========================================
    SAVE BUTTON (Secondary Button, Primary Action, smaller than btn-primary)
    ======================================== */
@@ -1938,9 +1967,29 @@ input:focus-visible,
     font-weight: var(--font-weight-bold);
 }
 
+.page-back-nav a {
+    text-decoration: none;
+}
+
+.page-back-nav a:hover,
+.page-back-nav a:focus {
+    text-decoration: underline;
+}
+
 .page-back-nav-arrow {
     font-size: 0.875em;
     margin-right: 8px;
+    transition: transform 0.15s ease;
+}
+
+.page-back-nav a:hover .page-back-nav-arrow {
+    transform: translateX(-3px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .page-back-nav-arrow {
+        transition: none;
+    }
 }
 
 /* ========================================
@@ -4556,6 +4605,33 @@ div.twitter-typeahead {
     background-color: var(--gray-100);
 }
 
+/* Search page (.advanced-search--fields): rows sit on the white card, no grey band
+   (the admin page keeps the grey rows) */
+.advanced-search--fields .advanced-input {
+    background-color: transparent;
+    border-radius: 0;
+    padding: 14px 0;
+    margin-bottom: 6px;
+    border-bottom: 1px solid var(--gray-200); /* Advanced_search.html: #F1EFE8 */
+}
+
+/* Search page: open / close Advanced Search are buttons styled as links (colour from .link-black) */
+.advanced-toggle-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold); /* Advanced_search.html: 600 */
+    text-decoration: underline;
+}
+
+.advanced-search--fields .advanced-header {
+    border-bottom-color: var(--gray-200); /* Advanced_search.html: #F1EFE8 */
+}
+
 .boolean-operator {
     width: 80px;
     flex-shrink: 0;
@@ -4597,6 +4673,53 @@ div.twitter-typeahead {
     text-overflow: ellipsis;
     white-space: nowrap;
     text-align: left;
+}
+
+.advanced-field-name {
+    display: block;
+    padding: 6px 0;
+}
+/* Search page "Add a field" menu — scrolls when there are many fields */
+.add-advanced-field-menu {
+    max-height: 340px;
+    overflow-y: auto;
+}
+
+/* Chevron flips while the "Add a field" menu is open */
+.add-advanced-field-btn .fa-chevron-down {
+    transition: transform 0.2s;
+}
+
+.add-advanced-field-btn[aria-expanded="true"] .fa-chevron-down {
+    transform: rotate(180deg);
+}
+
+/* Search page remove-field button — shape from .nav-arrow-btn, colours from Lunaris .remove-advanced
+   (own class: the admin page also uses .remove_advanced and loads this file) */
+.advanced-remove-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--border-radius-full);
+    border: none;
+    background-color: var(--color-mercury); /* Lunaris: #E4E4E4 */
+    color: var(--color-tuatara);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    -webkit-text-stroke: 1px currentColor;
+}
+
+.advanced-remove-btn:hover:not(:disabled),
+.advanced-remove-btn:focus-visible:not(:disabled) {
+    background-color: var(--color-tuatara);
+    color: var(--color-white);
+}
+
+.advanced-remove-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
 }
 
 .advanced-value {
