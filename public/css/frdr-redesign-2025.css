@@ -316,6 +316,7 @@ h5, .h5 {
     border-radius: var(--border-radius-sm) 0 0 var(--border-radius-sm) !important;
 }
 
+.input-group:has(> .frdr-search-input.form-control:focus),
 .input-group:has(> .frdr-search-btn:focus-visible) {
     border-radius: var(--border-radius-sm);
     outline: 2px solid var(--focus-ring);
@@ -4340,7 +4341,7 @@ a.clear-facet-btn {
 }
 
 .input-group:has(> .form-control:focus) {
-    border-radius: var(--border-radius-sm);
+    border-radius: 0.25rem;
     outline: 2px solid var(--focus-ring);
     outline-offset: 3px;
 }
