@@ -4158,9 +4158,10 @@ a.nav-arrow-btn:active {
     padding-top: 0.5rem;
 }
 
+/* Same curve as the card's inner corner (12px card radius - 1px border), so the inset focus ring runs parallel to it */
 .facet-heading-collapse-btn {
     width: 100%;
-    border-radius: calc(0.25rem - 1px);
+    border-radius: calc(var(--border-radius-md) - 1px);
     padding: 10px 16px;
 }
 
@@ -4196,17 +4197,11 @@ a.nav-arrow-btn:active {
     transition: transform 0.1s ease;
 }
 
-.btn.facet-heading-collapse-btn:hover {
-    color: var(--color-tomorrow-gold);
-    background-color: var(--color-tuatara);
-}
-
+/* Focused header (mouse click too): fixed rounded ring inset in the header, same shape expanded or collapsed */
+.btn.facet-heading-collapse-btn:focus,
 .btn.facet-heading-collapse-btn:focus-visible {
-    outline-offset: -4px;
-}
-
-.facet-field-heading:not(.facet-field-heading--applied) .btn.facet-heading-collapse-btn:hover:focus-visible {
-    --focus-ring: var(--focus-ring-dark);
+    outline: 2px solid var(--focus-ring);
+    outline-offset: -2px;
 }
 
 a.clear-facet-btn {
@@ -4262,12 +4257,7 @@ a.clear-facet-btn {
 
 .card-header.facet-field-heading--applied {
     background-color: var(--color-tomorrow-gold);
-    border-bottom-color: var(--color-tomorrow-gold);
-}
-
-.facet-field-heading--applied .btn.facet-heading-collapse-btn:hover {
-    background-color: transparent;
-    color: var(--color-tuatara);
+    border-bottom: none;
 }
 
 .index_date {
@@ -4537,6 +4527,12 @@ div.twitter-typeahead {
     margin: 20px auto;
     width: 100%;
     max-width: 1200px;
+}
+
+/* Search page card: border only while advanced search is open */
+.navbar-search > .frdr-card--raised:has(#advancedSearch.d-none) {
+    border-color: transparent;
+    box-shadow: none;
 }
 
 @media (max-width: 1400px) {
