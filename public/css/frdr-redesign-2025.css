@@ -2731,76 +2731,6 @@ a.external-link:after {
     }
 }
 
-/* ========================================
-   ITEM LIST / DOCUMENTS
-   migrated from frdr-theme.css
-   ======================================== */
-
-.documents-list .document {
-    border: 1px solid var(--gray-300);
-    border-radius: var(--border-radius-sm);
-    margin: 12px 15px;
-    padding: 16px 20px;
-    background-color: var(--color-white);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-    transition: all 0.2s ease-in-out;
-    position: relative;
-}
-
-.documents-list .document:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transform: translateY(-1px);
-}
-
-.index-details {
-    width: calc(100% - 100px);
-}
-
-.index_title {
-    margin-bottom: 0;
-    font-size: 1.1rem;
-    font-weight: var(--font-weight-semibold);
-    line-height: 1.2;
-}
-
-.index_creators {
-    font-style: italic;
-    line-height: 1.2;
-}
-
-/** xs–sm: full-height scroll **/
-@media (min-width: 1px) and (max-width: 768px) {
-    .documents-list { max-height: 100%; height: 100%; overflow-y: auto; }
-    .index-details { width: calc(100% - 60px); }
-}
-
-/** md: full-height scroll **/
-@media (min-width: 769px) and (max-width: 992px) {
-    .documents-list { max-height: 100%; height: 100%; overflow-y: auto; }
-}
-
-/** lg–xl+: viewport-relative scroll **/
-@media (min-width: 993px) {
-    .documents-list { max-height: calc(100vh - 340px); overflow-y: scroll; }
-}
-
-.home-container .repo-icon {
-    width: 80px;
-    margin-bottom: 12px;
-    margin-right: 8px;
-}
-
-.home-container .documentHeader {
-    margin: auto;
-}
-
-/* sort-pagination — kept from frdr-theme.css (distinct from Bootstrap .pagination) */
-.sort-pagination {
-    border-bottom: 1px solid var(--gray-400);
-    padding-bottom: 1em;
-}
-
-
 html {
     scroll-padding-top: 81.5px; /* height of sticky header */
 }
@@ -3999,6 +3929,7 @@ a.affiliation-badge:focus-visible .affiliation-badge-name {
 
 .frdr-pagination {
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
     gap: 8px;
@@ -4260,79 +4191,97 @@ a.clear-facet-btn {
     border-bottom: none;
 }
 
+/* ========================================
+   SEARCH RESULTS
+   ======================================== */
+
+.sort-pagination {
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.search-results .pagination-wrapper {
+    padding: 18px 20px;
+    border-top: 1px solid var(--gray-200);
+}
+
+@media (min-width: 992px) {
+    .search-results-list {
+        max-height: 620px;
+        overflow-y: auto;
+    }
+}
+
+.search-results-list .document {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.search-results-list .document:last-child {
+    border-bottom: none;
+}
+
+.search-results-list .document > span:first-child {
+    flex-shrink: 0;
+}
+
+.repo-icon {
+    display: block;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.index-details {
+    flex: 1;
+    min-width: 0;
+}
+
+.index_title {
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.4;
+}
+
+.more-info-area {
+    font-size: var(--font-size-sm);
+}
+
+.index_publisher {
+    margin-bottom: 4px;
+}
+
+.index_creators,
 .index_date {
     font-style: italic;
 }
 
-.documents-list, .noresults {
-    min-height: 400px;
-}
-
-.repo-icon {
-    width: 80px;
-    margin-bottom: 12px;
-    margin-left: 8px;
-    margin-right: 8px;
-}
-
-.page-links {
-    padding: 10px 0px 0px 10px;
+.search-results-list .edit-btn {
+    order: 1;
+    flex-shrink: 0;
+    background-color: var(--color-tuatara);
+    color: var(--color-white);
+    border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
     font-size: var(--font-size-h5);
 }
 
-.more-info-area {
-    font-size: 0.9em;
-}
-
-.centre-pane {
-    background-color: var(--color-white);
-    padding: 10px;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-}
-
-#content.index-main {
-    background-color: var(--gray-300);
-    padding-top: 8px !important;
-}
-
-/* .documents-list max-height/overflow already covered at every width by the 3-tier breakpoint system in the ITEM LIST / DOCUMENTS section above — not repeated here */
-
-/** xs size breakpoint **/
-@media (min-width: 1px) and (max-width: 576px) {
-    .centre-pane { width: 100%; }
-    .repo-icon { width: 60px; }
-    .index-details { width: calc(100% - 60px); }
-}
-
-/** sm size breakpoint **/
-@media (min-width: 577px) and (max-width: 768px) {
-    .centre-pane { width: 100%; }
-    .repo-icon { width: 60px; }
-    .index-details { width: calc(100% - 60px); }
-}
-
-/** md size breakpoint **/
-@media (min-width: 769px) and (max-width: 992px) {
-    .centre-pane { width: 100%; }
-    .repo-icon { width: 60px; }
-}
-
-/** lg size breakpoint **/
-@media (min-width: 993px) and (max-width: 1200px) {
-    .centre-pane { width: 100%; }
+.search-results-list .edit-btn:hover {
+    background-color: var(--color-tomorrow-gold);
+    color: var(--color-tuatara);
 }
 
 /** xl size breakpoint **/
 @media (min-width: 1201px) and (max-width: 1400px) {
-    .centre-pane { width: 100%; }
     .date-to { float: right; }
     .date-control { align-content: center; display: flex; justify-content: center; }
 }
 
 /** > xl size breakpoint **/
 @media (min-width: 1401px) {
-    .centre-pane { width: 100%; }
     .date-to { float: right; }
     .date-control { align-content: center; display: flex; justify-content: center; }
 }
@@ -4811,62 +4760,6 @@ div.twitter-typeahead {
         flex: 1;
         min-width: 0;
         max-width: none;
-    }
-}
-
-#main-container .documents-list {
-    padding: 8px 0;
-}
-
-#main-container .documents-list .document .repo-icon {
-    width: 50px !important;
-    height: 50px;
-    margin: 12px;
-    object-fit: contain;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#main-container .documents-list .document .index-details {
-    padding-left: 8px;
-    padding-right: 80px;
-}
-
-#main-container .documents-list .document .index_creators,
-#main-container .documents-list .document .index_date {
-    font-size: 0.9em;
-}
-
-#main-container .documents-list .document .edit-btn {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    background-color: var(--color-tuatara);
-    color: var(--color-white);
-    border: none;
-    border-radius: 4px;
-    padding: 6px 12px;
-    font-size: var(--font-size-h5);
-    display: inline-flex;
-    align-items: center;
-}
-
-#main-container .documents-list .document .edit-btn:hover {
-    background-color: var(--color-tomorrow-gold);
-    color: var(--color-tuatara);
-}
-
-@media (max-width: 768px) {
-    #main-container .documents-list .document .edit-btn {
-        top: 12px;
-        right: 12px;
-        padding: 4px 8px;
-        font-size: 0.8em;
-    }
-
-    #main-container .documents-list .document .index-details {
-        padding-right: 70px;
     }
 }
 
