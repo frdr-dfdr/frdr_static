@@ -1676,74 +1676,33 @@ a.social-media-icon {
    ======================================== */
 
 .btn-secondary {
-    background-color: var(--gray-100);
+    background-color: var(--color-white);
     color: var(--color-tuatara);
-    font-size: var(--font-size-h4);
-    font-weight: var(--font-weight-normal);
+    border: 1px solid var(--color-tuatara);
     padding: 8px 16px;
-    border: 1px solid var(--gray-400);
-}
-
-.btn-secondary:hover {
-    background-color: var(--gray-300);
-    border-color: var(--gray-500);
-    color: var(--color-tuatara);
-    text-decoration: none;
 }
 
 .btn-secondary:focus {
-    background-color: var(--gray-100);
-    border-color: var(--gray-400);
+    background-color: var(--color-white);
     color: var(--color-tuatara);
-    outline: none;
 }
 
-.btn-secondary:hover:focus,
-.btn-secondary:focus-visible {
-    background-color: var(--gray-300);
-    border-color: var(--gray-500);
-}
-
-.btn-secondary:active {
-    background-color: var(--gray-300);
-    border-color: var(--gray-500);
-    color: var(--color-tuatara);
-    outline: none;
+.btn-secondary:hover,
+.btn-secondary:focus-visible,
+.btn-secondary:not(:disabled):not(.disabled):active,
+.btn-secondary:not(:disabled):not(.disabled).active,
+.show > .btn-secondary.dropdown-toggle {
+    background-color: var(--color-tuatara);
+    border-color: var(--color-tuatara);
+    color: var(--color-white);
 }
 
 .btn-secondary:disabled,
 .btn-secondary.disabled {
-    background-color: var(--gray-100);
-    color: var(--gray-600);
-    border-color: var(--gray-300);
-    cursor: not-allowed;
-    opacity: 0.6;
-}
-
-.btn-secondary:not(:disabled):not(.disabled):active,
-.btn-secondary:not(:disabled):not(.disabled).active,
-.show > .btn-secondary.dropdown-toggle {
-    background-color: var(--gray-300);
-    border-color: var(--gray-500);
+    background-color: var(--color-white);
     color: var(--color-tuatara);
-}
-
-.btn-secondary-on-gray {
-    background-color: var(--color-white);
-}
-.btn-secondary-on-gray:hover,
-.btn-secondary-on-gray:active {
-    background-color: var(--gray-300);
-    border-color: var(--gray-500);
-}
-
-.btn-secondary-on-gray:focus {
-    background-color: var(--color-white);
-}
-
-.btn-secondary-on-gray:focus-visible {
-    background-color: var(--gray-300);
-    border-color: var(--gray-500);
+    opacity: 0.4;
+    cursor: not-allowed;
 }
 
 /* SECONDARY BUTTON — TUATARA */
@@ -1922,40 +1881,6 @@ input:focus-visible,
 .navbar-nav .dropdown-menu a:focus-visible,
 .add-advanced-field-menu .dropdown-item:focus-visible {
     outline-offset: -2px;
-}
-
-/* ========================================
-   OUTLINE BUTTONS
-   ======================================== */
-
-.btn-outline-secondary {
-    background-color: var(--color-white);
-    color: var(--color-tuatara);
-    border: 1px solid var(--color-tuatara);
-    padding: 8px 16px;
-}
-
-.btn-outline-secondary:focus {
-    background-color: var(--color-white);
-    color: var(--color-tuatara);
-}
-
-.btn-outline-secondary:hover,
-.btn-outline-secondary:focus-visible,
-.btn-outline-secondary:not(:disabled):not(.disabled):active,
-.btn-outline-secondary:not(:disabled):not(.disabled).active,
-.show > .btn-outline-secondary.dropdown-toggle {
-    background-color: var(--color-tuatara);
-    border-color: var(--color-tuatara);
-    color: var(--color-white);
-}
-
-.btn-outline-secondary:disabled,
-.btn-outline-secondary.disabled {
-    background-color: var(--color-white);
-    color: var(--color-tuatara);
-    opacity: 0.4;
-    cursor: not-allowed;
 }
 
 /* ========================================
