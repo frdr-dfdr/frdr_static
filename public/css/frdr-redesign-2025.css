@@ -80,7 +80,7 @@
 }
 
 /* Links in Body of Text */
-a:not(.btn, .badge, .page-link, .frdr-page-btn, .nav-arrow-btn, .affiliation-badge, .stats-card, .recent-dataset-title, .category-card, .coll-card, .col-stat-text, .table-sort, .progress-step, .skip-link, .link-arrow, .link-on-dark, .link-on-dark-white, .link-black),
+a:not(.btn, .badge, .frdr-page-btn, .nav-arrow-btn, .affiliation-badge, .stats-card, .recent-dataset-title, .category-card, .coll-card, .col-stat-text, .table-sort, .progress-step, .skip-link, .link-arrow, .link-on-dark, .link-on-dark-white, .link-black),
 .link-body {
     color: var(--color-tuatara);
     margin-bottom: 0px;
@@ -3906,37 +3906,6 @@ a.nav-arrow-btn:active {
 .pagination-info {
     color: var(--gray-700);
     margin: 12px 0 20px;
-}
-
-.pagination .page-item .page-link {
-    border-radius: var(--border-radius-sm) !important;
-    border: none;
-    color: var(--color-tuatara);
-    background-color: var(--color-ebb);
-    font-size: 12px;
-    margin: 0 2px;
-}
-
-.pagination .page-item.active .page-link {
-    background-color: var(--color-tomorrow-gold);
-    border: none;
-    color: var(--color-tuatara);
-    font-weight: var(--font-weight-bold);
-    box-shadow: inset 0 0 0 1px var(--color-tuatara);
-}
-
-.pagination .page-item.disabled .page-link {
-    color: var(--gray-400);
-    background-color: var(--color-ebb);
-    border: none;
-}
-
-.pagination .page-item:not(.disabled):not(.active) .page-link:hover,
-.pagination .page-item:not(.disabled):not(.active) .page-link:focus {
-    background-color: var(--color-desaturated-gold);
-    border: none;
-    color: var(--color-tuatara);
-    box-shadow: none;
 }
 
 .badge-primary {
