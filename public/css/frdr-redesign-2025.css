@@ -4707,6 +4707,10 @@ div.twitter-typeahead {
         background-image: linear-gradient(0deg, #3232232F, var(--color-white));
         min-height: 800px;
     }
+
+    .layout-content {
+        min-width: 0;
+    }
 }
 
 @media (min-width: 1400px) {
@@ -4964,11 +4968,11 @@ form#submit_new_dataset {
     box-shadow: none;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1199.98px) {
     .card.datasets .dataset-row { border: solid 1px var(--gray-400); }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
     .card.datasets .dataset-row { border-bottom: solid 1px var(--gray-400); }
 }
 
@@ -5033,7 +5037,7 @@ form#submit_new_dataset {
     font-weight: var(--font-weight-normal);
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1199.98px) {
     .dataset-header { margin: 0.25rem 0rem; }
 }
 
