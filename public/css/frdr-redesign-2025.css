@@ -1016,6 +1016,8 @@ a.lang-btn.d-lg-block {
 .alert.alert-success:not(:has(.alert-label))::before { content: var(--alert-label-success, none); }
 .alert.alert-danger:not(:has(.alert-label))::before { content: var(--alert-label-danger, none); }
 
+.alert.alert-info.instructions-box::before { content: none; }
+
 .alert a:hover,
 .alert a:focus,
 .alert a:active {
