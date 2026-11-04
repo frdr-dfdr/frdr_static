@@ -189,7 +189,7 @@ legend {
 }
 
 .label-required:after {
-    color: #ff0000;
+    color: var(--color-maple);
     content: " *";
 }
 
