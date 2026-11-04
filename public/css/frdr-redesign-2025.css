@@ -5795,9 +5795,9 @@ input[type=number] {
     position: sticky;
     top: 80px;
     z-index: 100;
-    background: var(--color-white);
+    background: var(--gray-100);
     padding: 16px 0 12px;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
 }
 
 .submit-progress-panel::before {
@@ -5808,7 +5808,8 @@ input[type=number] {
     left: 50%;
     width: 100vw;
     transform: translateX(-50%);
-    background-color: var(--color-white);
+    background-color: var(--gray-100);
+    border-bottom: 1px solid var(--gray-300);
     z-index: -1;
 }
 
@@ -5900,7 +5901,7 @@ input[type=number] {
     flex: 1;
     height: 2px;
     min-width: 12px;
-    background: var(--gray-300);
+    background: var(--gray-400);
     margin-top: 19px;
     margin-left: -20px;
     margin-right: -20px;
@@ -6050,7 +6051,7 @@ input[type=number] {
         flex: 1;
         height: 6px;
         border-radius: 3px;
-        background: var(--gray-300);
+        background: var(--gray-400);
         transition: background 0.18s ease;
     }
 
