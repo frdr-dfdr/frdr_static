@@ -1776,7 +1776,7 @@ a.social-media-icon {
 
 /* ========================================
    STATUS BUTTONS (Success, Info, Warning, Danger)
-   aligned with frdr-theme.css
+   Same as .btn-secondary except the hover / keyboard focus / active colours
    ======================================== */
 
 .btn-success,
@@ -1784,11 +1784,9 @@ a.social-media-icon {
 .btn-globus,
 .btn-warning,
 .btn-danger {
-    background-color: var(--gray-100);
+    background-color: var(--color-white);
     color: var(--color-tuatara);
-    font-size: var(--font-size-h4);
-    font-weight: var(--font-weight-normal);
-    border: 1px solid var(--gray-400);
+    border: 1px solid var(--color-tuatara);
     padding: 8px 16px;
 }
 
@@ -1797,56 +1795,60 @@ a.social-media-icon {
 .btn-globus:focus,
 .btn-warning:focus,
 .btn-danger:focus {
-    background-color: var(--gray-100);
-    border-color: var(--gray-400);
+    background-color: var(--color-white);
+    border-color: var(--color-tuatara);
     color: var(--color-tuatara);
 }
 
 .btn-success:hover,
-.btn-success:active,
 .btn-success:focus-visible,
+.btn-success:not(:disabled):not(.disabled):active,
+.btn-success:not(:disabled):not(.disabled).active,
+.show > .btn-success.dropdown-toggle,
 .btn-info:hover,
-.btn-info:active,
 .btn-info:focus-visible,
+.btn-info:not(:disabled):not(.disabled):active,
+.btn-info:not(:disabled):not(.disabled).active,
+.show > .btn-info.dropdown-toggle,
 .btn-globus:hover,
-.btn-globus:active,
-.btn-globus:focus-visible {
-    background-color: var(--color-tomorrow-gold) !important;
-    border: 1px solid #b08c00 !important;
-    color: var(--color-tuatara) !important;
-    text-shadow: none;
+.btn-globus:focus-visible,
+.btn-globus:not(:disabled):not(.disabled):active,
+.btn-globus:not(:disabled):not(.disabled).active,
+.show > .btn-globus.dropdown-toggle {
+    background-color: var(--color-tomorrow-gold);
+    border-color: #b08c00;
+    color: var(--color-tuatara);
 }
 
-/* Warning: hover, active, keyboard focus → amber */
 .btn-warning:hover,
-.btn-warning:active,
-.btn-warning:focus-visible {
+.btn-warning:focus-visible,
+.btn-warning:not(:disabled):not(.disabled):active,
+.btn-warning:not(:disabled):not(.disabled).active,
+.show > .btn-warning.dropdown-toggle {
     background-color: #f0ad4e;
     border-color: #eea236;
     color: var(--color-white);
-    text-shadow: none;
 }
 
 .btn-danger:hover,
-.btn-danger:active,
-.btn-danger:focus-visible {
+.btn-danger:focus-visible,
+.btn-danger:not(:disabled):not(.disabled):active,
+.btn-danger:not(:disabled):not(.disabled).active,
+.show > .btn-danger.dropdown-toggle {
     background-color: #d9534f;
     border-color: #d43f3a;
     color: var(--color-white);
-    text-shadow: none;
 }
 
-/* Disabled */
-.btn-success.disabled,
-.btn-success[disabled],
-fieldset[disabled] .btn-success {
-    border-color: #666666;
-}
-
-.btn-success.disabled, .btn-success:disabled,
-.btn-info.disabled, .btn-info:disabled,
-.btn-globus.disabled, .btn-globus:disabled {
+.btn-success:disabled, .btn-success.disabled,
+.btn-info:disabled, .btn-info.disabled,
+.btn-globus:disabled, .btn-globus.disabled,
+.btn-warning:disabled, .btn-warning.disabled,
+.btn-danger:disabled, .btn-danger.disabled {
+    background-color: var(--color-white);
+    border-color: var(--color-tuatara);
     color: var(--color-tuatara);
+    opacity: 0.4;
     cursor: not-allowed;
 }
 
