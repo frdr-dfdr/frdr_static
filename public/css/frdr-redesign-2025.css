@@ -4792,20 +4792,22 @@ div.twitter-typeahead {
 .card.panel-default > .card-header {
     background-color: var(--gray-200);
     background-image: none;
-    border-radius: 12px;
+    border-radius: var(--border-radius-md);
     display: flex;
     align-items: center;
-    gap: 12px;
+    position: relative;
+    overflow: hidden;
+    padding-left: 28px;
 }
 
 .card.panel-default > .card-header::before {
     content: "";
-    display: inline-block;
-    width: 5px;
-    height: 26px;
-    border-radius: 2px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 6px;
     background-color: var(--color-tomorrow-gold);
-    flex-shrink: 0;
 }
 
 @media (min-width: 576px) {
