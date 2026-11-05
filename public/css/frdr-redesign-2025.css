@@ -185,7 +185,7 @@ legend {
 }
 
 .text-success {
-    color: #006702 !important;
+    color: var(--color-success-ink) !important;
 }
 
 .label-required:after {
@@ -260,7 +260,7 @@ input.search_bar {
 }
 
 .bootstrap-tagsinput .tag {
-  background-color: #005c92;
+  background-color: var(--color-tuatara);
   padding: 2px 8px;
   border-radius: 3px;
   font-size: 15px;
@@ -1069,15 +1069,6 @@ a.lang-btn.d-lg-block {
 
 .locale {
     display: none;
-}
-
-.list-group-item.active,
-.list-group-item.active:hover,
-.list-group-item.active:focus {
-  text-shadow: 0 -1px 0 #2882bb;
-  background-image: linear-gradient(to bottom, #79ad2a 0%, #2882bb 100%);
-  background-repeat: repeat-x;
-  border-color: #2882bb;
 }
 
 .list-group-item img {
@@ -5308,15 +5299,31 @@ a.dashboard.dropdown-item {
     font-weight: var(--font-weight-light);
 }
 
+/* Same focus as .form-control:focus — the ring goes around the whole box, not the inner input */
 .bootstrap-tagsinput:focus-within {
     background-color: var(--color-white);
-    border: 1px solid var(--color-crete) !important;
-    box-shadow: 0 0 0 .2rem rgba(214, 171, 0, 0.25) !important; /* --color-tomorrow-gold at 25% */
+    border: 1px solid var(--gray-700) !important; /* was --color-crete */
+    box-shadow: none !important; /* was a 25% tomorrow-gold halo */
     color: #555;
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 3px;
+}
+
+.bootstrap-tagsinput input:focus-visible {
+    outline: none;
 }
 
 .checkbox-md {
     height: 1.5rem;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: var(--color-tuatara);
+}
+
+.form-check-inline .form-check-input {
+    margin-right: 0.5rem;
 }
 
 .table-heading {
@@ -5494,6 +5501,13 @@ input[type=number] {
 .ror-name { font-size: 17px; }
 .tt-menu { max-height: 300px; max-width: 500px; overflow-y: auto; }
 .tt-suggestion { border-bottom: 1px solid var(--gray-500); overflow-x: hidden; }
+
+.tt-suggestion:hover,
+.tt-suggestion:focus,
+.tt-suggestion.tt-cursor {
+    background-color: var(--color-tuatara);
+    color: var(--color-white);
+}
 
 .badge-warning {
     background-color: var(--color-tomorrow-gold);
@@ -6389,7 +6403,7 @@ span.collab-perm-inline:has(.text-secondary) {
 }
 
 .linked-set-card.author-drop-target {
-    outline: 2px solid var(--color-blue-stone);
+    outline: 2px solid var(--color-tuatara);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
 }
 
