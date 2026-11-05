@@ -5154,7 +5154,8 @@ a.dashboard.dropdown-item {
     color: var(--color-tuatara);
 }
 
-.dashboard.dropdown-item:hover {
+.dashboard.dropdown-item:hover,
+.dashboard.dropdown-item:focus {
     background-color: var(--color-tomorrow-gold);
 }
 
