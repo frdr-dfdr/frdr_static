@@ -6201,16 +6201,6 @@ input[type=number] {
    COLLABORATE STEP (/submit — collaborate)
    ======================================== */
 
-.collaborate-section {
-    border: 1px solid var(--gray-300);
-    border-radius: var(--border-radius-sm);
-    padding: 20px 24px;
-    margin-bottom: 16px;
-}
-.collaborate-section:last-child {
-    margin-bottom: 0;
-}
-
 .collab-list {
     border-top: 1px solid var(--gray-300);
 }
@@ -6271,17 +6261,13 @@ label.collab-perm-inline {
     cursor: pointer;
 }
 
-label.collab-perm-inline:has(input[type="checkbox"]:checked) {
-    background-color: var(--color-info);
-}
 
-/* Read-only permission indicators (Pending Collaborators) */
 span.collab-perm-inline:has(.text-success) {
-    color: #006702;
+    color: var(--color-success-ink);
 }
 
 span.collab-perm-inline:has(.text-secondary) {
-    color: var(--gray-600);
+    color: var(--gray-700);
 }
 
 .collab-perm-inline input[type="checkbox"] {
