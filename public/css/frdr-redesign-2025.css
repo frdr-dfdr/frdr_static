@@ -6345,17 +6345,21 @@ span.collab-perm-inline:has(.text-secondary) {
 
 .author-number {
     font-size: var(--font-size-h5);
-    color: var(--gray-600);
+    color: var(--gray-700);
     font-weight: var(--font-weight-semibold);
     margin-bottom: 4px;
 }
 
 .author-move-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
+    min-height: 24px;
     background: none;
     border: none;
-    padding: 1px 4px;
+    padding: 0;
     color: var(--gray-400);
-    cursor: pointer;
     line-height: 1;
 }
 
