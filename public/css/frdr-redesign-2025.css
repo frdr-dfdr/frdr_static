@@ -1342,6 +1342,11 @@ div.ekko-lightbox.modal > * > .modal-content {
     font-weight: 600;
 }
 
+/* Pending-request label (.text-danger) on the gold active item: to meet WCAG requirement */
+.ActionList-item.ActionList-item--navActive .ActionList-item-label.text-danger {
+    color: #8A0014 !important;
+}
+
 .ActionList-item.ActionList-item--navActive:not(.ActionList-item--danger) {
     background: rgba(208,215,222,0.24);
 }
@@ -6320,6 +6325,11 @@ span.collab-perm-inline:has(.text-secondary) {
 .field-entry-body {
     flex: 1;
     min-width: 0;
+}
+
+.field-entry-body > .field-error {
+    margin-left: 16px;
+    margin-right: 16px;
 }
 
 .field-entry-body .bootstrap-tagsinput {
