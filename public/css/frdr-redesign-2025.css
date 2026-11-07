@@ -1168,6 +1168,17 @@ div.file > a {
     margin-left: 10px;
 }
 
+.drag-drop-btn:has(> input[type="file"]:focus-visible) {
+    background-color: var(--color-desaturated-gold);
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 3px;
+}
+
+.file-details [role="button"]:focus-visible {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 2px;
+}
+
 .file-list > .sub-folder > .folder {
     border-radius: 5px;
 }
@@ -5840,6 +5851,11 @@ input[type=number] {
     z-index: -1;
 }
 
+/* The panel is sticky (top 80px, ~149px tall): keep focused fields from scrolling in under it (WCAG 2.4.11). */
+html:has(.submit-progress-panel) {
+    scroll-padding-top: 240px;
+}
+
 .submit-progress-header {
     display: flex;
     align-items: baseline;
@@ -6049,6 +6065,10 @@ input[type=number] {
 }
 
 @media (max-width: 639px) {
+    html:has(.submit-progress-panel) {
+        scroll-padding-top: 290px;
+    }
+
     .submit-progress-header {
         flex-direction: column;
         gap: 2px;
