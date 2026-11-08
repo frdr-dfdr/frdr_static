@@ -5826,14 +5826,15 @@ input[type=number] {
 }
 
 /* ========================================
-   SUBMISSION PROGRESS BAR
+   DEPOSIT WORKFLOW
    ======================================== */
+
+/* Progress bar */
 
 .submit-progress-panel {
     position: sticky;
     top: 80px;
     z-index: 100;
-    background: var(--gray-100);
     padding: 16px 0 12px;
     margin-bottom: 24px;
 }
@@ -5933,8 +5934,7 @@ html:has(.submit-progress-panel) {
 .submit-progress-steps {
     display: flex;
     align-items: flex-start;
-    padding-top: 6px;
-    padding-bottom: 4px;
+    padding: 6px 6px 4px;
     transition: transform 0.3s ease;
     will-change: transform;
 }
@@ -6194,9 +6194,83 @@ html:has(.submit-progress-panel) {
     }
 }
 
-/* ========================================
-   ACCEPT TERMS PAGE (/submit — show-license)
-   ======================================== */
+/* Nav buttons */
+@media (max-width: 767px) {
+    .deposit-nav-btns {
+        flex-direction: column-reverse;
+        align-items: stretch;
+        gap: 8px;
+        border-top: 1px solid var(--gray-300);
+        padding-top: 16px;
+    }
+    .deposit-nav-btns > div {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 8px;
+    }
+    .deposit-nav-btns .btn {
+        width: 100%;
+        margin-right: 0 !important;
+    }
+}
+
+/* Select Storage Group */
+
+.select-collection-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.select-collection-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    border: 1px solid var(--gray-300);
+    border-radius: var(--border-radius-sm);
+    padding: 16px;
+    cursor: pointer;
+    margin-bottom: 0;
+    font-weight: var(--font-weight-normal);
+    transition: border-color 0.1s ease, box-shadow 0.1s ease;
+}
+
+.select-collection-option:has(input:checked) {
+    border-color: var(--color-tuatara);
+}
+
+.select-collection-option:has(input:focus-visible) {
+    border-color: var(--color-tuatara);
+    box-shadow: 0 0 0 1px var(--color-tuatara);
+}
+
+.select-collection-option input[type="radio"] {
+    margin-top: 5px;
+    flex-shrink: 0;
+}
+
+.select-collection-option input[type="radio"]:focus-visible {
+    outline: none;
+}
+
+.select-collection-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.select-collection-meta {
+    font-size: var(--font-size-sm);
+    color: var(--gray-700);
+}
+
+@media (max-width: 767px) {
+    .select-collection-advanced-btn {
+        width: 100%;
+    }
+}
+
+/* Accept Terms */
 
 .license-checkbox-row {
     padding: 16px 18px;
@@ -6225,9 +6299,7 @@ html:has(.submit-progress-panel) {
     color: var(--color-maple);
 }
 
-/* ========================================
-   COLLABORATE STEP (/submit — collaborate)
-   ======================================== */
+/* Collaborate */
 
 .collab-list {
     border-top: 1px solid var(--gray-300);
@@ -6313,16 +6385,9 @@ span.collab-perm-inline:has(.text-secondary) {
         align-items: flex-start;
         gap: 12px;
     }
-    .collab-action {
-        justify-content: flex-start;
-    }
 }
 
-/* ================================================
-   MULTI-INPUT FIELD ENTRY
-   Shared base for all repeatable multi-input fields
-   (CRDC, Author, and linked fields)
-   ================================================ */
+/* Describe */
 
 .field-entry {
     display: flex;
@@ -6408,16 +6473,12 @@ span.collab-perm-inline:has(.text-secondary) {
 }
 
 @media (max-width: 767px) {
-    .field-entry {
-        display:block;
-    }
-
+    .field-entry,
     .field-entry-sidebar {
-        display:block;
+        display: block;
     }
 
     .field-entry-remove {
-        flex-basis: 100%;
         display: flex;
         justify-content: flex-end;
         padding: 15px 15px 0 15px;
@@ -6457,61 +6518,8 @@ span.collab-perm-inline:has(.text-secondary) {
     max-width: 100%;
 }
 
-/* ========================================
-   SELECT COLLECTION PAGE
-   ======================================== */
+/* Complete */
 
-.select-collection-options {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.select-collection-option {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    border: 1px solid var(--gray-300);
-    border-radius: var(--border-radius-sm);
-    padding: 16px;
-    cursor: pointer;
-    margin-bottom: 0;
-    font-weight: var(--font-weight-normal);
-    transition: border-color 0.1s ease, box-shadow 0.1s ease;
-}
-
-.select-collection-option:has(input:checked) {
-    border-color: var(--color-tuatara);
-}
-
-.select-collection-option:has(input:focus-visible) {
-    border-color: var(--color-tuatara);
-    box-shadow: 0 0 0 1px var(--color-tuatara);
-}
-
-.select-collection-option input[type="radio"] {
-    margin-top: 5px;
-    flex-shrink: 0;
-}
-
-.select-collection-option input[type="radio"]:focus-visible {
-    outline: none;
-}
-
-.select-collection-text {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-}
-
-.select-collection-meta {
-    font-size: var(--font-size-sm);
-    color: var(--gray-700);
-}
-
-/* ========================================
-   SUBMISSION COMPLETE PAGE
-   ======================================== */
 .submit-complete-doi-box {
     display: inline-block;
     border: 1px solid var(--gray-300);
@@ -6524,33 +6532,6 @@ span.collab-perm-inline:has(.text-secondary) {
     margin: 0 0 4px;
 }
 
-/* ========================================
-   DEPOSIT WORKFLOW NAV BUTTONS
-   ======================================== */
-
-@media (max-width: 767px) {
-    .deposit-nav-btns {
-        flex-direction: column-reverse;
-        align-items: stretch;
-        justify-content: flex-start;
-        gap: 8px;
-        border-top: 1px solid var(--gray-300);
-        padding-top: 16px;
-    }
-    .deposit-nav-btns > div {
-        display: flex;
-        flex-direction: column-reverse;
-        gap: 8px;
-    }
-    .deposit-nav-btns .btn {
-        width: 100%;
-        margin-right: 0 !important;
-    }
-
-    .select-collection-advanced-btn {
-        width: 100%;
-    }
-}
 
 /* ========================================
    USER SETTINGS PAGES
