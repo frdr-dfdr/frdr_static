@@ -1,0 +1,24 @@
+/* styles for item enquiry submission form and success page */
+.sm_display {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+.item-enquiry-info-header {
+    font-weight: bold;
+}
+.item-enquiry-info-item-title {
+    font-size: larger;
+}
+.item-enquiry-info-item-doi { }
+.item-enquiry-disclaimer-header {
+    font-weight: bold;
+    font-size: larger;
+}
+.item-enquiry-error-header {
+    font-weight: bold;
+    font-size: larger;
+}

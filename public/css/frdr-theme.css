@@ -1,3 +1,6 @@
+@import 'item-enquiry-list.css';
+@import 'item-enquiry-new.css';
+
 :root {
     --white: #FFFFFF;
     --gray-100: #F9F9F9;
@@ -130,7 +133,7 @@ small {
 
 a:not(.btn, .badge, .table-link) {
     color: var(--teal);
-    margin-bottom: 0px;
+    margin-bottom: 0;
     overflow-x: inherit;
     text-decoration: underline;
 }
@@ -169,7 +172,7 @@ input[type="file"] {display: block;height: auto;}
 img.ds-authority-confidence,
 span.ds-authority-confidence
 { width: 16px; height: 16px; margin: 5px; background-repeat: no-repeat;
-  padding: 0px 2px; vertical-align: bottom; color: transparent;}
+  padding: 0 2px; vertical-align: bottom; color: transparent;}
 img.ds-authority-confidence.cf-unset,
 span.ds-authority-confidence.cf-unset { 
   background-image: url(/repo/image/authority/bug.png);
@@ -242,11 +245,11 @@ legend {
 .frdr-jumbo-mid {
   background-color: #424242;
   background-image: url('/static/images/latest/frdr-jumbo-mid.png');
-  background-position: 0px 0px;
+  background-position: 0 0;
   min-height: 300px;
   margin-bottom: 3px;
   padding:  1px;
-  border-radius: 0px;
+  border-radius: 0;
 }
 
 #jumbo-mid-tagline {
@@ -273,8 +276,8 @@ legend {
   min-height: 80px;
   padding: 30px;
   font-size: 18px;
-  margin-top: 0px;
-  border-radius: 0px;
+  margin-top: 0;
+  border-radius: 0;
 }
 
 #sitelogo {
@@ -629,7 +632,7 @@ fieldset[disabled] .btn-success.active
     border-color: #424242;
     min-height: 100%;
     height: auto;
-    padding: 0rem 1rem;
+    padding: 0 1rem;
 }
 
 @media (min-width: 1px) and (max-width: 992px) {
@@ -644,8 +647,8 @@ fieldset[disabled] .btn-success.active
     width: 200px;
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
 }
  
 #header .navbar-up .search-button{
@@ -655,9 +658,9 @@ fieldset[disabled] .btn-success.active
 #header .search-button{
     background-color: #FFFFFF;
     border: 1px solid #ced4da;
-    border-left-width: 0px;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
+    border-left-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
 }
@@ -677,7 +680,7 @@ fieldset[disabled] .btn-success.active
 .container.navbar-up {
     justify-content: flex-end;
     padding-bottom: 5px;
-    margin-right: 0px;
+    margin-right: 0;
 }
 
 .navbar > .container{
@@ -735,7 +738,7 @@ fieldset[disabled] .btn-success.active
 
 /* Search bar in collapsed navbar */
 .navbar-nav > li > form {
-    padding: 0rem 0.25rem;
+    padding: 0 0.25rem;
 }
 
 .navbar-nav > li > a:not(.lang-btn) {
@@ -930,7 +933,7 @@ fieldset[disabled] .btn-success.active
 }
 
 .navbar-nav .nav-item {
-    padding-top: 0px;
+    padding-top: 0;
     padding-bottom: 1px;
 }
 
@@ -967,8 +970,8 @@ fieldset[disabled] .btn-success.active
 }
 
 .navbar-header > a {
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .navbar .navbar-nav > .active > a {
@@ -1048,7 +1051,7 @@ a.lang-btn.d-lg-block {
 }
 
 .dropdown-item {
-    padding: 0px;
+    padding: 0;
 }
 .dropdown-item > a {
     padding: 0.25rem 1.5rem;
@@ -1269,14 +1272,14 @@ div.folder.odd.drag-highlight, div.folder.drag-highlight, .drag-highlight {
 }
 
 .folder-details {
-    margin-left: 0px;
-    margin-right: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .folder-size {
-    padding-right: 0px;
+    padding-right: 0;
 }
 
 .file-details > div > a {
@@ -1402,7 +1405,7 @@ _:root, .ekko-lightbox-container > div > iframe {
 div.ekko-lightbox.modal > * > .modal-content {
     width: 1100px;
     overflow:hidden;
-    height: 927;
+    height: 927px;
 }
 
 .close {
@@ -1552,7 +1555,7 @@ button.link {
 }
 
 .dataset-row:last-of-type {
-    margin-bottom: 0px;
+    margin-bottom: 0;
     box-shadow: none;
 }
 
@@ -1573,7 +1576,7 @@ button.link {
 
 @media (min-width: 1px) and (max-width: 992px) {
     .dataset-header {
-        margin: 0.25rem 0rem;
+        margin: 0.25rem 0;
     }
 }
 
@@ -1583,8 +1586,8 @@ button.link {
 }
 
 .dataset-inner-col {
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .dataset-button-mw {
@@ -1745,12 +1748,12 @@ button.link {
 
 .sub-label {
     font-weight: normal;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 .no-left-padding {
-    padding-left: 0px;
+    padding-left: 0;
 }
 
 .align-checkbox {
@@ -1768,13 +1771,13 @@ button.link {
 button.notification-button {
     padding-left: 10px;
     padding-right: 10px;
-    border: 0px;
+    border: 0;
 }
 
 button.notification-spacer {
     margin-left: 10px;
-    padding-right: 0px;
-    border: 0px;
+    padding-right: 0;
+    border: 0;
 }
 
 .user-profiles-heading {
@@ -2009,12 +2012,12 @@ input[type=number] {
 
 
 @media only screen and (max-width : 1200px) {
-  .navbar { padding: 0px; }
+  .navbar { padding: 0; }
   .navbar-nav { line-height: 26px; }
-  #navbar-collapse-1 > ul { margin-top: 0px; margin-bottom: 0px;}
-  #navbar-collapse-1 > ul >li > a { border-radius: 0px; margin:0px; color:#424242;}
-  #navbar-collapse-1 > ul >li > ul { padding: 0px; }
-  #navbar-collapse-1 > ul >li > ul > li > a:hover { border-radius: 0px; margin:0px; color:#2191C5 !important;}
+  #navbar-collapse-1 > ul { margin-top: 0; margin-bottom: 0;}
+  #navbar-collapse-1 > ul >li > a { border-radius: 0; margin: 0; color:#424242;}
+  #navbar-collapse-1 > ul >li > ul { padding: 0; }
+  #navbar-collapse-1 > ul >li > ul > li > a:hover { border-radius: 0; margin: 0; color:#2191C5 !important;}
 }
 
 @media only screen and (max-width : 1024px) {
@@ -2499,7 +2502,7 @@ a.dashboard.dropdown-item {
 }
 
 .ActionList-sectionDivider h3 {
-    margin: 0px;
+    margin: 0;
 }
 
 
@@ -2664,11 +2667,11 @@ a.social-media-icon {
 
 .home-banner{
     background-image: url(/static/images/latest/banner_mountain_legacy_project.png);
-    background-position: 0px 0px;
+    background-position: 0 0;
     min-height: 300px;
     margin-bottom: 3px;
     padding:  1px;
-    border-radius: 0px;
+    border-radius: 0;
     background-size: cover;
     background-position: center center;
     position: relative;
@@ -2903,7 +2906,7 @@ a.external-link:after {
 }
 
 .index_title {
-    margin-bottom: 0px;
+    margin-bottom: 0;
     font-weight: 500;
     line-height: 1.2;
 }
