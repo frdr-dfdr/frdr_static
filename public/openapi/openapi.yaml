@@ -1,0 +1,639 @@
+openapi: 3.0.1
+info:
+  title: FRDR-DFDR Data Publication REST API
+  description: REST API to interact with data publication at www.frdr-dfdr.ca
+  version: 1.0.0
+servers:
+- url: https://www.frdr-dfdr.ca/v1/api
+  description: Production REST URL
+- url: https://demo.frdr-dfdr.ca/v1/api
+  description: Demo REST URL for trying out deposits
+- url: https://test.frdr.ca/v1/api
+  description: Staging REST URL
+- url: https://dev1-web-n1.frdr.ca/v1/api
+  description: Development REST URL
+paths:
+  /submissions/{submission_id}:
+    get:
+      operationId: getSubmission
+      parameters:
+      - name: submission_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: format
+        in: query
+        schema:
+          type: string
+      - name: Authorization
+        in: header
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Ok
+          content:
+            application/json:
+              example:
+                datacite.creator.affiliation: University of Saskatchewan
+                dc.contributor.author: "Archer, Rese"
+                dc.description.abstract: Test Upload
+                frdr.crdc.code: RDF5039904
+                datacite.creator.affiliationIdentifier: "-"
+                globus.shared_endpoint.path: /1/unpublished/publication_1/
+                datacite.fundingReference.funderIdentifier: "-"
+                dc.rights: Creative Commons Public Domain Dedication (CC0 1.0)
+                handle: 96f02cf0-b6a7-4f6c-8a0e-4aa91cb231ef
+                datacite.fundingReference.awardNumber: "-"
+                datacite.fundingReference.funderName: "-"
+                dc.identifier.uri: https://dev1-web-n1.frdr.ca/repo/dataset/96f02cf0-b6a7-4f6c-8a0e-4aa91cb231ef
+                datacite.resourceType: Dataset
+                datacite.creator.nameIdentifier: "-"
+                dc.title: Test Upload
+                dc.rights.uri: https://creativecommons.org/publicdomain/zero/1.0/
+                dc.subject: Upload
+                globus.shared_endpoint.name: 6a335465-90cc-4695-869a-e36dccd49fa4
+                id: 1
+                datacite.fundingReference.awardTitle: "-"
+                frdr.datasetreview.external: "No"
+        "403":
+          description: User unable to view this submission
+        "404":
+          description: Submission with id not found
+        "500":
+          description: Internal server error
+    put:
+      operationId: updateSubmission
+      parameters:
+      - name: submission_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: Authorization
+        in: header
+        schema:
+          type: string
+      requestBody:
+        description: Json describing metadata of submission
+        content:
+          application/json:
+            example: |
+              {
+                  "dc.title": "My Dataset Title",
+              }
+      responses:
+        "200":
+          description: Adds additional metadata information to a dataset
+          content:
+            application/json:
+              example:
+                dc.publisher: University of Somewhere
+                dc.contributor.author:
+                - "Smith, Jane"
+                - "Archer, Rese"
+                datacite.creator.affiliationIdentifier:
+                - https://ror.org/010x8gc63;https://ror.org/0213rcc28
+                - https://ror.org/010x8gc63
+                dc.description.abstract: Dataset description changed
+                frdr.crdc.code: RDF2030302
+                globus.shared_endpoint.path: /1/unpublished/publication_2/
+                dc.rights: Creative Commons Public Domain Dedication (CC0 1.0)
+                dc.date.accessioned: 2018-02-27
+                handle: 818eb388-1d83-4073-91fe-94c468e753c5
+                dc.date.issued: 2018-02-27
+                frdr.contact.name: Rese Archer
+                dc.identifier.uri: https://dev1-web-n1.frdr.ca/repo/dataset/818eb388-1d83-4073-91fe-94c468e753c5
+                dc.title: Changed Dataset Title
+                frdr.contact.email: rese.archer@frdr.ca
+                dc.subject:
+                - Computer Science
+                - Data Analysis
+                globus.shared_endpoint.name: 6a335465-90cc-4695-869a-e36dccd49fa4
+                dc.rights.uri: https://creativecommons.org/publicdomain/zero/1.0/
+                id: 2
+                dc.date.available: 2018-02-27
+        "403":
+          description: User unable to update this dataset
+        "404":
+          description: Dataset with id not found
+        "500":
+          description: Internal server error
+    delete:
+      operationId: deleteSubmission
+      parameters:
+      - name: submission_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: Authorization
+        in: header
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Deleted
+        "403":
+          description: User unable to delete this submission
+        "404":
+          description: Submission with id not found
+        "500":
+          description: Internal server error
+  /collections/{id}/datasets:
+    get:
+      operationId: getCollectionDatasets
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: Authorization
+        in: header
+        schema:
+          type: string
+      responses:
+        "200":
+          description: List of dataset ids within a collection
+          content:
+            application/json:
+              example:
+                dataset_ids:
+                - 1554
+                - 1537
+                - 1519
+                - 1673
+                - 1805
+        "404":
+          description: Collection with id not found
+        "500":
+          description: Internal server error
+  /collections:
+    get:
+      operationId: getCollections
+      parameters:
+      - name: Authorization
+        in: header
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Show the list of collections available for deposit
+          content:
+            application/json:
+              examples:
+                Example list of collections:
+                  description: Example list of collections
+                  value: |
+                    [
+                      {
+                        "submission_license": "<p>Depositing data is subject to the FRDR <a target="_blank" href="/docs/en/terms_of_use/">Terms of Use</a>.</p>
+                    <p>Le dépôt des données est soumis aux <a target="_blank" href="/docs/fr/conditions_d'utilisation/">Conditions de Utilisation</a> du DFDR.</p>
+                    ",
+                        "name": "Example Collection",
+                        "description": "",
+                        "id": 1
+                      }
+                    ]
+        "500":
+          description: Internal server error
+  /datasets/{dataset_id}:
+    get:
+      operationId: getDatasetById
+      parameters:
+      - name: dataset_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: format
+        in: query
+        schema:
+          type: string
+      - name: Authorization
+        in: header
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Ok
+          content:
+            application/json:
+              example:
+                dc.publisher: Federated Research Data Repository / dépôt fédéré de
+                  données de recherche
+                datacite.creator.affiliation: University of Saskatchewan
+                datacite.creator.affiliationIdentifier: "-"
+                globus.shared_endpoint.path: /1/published/publication_1/
+                datacite.fundingReference.funderIdentifier: "-"
+                dc.rights: Creative Commons Public Domain Dedication (CC0 1.0)
+                datacite.fundingReference.funderName: "-"
+                dc.identifier.uri: https://dev1-web-n1.frdr.ca/repo/dataset/96f02cf0-b6a7-4f6c-8a0e-4aa91cb231ef
+                datacite.resourceType: Dataset
+                datacite.creator.nameIdentifier: "-"
+                dc.rights.uri: https://creativecommons.org/publicdomain/zero/1.0/
+                globus.shared_endpoint.name: 6a335465-90cc-4695-869a-e36dccd49fa4
+                id: 1
+                frdr.datasetreview.external: "No"
+                dc.contributor.author: "Archer, Rese"
+                dc.description.abstract: Test Upload
+                frdr.crdc.code: RDF5039904
+                dc.date.accessioned: 2026-11-13T02:18:19Z
+                handle: 96f02cf0-b6a7-4f6c-8a0e-4aa91cb231ef
+                datacite.fundingReference.awardNumber: "-"
+                dc.date.issued: 2026-11-12
+                datacite.publicationYear: "2026"
+                dc.title: Test Upload
+                dc.subject: Upload
+                datacite.fundingReference.awardTitle: "-"
+                dc.date.available: 2026-11-13T02:18:19Z
+        "403":
+          description: User unable to view this dataset
+        "404":
+          description: Dataset with this id not found
+        "500":
+          description: Internal server error
+  /datasets:
+    get:
+      operationId: getPublishedDataset
+      parameters:
+      - name: uri
+        in: query
+        schema:
+          type: string
+      - name: format
+        in: query
+        schema:
+          type: string
+      - name: since
+        in: query
+        schema:
+          type: integer
+          format: int64
+      - name: Authorization
+        in: header
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Ok
+          content:
+            application/json:
+              example:
+                dataset_ids:
+                - 1
+        "404":
+          description: Collection with this id not found
+        "500":
+          description: Internal server error
+  /schemas/{id}:
+    get:
+      operationId: getSchema
+      parameters:
+      - name: Authorization
+        in: header
+        schema:
+          type: string
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: Show the details and metadata fields of a metadata schema
+          content:
+            application/json:
+              examples:
+                Dublin Core:
+                  summary: Truncated Dublin Core schema response
+                  description: Dublin Core
+                  value: |
+                    {
+                      "name": "dc",
+                      "namespace": "http://dublincore.org/documents/dcmi-terms/",
+                      "id": 1,
+                      "fields": [
+                        {
+                          "name": "accessrights",
+                          "description": "Information about who access the resource or an indication of its security status.",
+                          "fullname": "dc.accessrights"
+                        },
+                        {
+                          "qualifier": "advisor",
+                          "name": "contributor",
+                          "description": "Use primarily for thesis advisor.",
+                          "fullname": "dc.contributor.advisor"
+                        },
+                        {
+                          "qualifier": "author",
+                          "name": "contributor",
+                          "fullname": "dc.contributor.author"
+                        },
+                        {
+                          "qualifier": "editor",
+                          "name": "contributor",
+                          "fullname": "dc.contributor.editor"
+                        },
+                        {
+                          "qualifier": "illustrator",
+                          "name": "contributor",
+                          "fullname": "dc.contributor.illustrator"
+                        },
+                        {
+                          "qualifier": "other",
+                          "name": "contributor",
+                          "fullname": "dc.contributor.other"
+                        },
+                        {
+                          "name": "contributor",
+                          "description": "A person, organization, or service responsible for the content of the resource.  Catch-all for unspecified contributors.",
+                          "fullname": "dc.contributor"
+                        },
+                      ]
+                    }
+        "404":
+          description: Schema with int id not found
+        "500":
+          description: Internal server error
+  /schemas:
+    get:
+      operationId: getSchemas
+      parameters:
+      - name: Authorization
+        in: header
+        schema:
+          type: string
+      responses:
+        "200":
+          description: List of metadata schemas found
+          content:
+            application/json:
+              examples:
+                List of Metadata Schemas:
+                  summary: Example list of metatadata schemas returned
+                  description: List of Metadata Schemas
+                  value:
+                  - name: dc
+                    namespace: http://dublincore.org/documents/dcmi-terms/
+                    id: 1
+                  - name: dcterms
+                    namespace: http://purl.org/dc/terms/
+                    id: 2
+                  - name: globus
+                    namespace: http://globus.org/publish-terms/
+                    id: 3
+                  - name: frdr
+                    namespace: https://frdr.ca/schema/1.0/
+                    id: 4
+                  - name: datacite
+                    namespace: http://datacite.org/schema/kernel-4
+                    id: 5
+                  - name: ddi
+                    namespace: https://ddialliance.org/Specification/DDI-Lifecycle/3.3/XMLSchema/
+                    id: 6
+        "500":
+          description: Internal server error
+  /submissions:
+    get:
+      operationId: getSubmissions
+      parameters:
+      - name: collection_id
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: format
+        in: query
+        schema:
+          type: string
+      - name: Authorization
+        in: header
+        schema:
+          type: string
+      responses:
+        "200":
+          description: Show the list of submissions for depositor
+          content:
+            application/json:
+              example:
+              - datacite.creator.affiliation: University of Saskatchewan
+                dc.contributor.author: Rese Archer
+                dc.description.abstract: Test Upload
+                frdr.crdc.code: RDF5039904
+                datacite.creator.affiliationIdentifier: "-"
+                globus.shared_endpoint.path: /1/unpublished/publication_1/
+                datacite.fundingReference.funderIdentifier: "-"
+                dc.rights: Creative Commons Public Domain Dedication (CC0 1.0)
+                handle: 96f02cf0-b6a7-4f6c-8a0e-4aa91cb231ef
+                datacite.fundingReference.awardNumber: "-"
+                datacite.fundingReference.funderName: "-"
+                dc.identifier.uri: https://dev1-web-n1.frdr.ca/repo/dataset/96f02cf0-b6a7-4f6c-8a0e-4aa91cb231ef
+                datacite.resourceType: Dataset
+                datacite.creator.nameIdentifier: "-"
+                dc.title: Test Upload
+                dc.rights.uri: https://creativecommons.org/publicdomain/zero/1.0/
+                dc.subject: Upload
+                globus.shared_endpoint.name: 6a335465-90cc-4695-869a-e36dccd49fa4
+                id: 1
+                datacite.fundingReference.awardTitle: "-"
+                frdr.datasetreview.external: "No"
+        "500":
+          description: Internal server error
+  /dashboard:
+    get:
+      operationId: getUserDatasets
+      parameters:
+      - name: sort
+        in: query
+        schema:
+          type: string
+      - name: limit
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: offset
+        in: query
+        schema:
+          type: integer
+          format: int32
+      - name: Authorization
+        in: header
+        schema:
+          type: string
+      responses:
+        "200":
+          description: "Ok. Sort possible values: title, title_desc, date, date_desc.\
+            \ Limit default is 10, max is 1000"
+          content:
+            application/json:
+              example:
+              - dc.identifier.uri: https://dev1-web-n1.frdr.ca/repo/dataset/3aafc71b-367e-47cc-938b-e9359ba664f3
+                globus.shared_endpoint.path: /1/unpublished/publication_4/
+                handle: 3aafc71b-367e-47cc-938b-e9359ba664f3
+                globus.shared_endpoint.name: 6a335465-90cc-4695-869a-e36dccd49fa4
+                id: 4
+        "500":
+          description: Internal server error
+  /collections/{id}:
+    post:
+      operationId: postSubmissionToCollection
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: Authorization
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: string
+      responses:
+        "201":
+          description: Created
+          content:
+            application/json:
+              example:
+                dc.publisher: University of Somewhere
+                dc.description.abstract: Dataset description
+                frdr.crdc.code: RDF2030302
+                dc.contributor.author:
+                - "Smith, Jane"
+                - "Archer, Rese"
+                datacite.creator.affiliationIdentifier:
+                - https://ror.org/010x8gc63;https://ror.org/0213rcc28
+                - https://ror.org/010x8gc63
+                globus.shared_endpoint.path: /1/unpublished/publication_2/
+                dc.rights: Creative Commons Public Domain Dedication (CC0 1.0)
+                dc.date.accessioned: 2018-02-27
+                handle: 818eb388-1d83-4073-91fe-94c468e753c5
+                dc.date.issued: 2018-02-27
+                frdr.contact.name: Rese Archer
+                dc.identifier.uri: https://dev1-web-n1.frdr.ca/repo/dataset/818eb388-1d83-4073-91fe-94c468e753c5
+                dc.title: My Dataset Title
+                frdr.contact.email: rese.archer@frdr.ca
+                dc.subject:
+                - Computer Science
+                - Data Analysis
+                dc.rights.uri: https://creativecommons.org/publicdomain/zero/1.0/
+                globus.shared_endpoint.name: 6a335465-90cc-4695-869a-e36dccd49fa4
+                id: 2
+                dc.date.available: 2018-02-27
+        "400":
+          description: Unable to submit without accepting the license for submitting
+            to this collection
+        "403":
+          description: User unable to submit dataset to this collection
+        "404":
+          description: Collection with id not found
+        "500":
+          description: Internal server error
+  /submissions/{submission_id}/replace:
+    put:
+      operationId: replaceSubmissionMetadata
+      parameters:
+      - name: submission_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: Authorization
+        in: header
+        schema:
+          type: string
+      requestBody:
+        description: Json describing metadata of submission
+        content:
+          application/json:
+            example: |
+              {
+                  "dc.title": "My Dataset Title Updated",
+              }
+      responses:
+        "200":
+          description: Updated
+          content:
+            application/json:
+              example:
+                dc.publisher: University of Somewhere
+                dc.contributor.author:
+                - "Smith, Jane"
+                - "Archer, Rese"
+                datacite.creator.affiliationIdentifier:
+                - https://ror.org/010x8gc63;https://ror.org/0213rcc28
+                - https://ror.org/010x8gc63
+                dc.description.abstract: Dataset description changed
+                frdr.crdc.code: RDF2030302
+                globus.shared_endpoint.path: /1/unpublished/publication_2/
+                dc.rights: Creative Commons Public Domain Dedication (CC0 1.0)
+                dc.date.accessioned: 2018-02-27
+                handle: 818eb388-1d83-4073-91fe-94c468e753c5
+                dc.date.issued: 2018-02-27
+                frdr.contact.name: Rese Archer
+                dc.identifier.uri: https://dev1-web-n1.frdr.ca/repo/dataset/818eb388-1d83-4073-91fe-94c468e753c5
+                dc.title: Changed Dataset Title
+                frdr.contact.email: rese.archer@frdr.ca
+                dc.subject:
+                - Computer Science
+                - Data Analysis
+                globus.shared_endpoint.name: 6a335465-90cc-4695-869a-e36dccd49fa4
+                dc.rights.uri: https://creativecommons.org/publicdomain/zero/1.0/
+                id: 2
+                dc.date.available: 2018-02-27
+        "403":
+          description: User unable to update this dataset
+        "404":
+          description: Dataset with id not found
+        "500":
+          description: Internal server error
+  /submissions/{submission_id}/submit:
+    post:
+      operationId: submitSubmission
+      parameters:
+      - name: submission_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: format
+        in: query
+        schema:
+          type: string
+      - name: Authorization
+        in: header
+        schema:
+          type: string
+      requestBody:
+        content:
+          '*/*':
+            schema:
+              type: string
+      responses:
+        "200":
+          description: Submitted
+        "400":
+          description: Submission is unable to be submitted in its current state (already
+            submitted)
+        "403":
+          description: User unable to submit this dataset
+        "404":
+          description: Submission with id not found
+        "500":
+          description: Internal server error
