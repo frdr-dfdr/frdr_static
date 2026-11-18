@@ -5753,6 +5753,10 @@ input[type=number] {
     padding-bottom: 30px;
     border-bottom: 1px solid var(--gray-200);
 }
+
+.sent-card-top h1:focus {
+    outline: none;
+}
 .sent-check-icon {
     flex-shrink: 0;
     width: 70px;
@@ -5780,13 +5784,14 @@ input[type=number] {
     font-weight: var(--font-weight-bold);
     letter-spacing: 0.13em;
     text-transform: uppercase;
-    color: var(--gray-600);
+    color: var(--gray-700);
     margin: 0 0 18px;
 }
 .sent-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0 48px;
+    margin: 0;
 }
 .sent-grid-item {
     padding: 15px 0;
@@ -5801,17 +5806,17 @@ input[type=number] {
 .sent-item-key {
     font-size: var(--font-size-h5);
     font-weight: var(--font-weight-semibold);
-    color: var(--gray-600);
+    color: var(--gray-700);
     margin-bottom: 5px;
 }
 .sent-item-value {
     font-size: var(--font-size-h4);
     font-weight: var(--font-weight-semibold);
     color: var(--color-tuatara);
+    margin: 0;
 }
 .sent-item-value--quote {
     font-weight: var(--font-weight-normal);
-    color: var(--gray-600);
     line-height: 1.55;
     background: var(--gray-100);
     border-left: 3px solid var(--color-tomorrow-gold);
