@@ -5319,6 +5319,7 @@ a.dashboard.dropdown-item {
 
 .form-control {
     font-weight: var(--font-weight-light);
+    /* border-color: var(--gray-700); */
 }
 
 /* Same focus as .form-control:focus — the ring goes around the whole box, not the inner input */
@@ -5576,6 +5577,7 @@ input[type=number] {
 }
 
 .catlist-division-header {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 12px;
@@ -5611,6 +5613,7 @@ input[type=number] {
 .catlist-division-title {
     font-weight: var(--font-weight-bold);
     font-size: var(--font-size-h3);
+    line-height: var(--line-height-body);
     color: var(--color-tuatara);
 }
 
@@ -5620,13 +5623,33 @@ input[type=number] {
 }
 
 .catlist-division-toggle {
+    font: inherit;
+    color: inherit;
+    text-align: left;
     background: none;
     border: none;
+    padding: 0;
     cursor: pointer;
+}
+
+.catlist-division-toggle::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+}
+
+.catlist-division-toggle:focus-visible {
+    outline: none;
+}
+
+.catlist-division-toggle:focus-visible::after {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: -2px;
+}
+
+.catlist-division-chevron {
     color: var(--gray-600);
     padding: 4px 8px;
-    border-radius: var(--border-radius-sm);
-    transition: background-color 0.15s ease;
     flex-shrink: 0;
 }
 
