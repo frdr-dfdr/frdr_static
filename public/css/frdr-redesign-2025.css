@@ -5619,7 +5619,7 @@ input[type=number] {
 
 .catlist-division-meta {
     font-size: var(--font-size-h5);
-    color: var(--gray-600);
+    color: var(--gray-700);
 }
 
 .catlist-division-toggle {
